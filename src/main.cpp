@@ -6,9 +6,17 @@
 */
 
 #include <memory>
+#include "DLLoader.hpp"
 
 int main(int ac, char **av)
 {
-    av[ac - 1] = nullptr;
+    DLLoader dllLoader;
+
+    if (ac != 2)
+        return 84;
+    std::vector<std::string> oui = dllLoader.getLibraries("./lib/", av[1]);
+    for (const std::string &value : oui) {
+        std::cout << value << std::endl;
+    }
     return 0;
 }

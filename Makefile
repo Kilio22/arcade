@@ -17,13 +17,13 @@ COLOR_THEME	=	$(BLUE_C)
 DEBUG_THEME	=	$(CYAN_C)
 TESTS_THEME	=	$(RED_C)
 
-SRC	=
+SRC	= DLLoader.cpp
 
-CXX	= 	clang++
+CXX	= 	g++
 SRCS	=	$(SRC:%=$(SRC_PATH)/%) $(SRC_PATH)/main.cpp
 OBJ	=	$(SRCS:.cpp=.o)
 
-CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17
+CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17 -ldl
 DEBUG_FLAGS	=	-g3 -gdwarf-4
 
 all: message $(NAME)
