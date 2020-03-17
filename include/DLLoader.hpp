@@ -21,7 +21,10 @@ namespace Arcade
     class DLLoader
     {
         public:
-            DLLoader();
+            static DLLoader &getInstance(void);
+            DLLoader(DLLoader const &) = delete;
+            void operator=(DLLoader const &) = delete;
+
             ~DLLoader();
 
             bool isValidLib(const std::string &path);
@@ -34,7 +37,9 @@ namespace Arcade
 
         protected:
         private:
+            DLLoader();
             static const std::regex libRegex;
+            static DLLoader loaderInstance;
     };
 }
 

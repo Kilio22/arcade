@@ -8,6 +8,7 @@
 #include "DLLoader.hpp"
 
 const std::regex Arcade::DLLoader::libRegex("lib_arcade_.+\\.so");
+Arcade::DLLoader Arcade::DLLoader::loaderInstance;
 
 Arcade::DLLoader::DLLoader()
 {
@@ -15,6 +16,11 @@ Arcade::DLLoader::DLLoader()
 
 Arcade::DLLoader::~DLLoader()
 {
+}
+
+Arcade::DLLoader &Arcade::DLLoader::getInstance(void)
+{
+    return Arcade::DLLoader::loaderInstance;
 }
 
 std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPath, std::string fst)

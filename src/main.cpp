@@ -10,11 +10,9 @@
 
 int main(int ac, char **av)
 {
-    Arcade::DLLoader dllLoader;
-
     if (ac != 2)
         return 84;
-    std::vector<std::string> oui = dllLoader.getLibraries("./lib/", av[1]);
+    std::vector<std::string> oui = Arcade::DLLoader::getInstance().getLibraries("./lib/", av[1]);
     for (const std::string &value : oui) {
         std::cout << value << std::endl;
     }
