@@ -10,7 +10,7 @@
 
 int main(int ac, char **av)
 {
-    DLLoader dllLoader;
+    Arcade::DLLoader dllLoader;
 
     if (ac != 2)
         return 84;

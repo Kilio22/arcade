@@ -8,14 +8,17 @@
 #ifndef CORE_HPP_
 #define CORE_HPP_
 
-class Core
+namespace Arcade
 {
-    public:
-        Core();
-        ~Core();
+    class Core
+    {
+        public:
+            Core();
+            ~Core();
 
-    protected:
-    private:
-};
+        protected:
+        private:
+    };
+}
 
 #endif /* !CORE_HPP_ */

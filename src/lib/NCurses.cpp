@@ -7,10 +7,15 @@
 
 #include "NCurses.hpp"
 
-NCurses::NCurses()
+extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
+{
+    return std::make_unique<Arcade::Display::NCurses>();
+}
+
+Arcade::Display::NCurses::NCurses()
 {
 }
 
-NCurses::~NCurses()
+Arcade::Display::NCurses::~NCurses()
 {
 }

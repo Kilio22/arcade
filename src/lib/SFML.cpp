@@ -7,10 +7,15 @@
 
 #include "SFML.hpp"
 
-SFML::SFML()
+extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
+{
+    return std::make_unique<Arcade::Display::SFML>();
+}
+
+Arcade::Display::SFML::SFML()
 {
 }
 
-SFML::~SFML()
+Arcade::Display::SFML::~SFML()
 {
 }

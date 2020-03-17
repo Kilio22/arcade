@@ -7,10 +7,15 @@
 
 #include "SDL.hpp"
 
-SDL::SDL()
+extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
+{
+    return std::make_unique<Arcade::Display::SDL>();
+}
+
+Arcade::Display::SDL::SDL()
 {
 }
 
-SDL::~SDL()
+Arcade::Display::SDL::~SDL()
 {
 }

@@ -7,10 +7,10 @@
 
 #include "Core.hpp"
 
-Core::Core()
+Arcade::Core::Core()
 {
 }
 
-Core::~Core()
+Arcade::Core::~Core()
 {
 }

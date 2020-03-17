@@ -7,17 +7,17 @@
 
 #include "DLLoader.hpp"
 
-const std::regex DLLoader::libRegex("lib.+Arcade\\.so");
+const std::regex Arcade::DLLoader::libRegex("lib_arcade_.+\\.so");
 
-DLLoader::DLLoader()
+Arcade::DLLoader::DLLoader()
 {
 }
 
-DLLoader::~DLLoader()
+Arcade::DLLoader::~DLLoader()
 {
 }
 
-std::vector<std::string> DLLoader::getLibraries(const std::string &dirPath, std::string fst)
+std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPath, std::string fst)
 {
     std::vector<std::string> libsPath;
 
@@ -25,12 +25,10 @@ std::vector<std::string> DLLoader::getLibraries(const std::string &dirPath, std:
         fst = "./" + fst;
     }
     std::string firstLibName = fst.substr(fst.find_last_of('/') + 1);
-    if (std::filesystem::is_directory(dirPath) == false) {
+    if (std::filesystem::is_directory(dirPath) == false || std::regex_match(firstLibName, libRegex) == false || this->isValidLib(fst) == false) {
         return libsPath;
     }
-    if (firstLibName.size() > 3 && std::regex_match(firstLibName, libRegex) == true) {
-        libsPath.push_back(fst);
-    }
+    libsPath.push_back(fst);
     for (const auto &entry : std::filesystem::directory_iterator(dirPath)) {
         if (entry.is_regular_file() == false) {
             continue;
@@ -39,7 +37,7 @@ std::vector<std::string> DLLoader::getLibraries(const std::string &dirPath, std:
             continue;
         }
         const std::string libName = entry.path().string().substr(entry.path().string().find_last_of('/') + 1);
-        if (std::regex_match(libName, libRegex) == true && libName.compare(firstLibName) != 0) {
+        if (std::regex_match(libName, libRegex) == true && libName.compare(firstLibName) != 0 && this->isValidLib(entry.path().string()) == true) {
             libsPath.push_back(entry.path().string());
         }
     }
@@ -47,7 +45,7 @@ std::vector<std::string> DLLoader::getLibraries(const std::string &dirPath, std:
 }
 
 template <class T>
-std::unique_ptr<T> DLLoader::loadLibrary(const std::string &path)
+std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path)
 {
     void *handler = dlopen(path.c_str(), RTLD_LAZY);
     createLib_t <T>createLib = nullptr;
@@ -65,4 +63,22 @@ std::unique_ptr<T> DLLoader::loadLibrary(const std::string &path)
     lib = createLib();
     dlclose(handler);
     return lib;
+}
+
+bool Arcade::DLLoader::isValidLib(const std::string &path)
+{
+    void *handler = dlopen(path.c_str(), RTLD_LAZY);
+    void *createLib = nullptr;
+
+    if (!handler) {
+        std::cout << dlerror() << std::endl;
+        return false;
+    }
+    createLib = dlsym(handler, "createLib");
+    if (!createLib) {
+        std::cout << dlerror() << std::endl;
+        return false;
+    }
+    dlclose(handler);
+    return true;
 }

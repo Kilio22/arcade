@@ -23,7 +23,7 @@ CXX	= 	g++
 SRCS	=	$(SRC:%=$(SRC_PATH)/%) $(SRC_PATH)/main.cpp
 OBJ	=	$(SRCS:.cpp=.o)
 
-CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17 -ldl
+CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17
 DEBUG_FLAGS	=	-g3 -gdwarf-4
 
 all: message $(NAME)
@@ -33,7 +33,7 @@ message:
 	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"NANO TEK SPICE"$(DEFAULT)
 
 $(NAME): $(OBJ)
-	@$(CXX) -o $(NAME) $(OBJ) && \
+	@$(CXX) -o $(NAME) $(OBJ) -ldl && \
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
 
