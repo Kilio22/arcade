@@ -23,7 +23,6 @@ Arcade::DLLoader &Arcade::DLLoader::getInstance(void)
     return Arcade::DLLoader::loaderInstance;
 }
 
-// Il faudrait return un && -> On va voir ça
 std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPath, std::string fst)
 {
     std::vector<std::string> libsPath;
