@@ -17,22 +17,22 @@ COLOR_THEME	=	$(BLUE_C)
 DEBUG_THEME	=	$(CYAN_C)
 TESTS_THEME	=	$(RED_C)
 
+SRC_EXCEPTIONS	=	\
+	src/Exceptions/ArcadeException.cpp	\
+	src/Exceptions/BadFileException.cpp
+
 SRC_CORE	= \
 	src/DLLoader.cpp \
 	src/main.cpp
 
-SRC_NCURSES	=	\
+SRC_NCURSES	=	$(SRC_EXCEPTIONS) \
 	src/libs/NCurses.cpp
 
-SRC_SDL	=	\
+SRC_SDL	=	$(SRC_EXCEPTIONS) \
 	src/libs/SDL.cpp
 
-SRC_SFML	=	\
+SRC_SFML	=	$(SRC_EXCEPTIONS) \
 	src/libs/SFML.cpp
-
-SRC_EXCEPTIONS	=	\
-	src/Exceptions/ArcadeException.cpp	\
-	src/Exceptions/BadFileException.cpp	\
 
 OBJ_CORE	:=	$(SRC_CORE:.cpp=.o)
 OBJ_NCURSES	:=	$(SRC_NCURSES:.cpp=.o)
@@ -58,23 +58,23 @@ core: $(OBJ_CORE)
 
 games:
 
-graphicals: CXXFLAGS += -fPIC
 graphicals: ncurses sdl sfml
 
 ncurses: NAME = lib/lib_arcade_ncurses.so
 ncurses: OBJ = $(OBJ_NCURSES)
-ncurses: OBJ += $(OBJ_EXCEPTIONS)
-ncurses: $(OBJ_NCURSES) $(OBJ_EXCEPTIONS) build_ncurses
+ncurses: CXXFLAGS += -fPIC
+ncurses: $(OBJ_NCURSES) build_ncurses
 
 sdl: NAME = lib/lib_arcade_sdl.so
 sdl: OBJ = $(OBJ_SDL)
-sdl: OBJ += $(OBJ_EXCEPTIONS)
-sdl: $(OBJ_SDL) $(OBJ_EXCEPTIONS) build_sdl
+sdl: CXXFLAGS += -fPIC
+sdl: $(OBJ_SDL) build_sdl
 
 sfml: NAME = lib/lib_arcade_sfml.so
 sfml: OBJ = $(OBJ_SFML)
-sfml: OBJ += $(OBJ_EXCEPTIONS)
-sfml: $(OBJ_SFML) $(OBJ_EXCEPTIONS) build_sfml
+sfml: CXXFLAGS += -fPIC
+sfml: LDLIBS = -lsfml-graphics -lsfml-system -lsfml-window
+sfml: $(OBJ_SFML) build_sfml
 
 build_ncurses build_sdl build_sfml: $(OBJ)
 	@$(CXX) -o $(NAME) $(OBJ) $(LDLIBS) -shared && \
@@ -87,7 +87,7 @@ clean:
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
-	@$(RM) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_EXCEPTIONS)
+	@$(RM) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML)
 
 fclean:	clean
 	@$(RM) results.html && \

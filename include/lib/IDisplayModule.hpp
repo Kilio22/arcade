@@ -24,7 +24,8 @@ namespace Arcade::Display
             virtual ~IDisplayModule() = default;
 
             // Limited to the bash color codes in case colors aren't handled by a library
-            enum Colors {
+            enum Colors
+            {
                 DEFAULT,
                 BLACK,
                 RED,
@@ -47,7 +48,8 @@ namespace Arcade::Display
 
             // Keys you have to implement, there are enough keys to have multiple keyboard configurations for every game
             // You only need 6 keys for the core and 6 for the games.
-            enum Keys {
+            enum Keys
+            {
                 LEFT,
                 RIGHT,
                 UP,

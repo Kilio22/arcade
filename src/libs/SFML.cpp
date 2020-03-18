@@ -29,7 +29,7 @@ const std::vector<sf::Color> Arcade::Display::SFML::_libColors = {
     sf::Color::White
 };
 
-const std::vector<sf::Keyboard::Key> _libKeys = {
+const std::vector<sf::Keyboard::Key> Arcade::Display::SFML::_libKeys = {
     sf::Keyboard::Left,
     sf::Keyboard::Right,
     sf::Keyboard::Up,
@@ -145,6 +145,12 @@ void Arcade::Display::SFML::update()
 void Arcade::Display::SFML::render() const
 {
     this->_window->display();
+}
+
+char Arcade::Display::SFML::getKeyCode() const
+{
+    // TODEV
+    return '\0';
 }
 
 void Arcade::Display::SFML::setColor(Colors color)

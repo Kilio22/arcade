@@ -9,6 +9,7 @@
 #define CORE_HPP_
 
 #include <string>
+#include <vector>
 
 namespace Arcade
 {
@@ -18,9 +19,10 @@ namespace Arcade
             Core();
             ~Core();
 
-        protected:
         private:
             std::string _username;
+            std::vector<std::string> libraries;
+            std::vector<std::string> games;
     };
 }
 
