@@ -8,6 +8,8 @@
 #ifndef CORE_HPP_
 #define CORE_HPP_
 
+#include <string>
+
 namespace Arcade
 {
     class Core
@@ -18,6 +20,7 @@ namespace Arcade
 
         protected:
         private:
+            std::string _username;
     };
 }
 

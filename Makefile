@@ -30,10 +30,15 @@ SRC_SDL	=	\
 SRC_SFML	=	\
 	src/libs/SFML.cpp
 
+SRC_EXCEPTIONS	=	\
+	src/Exceptions/ArcadeException.cpp	\
+	src/Exceptions/BadFileException.cpp	\
+
 OBJ_CORE	:=	$(SRC_CORE:.cpp=.o)
 OBJ_NCURSES	:=	$(SRC_NCURSES:.cpp=.o)
 OBJ_SDL		:=	$(SRC_SDL:.cpp=.o)
 OBJ_SFML	:=	$(SRC_SFML:.cpp=.o)
+OBJ_EXCEPTIONS	:=	$(SRC_EXCEPTIONS:.cpp=.o)
 
 CXX	= 	g++
 CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17
@@ -58,15 +63,18 @@ graphicals: ncurses sdl sfml
 
 ncurses: NAME = lib/lib_arcade_ncurses.so
 ncurses: OBJ = $(OBJ_NCURSES)
-ncurses: $(OBJ_NCURSES) build_ncurses
+ncurses: OBJ += $(OBJ_EXCEPTIONS)
+ncurses: $(OBJ_NCURSES) $(OBJ_EXCEPTIONS) build_ncurses
 
 sdl: NAME = lib/lib_arcade_sdl.so
 sdl: OBJ = $(OBJ_SDL)
-sdl: $(OBJ_SDL) build_sdl
+sdl: OBJ += $(OBJ_EXCEPTIONS)
+sdl: $(OBJ_SDL) $(OBJ_EXCEPTIONS) build_sdl
 
 sfml: NAME = lib/lib_arcade_sfml.so
 sfml: OBJ = $(OBJ_SFML)
-sfml: $(OBJ_SFML) build_sfml
+sfml: OBJ += $(OBJ_EXCEPTIONS)
+sfml: $(OBJ_SFML) $(OBJ_EXCEPTIONS) build_sfml
 
 build_ncurses build_sdl build_sfml: $(OBJ)
 	@$(CXX) -o $(NAME) $(OBJ) $(LDLIBS) -shared && \
@@ -79,7 +87,7 @@ clean:
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
-	@$(RM) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML)
+	@$(RM) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_EXCEPTIONS)
 
 fclean:	clean
 	@$(RM) results.html && \

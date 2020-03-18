@@ -9,6 +9,7 @@
 #define SFML_HPP_
 
 #include <memory>
+#include <SFML/Graphics.hpp>
 #include "IDisplayModule.hpp"
 
 namespace Arcade::Display
@@ -20,42 +21,47 @@ namespace Arcade::Display
             ~SFML();
 
             void reset() final;
-            bool isOpen() final;
+            bool isOpen() const final;
 
-            bool switchToNext_lib() final;
-            bool switchToPrevious_lib() final;
-            bool switchToNext_game() final;
-            bool switchToPrevious_game() final;
+            bool switchToNext_lib() const final;
+            bool switchToPrevious_lib() const final;
+            bool switchToNext_game() const final;
+            bool switchToPrevious_game() const final;
 
-            bool shouldBeRestarted() final;
-            bool shouldGoToMenu() final;
-            bool shouldExit() final;
+            bool shouldBeRestarted() const final;
+            bool shouldGoToMenu() const final;
+            bool shouldExit() const final;
 
-            bool isKeyPressed(Keys key) final;
-            bool isKeyPressedOnce(Keys key) final;
+            bool isKeyPressed(IDisplayModule::Keys) const final;
+            bool isKeyPressedOnce(IDisplayModule::Keys) const final;
+            float getDelta() const final;
 
-            float getDelta() final;
-
-            void clear() final;
+            void clear() const final;
             void update() final;
-            void render() final;
+            void render() const final;
 
-            const std::string &getPlayerName() final;
-            void setPlayerName(const std::string &name) final;
+            char getKeyCode() const final;
 
-            void setColor(Colors color) final;
-            void putPixel(float x, float y) final;
-            void putLine(float x1, float y1, float x2, float y2) final;
-            void putRect(float x, float y, float w, float h) final;
-            void putFillRect(float x, float y, float w, float h) final;
-            void putCircle(float x, float y, float rad) final;
-            void putFillCircle(float x, float y, float rad) final;
-            void putText(const std::string &text, float size, float x, float y) final;
+            void setColor(IDisplayModule::Colors col) final;
+            void putPixel(float x, float y) const final;
+            void putLine(float x1, float y1, float x2, float y2) const final;
+            void putRect(float x, float y, float w, float h) const final;
+            void putFillRect(float x, float y, float w, float h) const final;
+            void putCircle(float x, float y, float rad) const final;
+            void putFillCircle(float x, float y, float rad) const final;
+            void putText(const std::string &text, unsigned int size, float x, float y) const final;
 
             const std::string &getLibName() const final;
 
         protected:
         private:
+            std::unique_ptr<sf::RenderWindow> _window;
+            sf::Event _event;
+            Colors _currentColor;
+
+            static const std::string _libName;
+            static const std::vector<sf::Color> _libColors;
+            static const std::vector<sf::Keyboard::Key> _libKeys;
     };
 }
 
