@@ -30,21 +30,25 @@ namespace Arcade::Games
             virtual bool loadFromFile() = 0; // default filename
 
             // save highscores to file return wether it worked or not
-            virtual bool saveToFile(const std::string &filepath) = 0; // with filename
-            virtual bool saveToFile() = 0; // default filename
+            virtual bool saveToFile(const std::string &filepath) const = 0; // with filename
+            virtual bool saveToFile() const = 0; // default filename
 
-            // Set the player's name
+            // Highscores are stored as such :
+            // name1:value1\n
+            // name2:value2\nEOF
+
+            // Set the player's name for the highscore
             virtual void setPlayerName(const std::string &name) = 0;
             // get the best score
-            virtual std::tuple<std::string, int> getHighscore() = 0;
+            virtual std::tuple<std::string, int> getHighscore() const = 0;
             // get the 16 best scores
-            virtual std::vector<std::tuple<std::string, int>> getLatestScores() = 0;
+            virtual std::vector<std::tuple<std::string, int>> getLatestScores() const = 0;
 
             // Handle Game
             // update game
             virtual void update() = 0;
             // display stuff using the lib given as an argument.
-            virtual void render(IDisplayModule &lib) = 0;
+            virtual void render(Arcade::Display::IDisplayModule &lib) const = 0;
             virtual const std::string &getGameName() const = 0;
     };
 }
