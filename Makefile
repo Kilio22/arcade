@@ -5,7 +5,7 @@
 ## This is a fairefichier, made by HeyShafty
 ##
 
-NAME	=	build
+NAME	=	arcade
 ROOT_PATH	=	./
 SRC_NAME	=	src
 TESTS_NAME	=	tests
@@ -17,38 +17,77 @@ COLOR_THEME	=	$(BLUE_C)
 DEBUG_THEME	=	$(CYAN_C)
 TESTS_THEME	=	$(RED_C)
 
-SRC	= DLLoader.cpp
+SRC_CORE	= \
+	src/DLLoader.cpp \
+	src/main.cpp
+
+SRC_NCURSES	=	\
+	src/libs/NCurses.cpp
+
+SRC_SDL	=	\
+	src/libs/SDL.cpp
+
+SRC_SFML	=	\
+	src/libs/SFML.cpp
+
+OBJ_CORE	:=	$(SRC_CORE:.cpp=.o)
+OBJ_NCURSES	:=	$(SRC_NCURSES:.cpp=.o)
+OBJ_SDL		:=	$(SRC_SDL:.cpp=.o)
+OBJ_SFML	:=	$(SRC_SFML:.cpp=.o)
 
 CXX	= 	g++
-SRCS	=	$(SRC:%=$(SRC_PATH)/%) $(SRC_PATH)/main.cpp
-OBJ	=	$(SRCS:.cpp=.o)
-
 CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17
+LDLIBS		=	-ldl
 DEBUG_FLAGS	=	-g3 -gdwarf-4
 
-all: message $(NAME)
+all: message core games graphicals
 
 message:
 	@$(LINE_RETURN)
 	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"NANO TEK SPICE"$(DEFAULT)
 
-$(NAME): $(OBJ)
-	@$(CXX) -o $(NAME) $(OBJ) -ldl && \
+core: $(OBJ_CORE)
+	@$(CXX) -o $(NAME) $(OBJ_CORE) $(LDLIBS) && \
+		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
+		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
+
+games:
+
+graphicals: CXXFLAGS += -fPIC
+graphicals: ncurses sdl sfml
+
+ncurses: NAME = lib/lib_arcade_ncurses.so
+ncurses: OBJ = $(OBJ_NCURSES)
+ncurses: $(OBJ_NCURSES) build_ncurses
+
+sdl: NAME = lib/lib_arcade_sdl.so
+sdl: OBJ = $(OBJ_SDL)
+sdl: $(OBJ_SDL) build_sdl
+
+sfml: NAME = lib/lib_arcade_sfml.so
+sfml: OBJ = $(OBJ_SFML)
+sfml: $(OBJ_SFML) build_sfml
+
+build_ncurses build_sdl build_sfml: $(OBJ)
+	@$(CXX) -o $(NAME) $(OBJ) $(LDLIBS) -shared && \
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
 
 clean:
 	@make fclean -C $(TESTS_PATH) -s SRC="$(SRC)" COLOR_THEME="$(RED_C)"
-	@$(RM) $(OBJ) && \
+	@$(RM) $(OBJ_CORE) && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
+	@$(RM) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML)
 
 fclean:	clean
 	@$(RM) results.html && \
 		$(ECHO) $(RED_C)$(DIM_T)"[fclean] "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"results.html"$(DEFAULT)
 	@$(RM) $(NAME) && \
 		$(ECHO) $(RED_C)$(DIM_T)"[fclean] "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Binary $(NAME)"$(DEFAULT)
+	@$(RM) games/*.so
+	@$(RM) lib/*.so
 
 re: fclean all
 
@@ -57,16 +96,16 @@ debug: COLOR_THEME = $(DEBUG_THEME)
 debug: all
 	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"⚠ DEBUG MODE ACTIVATED ⚠\n"$(DEFAULT)
 
-tests_run:
-	@make -C $(TESTS_PATH) -s \
-		SRC="$(SRC)" \
-		COLOR_THEME="$(TESTS_THEME)"
-	@$(ECHO) $(TESTS_THEME)""
-	@gcovr --exclude tests/ --sort-percentage --branches
-	@$(ECHO) $(BOLD_T)""
-	@gcovr --exclude tests/ --sort-percentage --print-summary
-	@$(ECHO) $(DEFAULT)
-	@gcovr --exclude tests/ --sort-percentage --html-details --html-title "Unit tests" --html-medium-threshold 40 --html-high-threshold 75 > results.html
+# tests_run:
+# 	@make -C $(TESTS_PATH) -s \
+# 		SRC="$(SRC)" \
+# 		COLOR_THEME="$(TESTS_THEME)"
+# 	@$(ECHO) $(TESTS_THEME)""
+# 	@gcovr --exclude tests/ --sort-percentage --branches
+# 	@$(ECHO) $(BOLD_T)""
+# 	@gcovr --exclude tests/ --sort-percentage --print-summary
+# 	@$(ECHO) $(DEFAULT)
+# 	@gcovr --exclude tests/ --sort-percentage --html-details --html-title "Unit tests" --html-medium-threshold 40 --html-high-threshold 75 > results.html
 
 %.o: %.cpp
 	@$(CXX) -c $(CXXFLAGS) -o $@ $< && \

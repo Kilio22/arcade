@@ -12,18 +12,20 @@
 #include <vector>
 #include <tuple>
 
-#define SAVE_PATH "games/.saves/"
+#define SAVE_PATH "./games/.saves/"
 #define WIDTH 640
 #define HEIGHT 480
 
 namespace Arcade::Display
 {
-    class IDisplayModule {
+    class IDisplayModule
+    {
         public:
             virtual ~IDisplayModule() = default;
 
             // Limited to the bash color codes in case colors aren't handled by a library
-            enum Colors {
+            enum Colors
+            {
                 DEFAULT,
                 BLACK,
                 RED,
@@ -46,7 +48,8 @@ namespace Arcade::Display
 
             // Keys you have to implement, there are enough keys to have multiple keyboard configurations for every game
             // You only need 6 keys for the core and 6 for the games.
-            enum Keys {
+            enum Keys
+            {
                 LEFT,
                 RIGHT,
                 UP,
@@ -90,8 +93,8 @@ namespace Arcade::Display
             virtual bool shouldExit() = 0;
 
             // Handle Inputs & Events
-            virtual bool isKeyPressed(IDisplayModule::Keys) = 0;
-            virtual bool isKeyPressedOnce(IDisplayModule::Keys) = 0;
+            virtual bool isKeyPressed(Keys key) = 0;
+            virtual bool isKeyPressedOnce(Keys key) = 0;
             // Get the number of frames that passed between two calls to this function
             // The games should not be frame dependant!! That's why this is here.
             virtual float getDelta() = 0;
@@ -107,13 +110,13 @@ namespace Arcade::Display
 
             // Handle Text Input
             // We need to ask for the player's name (check the pdf before complaining and asking about this function)
-            virtual std::string getPlayerName() = 0;
-            virtual void setPlayerName(std::string) = 0;
+            virtual const std::string &getPlayerName() = 0;
+            virtual void setPlayerName(const std::string &name) = 0;
 
             // Display Stuff
             // Sets the color for all the following draw functions.
             // everything you display after this will have the selected color
-            virtual void setColor(IDisplayModule::Colors col) = 0;
+            virtual void setColor(Colors color) = 0;
             // Display a pixel
             virtual void putPixel(float x, float y) = 0;
             // Display a line
@@ -127,14 +130,14 @@ namespace Arcade::Display
             // Display a full circle
             virtual void putFillCircle(float x, float y, float rad) = 0;
             // Display some text
-            virtual void putText(std::string text, float size, float x, float y) = 0;
+            virtual void putText(const std::string &text, float size, float x, float y) = 0;
 
             // We chose not to display images because some library can't and it would cause other problems
             // You can still parse a file and display pixel art images by displaying pixels manually if you want.
 
             // Strictly for debugging purposes, get the library's name (ncurses/sfm/sdl/libcaca etc etc)
-            virtual std::string getLibName() const = 0;
+            virtual const std::string &getLibName() const = 0;
     };
-}
+} // namespace Arcade::Display
 
 #endif /* !IDISPLAYMODULE_HPP_ */

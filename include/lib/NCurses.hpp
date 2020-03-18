@@ -31,8 +31,8 @@ namespace Arcade::Display
             bool shouldGoToMenu() final;
             bool shouldExit() final;
 
-            bool isKeyPressed(IDisplayModule::Keys) final;
-            bool isKeyPressedOnce(IDisplayModule::Keys) final;
+            bool isKeyPressed(Keys key) final;
+            bool isKeyPressedOnce(Keys key) final;
 
             float getDelta() final;
 
@@ -40,19 +40,19 @@ namespace Arcade::Display
             void update() final;
             void render() final;
 
-            std::string getPlayerName() final;
-            void setPlayerName(std::string) final;
+            const std::string &getPlayerName() final;
+            void setPlayerName(const std::string &name) final;
 
-            void setColor(IDisplayModule::Colors col) final;
+            void setColor(Colors color) final;
             void putPixel(float x, float y) final;
             void putLine(float x1, float y1, float x2, float y2) final;
             void putRect(float x, float y, float w, float h) final;
             void putFillRect(float x, float y, float w, float h) final;
             void putCircle(float x, float y, float rad) final;
             void putFillCircle(float x, float y, float rad) final;
-            void putText(std::string text, float size, float x, float y) final;
+            void putText(const std::string &text, float size, float x, float y) final;
 
-            std::string getLibName() const final;
+            const std::string &getLibName() const final;
 
         protected:
         private:

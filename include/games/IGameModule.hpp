@@ -15,7 +15,8 @@
 
 namespace Arcade::Games
 {
-    class IGameModule {
+    class IGameModule
+    {
         public:
             virtual ~IGameModule() = default;
 
@@ -25,15 +26,15 @@ namespace Arcade::Games
             virtual void reset() = 0;
 
             // Load highscores from file and return wether it worked or not
-            virtual bool loadFromFile(std::string filepath) = 0; // with filename
+            virtual bool loadFromFile(const std::string &filepath) = 0; // with filename
             virtual bool loadFromFile() = 0; // default filename
 
             // save highscores to file return wether it worked or not
-            virtual bool saveToFile(std::string filepath) = 0; // with filename
+            virtual bool saveToFile(const std::string &filepath) = 0; // with filename
             virtual bool saveToFile() = 0; // default filename
 
             // Set the player's name
-            virtual void setPlayerName(std::string) = 0;
+            virtual void setPlayerName(const std::string &name) = 0;
             // get the best score
             virtual std::tuple<std::string, int> getHighscore() = 0;
             // get the 16 best scores
@@ -43,8 +44,8 @@ namespace Arcade::Games
             // update game
             virtual void update() = 0;
             // display stuff using the lib given as an argument.
-            virtual void render(Arcade::Display::IDisplayModule &lib) = 0;
-            virtual std::string getGameName() const = 0;
+            virtual void render(IDisplayModule &lib) = 0;
+            virtual const std::string &getGameName() const = 0;
     };
 }
 
