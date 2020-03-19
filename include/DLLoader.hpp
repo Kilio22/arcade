@@ -28,12 +28,31 @@ namespace Arcade
             ~DLLoader();
 
             bool isValidLib(const std::string &path);
-            std::vector<std::string> getLibraries(const std::string &dirPath, std::string fst);
-            template <class T>
-            std::unique_ptr<T> loadLibrary(const std::string &path);
+            std::vector<std::string> getLibraries(const std::string &dirPath);
 
             template <class T>
             using createLib_t = std::unique_ptr<T> (*)(void);
+
+            template <class T>
+            std::unique_ptr<T> loadLibrary(const std::string &path)
+            {
+                void *handler = dlopen(path.c_str(), RTLD_NOW | RTLD_NODELETE);
+                createLib_t<T> createLib = nullptr;
+                std::unique_ptr<T> lib = nullptr;
+
+                if (!handler) {
+                    std::cout << dlerror() << std::endl;
+                    return nullptr;
+                }
+                createLib = (createLib_t<T>)dlsym(handler, "createLib");
+                if (!createLib) {
+                    std::cout << dlerror() << std::endl;
+                    return nullptr;
+                }
+                lib = createLib();
+                dlclose(handler);
+                return lib;
+            }
 
         protected:
         private:

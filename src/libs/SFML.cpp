@@ -80,42 +80,42 @@ bool Arcade::Display::SFML::isOpen() const
 
 bool Arcade::Display::SFML::switchToNextLib() const
 {
-    return this->_libKeys.at(Keys::RIGHT);
+    return this->_events.at(Keys::RIGHT);
 }
 
 bool Arcade::Display::SFML::switchToPreviousLib() const
 {
-    return this->_libKeys.at(Keys::LEFT);
+    return this->_events.at(Keys::LEFT);
 }
 
 bool Arcade::Display::SFML::switchToNextGame() const
 {
-    return this->_libKeys.at(Keys::UP);
+    return this->_events.at(Keys::UP);
 }
 
 bool Arcade::Display::SFML::switchToPreviousGame() const
 {
-    return this->_libKeys.at(Keys::DOWN);
+    return this->_events.at(Keys::DOWN);
 }
 
 bool Arcade::Display::SFML::shouldBeRestarted() const
 {
-    return this->_libKeys.at(Keys::R);
+    return this->_events.at(Keys::R);
 }
 
 bool Arcade::Display::SFML::shouldGoToMenu() const
 {
-    return this->_libKeys.at(Keys::M);
+    return this->_events.at(Keys::M);
 }
 
 bool Arcade::Display::SFML::shouldExit() const
 {
-    return this->_libKeys.at(Keys::ESCAPE);
+    return this->_events.at(Keys::ESCAPE);
 }
 
 bool Arcade::Display::SFML::isKeyPressed(Keys key) const
 {
-    return this->_libKeys.at(key);
+    return this->_events.at(key);
 }
 
 bool Arcade::Display::SFML::isKeyPressedOnce(Keys key) const
@@ -135,6 +135,7 @@ void Arcade::Display::SFML::clear() const
 
 void Arcade::Display::SFML::update()
 {
+    this->_events.assign(Keys::KEYS_END, false);
     while (this->_window->pollEvent(this->_event)) {
         if (this->_event.type == sf::Event::KeyPressed) {
             auto found = std::find(this->_libKeys.begin(),this->_libKeys.end(), this->_event.key.code);
@@ -229,7 +230,7 @@ void Arcade::Display::SFML::putText(const std::string &text, unsigned int size, 
     sf::Text newText;
     sf::Font newFont;
 
-    if (newFont.loadFromFile("../assets/pixelmix_bold.ttf") == false)
+    if (newFont.loadFromFile("./assets/pixelmix_bold.ttf") == false)
         throw Arcade::Exceptions::BadFileException("Cannot load font", "putText");
     newText.setFont(newFont);
     newText.setFillColor(this->_libColors.at(this->_currentColor));
