@@ -58,7 +58,7 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 }
 
 Arcade::Display::SFML::SFML()
-    : _currentColor(WHITE)
+    : _currentColor(WHITE), _events(Keys::KEYS_END, false)
 {
     this->_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT), "Aracde");
 }
@@ -78,58 +78,54 @@ bool Arcade::Display::SFML::isOpen() const
     return this->_window->isOpen();
 }
 
-bool Arcade::Display::SFML::switchToNext_lib() const
+bool Arcade::Display::SFML::switchToNextLib() const
 {
-    return false;
+    return this->_libKeys.at(Keys::RIGHT);
 }
 
-bool Arcade::Display::SFML::switchToPrevious_lib() const
+bool Arcade::Display::SFML::switchToPreviousLib() const
 {
-    return false;
+    return this->_libKeys.at(Keys::LEFT);
 }
 
-bool Arcade::Display::SFML::switchToNext_game() const
+bool Arcade::Display::SFML::switchToNextGame() const
 {
-    return false;
+    return this->_libKeys.at(Keys::UP);
 }
 
-bool Arcade::Display::SFML::switchToPrevious_game() const
+bool Arcade::Display::SFML::switchToPreviousGame() const
 {
-    return false;
+    return this->_libKeys.at(Keys::DOWN);
 }
 
 bool Arcade::Display::SFML::shouldBeRestarted() const
 {
-    return false;
+    return this->_libKeys.at(Keys::R);
 }
 
 bool Arcade::Display::SFML::shouldGoToMenu() const
 {
-    return false;
+    return this->_libKeys.at(Keys::M);
 }
 
 bool Arcade::Display::SFML::shouldExit() const
 {
-    if (this->_event.type == sf::Event::Closed)
-        return true;
-    if (this->_event.type == sf::Event::KeyPressed && this->_event.key.code == this->_libKeys.at(Keys::ESCAPE))
-        return true;
-    return false;
+    return this->_libKeys.at(Keys::ESCAPE);
 }
 
 bool Arcade::Display::SFML::isKeyPressed(Keys key) const
 {
-    return this->_event.type == sf::Event::KeyPressed && this->_event.key.code == this->_libKeys.at(key);
+    return this->_libKeys.at(key);
 }
 
 bool Arcade::Display::SFML::isKeyPressedOnce(Keys key) const
 {
-    return this->_event.type == sf::Event::KeyPressed && this->_event.key.code == this->_libKeys.at(key);
+    return this->_events.at(key);
 }
 
 float Arcade::Display::SFML::getDelta() const
 {
-    return 0;
+    return 1;
 }
 
 void Arcade::Display::SFML::clear() const
@@ -139,7 +135,13 @@ void Arcade::Display::SFML::clear() const
 
 void Arcade::Display::SFML::update()
 {
-    while (this->_window->pollEvent(this->_event));
+    while (this->_window->pollEvent(this->_event)) {
+        if (this->_event.type == sf::Event::KeyPressed) {
+            auto found = std::find(this->_libKeys.begin(),this->_libKeys.end(), this->_event.key.code);
+            if (found != this->_libKeys.end())
+                this->_events[std::distance(this->_libKeys.begin(), found)] = true;
+        }
+    }
 }
 
 void Arcade::Display::SFML::render() const
@@ -149,8 +151,13 @@ void Arcade::Display::SFML::render() const
 
 char Arcade::Display::SFML::getKeyCode() const
 {
-    // TODEV
-    return '\0';
+    if (this->_event.type != sf::Event::TextEntered)
+        return '\0';
+    if (this->_event.text.unicode == '\b')
+        return this->_event.text.unicode;
+    if (this->_event.text.unicode < ' ' || this->_event.text.unicode > 'z')
+        return '\0';
+    return this->_event.text.unicode;
 }
 
 void Arcade::Display::SFML::setColor(Colors color)

@@ -83,10 +83,10 @@ namespace Arcade::Display
             // Those are all key presses
             // Those must be different than the keys listed in the Keys enum.
             // The keys enum only lists keys used by games, not special keys to switch libraries.
-            virtual bool switchToNext_lib() const = 0;
-            virtual bool switchToPrevious_lib() const = 0;
-            virtual bool switchToNext_game() const = 0;
-            virtual bool switchToPrevious_game() const = 0;
+            virtual bool switchToNextLib() const = 0;
+            virtual bool switchToPreviousLib() const = 0;
+            virtual bool switchToNextGame() const = 0;
+            virtual bool switchToPreviousGame() const = 0;
             // From the pdf
             virtual bool shouldBeRestarted() const = 0;
             virtual bool shouldGoToMenu() const = 0;

@@ -22,10 +22,10 @@ namespace Arcade::Display
             void reset() final;
             bool isOpen() const final;
 
-            bool switchToNext_lib() const final;
-            bool switchToPrevious_lib() const final;
-            bool switchToNext_game() const final;
-            bool switchToPrevious_game() const final;
+            bool switchToNextLib() const final;
+            bool switchToPreviousLib() const final;
+            bool switchToNextGame() const final;
+            bool switchToPreviousGame() const final;
 
             bool shouldBeRestarted() const final;
             bool shouldGoToMenu() const final;

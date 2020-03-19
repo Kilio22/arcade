@@ -38,7 +38,6 @@ OBJ_CORE	:=	$(SRC_CORE:.cpp=.o)
 OBJ_NCURSES	:=	$(SRC_NCURSES:.cpp=.o)
 OBJ_SDL		:=	$(SRC_SDL:.cpp=.o)
 OBJ_SFML	:=	$(SRC_SFML:.cpp=.o)
-OBJ_EXCEPTIONS	:=	$(SRC_EXCEPTIONS:.cpp=.o)
 
 CXX	= 	g++
 CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17
