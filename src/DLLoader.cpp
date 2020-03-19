@@ -6,6 +6,8 @@
 */
 
 #include "DLLoader.hpp"
+#include "lib/IDisplayModule.hpp"
+#include "games/IGameModule.hpp"
 
 const std::regex Arcade::DLLoader::libRegex("lib_arcade_.+\\.so");
 Arcade::DLLoader Arcade::DLLoader::loaderInstance;
@@ -59,3 +61,27 @@ bool Arcade::DLLoader::isValidLib(const std::string &path)
     dlclose(handler);
     return true;
 }
+
+template <class T>
+std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path)
+{
+    void *handler = dlopen(path.c_str(), RTLD_NOW | RTLD_NODELETE);
+    createLib_t<T> createLib = nullptr;
+    std::unique_ptr<T> lib = nullptr;
+
+    if (!handler) {
+        std::cout << dlerror() << std::endl;
+        return nullptr;
+    }
+    createLib = (createLib_t<T>)dlsym(handler, "createLib");
+    if (!createLib) {
+        std::cout << dlerror() << std::endl;
+        return nullptr;
+    }
+    lib = createLib();
+    dlclose(handler);
+    return lib;
+}
+
+template std::unique_ptr<Arcade::Display::IDisplayModule> Arcade::DLLoader::loadLibrary(const std::string &path);
+template std::unique_ptr<Arcade::Games::IGameModule> Arcade::DLLoader::loadLibrary(const std::string &path);

@@ -11,7 +11,7 @@
 #include <string>
 #include <tuple>
 #include <vector>
-#include "IDisplayModule.hpp"
+#include "lib/IDisplayModule.hpp"
 
 namespace Arcade::Games
 {
