@@ -17,7 +17,7 @@ Arcade::Core::Core(const std::string &startLibraryPath)
     : username(defaultUsername),
     libraries(DLLoader::getInstance().getLibraries(ARCADE_LIB_PATH)),
     games(DLLoader::getInstance().getLibraries(ARCADE_GAMES_PATH)),
-    iGame(-1),
+    iGame(CORE_MENU_INDEX),
     displayModule(DLLoader::getInstance().loadLibrary<Display::IDisplayModule>(startLibraryPath)),
     gameModule(nullptr)
 {
@@ -48,8 +48,13 @@ void Arcade::Core::play()
             this->switchGame(NEXT);
         if (this->displayModule->switchToPreviousGame() == true)
             this->switchGame(PREV);
-        this->displayModule->putText("Hello, World!", 30, 100, 100);
-        this->displayModule->render();
+        if (this->iGame == CORE_MENU_INDEX) {
+            this->displayModule->putText("Hello, World!", 30, 100, 100);
+            this->displayModule->render();
+        } else {
+            this->gameModule->update();
+            this->gameModule->render(*this->displayModule);
+        }
     }
 }
 

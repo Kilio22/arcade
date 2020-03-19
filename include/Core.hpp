@@ -13,6 +13,8 @@
 #include "games/IGameModule.hpp"
 #include "lib/IDisplayModule.hpp"
 
+#define CORE_MENU_INDEX -1
+
 namespace Arcade
 {
     class Core
