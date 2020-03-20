@@ -58,7 +58,7 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 }
 
 Arcade::Display::SFML::SFML()
-    : _currentColor(WHITE), _events(Keys::KEYS_END, false)
+    : _currentColor(Colors::DEFAULT), _events(Keys::KEYS_END, false), _keyCode('\0')
 {
     this->_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT), "Aracde");
 }
@@ -142,6 +142,9 @@ void Arcade::Display::SFML::update()
             if (found != this->_libKeys.end())
                 this->_events[std::distance(this->_libKeys.begin(), found)] = true;
         }
+        if (this->_event.type == sf::Event::TextEntered) {
+            this->_keyCode = this->_event.text.unicode;
+        }
     }
 }
 
@@ -152,13 +155,11 @@ void Arcade::Display::SFML::render() const
 
 char Arcade::Display::SFML::getKeyCode() const
 {
-    if (this->_event.type != sf::Event::TextEntered)
+    if (this->_keyCode == '\b')
+        return this->_keyCode;
+    if (this->_keyCode < ' ' || this->_keyCode > 'z')
         return '\0';
-    if (this->_event.text.unicode == '\b')
-        return this->_event.text.unicode;
-    if (this->_event.text.unicode < ' ' || this->_event.text.unicode > 'z')
-        return '\0';
-    return this->_event.text.unicode;
+    return this->_keyCode;
 }
 
 void Arcade::Display::SFML::setColor(Colors color)
