@@ -19,10 +19,12 @@ TESTS_THEME	=	$(RED_C)
 
 SRC_EXCEPTIONS	=	\
 	src/Exceptions/ArcadeException.cpp	\
-	src/Exceptions/BadFileException.cpp
+	src/Exceptions/BadFileException.cpp \
+	src/Exceptions/InvalidLibraryException.cpp
 
-SRC_CORE	= \
+SRC_CORE	=	$(SRC_EXCEPTIONS) \
 	src/DLLoader.cpp \
+	src/Core.cpp \
 	src/main.cpp
 
 SRC_NCURSES	=	$(SRC_EXCEPTIONS) \
@@ -34,28 +36,29 @@ SRC_SDL	=	$(SRC_EXCEPTIONS) \
 SRC_SFML	=	$(SRC_EXCEPTIONS) \
 	src/libs/SFML.cpp
 
-OBJ_CORE	:=	$(SRC_CORE:.cpp=.o)
-OBJ_NCURSES	:=	$(SRC_NCURSES:.cpp=.o)
-OBJ_SDL		:=	$(SRC_SDL:.cpp=.o)
-OBJ_SFML	:=	$(SRC_SFML:.cpp=.o)
+OBJ_CORE	=	$(SRC_CORE:.cpp=.o)
+OBJ_NCURSES	=	$(SRC_NCURSES:.cpp=.o)
+OBJ_SDL		=	$(SRC_SDL:.cpp=.o)
+OBJ_SFML	=	$(SRC_SFML:.cpp=.o)
+OBJ_EXCEPTIONS	=	$(SRC_EXCEPTIONS:.cpp=.o)
 
 CXX	= 	g++
 CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17
 LDLIBS		=	-ldl
 DEBUG_FLAGS	=	-g3 -gdwarf-4
 
-all: message core games graphicals
+all: message core graphicals games
 
 message:
 	@$(LINE_RETURN)
 	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"NANO TEK SPICE"$(DEFAULT)
 
-core: $(OBJ_CORE)
+core: exceptions $(OBJ_CORE)
 	@$(CXX) -o $(NAME) $(OBJ_CORE) $(LDLIBS) && \
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
 
-games:
+games: exceptions
 
 graphicals: ncurses sdl sfml
 
@@ -75,10 +78,13 @@ sfml: CXXFLAGS += -fPIC
 sfml: LDLIBS = -lsfml-graphics -lsfml-system -lsfml-window
 sfml: $(OBJ_SFML) build_sfml
 
-build_ncurses build_sdl build_sfml: $(OBJ)
+build_ncurses build_sdl build_sfml: exceptions $(OBJ)
 	@$(CXX) -o $(NAME) $(OBJ) $(LDLIBS) -shared && \
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
+
+exceptions: CXXFLAGS += -fPIC
+exceptions: $(OBJ_EXCEPTIONS)
 
 clean:
 	@make fclean -C $(TESTS_PATH) -s SRC="$(SRC)" COLOR_THEME="$(RED_C)"
@@ -86,7 +92,7 @@ clean:
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
-	@$(RM) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML)
+	@$(RM) $(OBJ_EXCEPTIONS) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML)
 
 fclean:	clean
 	@$(RM) results.html && \

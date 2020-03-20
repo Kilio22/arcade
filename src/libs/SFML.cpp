@@ -232,7 +232,7 @@ void Arcade::Display::SFML::putText(const std::string &text, unsigned int size, 
     sf::Font newFont;
 
     if (newFont.loadFromFile("./assets/pixelmix_bold.ttf") == false)
-        throw Arcade::Exceptions::BadFileException("Cannot load font", "putText");
+        throw Arcade::Exceptions::BadFileException("Cannot load font", "SFML::putText");
     newText.setFont(newFont);
     newText.setFillColor(this->_libColors.at(this->_currentColor));
     newText.setCharacterSize(size);
