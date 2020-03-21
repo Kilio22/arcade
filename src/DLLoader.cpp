@@ -16,16 +16,12 @@ Arcade::DLLoader::DLLoader()
 {
 }
 
-Arcade::DLLoader::~DLLoader()
-{
-}
-
-Arcade::DLLoader &Arcade::DLLoader::getInstance(void)
+Arcade::DLLoader const &Arcade::DLLoader::getInstance(void)
 {
     return Arcade::DLLoader::loaderInstance;
 }
 
-std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPath)
+std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPath) const
 {
     std::vector<std::string> libsPath;
 
@@ -47,7 +43,7 @@ std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPa
     return libsPath;
 }
 
-bool Arcade::DLLoader::isValidLib(const std::string &path)
+bool Arcade::DLLoader::isValidLib(const std::string &path) const
 {
     void *handler = dlopen(path.c_str(), RTLD_NOW);
     void *createLib = nullptr;
@@ -66,7 +62,7 @@ bool Arcade::DLLoader::isValidLib(const std::string &path)
 }
 
 template <class T>
-std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path)
+std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path) const
 {
     void *handler = dlopen(path.c_str(), RTLD_NOW | RTLD_NODELETE);
     createLib_t<T> createLib = nullptr;
@@ -86,5 +82,5 @@ std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path)
     return lib;
 }
 
-template std::unique_ptr<Arcade::Display::IDisplayModule> Arcade::DLLoader::loadLibrary(const std::string &path);
-template std::unique_ptr<Arcade::Games::IGameModule> Arcade::DLLoader::loadLibrary(const std::string &path);
+template std::unique_ptr<Arcade::Display::IDisplayModule> Arcade::DLLoader::loadLibrary(const std::string &path) const;
+template std::unique_ptr<Arcade::Games::IGameModule> Arcade::DLLoader::loadLibrary(const std::string &path) const;
