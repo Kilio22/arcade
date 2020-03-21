@@ -9,6 +9,7 @@
 #define SDL_HPP_
 
 #include <memory>
+#include <SDL2/SDL.h>
 #include "IDisplayModule.hpp"
 
 namespace Arcade::Display
@@ -54,6 +55,16 @@ namespace Arcade::Display
 
         protected:
         private:
+            SDL_Window *_window;
+            SDL_Surface *_surface;
+            SDL_Renderer *_renderer;
+            Colors _currentColor;
+            std::vector<bool> _events;
+            char _keyCode;
+
+            static const std::vector<SDL_Scancode> _libKeys;
+            static const std::vector<SDL_Color> _libColors;
+            static const std::string _libName;
     };
 }
 

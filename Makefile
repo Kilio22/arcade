@@ -20,7 +20,8 @@ TESTS_THEME	=	$(RED_C)
 SRC_EXCEPTIONS	=	\
 	src/Exceptions/ArcadeException.cpp	\
 	src/Exceptions/BadFileException.cpp \
-	src/Exceptions/InvalidLibraryException.cpp
+	src/Exceptions/BadInstanciationException.cpp \
+	src/Exceptions/InvalidLibraryException.cpp	\
 
 SRC_CORE	=	$(SRC_EXCEPTIONS) \
 	src/DLLoader.cpp \
@@ -70,6 +71,7 @@ ncurses: $(OBJ_NCURSES) build_ncurses
 sdl: NAME = lib/lib_arcade_sdl.so
 sdl: OBJ = $(OBJ_SDL)
 sdl: CXXFLAGS += -fPIC
+sdl: LDLIBS = -lSDL2 -lSDL2_ttf
 sdl: $(OBJ_SDL) build_sdl
 
 sfml: NAME = lib/lib_arcade_sfml.so
@@ -106,7 +108,7 @@ re: fclean all
 
 debug: CXXFLAGS += $(DEBUG_FLAGS)
 debug: COLOR_THEME = $(DEBUG_THEME)
-debug: all
+debug: re
 	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"⚠ DEBUG MODE ACTIVATED ⚠\n"$(DEFAULT)
 
 # tests_run:

@@ -29,6 +29,9 @@ std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPa
 {
     std::vector<std::string> libsPath;
 
+    if (std::filesystem::is_directory(dirPath) == false) {
+        return {};
+    }
     for (const auto &entry : std::filesystem::directory_iterator(dirPath)) {
         if (entry.is_regular_file() == false) {
             continue;
