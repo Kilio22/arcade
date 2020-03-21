@@ -83,6 +83,7 @@ Arcade::Display::SDL::SDL()
         throw Arcade::Exceptions::BadInstanciationException("Renderer creation failed.", "SDL Ctor");
     }
     SDL_StartTextInput();
+    SDL_SetRenderDrawColor(this->_renderer, this->_libColors.at(this->_currentColor).r, this->_libColors.at(this->_currentColor).g, this->_libColors.at(this->_currentColor).b, 255); // set to current color
 }
 
 Arcade::Display::SDL::~SDL()
