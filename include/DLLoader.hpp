@@ -21,16 +21,16 @@ namespace Arcade
     class DLLoader
     {
         public:
-            static DLLoader &getInstance(void);
+            static DLLoader const &getInstance(void);
             DLLoader(DLLoader const &) = delete;
             void operator=(DLLoader const &) = delete;
 
-            ~DLLoader();
+            ~DLLoader() = default;
 
-            bool isValidLib(const std::string &path);
-            std::vector<std::string> getLibraries(const std::string &dirPath);
+            bool isValidLib(const std::string &path) const;
+            std::vector<std::string> getLibraries(const std::string &dirPath) const;
             template <class T>
-            std::unique_ptr<T> loadLibrary(const std::string &path);
+            std::unique_ptr<T> loadLibrary(const std::string &path) const;
 
             template <class T>
             using createLib_t = std::unique_ptr<T> (*)(void);
