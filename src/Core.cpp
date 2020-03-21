@@ -52,7 +52,7 @@ void Arcade::Core::play()
             this->displayModule->putText("Hello, World!", 30, 100, 100);
             this->displayModule->render();
         } else {
-            this->gameModule->update();
+            this->gameModule->update(*this->displayModule);
             this->gameModule->render(*this->displayModule);
         }
     }

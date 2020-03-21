@@ -34,8 +34,8 @@ namespace Arcade::Games
             virtual bool saveToFile() const = 0; // default filename
 
             // Highscores are stored as such :
-            // name1:value1\n
-            // name2:value2\nEOF
+            // "name:value\n
+            // name2:value2\nEOF"
 
             // Set the player's name for the highscore
             virtual void setPlayerName(const std::string &name) = 0;
@@ -46,7 +46,7 @@ namespace Arcade::Games
 
             // Handle Game
             // update game
-            virtual void update() = 0;
+            virtual void update(const Arcade::Display::IDisplayModule &lib) = 0;
             // display stuff using the lib given as an argument.
             virtual void render(Arcade::Display::IDisplayModule &lib) const = 0;
             virtual const std::string &getGameName() const = 0;
