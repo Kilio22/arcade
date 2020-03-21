@@ -53,7 +53,6 @@ namespace Arcade::Display
 
             const std::string &getLibName() const final;
 
-        protected:
         private:
             std::unique_ptr<sf::RenderWindow> _window;
             Colors _currentColor;

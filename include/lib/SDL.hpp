@@ -53,7 +53,6 @@ namespace Arcade::Display
 
             const std::string &getLibName() const final;
 
-        protected:
         private:
             SDL_Window *_window;
             SDL_Surface *_surface;

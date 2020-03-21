@@ -44,7 +44,7 @@ OBJ_SFML	=	$(SRC_SFML:.cpp=.o)
 OBJ_EXCEPTIONS	=	$(SRC_EXCEPTIONS:.cpp=.o)
 
 CXX	= 	g++
-CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17
+CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17 -O2
 LDLIBS		=	-ldl
 DEBUG_FLAGS	=	-g3 -gdwarf-4
 

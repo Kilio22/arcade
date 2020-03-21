@@ -27,7 +27,7 @@ namespace Arcade
             };
 
         public:
-            Core(const std::string &startLibraryPath);
+            explicit Core(const std::string &startLibraryPath);
             ~Core() = default;
 
             void play();

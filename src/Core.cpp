@@ -25,6 +25,7 @@ Arcade::Core::Core(const std::string &startLibraryPath)
         throw Exceptions::InvalidLibraryException("Given library could not be loaded.", "Core::Core");
     // if (this->games.empty())
     //     throw Exceptions::InvalidLibraryException("There are no available games to play.", "Core::Core");
+    // TODEV: sometimes the find may not work even though the path is fine
     this->iLib = std::distance(this->libraries.begin(),
                                std::find(this->libraries.begin(),
                                          this->libraries.end(),
