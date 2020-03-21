@@ -56,7 +56,6 @@ namespace Arcade::Display
         protected:
         private:
             std::unique_ptr<sf::RenderWindow> _window;
-            sf::Event _event;
             Colors _currentColor;
             std::vector<bool> _events;
             char _keyCode;

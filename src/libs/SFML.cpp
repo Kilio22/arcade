@@ -135,15 +135,17 @@ void Arcade::Display::SFML::clear() const
 
 void Arcade::Display::SFML::update()
 {
+    sf::Event event;
+
     this->_events.assign(Keys::KEYS_END, false);
-    while (this->_window->pollEvent(this->_event)) {
-        if (this->_event.type == sf::Event::KeyPressed) {
-            auto found = std::find(this->_libKeys.begin(),this->_libKeys.end(), this->_event.key.code);
+    while (this->_window->pollEvent(event)) {
+        if (event.type == sf::Event::KeyPressed) {
+            auto found = std::find(this->_libKeys.begin(),this->_libKeys.end(), event.key.code);
             if (found != this->_libKeys.end())
                 this->_events[std::distance(this->_libKeys.begin(), found)] = true;
         }
-        if (this->_event.type == sf::Event::TextEntered) {
-            this->_keyCode = this->_event.text.unicode;
+        if (event.type == sf::Event::TextEntered) {
+            this->_keyCode = event.text.unicode;
         }
     }
 }
