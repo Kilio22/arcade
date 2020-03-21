@@ -8,18 +8,17 @@
 #ifndef ARCADEEXCEPTION_HPP_
 #define ARCADEEXCEPTION_HPP_
 
-#include <exception>
+#include <stdexcept>
 #include <string>
 
 namespace Arcade::Exceptions
 {
-    class ArcadeException : public std::exception
+    class ArcadeException : public std::runtime_error
     {
         public:
             ArcadeException(std::string const &message, std::string const &component);
             ~ArcadeException() = default;
 
-            const char *what(void) const noexcept;
             std::string const &getComponent(void) const noexcept;
 
         protected:

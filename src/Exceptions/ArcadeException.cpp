@@ -8,13 +8,8 @@
 #include "Exceptions/ArcadeException.hpp"
 
 Arcade::Exceptions::ArcadeException::ArcadeException(std::string const &message, std::string const &component)
-    : _message(message), _component(component)
+    : std::runtime_error(message), _component(component)
 {
-}
-
-const char *Arcade::Exceptions::ArcadeException::what(void) const noexcept
-{
-    return this->_message.c_str();
 }
 
 std::string const &Arcade::Exceptions::ArcadeException::getComponent(void) const noexcept
