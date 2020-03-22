@@ -116,7 +116,7 @@ void Arcade::Core::displayOverlay() const
     }
     /* Pas encore de jeux xdxd */
     this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_YELLOW);
-    this->displayModule->putText("Scores: " + std::to_string(xdd.size()), 20, 10, y += 60);
+    this->displayModule->putText("Scores: " + std::to_string(xdd.size()), 20, 10, y += 200);
         for (auto &score : xdd)
             this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, 10, y += 40);
     /* Décommenter ci-dessous quand y'a des jeux xdxd */
