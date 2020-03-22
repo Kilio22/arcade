@@ -77,7 +77,7 @@ void Arcade::Display::SFML::reset()
 
 void Arcade::Display::SFML::open()
 {
-    this->_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(FULL_WIDTH, FULL_HEIGHT), "SFML::open");
+    this->_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(FULL_WIDTH, FULL_HEIGHT), "Arcade");
 }
 
 bool Arcade::Display::SFML::isOpen() const
@@ -145,6 +145,7 @@ void Arcade::Display::SFML::update()
     sf::Event event;
 
     this->_events.assign(Keys::KEYS_END, false);
+    this->_keyCode = '\0';
     while (this->_window->pollEvent(event)) {
         if (event.type == sf::Event::KeyPressed) {
             auto found = std::find(this->_libKeys.begin(),this->_libKeys.end(), event.key.code);

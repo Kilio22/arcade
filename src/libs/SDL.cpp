@@ -170,11 +170,15 @@ void Arcade::Display::SDL::update()
     SDL_Event event;
 
     this->_events.assign(Keys::KEYS_END, false);
+    this->_keyCode = '\0';
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_KEYDOWN) {
             auto found = std::find(this->_libKeys.begin(), this->_libKeys.end(), event.key.keysym.scancode);
             if (found != this->_libKeys.end()) {
                 this->_events[std::distance(this->_libKeys.begin(), found)] = true;
+            }
+            if (event.key.keysym.scancode == SDL_SCANCODE_BACKSPACE) {
+                this->_keyCode = '\b';
             }
         }
         if (event.type == SDL_TEXTINPUT) {
