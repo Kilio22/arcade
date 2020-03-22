@@ -20,7 +20,7 @@ const std::vector<sf::Color> Arcade::Display::SFML::_libColors = {
     sf::Color::Cyan,
     sf::Color(128, 128, 128),
     sf::Color(105, 105, 105),
-    sf::Color::Red,
+    sf::Color(240, 128, 128),
     sf::Color(0, 255, 111),
     sf::Color::Yellow,
     sf::Color(0, 162, 255),
@@ -58,19 +58,26 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 }
 
 Arcade::Display::SFML::SFML()
-    : _currentColor(Colors::DEFAULT), _events(Keys::KEYS_END, false), _keyCode('\0')
+    : _window(nullptr), _currentColor(Colors::DEFAULT), _events(Keys::KEYS_END, false), _keyCode('\0')
 {
-    this->_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(WIDTH, HEIGHT), "Aracde");
 }
 
 Arcade::Display::SFML::~SFML()
 {
-    this->_window->close();
+    if (this->_window != nullptr) {
+        this->_window->close();
+        this->_window.release();
+    }
 }
 
 void Arcade::Display::SFML::reset()
 {
     this->clear();
+}
+
+void Arcade::Display::SFML::open()
+{
+    this->_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(FULL_WIDTH, FULL_HEIGHT), "SFML::open");
 }
 
 bool Arcade::Display::SFML::isOpen() const

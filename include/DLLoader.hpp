@@ -14,6 +14,7 @@
 #include <iostream>
 #include <filesystem>
 #include <regex>
+#include <list>
 #include <dlfcn.h>
 
 namespace Arcade
@@ -27,8 +28,8 @@ namespace Arcade
 
             ~DLLoader() = default;
 
-            bool isValidLib(const std::string &path) const;
-            std::vector<std::string> getLibraries(const std::string &dirPath) const;
+            template <class T>
+            std::vector<std::pair<std::string, std::string>> getLibraries(const std::string &dirPath) const;
             template <class T>
             std::unique_ptr<T> loadLibrary(const std::string &path) const;
 

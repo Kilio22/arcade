@@ -13,8 +13,6 @@
 #include "games/IGameModule.hpp"
 #include "lib/IDisplayModule.hpp"
 
-#define CORE_MENU_INDEX -1
-
 namespace Arcade
 {
     class Core
@@ -33,14 +31,18 @@ namespace Arcade
             void play();
 
         private:
+            void menu();
+            void displayOverlay() const;
+            void displayControls() const;
+
             void switchLibrary(Direction direction);
             void switchGame(Direction direction);
 
             std::string username;
 
-            std::vector<std::string> libraries;
+            std::vector<std::pair<std::string, std::string>> libraries;
             int iLib;
-            std::vector<std::string> games;
+            std::vector<std::pair<std::string, std::string>> games;
             int iGame;
 
             std::unique_ptr<Display::IDisplayModule> displayModule;

@@ -49,7 +49,7 @@ namespace Arcade::Games
             virtual void update(const Arcade::Display::IDisplayModule &lib) = 0;
             // display stuff using the lib given as an argument.
             virtual void render(Arcade::Display::IDisplayModule &lib) const = 0;
-            virtual const std::string &getGameName() const = 0;
+            virtual const std::string &getLibName() const = 0;
     };
 }
 

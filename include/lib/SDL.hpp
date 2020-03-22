@@ -21,6 +21,7 @@ namespace Arcade::Display
             ~SDL();
 
             void reset() final;
+            void open() final;
             bool isOpen() const final;
 
             bool switchToNextLib() const final;

@@ -13,6 +13,8 @@
 #include <tuple>
 
 #define SAVE_PATH "./games/.saves/"
+#define FULL_WIDTH 1792
+#define FULL_HEIGHT 936
 #define WIDTH 640
 #define HEIGHT 480
 
@@ -76,6 +78,8 @@ namespace Arcade::Display
             // For the core
             // Reset the library
             virtual void reset() = 0;
+            // Opens / inits the window
+            virtual void open() = 0;
             // Check if the window is open
             virtual bool isOpen() const = 0;
 

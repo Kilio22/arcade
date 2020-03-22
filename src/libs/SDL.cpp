@@ -48,7 +48,7 @@ const std::vector<SDL_Color> Arcade::Display::SDL::_libColors =
     {0, 255, 255, 255},
     {128, 128, 128, 255},
     {105, 105, 105, 255},
-    {255, 0, 0, 255},
+    {240, 128, 128, 255},
     {0, 255, 111, 255},
     {255, 255, 0, 255},
     {0, 162, 255, 255},
@@ -67,35 +67,41 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 Arcade::Display::SDL::SDL()
     : _window(nullptr), _currentColor(Colors::DEFAULT), _events(20, false), _keyCode('\0')
 {
-    if (SDL_Init(SDL_INIT_VIDEO) < 0 || TTF_Init() < 0) {
-        throw Arcade::Exceptions::BadInstanciationException(std::string("SDL could not initialize! SDL_Error: " + std::string(SDL_GetError())), "SDL Ctor");
-    }
-    this->_window = SDL_CreateWindow("Arcade", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WIDTH, HEIGHT, SDL_WINDOW_SHOWN);
-    if (this->_window == nullptr) {
-        throw Arcade::Exceptions::BadInstanciationException("Window creation failed.", "SDL Ctor");
-    }
-    this->_surface = SDL_GetWindowSurface(this->_window);
-    if (this->_surface == nullptr) {
-        throw Arcade::Exceptions::BadInstanciationException("Surface creation failed.", "SDL Ctor");
-    }
-    this->_renderer = SDL_CreateRenderer(this->_window, -1, SDL_RENDERER_ACCELERATED);
-    if (this->_renderer == nullptr) {
-        throw Arcade::Exceptions::BadInstanciationException("Renderer creation failed.", "SDL Ctor");
-    }
-    SDL_StartTextInput();
-    SDL_SetRenderDrawColor(this->_renderer, this->_libColors.at(this->_currentColor).r, this->_libColors.at(this->_currentColor).g, this->_libColors.at(this->_currentColor).b, 255); // set to current color
 }
 
 Arcade::Display::SDL::~SDL()
 {
-    SDL_DestroyRenderer(this->_renderer);
-    SDL_DestroyWindow(this->_window);
-    TTF_Quit();
-    SDL_Quit();
+    if (this->_window != nullptr) {
+        SDL_DestroyRenderer(this->_renderer);
+        SDL_DestroyWindow(this->_window);
+        TTF_Quit();
+        SDL_Quit();
+    }
 }
 
 void Arcade::Display::SDL::reset()
 {}
+
+void Arcade::Display::SDL::open()
+{
+    if (SDL_Init(SDL_INIT_VIDEO) < 0 || TTF_Init() < 0) {
+        throw Arcade::Exceptions::BadInstanciationException(std::string("SDL could not initialize! SDL_Error: " + std::string(SDL_GetError())), "SDL::open");
+    }
+    this->_window = SDL_CreateWindow("Arcade", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, FULL_WIDTH, FULL_HEIGHT, SDL_WINDOW_SHOWN);
+    if (this->_window == nullptr) {
+        throw Arcade::Exceptions::BadInstanciationException("Window creation failed.", "SDL::open");
+    }
+    this->_surface = SDL_GetWindowSurface(this->_window);
+    if (this->_surface == nullptr) {
+        throw Arcade::Exceptions::BadInstanciationException("Surface creation failed.", "SDL::open");
+    }
+    this->_renderer = SDL_CreateRenderer(this->_window, -1, SDL_RENDERER_ACCELERATED);
+    if (this->_renderer == nullptr) {
+        throw Arcade::Exceptions::BadInstanciationException("Renderer creation failed.", "SDL::open");
+    }
+    SDL_StartTextInput();
+    SDL_SetRenderDrawColor(this->_renderer, this->_libColors.at(this->_currentColor).r, this->_libColors.at(this->_currentColor).g, this->_libColors.at(this->_currentColor).b, 255); // set to current color
+}
 
 bool Arcade::Display::SDL::isOpen() const
 {

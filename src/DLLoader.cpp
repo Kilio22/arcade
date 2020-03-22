@@ -21,9 +21,10 @@ Arcade::DLLoader const &Arcade::DLLoader::getInstance(void)
     return Arcade::DLLoader::loaderInstance;
 }
 
-std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPath) const
+template <class T>
+std::vector<std::pair<std::string, std::string>> Arcade::DLLoader::getLibraries(const std::string &dirPath) const
 {
-    std::vector<std::string> libsPath;
+    std::vector<std::pair<std::string, std::string>> availableLibs;
 
     if (std::filesystem::is_directory(dirPath) == false) {
         return {};
@@ -35,30 +36,17 @@ std::vector<std::string> Arcade::DLLoader::getLibraries(const std::string &dirPa
         if (entry.path().string().find_last_of('/') == std::string::npos) {
             continue;
         }
-        const std::string libName = entry.path().string().substr(entry.path().string().find_last_of('/') + 1);
-        if (std::regex_match(libName, libRegex) == true && this->isValidLib(entry.path().string()) == true) {
-            libsPath.push_back(entry.path().string());
+        const std::string libFileName = entry.path().string().substr(entry.path().string().find_last_of('/') + 1);
+        const std::unique_ptr<T> lib = this->loadLibrary<T>(entry.path().string());
+        if (std::regex_match(libFileName, libRegex) == true && lib != nullptr) {
+            availableLibs.push_back(
+                std::make_pair(
+                    entry.path().string(),
+                    lib->getLibName()
+            ));
         }
     }
-    return libsPath;
-}
-
-bool Arcade::DLLoader::isValidLib(const std::string &path) const
-{
-    void *handler = dlopen(path.c_str(), RTLD_NOW);
-    void *createLib = nullptr;
-
-    if (!handler) {
-        std::cout << dlerror() << std::endl;
-        return false;
-    }
-    createLib = dlsym(handler, "createLib");
-    if (!createLib) {
-        std::cout << dlerror() << std::endl;
-        return false;
-    }
-    dlclose(handler);
-    return true;
+    return availableLibs;
 }
 
 template <class T>
@@ -69,18 +57,21 @@ std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path) const
     std::unique_ptr<T> lib = nullptr;
 
     if (!handler) {
-        std::cout << dlerror() << std::endl;
+        std::cerr << dlerror() << std::endl;
         return nullptr;
     }
     createLib = (createLib_t<T>)dlsym(handler, "createLib");
     if (!createLib) {
-        std::cout << dlerror() << std::endl;
+        std::cerr << dlerror() << std::endl;
         return nullptr;
     }
     lib = createLib();
     dlclose(handler);
     return lib;
 }
+
+template std::vector<std::pair<std::string, std::string>> Arcade::DLLoader::getLibraries<Arcade::Display::IDisplayModule>(const std::string &dirPath) const;
+template std::vector<std::pair<std::string, std::string>> Arcade::DLLoader::getLibraries<Arcade::Games::IGameModule>(const std::string &dirPath) const;
 
 template std::unique_ptr<Arcade::Display::IDisplayModule> Arcade::DLLoader::loadLibrary(const std::string &path) const;
 template std::unique_ptr<Arcade::Games::IGameModule> Arcade::DLLoader::loadLibrary(const std::string &path) const;

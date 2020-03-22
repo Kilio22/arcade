@@ -17,31 +17,32 @@ COLOR_THEME	=	$(BLUE_C)
 DEBUG_THEME	=	$(CYAN_C)
 TESTS_THEME	=	$(RED_C)
 
-SRC_EXCEPTIONS	=	\
+SRC_DEFAULT	=	\
 	src/Exceptions/ArcadeException.cpp	\
 	src/Exceptions/BadFileException.cpp \
 	src/Exceptions/BadInstanciationException.cpp \
 	src/Exceptions/InvalidLibraryException.cpp	\
+	src/Logger.cpp
 
-SRC_CORE	=	$(SRC_EXCEPTIONS) \
+SRC_CORE	=	$(SRC_DEFAULT) \
 	src/DLLoader.cpp \
 	src/Core.cpp \
 	src/main.cpp
 
-SRC_NCURSES	=	$(SRC_EXCEPTIONS) \
+SRC_NCURSES	=	$(SRC_DEFAULT) \
 	src/libs/NCurses.cpp
 
-SRC_SDL	=	$(SRC_EXCEPTIONS) \
+SRC_SDL	=	$(SRC_DEFAULT) \
 	src/libs/SDL.cpp
 
-SRC_SFML	=	$(SRC_EXCEPTIONS) \
+SRC_SFML	=	$(SRC_DEFAULT) \
 	src/libs/SFML.cpp
 
 OBJ_CORE	=	$(SRC_CORE:.cpp=.o)
 OBJ_NCURSES	=	$(SRC_NCURSES:.cpp=.o)
 OBJ_SDL		=	$(SRC_SDL:.cpp=.o)
 OBJ_SFML	=	$(SRC_SFML:.cpp=.o)
-OBJ_EXCEPTIONS	=	$(SRC_EXCEPTIONS:.cpp=.o)
+OBJ_DEFAULT	=	$(SRC_DEFAULT:.cpp=.o)
 
 CXX	= 	g++
 CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17 -O2
@@ -86,7 +87,7 @@ build_ncurses build_sdl build_sfml: exceptions $(OBJ)
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
 
 exceptions: CXXFLAGS += -fPIC
-exceptions: $(OBJ_EXCEPTIONS)
+exceptions: $(OBJ_DEFAULT)
 
 clean:
 	@make fclean -C $(TESTS_PATH) -s SRC="$(SRC)" COLOR_THEME="$(RED_C)"
@@ -94,7 +95,7 @@ clean:
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
-	@$(RM) $(OBJ_EXCEPTIONS) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML)
+	@$(RM) $(OBJ_DEFAULT) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML)
 
 fclean:	clean
 	@$(RM) results.html && \
@@ -108,7 +109,7 @@ re: fclean all
 
 debug: CXXFLAGS += $(DEBUG_FLAGS)
 debug: COLOR_THEME = $(DEBUG_THEME)
-debug: re
+debug: all
 	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"⚠ DEBUG MODE ACTIVATED ⚠\n"$(DEFAULT)
 
 # tests_run:
