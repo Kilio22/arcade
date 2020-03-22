@@ -6,6 +6,7 @@
 */
 
 #include "DLLoader.hpp"
+#include "Logger.hpp"
 #include "lib/IDisplayModule.hpp"
 #include "games/IGameModule.hpp"
 
@@ -57,12 +58,12 @@ std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path) const
     std::unique_ptr<T> lib = nullptr;
 
     if (!handler) {
-        std::cerr << dlerror() << std::endl;
+        Logger::log(Logger::ERROR, dlerror());
         return nullptr;
     }
     createLib = (createLib_t<T>)dlsym(handler, "createLib");
     if (!createLib) {
-        std::cerr << dlerror() << std::endl;
+        Logger::log(Logger::ERROR, dlerror());
         return nullptr;
     }
     lib = createLib();

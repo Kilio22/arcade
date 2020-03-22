@@ -34,10 +34,10 @@ Arcade::Core::Core(const std::string &startLibraryPath)
         throw Exceptions::BadFileException("Argument does not match with any existing library.", "Core::Core");
     this->iLib = std::distance(this->libraries.begin(), it);
 
-    std::cerr << "[DEBUG] Library count: " << this->libraries.size() << std::endl;
-    std::cerr << "[DEBUG] Library name: " << this->displayModule->getLibName() << " [" << this->iLib << "]" << std::endl;
-    std::cerr << "[DEBUG] Game count: " << this->games.size() << std::endl;
-    // std::cerr << "[DEBUG] Game name: " << this->gameModule->getGameName() << std::endl;
+    Logger::log(Logger::DEBUG, "Library count: ", this->libraries.size());
+    Logger::log(Logger::DEBUG, "Library name: ", this->displayModule->getLibName(), " [", this->iLib, "]");
+    Logger::log(Logger::DEBUG, "Game count: ", this->games.size());
+    // Logger::log(Logger::DEBUG, "[DEBUG] Game name: ", this->gameModule->getLibName());
 }
 
 void Arcade::Core::play()
@@ -157,7 +157,7 @@ void Arcade::Core::switchLibrary(Direction direction)
 {
     if (this->libraries.size() <= 1)
         return;
-    std::cerr << "[DEBUG] Changing library " << direction << std::endl;
+    Logger::log(Logger::DEBUG, "Changing library ", direction);
     if (direction == PREV) {
         --this->iLib;
         if (this->iLib < 0)
@@ -169,7 +169,7 @@ void Arcade::Core::switchLibrary(Direction direction)
     if (this->displayModule == nullptr)
         throw Exceptions::InvalidLibraryException("Unexpected error while switching library.", "Core::switchLibrary");
     this->displayModule->open();
-    std::cerr << "[DEBUG] New library: " << this->displayModule->getLibName() << " [" << this->iLib << "]" << std::endl;
+    Logger::log(Logger::DEBUG, "New library: ", this->displayModule->getLibName(), " [", this->iLib, "]");
 }
 
 // Pas encore testé (on a pas de jeux lel)
@@ -179,7 +179,7 @@ void Arcade::Core::switchGame(Direction direction)
         return;
     if (this->iGame == -1)
         return;
-    std::cerr << "[DEBUG] Changing game " << direction << std::endl;
+    Logger::log(Logger::DEBUG, "Changing game ", direction);
     if (direction == PREV) {
         --this->iGame;
         if (this->iGame < 0)
@@ -190,6 +190,6 @@ void Arcade::Core::switchGame(Direction direction)
     this->gameModule = DLLoader::getInstance().loadLibrary<Games::IGameModule>(this->games[this->iGame].first);
     if (this->gameModule == nullptr)
         throw Exceptions::InvalidLibraryException("Unexpected error while switching game.", "Core::switchGame");
-    std::cerr << "[DEBUG] New game: " << this->gameModule->getLibName() << " [" << this->iGame << "]" << std::endl;
+    Logger::log(Logger::DEBUG, "New game: ", this->gameModule->getLibName(), " [", this->iGame, "]");
         auto scores = this->gameModule->getLatestScores();
 }

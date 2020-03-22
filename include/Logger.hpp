@@ -29,8 +29,13 @@ namespace Arcade
 
             void operator=(const Logger &) = delete;
 
-            static void log(const std::string &message, LogLevel level);
-            static void log(std::ostringstream message, LogLevel level);
+            template <typename ... Args>
+            static void log(LogLevel level, Args &&...args)
+            {
+                if (level <= Logger::level)
+                    (std::cerr << ... << args) << std::endl;
+            }
+
             static void setLogLevel(LogLevel level);
 
         private:

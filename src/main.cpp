@@ -8,8 +8,9 @@
 #include <memory>
 #include <iostream>
 #include "arcade.h"
-#include "Exceptions/ArcadeException.hpp"
 #include "Core.hpp"
+#include "Logger.hpp"
+#include "Exceptions/ArcadeException.hpp"
 
 static int print_wrong_arg_number()
 {
@@ -24,6 +25,7 @@ int main(int ac, char *av[])
     }
     try
     {
+        Arcade::Logger::setLogLevel(Arcade::Logger::LogLevel::DEBUG);
         Arcade::Core core(av[1]);
 
         core.play();

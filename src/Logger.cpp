@@ -10,12 +10,6 @@
 
 Arcade::Logger::LogLevel Arcade::Logger::level = ERROR;
 
-void Arcade::Logger::log(const std::string &message, LogLevel level)
-{
-    if (level >= Logger::level)
-        std::cerr << message << std::endl;
-}
-
 void Arcade::Logger::setLogLevel(LogLevel level)
 {
     Logger::level = level;
