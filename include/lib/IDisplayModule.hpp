@@ -56,7 +56,6 @@ namespace Arcade::Display
                 RIGHT,
                 UP,
                 DOWN,
-                RETURN,
                 Z,
                 Q,
                 S,
@@ -73,6 +72,7 @@ namespace Arcade::Display
                 I,
                 M,
                 R,
+                ENTER,
                 KEYS_END
             };
 

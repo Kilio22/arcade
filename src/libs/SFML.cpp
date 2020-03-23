@@ -49,7 +49,8 @@ const std::vector<sf::Keyboard::Key> Arcade::Display::SFML::_libKeys = {
     sf::Keyboard::U,
     sf::Keyboard::I,
     sf::Keyboard::M,
-    sf::Keyboard::R
+    sf::Keyboard::R,
+    sf::Keyboard::Return
 };
 
 extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)

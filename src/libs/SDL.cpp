@@ -33,7 +33,8 @@ const std::vector<SDL_Scancode> Arcade::Display::SDL::_libKeys =
     SDL_SCANCODE_U,
     SDL_SCANCODE_I,
     SDL_SCANCODE_M,
-    SDL_SCANCODE_R
+    SDL_SCANCODE_R,
+    SDL_SCANCODE_RETURN
 };
 
 const std::vector<SDL_Color> Arcade::Display::SDL::_libColors =
