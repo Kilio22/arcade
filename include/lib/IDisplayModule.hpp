@@ -75,39 +75,6 @@ namespace Arcade::Display
                 KEYS_END
             };
 
-            struct rectangle_s {
-                float x;
-                float y;
-                float w;
-                float h;
-                IDisplayModule::Colors color;
-            };
-            typedef struct rectangle_s rectangle_t;
-
-            struct circle_s {
-                float x;
-                float y;
-                float radius;
-                IDisplayModule::Colors color;
-            };
-            typedef struct circle_s circle_t;
-
-            struct pixel_s {
-                float x;
-                float y;
-                IDisplayModule::Colors color;
-            };
-            typedef struct pixel_s pixel_t;
-
-            struct line_s {
-                float x1;
-                float y1;
-                float x2;
-                float y2;
-                IDisplayModule::Colors color;
-            };
-            typedef struct line_s line_t;
-
             // For the core
             // Reset the library
             virtual void reset() = 0;
