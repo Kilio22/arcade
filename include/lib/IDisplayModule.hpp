@@ -12,7 +12,6 @@
 #include <vector>
 #include <tuple>
 
-#define SAVE_PATH "./games/.saves/"
 #define FULL_WIDTH 1792
 #define FULL_HEIGHT 936
 #define WIDTH 640

@@ -8,6 +8,8 @@
 #ifndef AGAMEMODULE_HPP_
 #define AGAMEMODULE_HPP_
 
+#include <fstream>
+#include <regex>
 #include "games/IGameModule.hpp"
 
 namespace Arcade::Games
@@ -16,13 +18,11 @@ namespace Arcade::Games
     {
         public:
             AGameModule(std::string const &libname);
-            ~AGameModule();
+            virtual ~AGameModule() = default;
 
-            bool loadFromFile(const std::string &filepath) final;
-            bool loadFromFile() final;
+            bool loadFromFile(const std::string &filepath = "") final;
 
-            bool saveToFile(const std::string &filepath) const final;
-            bool saveToFile() const final;
+            bool saveToFile(const std::string &filepath = "") const final;
 
             void setPlayerName(const std::string &name) final;
             std::tuple<std::string, int> getHighscore() const final;
@@ -34,6 +34,9 @@ namespace Arcade::Games
         private:
             std::string _playerName;
             std::string _libName;
+            std::vector<std::tuple<std::string, int>> _highscores;
+
+            static const std::regex highscoreRegex;
     };
 }
 

@@ -13,6 +13,8 @@
 #include <vector>
 #include "lib/IDisplayModule.hpp"
 
+#define SAVE_PATH "./games/.saves/"
+
 namespace Arcade::Games
 {
     class IGameModule
