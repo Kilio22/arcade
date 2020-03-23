@@ -217,6 +217,17 @@ void Arcade::Display::SDL::putPixel(float x, float y) const
 
 void Arcade::Display::SDL::putLine(float x1, float y1, float x2, float y2) const
 {
+    if (x1 < 0) {
+        x1 *= -1;
+        x2 *= -1;
+        y1 *= -1;
+        y2 *= -1;
+    } else if (x1 >= 0) {
+        x1 += (FULL_WIDTH - WIDTH) / 2;
+        x2 += (FULL_WIDTH - WIDTH) / 2;
+        y1 += (FULL_HEIGHT - HEIGHT) / 2;
+        y2 += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     SDL_RenderDrawLine(this->_renderer, x1, y1, x2, y2);
 }
 
@@ -224,6 +235,13 @@ void Arcade::Display::SDL::putRect(float x, float y, float w, float h) const
 {
     SDL_Rect fillRect = {(int)x, (int)y, (int)w, (int)h};
 
+    if (x < 0) {
+        fillRect.x *= -1;
+        fillRect.y *= -1;
+    } else if (x >= 0) {
+        fillRect.x += (FULL_WIDTH - WIDTH) / 2;
+        fillRect.y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     SDL_RenderDrawRect(this->_renderer, &fillRect);
 }
 
@@ -231,6 +249,13 @@ void Arcade::Display::SDL::putFillRect(float x, float y, float w, float h) const
 {
     SDL_Rect fillRect = {(int)x, (int)y, (int)w, (int)h};
 
+    if (x < 0) {
+        fillRect.x *= -1;
+        fillRect.y *= -1;
+    } else if (x >= 0) {
+        fillRect.x += (FULL_WIDTH - WIDTH) / 2;
+        fillRect.y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     SDL_RenderFillRect(this->_renderer, &fillRect);
 }
 
@@ -242,6 +267,13 @@ void Arcade::Display::SDL::putCircle(float x, float y, float radius) const
     int oldPx = 0;
     int oldPy = radius;
 
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+    } else if (x >= 0) {
+        x += (FULL_WIDTH - WIDTH) / 2;
+        y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     x += radius;
     y += radius;
     while (py > px) {
@@ -271,6 +303,13 @@ void Arcade::Display::SDL::putFillCircle(float x, float y, float radius) const
     int oldPy = radius;
 
     this->putCircle(x, y, radius);
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+    } else if (x >= 0) {
+        x += (FULL_WIDTH - WIDTH) / 2;
+        y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     x += radius;
     y += radius;
     while (py > px) {
@@ -295,6 +334,13 @@ void Arcade::Display::SDL::putText(const std::string &text, unsigned int size, f
     SDL_Rect textRect;
     SDL_Texture *texture;
 
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+    } else if (x >= 0) {
+        x += (FULL_WIDTH - WIDTH) / 2;
+        y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     if (font == NULL)
         throw Arcade::Exceptions::BadFileException("Cannot load font", "SDL::putText");
     textSurface = TTF_RenderText_Solid(font, text.c_str(), this->_libColors.at(this->_currentColor));

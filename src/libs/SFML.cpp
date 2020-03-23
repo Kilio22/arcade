@@ -185,6 +185,17 @@ void Arcade::Display::SFML::putPixel(float x, float y) const
 
 void Arcade::Display::SFML::putLine(float x1, float y1, float x2, float y2) const
 {
+    if (x1 < 0) {
+        x1 *= -1;
+        x2 *= -1;
+        y1 *= -1;
+        y2 *= -1;
+    } else if (x1 >= 0) {
+        x1 += (FULL_WIDTH - WIDTH) / 2;
+        x2 += (FULL_WIDTH - WIDTH) / 2;
+        y1 += (FULL_HEIGHT - HEIGHT) / 2;
+        y2 += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     sf::Vertex p1(sf::Vector2f(x1, y1), this->_libColors.at(this->_currentColor));
     sf::Vertex p2(sf::Vector2f(x2, y2), this->_libColors.at(this->_currentColor));
     sf::Vertex vertices[2] = {
@@ -199,6 +210,13 @@ void Arcade::Display::SFML::putRect(float x, float y, float w, float h) const
 {
     sf::RectangleShape rect;
 
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+    } else if (x >= 0) {
+        x += (FULL_WIDTH - WIDTH) / 2;
+        y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     rect.setPosition(sf::Vector2f(x, y));
     rect.setSize(sf::Vector2f(w, h));
     rect.setOutlineColor(this->_libColors.at(this->_currentColor));
@@ -209,6 +227,13 @@ void Arcade::Display::SFML::putFillRect(float x, float y, float w, float h) cons
 {
     sf::RectangleShape rect;
 
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+    } else if (x >= 0) {
+        x += (FULL_WIDTH - WIDTH) / 2;
+        y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     rect.setPosition(sf::Vector2f(x, y));
     rect.setSize(sf::Vector2f(w, h));
     rect.setOutlineColor(this->_libColors.at(this->_currentColor));
@@ -220,6 +245,13 @@ void Arcade::Display::SFML::putCircle(float x, float y, float rad) const
 {
     sf::CircleShape circle;
 
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+    } else if (x >= 0) {
+        x += (FULL_WIDTH - WIDTH) / 2;
+        y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     circle.setPosition(sf::Vector2f(x, y));
     circle.setRadius(rad);
     circle.setOutlineColor(this->_libColors.at(this->_currentColor));
@@ -230,6 +262,13 @@ void Arcade::Display::SFML::putFillCircle(float x, float y, float rad) const
 {
     sf::CircleShape circle;
 
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+    } else if (x >= 0) {
+        x += (FULL_WIDTH - WIDTH) / 2;
+        y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     circle.setPosition(sf::Vector2f(x, y));
     circle.setRadius(rad);
     circle.setOutlineColor(this->_libColors.at(this->_currentColor));
@@ -242,6 +281,13 @@ void Arcade::Display::SFML::putText(const std::string &text, unsigned int size, 
     sf::Text newText;
     sf::Font newFont;
 
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+    } else if (x >= 0) {
+        x += (FULL_WIDTH - WIDTH) / 2;
+        y += (FULL_HEIGHT - HEIGHT) / 2;
+    }
     if (newFont.loadFromFile("./assets/pixelmix_bold.ttf") == false)
         throw Arcade::Exceptions::BadFileException("Cannot load font", "SFML::putText");
     newText.setFont(newFont);
