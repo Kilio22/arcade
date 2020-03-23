@@ -38,6 +38,12 @@ SRC_SDL	=	$(SRC_DEFAULT) \
 SRC_SFML	=	$(SRC_DEFAULT) \
 	src/libs/SFML.cpp
 
+SRC_PACMAN	=	$(SRC_DEFAULT) \
+	src/games/AGameModule.cpp	\
+	src/games/Pacman.cpp
+
+OBJ_PACMAN	=	$(SRC_PACMAN:.cpp=.o)
+
 OBJ_CORE	=	$(SRC_CORE:.cpp=.o)
 OBJ_NCURSES	=	$(SRC_NCURSES:.cpp=.o)
 OBJ_SDL		=	$(SRC_SDL:.cpp=.o)
@@ -53,14 +59,19 @@ all: message core graphicals games
 
 message:
 	@$(LINE_RETURN)
-	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"NANO TEK SPICE"$(DEFAULT)
+	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"Arcade"$(DEFAULT)
 
 core: exceptions $(OBJ_CORE)
 	@$(CXX) -o $(NAME) $(OBJ_CORE) $(LDLIBS) && \
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
 
-games: exceptions
+games: pacman
+
+pacman: NAME = games/lib_arcade_pacman.so
+pacman: OBJ = $(OBJ_PACMAN)
+pacman: CXXFLAGS += -fPIC
+pacman: $(OBJ_PACMAN) build_pacman
 
 graphicals: ncurses sdl sfml
 
@@ -81,7 +92,7 @@ sfml: CXXFLAGS += -fPIC
 sfml: LDLIBS = -lsfml-graphics -lsfml-system -lsfml-window
 sfml: $(OBJ_SFML) build_sfml
 
-build_ncurses build_sdl build_sfml: exceptions $(OBJ)
+build_ncurses build_sdl build_sfml build_pacman: exceptions $(OBJ)
 	@$(CXX) -o $(NAME) $(OBJ) $(LDLIBS) -shared && \
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
@@ -95,7 +106,7 @@ clean:
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
-	@$(RM) $(OBJ_DEFAULT) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML)
+	@$(RM) $(OBJ_DEFAULT) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_PACMAN)
 
 fclean:	clean
 	@$(RM) results.html && \
