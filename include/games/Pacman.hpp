@@ -8,6 +8,7 @@
 #ifndef PACMAN_HPP_
 #define PACMAN_HPP_
 
+#include "lib/DataStructures.h"
 #include "games/AGameModule.hpp"
 
 namespace Arcade::Games
@@ -25,6 +26,10 @@ namespace Arcade::Games
 
         protected:
         private:
+            std::vector<rectangle_t> _rects;
+            std::vector<circle_t> _cicles;
+            std::vector<circle_t> _monsters;
+            std::vector<circle_t> _pacman;
     };
 }
 

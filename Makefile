@@ -40,7 +40,7 @@ SRC_SFML	=	$(SRC_DEFAULT) \
 
 SRC_PACMAN	=	$(SRC_DEFAULT) \
 	src/games/AGameModule.cpp	\
-	src/games/Pacman.cpp
+	src/games/Pacman/Pacman.cpp
 
 OBJ_PACMAN	=	$(SRC_PACMAN:.cpp=.o)
 
