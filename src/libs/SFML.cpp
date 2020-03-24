@@ -219,6 +219,8 @@ void Arcade::Display::SFML::putRect(float x, float y, float w, float h) const
     }
     rect.setPosition(sf::Vector2f(x, y));
     rect.setSize(sf::Vector2f(w, h));
+    rect.setFillColor(sf::Color::Black);
+    rect.setOutlineThickness(3);
     rect.setOutlineColor(this->_libColors.at(this->_currentColor));
     this->_window->draw(rect);
 }
