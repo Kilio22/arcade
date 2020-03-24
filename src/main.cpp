@@ -6,6 +6,7 @@
 */
 
 #include <memory>
+#include <ctime>
 #include <iostream>
 #include "arcade.h"
 #include "Core.hpp"
@@ -23,6 +24,7 @@ int main(int ac, char *av[])
     if (ac != 2) {
         return print_wrong_arg_number();
     }
+    std::srand(std::time(nullptr));
     try
     {
         Arcade::Logger::setLogLevel(Arcade::Logger::LogLevel::DEBUG);
