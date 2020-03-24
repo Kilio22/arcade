@@ -24,7 +24,6 @@ namespace Arcade::Games
             void update(const Arcade::Display::IDisplayModule &lib) final;
             void render(Arcade::Display::IDisplayModule &lib) const final;
 
-        protected:
         private:
             std::vector<rectangle_t> _rects;
             std::vector<circle_t> _cicles;
