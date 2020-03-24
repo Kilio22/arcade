@@ -7,11 +7,20 @@
 
 #include "games/Solarfox.hpp"
 
+extern "C" std::unique_ptr<Arcade::Games::IGameModule> createLib(void)
+{
+    return std::make_unique<Arcade::Games::Solarfox>();
+}
+
 Arcade::Games::Solarfox::Solarfox()
     : AGameModule("Solarfox")
 {
 }
 
-Arcade::Games::Solarfox::~Solarfox()
+void Arcade::Games::Solarfox::reset()
+{
+}
+
+void Arcade::Games::Solarfox::update(const Arcade::Display::IDisplayModule &)
 {
 }

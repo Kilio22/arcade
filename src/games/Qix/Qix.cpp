@@ -7,11 +7,20 @@
 
 #include "games/Qix.hpp"
 
+extern "C" std::unique_ptr<Arcade::Games::IGameModule> createLib(void)
+{
+    return std::make_unique<Arcade::Games::Qix>();
+}
+
 Arcade::Games::Qix::Qix()
     : AGameModule("Qix")
 {
 }
 
-Arcade::Games::Qix::~Qix()
+void Arcade::Games::Qix::reset()
+{
+}
+
+void Arcade::Games::Qix::update(const Arcade::Display::IDisplayModule &)
 {
 }

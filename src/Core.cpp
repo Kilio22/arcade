@@ -84,6 +84,7 @@ void Arcade::Core::menuEvents()
         if (this->gameModule == nullptr)
             throw Exceptions::InvalidLibraryException("Unexpected error while loading game.", "Core::menuEvents");
         this->gameModule->setPlayerName(this->username);
+        Logger::log(Logger::DEBUG, "Selected game: ", this->gameModule->getLibName(), " [", this->iGame, "]");
         return;
     }
     if (this->displayModule->switchToNextGame() == true) {
@@ -109,7 +110,7 @@ void Arcade::Core::menuDisplay() const
     this->displayModule->putFillRect(0, 0, WIDTH, HEIGHT);
     this->displayModule->setColor(Display::IDisplayModule::Colors::CYAN);
     int y = 0;
-    for (int i = 0; i < (int)this->games.size(); ++i) {
+    for (int i = this->games.size() - 1; i >= 0; --i) {
         if (this->iGame == i)
             this->displayModule->setColor(Display::IDisplayModule::Colors::BLUE);
         this->displayModule->putText(this->games[i].second, 20, 30, y += 30);
@@ -157,12 +158,13 @@ void Arcade::Core::displayOverlay() const
         for (auto &score : xdd)
             this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
     /* Décommenter ci-dessous quand y'a des jeux xdxd */
-    // if (this->gameModule != nullptr) {
-    //     auto scores = this->gameModule->getLatestScores();
-    //     this->displayModule->putText("Scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
-    //     for (auto &score : scores)
-    //         this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
-    // }
+    if (this->gameModule != nullptr) {
+        this->displayModule->putText(this->gameModule->getLibName() + ": " + std::to_string(std::get<1>(this->gameModule->getHighscore())), 20, -(FULL_WIDTH / 2) + 75, -50);
+        auto scores = this->gameModule->getLatestScores();
+        this->displayModule->putText("Scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
+        for (auto &score : scores)
+            this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
+    }
     this->displayControls();
 }
 

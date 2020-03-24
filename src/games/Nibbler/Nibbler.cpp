@@ -21,13 +21,6 @@ void Arcade::Games::Nibbler::reset()
 {
 }
 
-void Arcade::Games::Nibbler::update(const Arcade::Display::IDisplayModule &lib)
+void Arcade::Games::Nibbler::update(const Arcade::Display::IDisplayModule &)
 {
-    (void)lib;
-}
-
-void Arcade::Games::Nibbler::render(Arcade::Display::IDisplayModule &lib) const
-{
-    lib.setColor(Display::IDisplayModule::Colors::WHITE);
-    lib.putText("Sorry, game is out of order :(", 20, 10, 10);
 }

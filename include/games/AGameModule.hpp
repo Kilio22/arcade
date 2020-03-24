@@ -30,6 +30,12 @@ namespace Arcade::Games
             std::tuple<std::string, int> getHighscore() const final;
             std::vector<std::tuple<std::string, int>> getLatestScores() const final;
 
+            /**
+             * Default game implementation
+             * (out of order)
+             */
+            void render(Arcade::Display::IDisplayModule &lib) const override;
+
             const std::string &getLibName() const final;
 
         protected:

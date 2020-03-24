@@ -21,7 +21,6 @@ namespace Arcade::Games
             void reset() final;
 
             void update(const Arcade::Display::IDisplayModule &lib) final;
-            void render(Arcade::Display::IDisplayModule &lib) const final;
 
         private:
     };

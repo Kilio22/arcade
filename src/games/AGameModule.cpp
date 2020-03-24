@@ -95,3 +95,10 @@ const std::string &Arcade::Games::AGameModule::getLibName() const
 {
     return this->_libName;
 }
+
+/* Default game render if not overriden */
+void Arcade::Games::AGameModule::render(Arcade::Display::IDisplayModule &lib) const
+{
+    lib.setColor(Display::IDisplayModule::Colors::WHITE);
+    lib.putText("Sorry, game is out of order :(", 20, 10, 10);
+}
