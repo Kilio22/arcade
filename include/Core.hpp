@@ -31,9 +31,14 @@ namespace Arcade
             void play();
 
         private:
-            void menu();
             void displayOverlay() const;
             void displayControls() const;
+
+            void menuEvents();
+            void menuDisplay() const;
+
+            void gameEvents();
+            void gameDisplay() const;
 
             void switchLibrary(Direction direction);
             void switchGame(Direction direction);

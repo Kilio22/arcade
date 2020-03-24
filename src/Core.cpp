@@ -25,8 +25,8 @@ Arcade::Core::Core(const std::string &startLibraryPath)
 {
     if (this->displayModule == nullptr)
         throw Exceptions::InvalidLibraryException("Given library could not be loaded.", "Core::Core");
-    // if (this->games.empty())
-    //     throw Exceptions::InvalidLibraryException("There are no available games to play.", "Core::Core");
+    if (this->games.empty())
+        throw Exceptions::InvalidLibraryException("There are no available games to play.", "Core::Core");
 
     // TODEV: sometimes the find may not work even though the path is fine
     auto it = std::find_if(this->libraries.begin(), this->libraries.end(), [startLibraryPath](auto &pair){ return pair.first == startLibraryPath; });
@@ -37,7 +37,6 @@ Arcade::Core::Core(const std::string &startLibraryPath)
     Logger::log(Logger::DEBUG, "Library count: ", this->libraries.size());
     Logger::log(Logger::DEBUG, "Library name: ", this->displayModule->getLibName(), " [", this->iLib, "]");
     Logger::log(Logger::DEBUG, "Game count: ", this->games.size());
-    this->gameModule = DLLoader::getInstance().loadLibrary<Games::IGameModule>(this->games[0].first);
 }
 
 void Arcade::Core::play()
@@ -49,21 +48,26 @@ void Arcade::Core::play()
         this->displayModule->update();
         if (this->displayModule->shouldExit())
             return;
-        if (this->displayModule->shouldGoToMenu())
-            this->gameModule.reset();
         if (this->displayModule->switchToNextLib() == true)
             this->switchLibrary(NEXT);
         if (this->displayModule->switchToPreviousLib() == true)
             this->switchLibrary(PREV);
-        if (this->displayModule->switchToNextGame() == true)
-            this->switchGame(NEXT);
-        if (this->displayModule->switchToPreviousGame() == true)
-            this->switchGame(PREV);
         this->displayOverlay();
         if (this->gameModule == nullptr) {
-            this->menu();
+            this->menuEvents();
+            this->menuDisplay();
             this->displayModule->render();
         } else {
+            if (this->displayModule->shouldGoToMenu()) {
+                this->gameModule.reset();
+                continue;
+            }
+            if (this->displayModule->shouldBeRestarted() == true)
+                this->gameModule->reset();
+            if (this->displayModule->switchToNextGame() == true)
+                this->switchGame(NEXT);
+            if (this->displayModule->switchToPreviousGame() == true)
+                this->switchGame(PREV);
             this->gameModule->update(*this->displayModule);
             this->displayModule->setColor(Display::IDisplayModule::Colors::DARK_GRAY);
             this->displayModule->putFillRect(0, 0, WIDTH, HEIGHT);
@@ -73,14 +77,34 @@ void Arcade::Core::play()
     }
 }
 
-void Arcade::Core::menu()
+void Arcade::Core::menuEvents()
 {
+    if (this->displayModule->isKeyPressedOnce(Display::IDisplayModule::Keys::ENTER) == true) {
+        this->gameModule = DLLoader::getInstance().loadLibrary<Games::IGameModule>(this->games[this->iGame].first);
+        if (this->gameModule == nullptr)
+            throw Exceptions::InvalidLibraryException("Unexpected error while loading game.", "Core::menuEvents");
+        this->gameModule->setPlayerName(this->username);
+        return;
+    }
+    if (this->displayModule->switchToNextGame() == true) {
+        this->iGame = (this->iGame + 1) % this->games.size();
+    }
+    if (this->displayModule->switchToPreviousGame() == true) {
+        --this->iGame;
+        if (this->iGame < 0)
+            this->iGame = this->games.size() - 1;
+    }
     if (this->displayModule->getKeyCode() != '\0') {
-        if (this->displayModule->getKeyCode() == '\b' && this->username.empty() == false)
-            this->username = this->username.substr(0, this->username.length() - 1);
-        else if (this->displayModule->getKeyCode() != '\n')
+        if (this->displayModule->getKeyCode() == '\b') {
+            if (this->username.empty() == false)
+                this->username = this->username.substr(0, this->username.length() - 1);
+        } else if (this->displayModule->getKeyCode() != '\n')
             this->username.append(std::string(1, this->displayModule->getKeyCode()));
     }
+}
+
+void Arcade::Core::menuDisplay() const
+{
     this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_BLUE);
     this->displayModule->putFillRect(0, 0, WIDTH, HEIGHT);
     this->displayModule->setColor(Display::IDisplayModule::Colors::CYAN);
@@ -92,6 +116,16 @@ void Arcade::Core::menu()
         if (this->iGame == i)
             this->displayModule->setColor(Display::IDisplayModule::Colors::CYAN);
     }
+}
+
+void Arcade::Core::gameEvents()
+{
+
+}
+
+void Arcade::Core::gameDisplay() const
+{
+
 }
 
 void Arcade::Core::displayOverlay() const
@@ -178,8 +212,6 @@ void Arcade::Core::switchGame(Direction direction)
 {
     if (this->games.size() <= 1)
         return;
-    if (this->iGame == -1)
-        return;
     Logger::log(Logger::DEBUG, "Changing game ", direction);
     if (direction == PREV) {
         --this->iGame;
@@ -191,6 +223,7 @@ void Arcade::Core::switchGame(Direction direction)
     this->gameModule = DLLoader::getInstance().loadLibrary<Games::IGameModule>(this->games[this->iGame].first);
     if (this->gameModule == nullptr)
         throw Exceptions::InvalidLibraryException("Unexpected error while switching game.", "Core::switchGame");
+    this->gameModule->setPlayerName(this->username);
     Logger::log(Logger::DEBUG, "New game: ", this->gameModule->getLibName(), " [", this->iGame, "]");
         auto scores = this->gameModule->getLatestScores();
 }

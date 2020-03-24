@@ -9,6 +9,7 @@
 #include <SDL2/SDL_keycode.h>
 #include <SDL2/SDL_ttf.h>
 #include "lib/SDL.hpp"
+#include "Logger.hpp"
 #include "Exceptions/BadInstanciationException.hpp"
 #include "Exceptions/BadFileException.hpp"
 
@@ -66,7 +67,7 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 }
 
 Arcade::Display::SDL::SDL()
-    : _window(nullptr), _currentColor(Colors::DEFAULT), _events(20, false), _keyCode('\0')
+    : _window(nullptr), _currentColor(Colors::DEFAULT), _events(Keys::KEYS_END, false), _keyCode('\0')
 {
 }
 
@@ -136,6 +137,7 @@ bool Arcade::Display::SDL::shouldBeRestarted() const
 
 bool Arcade::Display::SDL::shouldGoToMenu() const
 {
+    Logger::log(Logger::DEBUG, "M is: ", this->_events.at(Keys::M));
     return this->_events.at(Keys::M);
 }
 

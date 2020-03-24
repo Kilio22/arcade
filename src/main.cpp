@@ -36,5 +36,9 @@ int main(int ac, char *av[])
         std::cerr << ex.what();
         std::cerr << "\"" << std::endl;
     }
+    catch (const std::exception &ex)
+    {
+        std::cerr << "An unexpeted error happened! " << ex.what() << std::endl;
+    }
     return ARCADE_SUCCESS;
 }

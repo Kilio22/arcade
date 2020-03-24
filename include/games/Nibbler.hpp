@@ -16,7 +16,7 @@ namespace Arcade::Games
     {
         public:
             Nibbler();
-            ~Nibbler();
+            ~Nibbler() = default;
 
             void reset() final;
 
