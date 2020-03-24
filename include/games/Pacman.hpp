@@ -30,6 +30,8 @@ namespace Arcade::Games
             std::vector<circle_t> _cicles;
             std::vector<circle_t> _monsters;
             std::vector<circle_t> _pacman;
+
+            static const std::string _mapPath;
     };
 }
 

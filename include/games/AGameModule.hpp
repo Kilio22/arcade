@@ -20,9 +20,11 @@ namespace Arcade::Games
             AGameModule(std::string const &libname);
             virtual ~AGameModule() = default;
 
-            bool loadFromFile(const std::string &filepath = "") final;
+            bool loadFromFile(const std::string &filepath) final;
+            bool loadFromFile() final;
 
-            bool saveToFile(const std::string &filepath = "") const final;
+            bool saveToFile(const std::string &filepath) const final;
+            bool saveToFile() const final;
 
             void setPlayerName(const std::string &name) final;
             std::tuple<std::string, int> getHighscore() const final;

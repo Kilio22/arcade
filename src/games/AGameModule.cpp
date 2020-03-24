@@ -19,10 +19,24 @@ bool Arcade::Games::AGameModule::loadFromFile(const std::string &filepath)
     std::ifstream ifs;
     std::string line;
 
-    if (filepath == "")
-        ifs.open(SAVE_PATH + this->_libName);
-    else
-        ifs.open(filepath);
+    ifs.open(filepath);
+    if (ifs.is_open() == false)
+        return false;
+    while (std::getline(ifs, line)) {
+        if (std::regex_match(line, this->highscoreRegex) == false)
+            return false;
+        this->_highscores.push_back({line.substr(0, line.find(':')), std::stoi(line.substr(line.find(':') + 1))});
+    }
+    ifs.close();
+    return true;
+}
+
+bool Arcade::Games::AGameModule::loadFromFile()
+{
+    std::ifstream ifs;
+    std::string line;
+
+    ifs.open(SAVE_PATH + this->_libName);
     if (ifs.is_open() == false)
         return false;
     while (std::getline(ifs, line)) {
@@ -38,10 +52,19 @@ bool Arcade::Games::AGameModule::saveToFile(const std::string &filepath) const
 {
     std::ofstream ofs;
 
-    if (filepath == "")
-        ofs.open(SAVE_PATH + this->_libName);
-    else
-        ofs.open(filepath);
+    ofs.open(filepath);
+    for (auto tuple : this->_highscores) {
+        ofs << std::get<0>(tuple) << ":" << std::get<1>(tuple) << std::endl;
+    }
+    ofs.close();
+    return false;
+}
+
+bool Arcade::Games::AGameModule::saveToFile() const
+{
+    std::ofstream ofs;
+
+    ofs.open(SAVE_PATH + this->_libName);
     for (auto tuple : this->_highscores) {
         ofs << std::get<0>(tuple) << ":" << std::get<1>(tuple) << std::endl;
     }
