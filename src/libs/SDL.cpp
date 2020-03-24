@@ -183,7 +183,6 @@ void Arcade::Display::SDL::update()
             }
         }
         if (event.type == SDL_TEXTINPUT) {
-            std::cout << event.text.text << std::endl;
             this->_keyCode = event.text.text[0];
             memset(event.text.text, '\0', SDL_TEXTINPUTEVENT_TEXT_SIZE);
         }
