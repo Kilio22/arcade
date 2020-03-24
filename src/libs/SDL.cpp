@@ -55,7 +55,7 @@ const std::vector<SDL_Color> Arcade::Display::SDL::_libColors =
     {0, 162, 255, 255},
     {255, 0, 247, 255},
     {0, 247, 255, 255},
-    {0, 0, 0, 255}
+    {255, 255, 255, 255}
 };
 
 const std::string Arcade::Display::SDL::_libName = "SDL";
