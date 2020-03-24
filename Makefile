@@ -24,6 +24,9 @@ SRC_DEFAULT	=	\
 	src/Exceptions/InvalidLibraryException.cpp	\
 	src/Logger.cpp
 
+SRC_GAMES	=	$(SRC_DEFAULT) \
+	src/games/AGameModule.cpp
+
 SRC_CORE	=	$(SRC_DEFAULT) \
 	src/DLLoader.cpp \
 	src/Core.cpp \
@@ -38,11 +41,26 @@ SRC_SDL	=	$(SRC_DEFAULT) \
 SRC_SFML	=	$(SRC_DEFAULT) \
 	src/libs/SFML.cpp
 
-SRC_PACMAN	=	$(SRC_DEFAULT) \
-	src/games/AGameModule.cpp	\
+SRC_CENTIPEDE	=	$(SRC_GAMES) \
+	src/games/Centipede/Centipede.cpp
+
+SRC_NIBBLER	=	$(SRC_GAMES) \
+	src/games/Nibbler/Nibbler.cpp
+
+SRC_PACMAN	=	$(SRC_GAMES) \
 	src/games/Pacman/Pacman.cpp
 
+SRC_QIX	=	$(SRC_GAMES) \
+	src/games/Qix/Qix.cpp
+
+SRC_SOLARFOX	=	$(SRC_GAMES) \
+	src/games/Solarfox/Solarfox.cpp
+
+OBJ_CENTIPEDE	=	$(SRC_CENTIPEDE:.cpp=.o)
+OBJ_NIBBLER	=	$(SRC_NIBBLER:.cpp=.o)
 OBJ_PACMAN	=	$(SRC_PACMAN:.cpp=.o)
+OBJ_QIX	=	$(SRC_QIX:.cpp=.o)
+OBJ_SOLARFOX	=	$(SRC_SOLARFOX:.cpp=.o)
 
 OBJ_CORE	=	$(SRC_CORE:.cpp=.o)
 OBJ_NCURSES	=	$(SRC_NCURSES:.cpp=.o)
@@ -66,12 +84,32 @@ core: exceptions $(OBJ_CORE)
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
 
-games: pacman
+games: centipede nibbler pacman qix solarfox
+
+centipede: NAME = games/lib_arcade_centipede.so
+centipede: OBJ = $(OBJ_CENTIPEDE)
+centipede: CXXFLAGS += -fPIC
+centipede: $(OBJ_CENTIPEDE) build_centipede
+
+nibbler: NAME = games/lib_arcade_nibbler.so
+nibbler: OBJ = $(OBJ_NIBBLER)
+nibbler: CXXFLAGS += -fPIC
+nibbler: $(OBJ_NIBBLER) build_nibbler
 
 pacman: NAME = games/lib_arcade_pacman.so
 pacman: OBJ = $(OBJ_PACMAN)
 pacman: CXXFLAGS += -fPIC
 pacman: $(OBJ_PACMAN) build_pacman
+
+qix: NAME = games/lib_arcade_qix.so
+qix: OBJ = $(OBJ_QIX)
+qix: CXXFLAGS += -fPIC
+qix: $(OBJ_QIX) build_qix
+
+solarfox: NAME = games/lib_arcade_solarfox.so
+solarfox: OBJ = $(OBJ_SOLARFOX)
+solarfox: CXXFLAGS += -fPIC
+solarfox: $(OBJ_SOLARFOX) build_solarfox
 
 graphicals: ncurses sdl sfml
 
@@ -92,7 +130,7 @@ sfml: CXXFLAGS += -fPIC
 sfml: LDLIBS = -lsfml-graphics -lsfml-system -lsfml-window
 sfml: $(OBJ_SFML) build_sfml
 
-build_ncurses build_sdl build_sfml build_pacman: exceptions $(OBJ)
+build_ncurses build_sdl build_sfml build_centipede build_nibbler build_pacman build_qix build_solarfox: exceptions $(OBJ)
 	@$(CXX) -o $(NAME) $(OBJ) $(LDLIBS) -shared && \
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
@@ -106,7 +144,7 @@ clean:
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
-	@$(RM) $(OBJ_DEFAULT) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_PACMAN)
+	@$(RM) $(OBJ_DEFAULT) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_CENTIPEDE) $(OBJ_NIBBLER) $(OBJ_PACMAN) $(OBJ_QIX) $(OBJ_SOLARFOX)
 
 fclean:	clean
 	@$(RM) results.html && \

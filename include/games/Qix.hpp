@@ -2,22 +2,21 @@
 ** EPITECH PROJECT, 2020
 ** OOP_arcade_2019
 ** File description:
-** Pacman
+** Qix
 */
 
-#ifndef PACMAN_HPP_
-#define PACMAN_HPP_
+#ifndef QIX_HPP_
+#define QIX_HPP_
 
-#include "lib/DataStructures.h"
 #include "games/AGameModule.hpp"
 
 namespace Arcade::Games
 {
-    class Pacman : public AGameModule
+    class Qix : public AGameModule
     {
         public:
-            Pacman();
-            ~Pacman();
+            Qix();
+            ~Qix();
 
             void reset() final;
 
@@ -25,11 +24,7 @@ namespace Arcade::Games
             void render(Arcade::Display::IDisplayModule &lib) const final;
 
         private:
-            std::vector<rectangle_t> _rects;
-            std::vector<circle_t> _cicles;
-            std::vector<circle_t> _monsters;
-            std::vector<circle_t> _pacman;
     };
 }
 
-#endif /* !PACMAN_HPP_ */
+#endif /* !QIX_HPP_ */

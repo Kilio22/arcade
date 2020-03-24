@@ -2,22 +2,21 @@
 ** EPITECH PROJECT, 2020
 ** OOP_arcade_2019
 ** File description:
-** Pacman
+** Solarfox
 */
 
-#ifndef PACMAN_HPP_
-#define PACMAN_HPP_
+#ifndef SOLARFOX_HPP_
+#define SOLARFOX_HPP_
 
-#include "lib/DataStructures.h"
 #include "games/AGameModule.hpp"
 
 namespace Arcade::Games
 {
-    class Pacman : public AGameModule
+    class Solarfox : public AGameModule
     {
         public:
-            Pacman();
-            ~Pacman();
+            Solarfox();
+            ~Solarfox();
 
             void reset() final;
 
@@ -25,11 +24,7 @@ namespace Arcade::Games
             void render(Arcade::Display::IDisplayModule &lib) const final;
 
         private:
-            std::vector<rectangle_t> _rects;
-            std::vector<circle_t> _cicles;
-            std::vector<circle_t> _monsters;
-            std::vector<circle_t> _pacman;
     };
 }
 
-#endif /* !PACMAN_HPP_ */
+#endif /* !SOLARFOX_HPP_ */
