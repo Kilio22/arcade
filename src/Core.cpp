@@ -37,7 +37,7 @@ Arcade::Core::Core(const std::string &startLibraryPath)
     Logger::log(Logger::DEBUG, "Library count: ", this->libraries.size());
     Logger::log(Logger::DEBUG, "Library name: ", this->displayModule->getLibName(), " [", this->iLib, "]");
     Logger::log(Logger::DEBUG, "Game count: ", this->games.size());
-    // Logger::log(Logger::DEBUG, "[DEBUG] Game name: ", this->gameModule->getLibName());
+    this->gameModule = DLLoader::getInstance().loadLibrary<Games::IGameModule>(this->games[0].first);
 }
 
 void Arcade::Core::play()
@@ -65,7 +65,10 @@ void Arcade::Core::play()
             this->displayModule->render();
         } else {
             this->gameModule->update(*this->displayModule);
+            this->displayModule->setColor(Display::IDisplayModule::Colors::DARK_GRAY);
+            this->displayModule->putFillRect(0, 0, WIDTH, HEIGHT);
             this->gameModule->render(*this->displayModule);
+            this->displayModule->render();
         }
     }
 }
@@ -79,13 +82,13 @@ void Arcade::Core::menu()
             this->username.append(std::string(1, this->displayModule->getKeyCode()));
     }
     this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_BLUE);
-    this->displayModule->putFillRect((FULL_WIDTH - WIDTH) / 2, (FULL_HEIGHT - HEIGHT) / 2, WIDTH, HEIGHT);
+    this->displayModule->putFillRect(0, 0, WIDTH, HEIGHT);
     this->displayModule->setColor(Display::IDisplayModule::Colors::CYAN);
-    int y = (FULL_HEIGHT - HEIGHT) / 2;
-    for (int i = 0; i < 3; ++i) {
+    int y = 0;
+    for (int i = 0; i < (int)this->games.size(); ++i) {
         if (this->iGame == i)
             this->displayModule->setColor(Display::IDisplayModule::Colors::BLUE);
-        this->displayModule->putText("No games yet.", 20, (FULL_WIDTH - WIDTH) / 2 + 30, y += 30);
+        this->displayModule->putText(this->games[i].second, 20, 30, y += 30);
         if (this->iGame == i)
             this->displayModule->setColor(Display::IDisplayModule::Colors::CYAN);
     }
@@ -100,32 +103,32 @@ void Arcade::Core::displayOverlay() const
         {"Jean-padernier", 22},
         {"Jean-putaing", 1},
     };
-    int y = 70;
+    int y = -70;
 
     this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_GREEN);
-    this->displayModule->putText("Player: " + this->username + (this->gameModule == nullptr ? "<" : ""), 20, 10, 10);
+    this->displayModule->putText("Player: " + this->username + (this->gameModule == nullptr ? "<" : ""), 20, -10, -10);
     this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_RED);
-    this->displayModule->putText("Available libraries: " + std::to_string(this->libraries.size()), 20, 10, y);
+    this->displayModule->putText("Available libraries: " + std::to_string(this->libraries.size()), 20, -10, y);
     for (int i = 0; i < (int)this->libraries.size(); ++i) {
         if (this->iLib == i) {
             this->displayModule->setColor(Display::IDisplayModule::Colors::RED);
-            this->displayModule->putText("    > " + this->libraries[i].second, 20, 10, y += 40);
+            this->displayModule->putText("    > " + this->libraries[i].second, 20, -10, y -= 40);
             this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_RED);
         } else
-            this->displayModule->putText("    " + this->libraries[i].second, 20, 10, y += 40);
+            this->displayModule->putText("    " + this->libraries[i].second, 20, -10, y -= 40);
     }
     /* Pas encore de jeux xdxd */
     this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_YELLOW);
-    this->displayModule->putText("Scores: " + std::to_string(xdd.size()), 20, 10, y += 200);
+    this->displayModule->putText("Scores: " + std::to_string(xdd.size()), 20, -10, y -= 200);
         for (auto &score : xdd)
-            this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, 10, y += 40);
+            this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
     /* Décommenter ci-dessous quand y'a des jeux xdxd */
-    if (this->gameModule != nullptr) {
-        auto scores = this->gameModule->getLatestScores();
-        this->displayModule->putText("Scores: " + std::to_string(scores.size()), 20, 10, y += 60);
-        for (auto &score : scores)
-            this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, 10, y += 40);
-    }
+    // if (this->gameModule != nullptr) {
+    //     auto scores = this->gameModule->getLatestScores();
+    //     this->displayModule->putText("Scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
+    //     for (auto &score : scores)
+    //         this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
+    // }
     this->displayControls();
 }
 
@@ -137,22 +140,21 @@ void Arcade::Core::displayControls() const
 
     this->displayModule->setColor(Display::IDisplayModule::Colors::DARK_GRAY);
     sprintf(str, "%39s", "Press R to restart the game.");
-    this->displayModule->putText(str, 15, 1350, y += 10);
+    this->displayModule->putText(str, 15, -1350, y -= 10);
     sprintf(str, "%39s", "Press ESCAPE to quit Arcade.");
-    this->displayModule->putText(str, 15, 1350, y += 30);
+    this->displayModule->putText(str, 15, -1350, y -= 30);
     sprintf(str, "%39s", "Press M to go back to the menu.");
-    this->displayModule->putText(str, 15, 1350, y += 30);
+    this->displayModule->putText(str, 15, -1350, y -= 30);
     sprintf(str, "%39s", "Press DOWN to use the previous game.");
-    this->displayModule->putText(str, 15, 1350, y += 30);
+    this->displayModule->putText(str, 15, -1350, y -= 30);
     sprintf(str, "%39s", "Press UP to use the next game.");
-    this->displayModule->putText(str, 15, 1350, y += 30);
+    this->displayModule->putText(str, 15, -1350, y -= 30);
     sprintf(str, "%39s", "Press LEFT to use the previous library.");
-    this->displayModule->putText(str, 15, 1350, y += 30);
+    this->displayModule->putText(str, 15, -1350, y -= 30);
     sprintf(str, "%39s", "Press RIGHT to use the next library.");
-    this->displayModule->putText(str, 15, 1350, y += 30);
+    this->displayModule->putText(str, 15, -1350, y -= 30);
 }
 
-// Pas encore testé (il faudrait une autre librarie qui peut load)
 void Arcade::Core::switchLibrary(Direction direction)
 {
     if (this->libraries.size() <= 1)
@@ -172,7 +174,6 @@ void Arcade::Core::switchLibrary(Direction direction)
     Logger::log(Logger::DEBUG, "New library: ", this->displayModule->getLibName(), " [", this->iLib, "]");
 }
 
-// Pas encore testé (on a pas de jeux lel)
 void Arcade::Core::switchGame(Direction direction)
 {
     if (this->games.size() <= 1)
