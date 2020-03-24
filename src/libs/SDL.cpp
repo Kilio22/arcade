@@ -9,7 +9,6 @@
 #include <SDL2/SDL_keycode.h>
 #include <SDL2/SDL_ttf.h>
 #include "lib/SDL.hpp"
-#include "Logger.hpp"
 #include "Exceptions/BadInstanciationException.hpp"
 #include "Exceptions/BadFileException.hpp"
 
@@ -137,7 +136,6 @@ bool Arcade::Display::SDL::shouldBeRestarted() const
 
 bool Arcade::Display::SDL::shouldGoToMenu() const
 {
-    Logger::log(Logger::DEBUG, "M is: ", this->_events.at(Keys::M));
     return this->_events.at(Keys::M);
 }
 

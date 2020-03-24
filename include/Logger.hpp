@@ -9,6 +9,7 @@
 #define LOGGER_HPP_
 
 #include <string>
+#include <iostream>
 
 namespace Arcade
 {
