@@ -161,8 +161,12 @@ void Arcade::Core::displayOverlay() const
         this->displayModule->putText(this->gameModule->getLibName() + ": " + std::to_string(std::get<1>(this->gameModule->getHighscore())), 20, -(FULL_WIDTH / 2) + 75, -50);
         auto scores = this->gameModule->getLatestScores();
         this->displayModule->putText("Scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
-        for (auto &score : scores)
-            this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
+        if (scores.empty())
+            this->displayModule->putText("    None yet...", 20, -10, y -= 40);
+        else {
+            for (auto &score : scores)
+                this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
+        }
     }
     this->displayControls();
 }
