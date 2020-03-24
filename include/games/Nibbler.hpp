@@ -35,7 +35,7 @@ namespace Arcade::Games
 
         private:
             const int xTiles = 40;
-            const int yTiles = 30;
+            const int yTiles = 29;
             const int xSize = WIDTH / xTiles;
             const int ySize = HEIGHT / yTiles;
 
@@ -49,6 +49,7 @@ namespace Arcade::Games
             void drawBorder(Arcade::Display::IDisplayModule &displayModule) const;
             void drawFruit(Arcade::Display::IDisplayModule &displayModule) const;
             void drawSnake(Arcade::Display::IDisplayModule &displayModule) const;
+            void drawControls(Arcade::Display::IDisplayModule &displayModule) const;
             void drawScore(Arcade::Display::IDisplayModule &displayModule) const;
 
             float framesToStep;

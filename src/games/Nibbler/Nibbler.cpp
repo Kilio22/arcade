@@ -121,6 +121,7 @@ void Arcade::Games::Nibbler::render(Arcade::Display::IDisplayModule &displayModu
     this->drawBorder(displayModule);
     this->drawFruit(displayModule);
     this->drawSnake(displayModule);
+    this->drawControls(displayModule);
     this->drawScore(displayModule);
 }
 
@@ -129,7 +130,7 @@ void Arcade::Games::Nibbler::drawBorder(Arcade::Display::IDisplayModule &display
     displayModule.setColor(Display::IDisplayModule::Colors::WHITE);
     for (int i = 0; i < this->xTiles; ++i) {
         displayModule.putFillRect(i * xSize, 0, xSize, ySize);
-        displayModule.putFillRect(i * xSize, HEIGHT - ySize, xSize, ySize);
+        displayModule.putFillRect(i * xSize, HEIGHT - ySize * 2, xSize, ySize);
     }
     for (int i = 1; i < this->yTiles - 1; ++i) {
         displayModule.putFillRect(0, i * ySize, xSize, ySize);
@@ -154,6 +155,12 @@ void Arcade::Games::Nibbler::drawSnake(Arcade::Display::IDisplayModule &displayM
         displayModule.putFillRect(snakePart->first * xSize, snakePart->second * ySize, xSize, ySize);
         ++snakePart;
     }
+}
+
+void Arcade::Games::Nibbler::drawControls(Arcade::Display::IDisplayModule &displayModule) const
+{
+    displayModule.setColor(Display::IDisplayModule::Colors::MAGENTA);
+    displayModule.putText("SPACE for boost!", 10, WIDTH / 2 - 65, HEIGHT - 13);
 }
 
 void Arcade::Games::Nibbler::drawScore(Arcade::Display::IDisplayModule &displayModule) const
