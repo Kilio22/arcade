@@ -26,6 +26,7 @@ namespace Arcade::Games
 
         private:
             std::vector<rectangle_t> _rects;
+            std::vector<pixel_t> _pixels;
             std::vector<circle_t> _cicles;
             std::vector<circle_t> _monsters;
             std::vector<circle_t> _pacman;

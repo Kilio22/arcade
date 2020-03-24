@@ -12,29 +12,29 @@
 #include "Exceptions/BadInstanciationException.hpp"
 #include "Exceptions/BadFileException.hpp"
 
-const std::vector<SDL_Scancode> Arcade::Display::SDL::_libKeys =
+const std::vector<SDL_Keycode> Arcade::Display::SDL::_libKeys =
 {
-    SDL_SCANCODE_LEFT,
-    SDL_SCANCODE_RIGHT,
-    SDL_SCANCODE_UP,
-    SDL_SCANCODE_DOWN,
-    SDL_SCANCODE_Z,
-    SDL_SCANCODE_Q,
-    SDL_SCANCODE_S,
-    SDL_SCANCODE_D,
-    SDL_SCANCODE_A,
-    SDL_SCANCODE_E,
-    SDL_SCANCODE_W,
-    SDL_SCANCODE_X,
-    SDL_SCANCODE_SPACE,
-    SDL_SCANCODE_ESCAPE,
-    SDL_SCANCODE_J,
-    SDL_SCANCODE_K,
-    SDL_SCANCODE_U,
-    SDL_SCANCODE_I,
-    SDL_SCANCODE_M,
-    SDL_SCANCODE_R,
-    SDL_SCANCODE_RETURN
+    SDLK_LEFT,
+    SDLK_RIGHT,
+    SDLK_UP,
+    SDLK_DOWN,
+    SDLK_z,
+    SDLK_q,
+    SDLK_s,
+    SDLK_d,
+    SDLK_a,
+    SDLK_e,
+    SDLK_w,
+    SDLK_x,
+    SDLK_SPACE,
+    SDLK_ESCAPE,
+    SDLK_j,
+    SDLK_k,
+    SDLK_u,
+    SDLK_i,
+    SDLK_m,
+    SDLK_r,
+    SDLK_RETURN
 };
 
 const std::vector<SDL_Color> Arcade::Display::SDL::_libColors =
@@ -174,7 +174,7 @@ void Arcade::Display::SDL::update()
     this->_keyCode = '\0';
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_KEYDOWN) {
-            auto found = std::find(this->_libKeys.begin(), this->_libKeys.end(), event.key.keysym.scancode);
+            auto found = std::find(this->_libKeys.begin(), this->_libKeys.end(), event.key.keysym.sym);
             if (found != this->_libKeys.end()) {
                 this->_events[std::distance(this->_libKeys.begin(), found)] = true;
             }
