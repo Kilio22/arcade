@@ -123,7 +123,7 @@ bool Arcade::Display::SFML::shouldExit() const
 
 bool Arcade::Display::SFML::isKeyPressed(Keys key) const
 {
-    return this->_events.at(key);
+    return sf::Keyboard::isKeyPressed(this->_libKeys.at(key));
 }
 
 bool Arcade::Display::SFML::isKeyPressedOnce(Keys key) const

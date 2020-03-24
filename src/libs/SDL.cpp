@@ -146,7 +146,9 @@ bool Arcade::Display::SDL::shouldExit() const
 
 bool Arcade::Display::SDL::isKeyPressed(IDisplayModule::Keys key) const
 {
-    return this->_events.at(key);
+    auto keyboard = SDL_GetKeyboardState(NULL);
+
+    return keyboard[SDL_GetScancodeFromKey(this->_libKeys.at(key))];
 }
 
 bool Arcade::Display::SDL::isKeyPressedOnce(IDisplayModule::Keys key) const
