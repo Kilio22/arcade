@@ -151,16 +151,12 @@ void Arcade::Core::displayOverlay() const
         } else
             this->displayModule->putText("    " + this->libraries[i].second, 20, -10, y -= 40);
     }
-    /* Pas encore de jeux xdxd */
-    this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_YELLOW);
-    this->displayModule->putText("Scores: " + std::to_string(xdd.size()), 20, -10, y -= 200);
-        for (auto &score : xdd)
-            this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
-    /* Décommenter ci-dessous quand y'a des jeux xdxd */
     if (this->gameModule != nullptr) {
+        this->displayModule->setColor(Display::IDisplayModule::Colors::YELLOW);
         this->displayModule->putText(this->gameModule->getLibName() + ": " + std::to_string(std::get<1>(this->gameModule->getHighscore())), 20, -(FULL_WIDTH / 2) + 75, -50);
         auto scores = this->gameModule->getLatestScores();
-        this->displayModule->putText("Scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
+        this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_YELLOW);
+        this->displayModule->putText("Lastest scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
         if (scores.empty())
             this->displayModule->putText("    None yet...", 20, -10, y -= 40);
         else {

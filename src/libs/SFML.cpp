@@ -22,7 +22,7 @@ const std::vector<sf::Color> Arcade::Display::SFML::_libColors = {
     sf::Color(105, 105, 105),
     sf::Color(240, 128, 128),
     sf::Color(0, 255, 111),
-    sf::Color::Yellow,
+    sf::Color(255, 255, 64),
     sf::Color(0, 162, 255),
     sf::Color(255, 0, 247),
     sf::Color(0, 247, 255),
