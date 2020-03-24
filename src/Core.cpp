@@ -50,30 +50,21 @@ void Arcade::Core::play()
             return;
         if (this->displayModule->switchToNextLib() == true)
             this->switchLibrary(NEXT);
-        if (this->displayModule->switchToPreviousLib() == true)
+        else if (this->displayModule->switchToPreviousLib() == true)
             this->switchLibrary(PREV);
         this->displayOverlay();
         if (this->gameModule == nullptr) {
             this->menuEvents();
             this->menuDisplay();
-            this->displayModule->render();
         } else {
             if (this->displayModule->shouldGoToMenu()) {
                 this->gameModule.reset();
                 continue;
             }
-            if (this->displayModule->shouldBeRestarted() == true)
-                this->gameModule->reset();
-            if (this->displayModule->switchToNextGame() == true)
-                this->switchGame(NEXT);
-            if (this->displayModule->switchToPreviousGame() == true)
-                this->switchGame(PREV);
-            this->gameModule->update(*this->displayModule);
-            this->displayModule->setColor(Display::IDisplayModule::Colors::DARK_GRAY);
-            this->displayModule->putFillRect(0, 0, WIDTH, HEIGHT);
-            this->gameModule->render(*this->displayModule);
-            this->displayModule->render();
+            this->gameEvents();
+            this->gameDisplay();
         }
+        this->displayModule->render();
     }
 }
 
@@ -121,12 +112,20 @@ void Arcade::Core::menuDisplay() const
 
 void Arcade::Core::gameEvents()
 {
-
+    if (this->displayModule->shouldBeRestarted() == true)
+        this->gameModule->reset();
+    if (this->displayModule->switchToNextGame() == true)
+        this->switchGame(NEXT);
+    else if (this->displayModule->switchToPreviousGame() == true)
+        this->switchGame(PREV);
 }
 
 void Arcade::Core::gameDisplay() const
 {
-
+    this->gameModule->update(*this->displayModule);
+    this->displayModule->setColor(Display::IDisplayModule::Colors::DARK_GRAY);
+    this->displayModule->putFillRect(0, 0, WIDTH, HEIGHT);
+    this->gameModule->render(*this->displayModule);
 }
 
 void Arcade::Core::displayOverlay() const
