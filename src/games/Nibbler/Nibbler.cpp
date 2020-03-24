@@ -13,15 +13,9 @@ extern "C" std::unique_ptr<Arcade::Games::IGameModule> createLib(void)
 }
 
 Arcade::Games::Nibbler::Nibbler()
-    : AGameModule("Nibbler"),
-    framesToStep(10),
-    frameCount(0),
-    direction(UP),
-    lastDirection(UP),
-    score(0),
-    snake({{10, 10}, {10, 11}, {10, 12}, {10, 13}})
+    : AGameModule("Nibbler")
 {
-    this->spawnFruit();
+    this->reset();
 }
 
 void Arcade::Games::Nibbler::reset()
