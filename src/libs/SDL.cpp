@@ -39,7 +39,7 @@ const std::vector<SDL_Keycode> Arcade::Display::SDL::_libKeys =
 
 const std::vector<SDL_Color> Arcade::Display::SDL::_libColors =
 {
-    {255, 255, 255, 255},
+    {0, 0, 0, 255},
     {0, 0, 0, 255},
     {255, 0, 0, 255},
     {0, 255, 0, 255},

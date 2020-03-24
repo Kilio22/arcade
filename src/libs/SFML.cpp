@@ -10,7 +10,7 @@
 
 const std::string Arcade::Display::SFML::_libName = "SFML";
 const std::vector<sf::Color> Arcade::Display::SFML::_libColors = {
-    sf::Color::White,
+    sf::Color::Black,
     sf::Color::Black,
     sf::Color::Red,
     sf::Color::Green,
@@ -222,6 +222,7 @@ void Arcade::Display::SFML::putRect(float x, float y, float w, float h) const
     rect.setFillColor(sf::Color::Black);
     rect.setOutlineThickness(3);
     rect.setOutlineColor(this->_libColors.at(this->_currentColor));
+    rect.setFillColor(this->_libColors[DEFAULT]);
     this->_window->draw(rect);
 }
 
