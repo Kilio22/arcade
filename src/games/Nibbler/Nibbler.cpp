@@ -107,8 +107,8 @@ void Arcade::Games::Nibbler::updateSnake()
     this->lastDirection = this->direction;
     if (newHead == this->fruit) {
         this->spawnFruit();
-        this->score += 100;
-        if (this->score % 500 == 0 && this->framesToStep > 1)
+        this->_currentScore += 100;
+        if (this->_currentScore % 500 == 0 && this->framesToStep > 1)
             this->framesToStep -= .5;
     } else
         this->snake.pop_back();
@@ -122,7 +122,6 @@ void Arcade::Games::Nibbler::render(Arcade::Display::IDisplayModule &displayModu
     this->drawFruit(displayModule);
     this->drawSnake(displayModule);
     this->drawControls(displayModule);
-    this->drawScore(displayModule);
 }
 
 void Arcade::Games::Nibbler::drawBorder(Arcade::Display::IDisplayModule &displayModule) const
@@ -161,10 +160,4 @@ void Arcade::Games::Nibbler::drawControls(Arcade::Display::IDisplayModule &displ
 {
     displayModule.setColor(Display::IDisplayModule::Colors::MAGENTA);
     displayModule.putText("SPACE for boost!", 10, WIDTH / 2 - 65, HEIGHT - 13);
-}
-
-void Arcade::Games::Nibbler::drawScore(Arcade::Display::IDisplayModule &displayModule) const
-{
-    displayModule.setColor(Display::IDisplayModule::Colors::LIGHT_YELLOW);
-    displayModule.putText("Score: " + std::to_string(this->score), 20, 30, 30);
 }

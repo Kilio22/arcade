@@ -51,7 +51,6 @@ namespace Arcade::Games
             std::vector<circle_t> _monsters;
             circle_t _pacman;
             Direction _direction;
-            int _score;
             bool _canEatMonsters;
             clock_t _eatClock;
             int _framesToStep;

@@ -27,8 +27,8 @@ namespace Arcade::Games
             bool saveToFile() const final;
 
             void setPlayerName(const std::string &name) final;
-            std::tuple<std::string, int> getHighscore() const final;
-            std::vector<std::tuple<std::string, int>> getLatestScores() const final;
+            std::pair<std::string, int> getScore() const final;
+            std::vector<std::pair<std::string, int>> getBestScores() const final;
 
             /**
              * Default game implementation
@@ -39,10 +39,12 @@ namespace Arcade::Games
             const std::string &getLibName() const final;
 
         protected:
+            void addToBestScores(int nb);
+            int _currentScore;
         private:
             std::string _playerName;
             std::string _libName;
-            std::vector<std::tuple<std::string, int>> _highscores;
+            std::vector<std::pair<std::string, int>> _highscores;
 
             static const std::regex highscoreRegex;
     };

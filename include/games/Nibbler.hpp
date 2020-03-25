@@ -50,7 +50,6 @@ namespace Arcade::Games
             void drawFruit(Arcade::Display::IDisplayModule &displayModule) const;
             void drawSnake(Arcade::Display::IDisplayModule &displayModule) const;
             void drawControls(Arcade::Display::IDisplayModule &displayModule) const;
-            void drawScore(Arcade::Display::IDisplayModule &displayModule) const;
 
             float framesToStep;
             float frameCount;

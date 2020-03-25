@@ -41,10 +41,10 @@ namespace Arcade::Games
 
             // Set the player's name for the highscore
             virtual void setPlayerName(const std::string &name) = 0;
-            // get the best score
-            virtual std::tuple<std::string, int> getHighscore() const = 0;
+            // get the current score
+            virtual std::pair<std::string, int> getScore() const = 0;
             // get the 16 best scores
-            virtual std::vector<std::tuple<std::string, int>> getLatestScores() const = 0;
+            virtual std::vector<std::pair<std::string, int>> getBestScores() const = 0;
 
             // Handle Game
             // update game

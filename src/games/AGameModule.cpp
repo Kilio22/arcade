@@ -77,18 +77,16 @@ void Arcade::Games::AGameModule::setPlayerName(const std::string &playerName)
     this->_playerName.assign(playerName);
 }
 
-std::tuple<std::string, int> Arcade::Games::AGameModule::getHighscore() const
-{
-    if (this->_highscores.size() == 0)
-        return {};
-    return this->_highscores.at(0);
-}
-
-std::vector<std::tuple<std::string, int>> Arcade::Games::AGameModule::getLatestScores() const
+std::vector<std::pair<std::string, int>> Arcade::Games::AGameModule::getBestScores(void) const
 {
     if (this->_highscores.size() < 16)
         return this->_highscores;
     return {this->_highscores.begin(), this->_highscores.begin() + 16};
+}
+
+std::pair<std::string, int> Arcade::Games::AGameModule::getScore(void) const
+{
+    return {this->_playerName, this->_currentScore};
 }
 
 const std::string &Arcade::Games::AGameModule::getLibName() const
@@ -101,4 +99,10 @@ void Arcade::Games::AGameModule::render(Arcade::Display::IDisplayModule &lib) co
 {
     lib.setColor(Display::IDisplayModule::Colors::WHITE);
     lib.putText("Sorry, game is out of order :(", 20, 10, 10);
+}
+
+void Arcade::Games::AGameModule::addToBestScores(int nb)
+{
+    this->_highscores.push_back({this->_playerName, nb});
+    std::sort(this->_highscores.begin(), this->_highscores.end(), std::greater<>());
 }

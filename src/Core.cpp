@@ -153,15 +153,15 @@ void Arcade::Core::displayOverlay() const
     }
     if (this->gameModule != nullptr) {
         this->displayModule->setColor(Display::IDisplayModule::Colors::YELLOW);
-        this->displayModule->putText(this->gameModule->getLibName() + ": " + std::to_string(std::get<1>(this->gameModule->getHighscore())), 20, -(FULL_WIDTH / 2) + 75, -50);
-        auto scores = this->gameModule->getLatestScores();
+        this->displayModule->putText(this->gameModule->getLibName() + ": " + std::to_string(this->gameModule->getScore().second), 20, -(FULL_WIDTH / 2) + 75, -50);
+        auto scores = this->gameModule->getBestScores();
         this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_YELLOW);
         this->displayModule->putText("Lastest scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
         if (scores.empty())
             this->displayModule->putText("    None yet...", 20, -10, y -= 40);
         else {
             for (auto &score : scores)
-                this->displayModule->putText("    " + std::get<0>(score) + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
+                this->displayModule->putText("    " + score.first + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
         }
     }
     this->displayControls();
@@ -226,5 +226,5 @@ void Arcade::Core::switchGame(Direction direction)
         throw Exceptions::InvalidLibraryException("Unexpected error while switching game.", "Core::switchGame");
     this->gameModule->setPlayerName(this->username);
     Logger::log(Logger::DEBUG, "New game: ", this->gameModule->getLibName(), " [", this->iGame, "]");
-        auto scores = this->gameModule->getLatestScores();
+    auto scores = this->gameModule->getBestScores();
 }

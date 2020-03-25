@@ -27,7 +27,7 @@ Arcade::Games::Pacman::Pacman::~Pacman()
 
 void Arcade::Games::Pacman::reset()
 {
-    this->_score = 0;
+    this->_currentScore = 0;
     this->_framesToStep = 8;
     this->_framesCount = 0;
     this->_bonuses.clear();
@@ -133,7 +133,7 @@ void Arcade::Games::Pacman::eat(void)
 {
     this->_tokens.erase(std::remove_if(this->_tokens.begin(), this->_tokens.end(), [this](std::pair<rectangle_t, circle_t> token) {
         if (this->_pacman.x >= token.first.x && this->_pacman.x <= (token.first.x + 15) && this->_pacman.y >= token.first.y && this->_pacman.y <= (token.first.y + 15)) {
-            this->_score++;
+            this->_currentScore++;
             this->_path.push_back(token.first);
             return true;
         }
@@ -141,7 +141,7 @@ void Arcade::Games::Pacman::eat(void)
     }), this->_tokens.end());
     this->_bonuses.erase(std::remove_if(this->_bonuses.begin(), this->_bonuses.end(), [this](std::pair<rectangle_t, rectangle_t> bonus) {
         if (this->_pacman.x >= bonus.first.x && this->_pacman.x <= (bonus.first.x + 15) && this->_pacman.y >= bonus.first.y && this->_pacman.y <= (bonus.first.y + 15)) {
-            this->_score += 10;
+            this->_currentScore += 10;
             this->_path.push_back(bonus.first);
             this->_eatClock = clock();
             this->_canEatMonsters = true;
