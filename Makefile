@@ -144,7 +144,7 @@ clean:
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
-	@$(RM) $(OBJ_DEFAULT) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_CENTIPEDE) $(OBJ_NIBBLER) $(OBJ_PACMAN) $(OBJ_QIX) $(OBJ_SOLARFOX)
+	@$(RM) $(OBJ_DEFAULT) $(OBJ_LIBCACA) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_CENTIPEDE) $(OBJ_NIBBLER) $(OBJ_PACMAN) $(OBJ_QIX) $(OBJ_SOLARFOX)
 
 fclean:	clean
 	@$(RM) results.html && \
@@ -164,23 +164,18 @@ debug: all
 doc:
 	@doxygen doc/Doxyfile
 
-# tests_run:
-# 	@make -C $(TESTS_PATH) -s \
-# 		SRC="$(SRC)" \
-# 		COLOR_THEME="$(TESTS_THEME)"
-# 	@$(ECHO) $(TESTS_THEME)""
-# 	@gcovr --exclude tests/ --sort-percentage --branches
-# 	@$(ECHO) $(BOLD_T)""
-# 	@gcovr --exclude tests/ --sort-percentage --print-summary
-# 	@$(ECHO) $(DEFAULT)
-# 	@gcovr --exclude tests/ --sort-percentage --html-details --html-title "Unit tests" --html-medium-threshold 40 --html-high-threshold 75 > results.html
-
 %.o: %.cpp
 	@$(CXX) -c $(CXXFLAGS) -o $@ $< && \
 		$(ECHO) $(DIM_T) "$(CXX) $(CXXFLAGS) -c "$<$(COLOR_THEME)" -o "$@ $(DEFAULT) || \
 		$(ECHO) "\n"$(MAGEN_C) $(UNDLN_T)$(BOLD_T)"$(CXX) $(CXXFLAGS) -c "$<" -o "$@$(DEFAULT)"\n"
 
-.PHONY: all message core games centipede nibbler pacman qix solarfox libcaca sdl sfml build_libcaca build_sdl build_sfml build_centipede build_nibbler build_pacman build_qix build_solarfox exceptions clean fclean re debug doc
+.PHONY: all message core games graphicals \
+		centipede nibbler pacman qix solarfox \
+		libcaca sdl sfml \
+		build_libcaca build_sdl build_sfml build_centipede build_nibbler build_pacman build_qix build_solarfox \
+		exceptions \
+		clean fclean re debug \
+		doc
 
 ECHO	=	/bin/echo -e
 DEFAULT	=	"\e[0m"
