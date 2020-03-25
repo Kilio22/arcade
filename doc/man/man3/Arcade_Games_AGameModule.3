@@ -1,0 +1,72 @@
+.TH "Arcade::Games::AGameModule" 3 "Wed Mar 25 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Arcade::Games::AGameModule
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBArcade::Games::IGameModule\fP\&.
+.PP
+Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBArcade::Games::Pacman\fP, \fBArcade::Games::Qix\fP, and \fBArcade::Games::Solarfox\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBAGameModule\fP (std::string const &libname)"
+.br
+.ti -1c
+.RI "bool \fBloadFromFile\fP (const std::string &filepath) final"
+.br
+.ti -1c
+.RI "bool \fBloadFromFile\fP () final"
+.br
+.ti -1c
+.RI "bool \fBsaveToFile\fP (const std::string &filepath) const final"
+.br
+.ti -1c
+.RI "bool \fBsaveToFile\fP () const final"
+.br
+.ti -1c
+.RI "void \fBsetPlayerName\fP (const std::string &name) final"
+.br
+.ti -1c
+.RI "std::pair< std::string, int > \fBgetScore\fP () const final"
+.br
+.ti -1c
+.RI "std::vector< std::pair< std::string, int > > \fBgetBestScores\fP () const final"
+.br
+.ti -1c
+.RI "void \fBrender\fP (\fBArcade::Display::IDisplayModule\fP &lib) const override"
+.br
+.ti -1c
+.RI "const std::string & \fBgetLibName\fP () const final"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBaddToBestScores\fP (int nb)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_currentScore\fP"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "void Arcade::Games::AGameModule::render (\fBArcade::Display::IDisplayModule\fP & lib) const\fC [override]\fP, \fC [virtual]\fP"
+Default game implementation (out of order) 
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
+.PP
+Reimplemented in \fBArcade::Games::Nibbler\fP, and \fBArcade::Games::Pacman\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

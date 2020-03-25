@@ -1,0 +1,51 @@
+.TH "Arcade::Games::IGameModule" 3 "Wed Mar 25 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Arcade::Games::IGameModule
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBArcade::Games::AGameModule\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBreset\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBloadFromFile\fP (const std::string &filepath)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBloadFromFile\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBsaveToFile\fP (const std::string &filepath) const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBsaveToFile\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBsetPlayerName\fP (const std::string &name)=0"
+.br
+.ti -1c
+.RI "virtual std::pair< std::string, int > \fBgetScore\fP () const =0"
+.br
+.ti -1c
+.RI "virtual std::vector< std::pair< std::string, int > > \fBgetBestScores\fP () const =0"
+.br
+.ti -1c
+.RI "virtual void \fBupdate\fP (const \fBArcade::Display::IDisplayModule\fP &lib)=0"
+.br
+.ti -1c
+.RI "virtual void \fBrender\fP (\fBArcade::Display::IDisplayModule\fP &lib) const =0"
+.br
+.ti -1c
+.RI "virtual const std::string & \fBgetLibName\fP () const =0"
+.br
+.in -1c
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

@@ -1,0 +1,98 @@
+.TH "Arcade::Display::SDL" 3 "Wed Mar 25 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Arcade::Display::SDL
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBArcade::Display::IDisplayModule\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBreset\fP () final"
+.br
+.ti -1c
+.RI "void \fBopen\fP () final"
+.br
+.ti -1c
+.RI "bool \fBisOpen\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBswitchToNextLib\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBswitchToPreviousLib\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBswitchToNextGame\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBswitchToPreviousGame\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBshouldBeRestarted\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBshouldGoToMenu\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBshouldExit\fP () const final"
+.br
+.ti -1c
+.RI "bool \fBisKeyPressed\fP (IDisplayModule::Keys) const final"
+.br
+.ti -1c
+.RI "bool \fBisKeyPressedOnce\fP (IDisplayModule::Keys) const final"
+.br
+.ti -1c
+.RI "float \fBgetDelta\fP () const final"
+.br
+.ti -1c
+.RI "void \fBclear\fP () const final"
+.br
+.ti -1c
+.RI "void \fBupdate\fP () final"
+.br
+.ti -1c
+.RI "void \fBrender\fP () const final"
+.br
+.ti -1c
+.RI "char \fBgetKeyCode\fP () const final"
+.br
+.ti -1c
+.RI "void \fBsetColor\fP (IDisplayModule::Colors col) final"
+.br
+.ti -1c
+.RI "void \fBputPixel\fP (float x, float y) const final"
+.br
+.ti -1c
+.RI "void \fBputLine\fP (float x1, float y1, float x2, float y2) const final"
+.br
+.ti -1c
+.RI "void \fBputRect\fP (float x, float y, float w, float h) const final"
+.br
+.ti -1c
+.RI "void \fBputFillRect\fP (float x, float y, float w, float h) const final"
+.br
+.ti -1c
+.RI "void \fBputCircle\fP (float x, float y, float rad) const final"
+.br
+.ti -1c
+.RI "void \fBputFillCircle\fP (float x, float y, float rad) const final"
+.br
+.ti -1c
+.RI "void \fBputText\fP (const std::string &text, unsigned int size, float x, float y) const final"
+.br
+.ti -1c
+.RI "const std::string & \fBgetLibName\fP () const final"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.
