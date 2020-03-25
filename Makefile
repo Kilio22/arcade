@@ -161,6 +161,9 @@ debug: COLOR_THEME = $(DEBUG_THEME)
 debug: all
 	@$(ECHO) $(BOLD_T)$(COLOR_THEME)"⚠ DEBUG MODE ACTIVATED ⚠\n"$(DEFAULT)
 
+doc:
+	@doxygen doc/Doxyfile
+
 # tests_run:
 # 	@make -C $(TESTS_PATH) -s \
 # 		SRC="$(SRC)" \
@@ -177,7 +180,7 @@ debug: all
 		$(ECHO) $(DIM_T) "$(CXX) $(CXXFLAGS) -c "$<$(COLOR_THEME)" -o "$@ $(DEFAULT) || \
 		$(ECHO) "\n"$(MAGEN_C) $(UNDLN_T)$(BOLD_T)"$(CXX) $(CXXFLAGS) -c "$<" -o "$@$(DEFAULT)"\n"
 
-.PHONY: all message clean fclean re debug tests_run
+.PHONY: all message core games centipede nibbler pacman qix solarfox libcaca sdl sfml build_libcaca build_sdl build_sfml build_centipede build_nibbler build_pacman build_qix build_solarfox exceptions clean fclean re debug doc
 
 ECHO	=	/bin/echo -e
 DEFAULT	=	"\e[0m"

@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['how_20to_20implement_20your_20own_20game_20_2f_20library',['How to implement your own game / library',['../index.html',1,'']]]
+  ['idisplaymodule',['IDisplayModule',['../classArcade_1_1Display_1_1IDisplayModule.html',1,'Arcade::Display']]],
+  ['igamemodule',['IGameModule',['../classArcade_1_1Games_1_1IGameModule.html',1,'Arcade::Games']]],
+  ['invalidlibraryexception',['InvalidLibraryException',['../classArcade_1_1Exceptions_1_1InvalidLibraryException.html',1,'Arcade::Exceptions']]]
 ];

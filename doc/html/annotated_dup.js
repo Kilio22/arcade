@@ -22,12 +22,6 @@ var annotated_dup =
         [ "Qix", "classArcade_1_1Games_1_1Qix.html", "classArcade_1_1Games_1_1Qix" ],
         [ "Solarfox", "classArcade_1_1Games_1_1Solarfox.html", "classArcade_1_1Games_1_1Solarfox" ]
       ] ],
-      [ "Core", "classArcade_1_1Core.html", "classArcade_1_1Core" ],
-      [ "DLLoader", "classArcade_1_1DLLoader.html", "classArcade_1_1DLLoader" ],
-      [ "Logger", "classArcade_1_1Logger.html", "classArcade_1_1Logger" ]
-    ] ],
-    [ "circle_s", "structcircle__s.html", "structcircle__s" ],
-    [ "line_s", "structline__s.html", "structline__s" ],
-    [ "pixel_s", "structpixel__s.html", "structpixel__s" ],
-    [ "rectangle_s", "structrectangle__s.html", "structrectangle__s" ]
+      [ "Core", "classArcade_1_1Core.html", "classArcade_1_1Core" ]
+    ] ]
 ];

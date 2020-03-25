@@ -8,7 +8,7 @@
 #ifndef PACMAN_HPP_
 #define PACMAN_HPP_
 
-#include "lib/DataStructures.h"
+#include "DataStructures.h"
 #include "time.h"
 #include "games/AGameModule.hpp"
 

@@ -5,7 +5,7 @@ var classArcade_1_1Display_1_1SDL =
     [ "clear", "classArcade_1_1Display_1_1SDL.html#a537c85f0d2ebdd7d83484126baecf5da", null ],
     [ "getDelta", "classArcade_1_1Display_1_1SDL.html#a1ca09d130dea3bec2481eb72a49c0f03", null ],
     [ "getKeyCode", "classArcade_1_1Display_1_1SDL.html#a3ba94b49b72c9e189f52af7b97f4ad91", null ],
-    [ "getLibName", "classArcade_1_1Display_1_1SDL.html#a9ed25cd590d8ac708844b927e7213a08", null ],
+    [ "getLibName", "classArcade_1_1Display_1_1SDL.html#aa549d6ec470b99b545db63a1d4a2b58e", null ],
     [ "isKeyPressed", "classArcade_1_1Display_1_1SDL.html#a375ea86360c510415d86a198f5cd3e30", null ],
     [ "isKeyPressedOnce", "classArcade_1_1Display_1_1SDL.html#a883547b9f495cdf800225bc32b0ffe40", null ],
     [ "isOpen", "classArcade_1_1Display_1_1SDL.html#a7d86c934d5dde9283e9c70816cf9c8a5", null ],

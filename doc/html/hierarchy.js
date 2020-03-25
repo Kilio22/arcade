@@ -1,8 +1,6 @@
 var hierarchy =
 [
-    [ "circle_s", "structcircle__s.html", null ],
     [ "Arcade::Core", "classArcade_1_1Core.html", null ],
-    [ "Arcade::DLLoader", "classArcade_1_1DLLoader.html", null ],
     [ "Arcade::Display::IDisplayModule", "classArcade_1_1Display_1_1IDisplayModule.html", [
       [ "Arcade::Display::Libcaca", "classArcade_1_1Display_1_1Libcaca.html", null ],
       [ "Arcade::Display::SDL", "classArcade_1_1Display_1_1SDL.html", null ],
@@ -17,10 +15,6 @@ var hierarchy =
         [ "Arcade::Games::Solarfox", "classArcade_1_1Games_1_1Solarfox.html", null ]
       ] ]
     ] ],
-    [ "line_s", "structline__s.html", null ],
-    [ "Arcade::Logger", "classArcade_1_1Logger.html", null ],
-    [ "pixel_s", "structpixel__s.html", null ],
-    [ "rectangle_s", "structrectangle__s.html", null ],
     [ "runtime_error", null, [
       [ "Arcade::Exceptions::ArcadeException", "classArcade_1_1Exceptions_1_1ArcadeException.html", [
         [ "Arcade::Exceptions::BadFileException", "classArcade_1_1Exceptions_1_1BadFileException.html", null ],
