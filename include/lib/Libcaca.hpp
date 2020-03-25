@@ -2,22 +2,22 @@
 ** EPITECH PROJECT, 2020
 ** OOP_arcade_2019
 ** File description:
-** NCurses
+** Libcaca
 */
 
-#ifndef NCURSES_HPP_
-#define NCURSES_HPP_
+#ifndef LIBCACA_HPP_
+#define LIBCACA_HPP_
 
 #include <memory>
 #include "IDisplayModule.hpp"
 
 namespace Arcade::Display
 {
-    class NCurses : public IDisplayModule
+    class Libcaca : public IDisplayModule
     {
         public:
-            NCurses();
-            ~NCurses();
+            Libcaca();
+            ~Libcaca();
 
             void reset() final;
             void open() final;
