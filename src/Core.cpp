@@ -28,8 +28,8 @@ Arcade::Core::Core(const std::string &startLibraryPath)
     if (this->games.empty())
         throw Exceptions::InvalidLibraryException("There are no available games to play.", "Core::Core");
 
-    // TODEV: sometimes the find may not work even though the path is fine
-    auto it = std::find_if(this->libraries.begin(), this->libraries.end(), [startLibraryPath](auto &pair){ return pair.first == startLibraryPath; });
+    auto startLibraryRelativePath = "./lib" + startLibraryPath.substr(startLibraryPath.find_last_of("/"));
+    auto it = std::find_if(this->libraries.begin(), this->libraries.end(), [startLibraryRelativePath](auto &pair){ return pair.first == startLibraryRelativePath; });
     if (it == this->libraries.end())
         throw Exceptions::BadFileException("Argument does not match with any existing library.", "Core::Core");
     this->iLib = std::distance(this->libraries.begin(), it);
