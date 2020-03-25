@@ -32,8 +32,8 @@ SRC_CORE	=	$(SRC_DEFAULT) \
 	src/Core.cpp \
 	src/main.cpp
 
-SRC_NCURSES	=	$(SRC_DEFAULT) \
-	src/libs/NCurses.cpp
+SRC_LIBCACA	=	$(SRC_DEFAULT) \
+	src/libs/Libcaca.cpp
 
 SRC_SDL	=	$(SRC_DEFAULT) \
 	src/libs/SDL.cpp
@@ -63,7 +63,7 @@ OBJ_QIX	=	$(SRC_QIX:.cpp=.o)
 OBJ_SOLARFOX	=	$(SRC_SOLARFOX:.cpp=.o)
 
 OBJ_CORE	=	$(SRC_CORE:.cpp=.o)
-OBJ_NCURSES	=	$(SRC_NCURSES:.cpp=.o)
+OBJ_LIBCACA	=	$(SRC_LIBCACA:.cpp=.o)
 OBJ_SDL		=	$(SRC_SDL:.cpp=.o)
 OBJ_SFML	=	$(SRC_SFML:.cpp=.o)
 OBJ_DEFAULT	=	$(SRC_DEFAULT:.cpp=.o)
@@ -111,12 +111,12 @@ solarfox: OBJ = $(OBJ_SOLARFOX)
 solarfox: CXXFLAGS += -fPIC
 solarfox: $(OBJ_SOLARFOX) build_solarfox
 
-graphicals: ncurses sdl sfml
+graphicals: libcaca sdl sfml
 
-ncurses: NAME = lib/lib_arcade_ncurses.so
-ncurses: OBJ = $(OBJ_NCURSES)
-ncurses: CXXFLAGS += -fPIC
-ncurses: $(OBJ_NCURSES) build_ncurses
+libcaca: NAME = lib/lib_arcade_libcaca.so
+libcaca: OBJ = $(OBJ_LIBCACA)
+libcaca: CXXFLAGS += -fPIC
+libcaca: $(OBJ_LIBCACA) build_libcaca
 
 sdl: NAME = lib/lib_arcade_sdl.so
 sdl: OBJ = $(OBJ_SDL)
@@ -130,7 +130,7 @@ sfml: CXXFLAGS += -fPIC
 sfml: LDLIBS = -lsfml-graphics -lsfml-system -lsfml-window
 sfml: $(OBJ_SFML) build_sfml
 
-build_ncurses build_sdl build_sfml build_centipede build_nibbler build_pacman build_qix build_solarfox: exceptions $(OBJ)
+build_libcaca build_sdl build_sfml build_centipede build_nibbler build_pacman build_qix build_solarfox: exceptions $(OBJ)
 	@$(CXX) -o $(NAME) $(OBJ) $(LDLIBS) -shared && \
 		$(ECHO) $(BOLD_T)$(GREEN_C)"\n[✔] COMPILED:" $(DEFAULT)$(LIGHT_GREEN) "$(NAME)\n"$(DEFAULT) || \
 		$(ECHO) $(BOLD_T)$(RED_C)"[✘] "$(UNDLN_T)"BUILD FAILED:" $(LIGHT_RED) "$(NAME)\n"$(DEFAULT)
