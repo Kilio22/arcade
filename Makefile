@@ -70,7 +70,7 @@ OBJ_DEFAULT	=	$(SRC_DEFAULT:.cpp=.o)
 
 CXX	= 	g++
 CXXFLAGS	=	-Wall -Wextra -Werror -I $(INCL_PATH) -std=c++17 -O2
-LDLIBS		=	-ldl
+LDLIBS		=	-ldl -lstdc++fs
 DEBUG_FLAGS	=	-g3 -gdwarf-4
 
 all: message core graphicals games
@@ -144,7 +144,7 @@ clean:
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"$(NAME)'s object files"$(DEFAULT)
 	@$(RM) vgcore.* && \
 		$(ECHO) $(RED_C)$(DIM_T)"[clean]  "$(DEFAULT) $(BOLD_T)$(RED_C)"DELETED: "$(DEFAULT) $(LIGHT_RED)"Valgrind files"$(DEFAULT)
-	@$(RM) $(OBJ_DEFAULT) $(OBJ_LIBCACA) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_CENTIPEDE) $(OBJ_NIBBLER) $(OBJ_PACMAN) $(OBJ_QIX) $(OBJ_SOLARFOX)
+	@$(RM) $(OBJ_DEFAULT) $(OBJ_NCURSES) $(OBJ_SDL) $(OBJ_SFML) $(OBJ_CENTIPEDE) $(OBJ_NIBBLER) $(OBJ_PACMAN) $(OBJ_QIX) $(OBJ_SOLARFOX)
 
 fclean:	clean
 	@$(RM) results.html && \

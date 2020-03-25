@@ -58,4 +58,4 @@ namespace Arcade::Display
     };
 }
 
-#endif /* !NCURSES_HPP_ */
+#endif /* !LIBCACA_HPP_ */
