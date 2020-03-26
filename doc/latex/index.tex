@@ -1,0 +1,41 @@
+\subsection*{Game}
+
+
+\begin{DoxyItemize}
+\item First, you wanna create a c++ class implementing the \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule}{I\+Game\+Module}} interface.
+\item Next you wanna compile it into a dynamic library (.so file).
+\item Put that library file in the {\ttfamily games/} folder located at the root of the arcade repository.
+\end{DoxyItemize}
+
+Every class contained by the libraries located in the {\ttfamily games/} folder are
+
+going to be instanciated thanks to the symbol {\ttfamily create\+Lib} that your library {\bfseries{must}} contain.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} std::unique\_ptr<Arcade::Games::IGameModule> createLib(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} std::make\_unique<MyGameModule>();}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+
+
+\subsection*{Library}
+
+
+\begin{DoxyItemize}
+\item First, you wanna create a c++ class implementing the \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{I\+Display\+Module}} interface.
+\item Next you wanna compile it into a dynamic library (.so file).
+\item Put that library file in the {\ttfamily lib/} folder located at the root of the arcade repository.
+\end{DoxyItemize}
+
+Every class contained by the libraries located in the {\ttfamily lib/} folder are going to be instanciated thanks to the symbol {\ttfamily create\+Lib} that your library {\bfseries{must}} contain.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{extern} \textcolor{stringliteral}{"C"} std::unique\_ptr<Arcade::Display::IDisplayModule> createLib(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{    \textcolor{keywordflow}{return} std::make\_unique<MyDisplayModule>();}
+\DoxyCodeLine{\}}
+\end{DoxyCode}
+ 

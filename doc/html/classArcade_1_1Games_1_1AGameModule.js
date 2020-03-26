@@ -1,7 +1,7 @@
 var classArcade_1_1Games_1_1AGameModule =
 [
     [ "AGameModule", "classArcade_1_1Games_1_1AGameModule.html#a489ae3b9ad35cf20ee05be8e3f365a99", null ],
-    [ "~AGameModule", "classArcade_1_1Games_1_1AGameModule.html#ad5ff511d13e269ce24b6955332982058", null ],
+    [ "~AGameModule", "classArcade_1_1Games_1_1AGameModule.html#a55497e717217fe636c9ed7dc625cf150", null ],
     [ "addToBestScores", "classArcade_1_1Games_1_1AGameModule.html#a961c4a606bcc5d2ab1ead8b3c0bb3408", null ],
     [ "getBestScores", "classArcade_1_1Games_1_1AGameModule.html#aaebba3bd5236f97cb18867fe99c7135b", null ],
     [ "getLibName", "classArcade_1_1Games_1_1AGameModule.html#a3245a3ba2eac74eadf5041bc3806ed6b", null ],

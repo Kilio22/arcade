@@ -164,6 +164,15 @@ debug: all
 doc:
 	@doxygen doc/Doxyfile
 
+doc_pdf:
+	@make -C doc/latex
+	@cp doc/latex/refman.pdf doc/ArcadeDoc.pdf
+
+doc_clean:
+	@$(RM) -r doc/html
+	@$(RM) -r doc/latex
+	@$(RM) -r doc/man
+
 %.o: %.cpp
 	@$(CXX) -c $(CXXFLAGS) -o $@ $< && \
 		$(ECHO) $(DIM_T) "$(CXX) $(CXXFLAGS) -c "$<$(COLOR_THEME)" -o "$@ $(DEFAULT) || \

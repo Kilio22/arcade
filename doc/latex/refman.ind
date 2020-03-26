@@ -1,0 +1,30 @@
+\begin{theindex}
+
+  \item {Arcade::Core}, \hyperpage{9}
+  \item {Arcade::Display::IDisplayModule}, \hyperpage{10}
+  \item {Arcade::Display::Libcaca}, \hyperpage{11}
+  \item {Arcade::Display::SDL}, \hyperpage{14}
+  \item {Arcade::Display::SFML}, \hyperpage{15}
+  \item {Arcade::Exceptions::ArcadeException}, \hyperpage{8}
+  \item {Arcade::Exceptions::BadFileException}, \hyperpage{8}
+  \item {Arcade::Exceptions::BadInstanciationException}, \hyperpage{9}
+  \item {Arcade::Exceptions::InvalidLibraryException}, \hyperpage{11}
+  \item {Arcade::Games::AGameModule}, \hyperpage{7}
+    \subitem {render}, \hyperpage{7}
+  \item {Arcade::Games::Centipede}, \hyperpage{9}
+  \item {Arcade::Games::IGameModule}, \hyperpage{11}
+  \item {Arcade::Games::Nibbler}, \hyperpage{12}
+    \subitem {render}, \hyperpage{13}
+  \item {Arcade::Games::Pacman}, \hyperpage{13}
+    \subitem {render}, \hyperpage{13}
+  \item {Arcade::Games::Qix}, \hyperpage{14}
+  \item {Arcade::Games::Solarfox}, \hyperpage{16}
+
+  \indexspace
+
+  \item {render}
+    \subitem {Arcade::Games::AGameModule}, \hyperpage{7}
+    \subitem {Arcade::Games::Nibbler}, \hyperpage{13}
+    \subitem {Arcade::Games::Pacman}, \hyperpage{13}
+
+\end{theindex}
