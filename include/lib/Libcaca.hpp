@@ -9,6 +9,7 @@
 #define LIBCACA_HPP_
 
 #include <memory>
+#include <caca.h>
 #include "IDisplayModule.hpp"
 
 namespace Arcade::Display
@@ -53,8 +54,13 @@ namespace Arcade::Display
 
             const std::string &getLibName() const final;
 
-        protected:
         private:
+            caca_canvas_t *_canvas;
+            caca_display_t *_display;
+
+            static const std::string _libName;
+            static const std::vector<caca_key> _libKeys;
+            static const std::vector<caca_color> _libColors;
     };
 }
 
