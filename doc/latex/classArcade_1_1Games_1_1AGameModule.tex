@@ -1,0 +1,69 @@
+\hypertarget{classArcade_1_1Games_1_1AGameModule}{}\section{Arcade\+::Games\+::A\+Game\+Module Class Reference}
+\label{classArcade_1_1Games_1_1AGameModule}\index{Arcade::Games::AGameModule@{Arcade::Games::AGameModule}}
+Inheritance diagram for Arcade\+::Games\+::A\+Game\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.723077cm]{classArcade_1_1Games_1_1AGameModule}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a489ae3b9ad35cf20ee05be8e3f365a99}\label{classArcade_1_1Games_1_1AGameModule_a489ae3b9ad35cf20ee05be8e3f365a99}} 
+{\bfseries A\+Game\+Module} (std\+::string const \&libname)
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a1f7e26d79d4c392458407edfe934ff5f}\label{classArcade_1_1Games_1_1AGameModule_a1f7e26d79d4c392458407edfe934ff5f}} 
+bool {\bfseries load\+From\+File} (const std\+::string \&filepath) final
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a61be4a5123cb5933b10fa0a4c34d8b06}\label{classArcade_1_1Games_1_1AGameModule_a61be4a5123cb5933b10fa0a4c34d8b06}} 
+bool {\bfseries load\+From\+File} () final
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a16425d9ca7518acbc60fbece4a974009}\label{classArcade_1_1Games_1_1AGameModule_a16425d9ca7518acbc60fbece4a974009}} 
+bool {\bfseries save\+To\+File} (const std\+::string \&filepath) const final
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a82fdd06480edd7f727504f5073730812}\label{classArcade_1_1Games_1_1AGameModule_a82fdd06480edd7f727504f5073730812}} 
+bool {\bfseries save\+To\+File} () const final
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_abdbf4cf008033b5f339d9758d7f2b8a2}\label{classArcade_1_1Games_1_1AGameModule_abdbf4cf008033b5f339d9758d7f2b8a2}} 
+void {\bfseries set\+Player\+Name} (const std\+::string \&name) final
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a83dbf1572ae5e25174bc7b81fed7ba77}\label{classArcade_1_1Games_1_1AGameModule_a83dbf1572ae5e25174bc7b81fed7ba77}} 
+std\+::pair$<$ std\+::string, int $>$ {\bfseries get\+Score} () const final
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_aaebba3bd5236f97cb18867fe99c7135b}\label{classArcade_1_1Games_1_1AGameModule_aaebba3bd5236f97cb18867fe99c7135b}} 
+std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ {\bfseries get\+Best\+Scores} () const final
+\item 
+void \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a5897780d42d5faba3287c29b87f2b498}{render}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&lib) const override
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a3245a3ba2eac74eadf5041bc3806ed6b}\label{classArcade_1_1Games_1_1AGameModule_a3245a3ba2eac74eadf5041bc3806ed6b}} 
+const std\+::string \& {\bfseries get\+Lib\+Name} () const final
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a961c4a606bcc5d2ab1ead8b3c0bb3408}\label{classArcade_1_1Games_1_1AGameModule_a961c4a606bcc5d2ab1ead8b3c0bb3408}} 
+void {\bfseries add\+To\+Best\+Scores} (int nb)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_aec19427e257bb35879871c6853f51a8f}\label{classArcade_1_1Games_1_1AGameModule_aec19427e257bb35879871c6853f51a8f}} 
+int {\bfseries \+\_\+current\+Score}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a5897780d42d5faba3287c29b87f2b498}\label{classArcade_1_1Games_1_1AGameModule_a5897780d42d5faba3287c29b87f2b498}} 
+\index{Arcade::Games::AGameModule@{Arcade::Games::AGameModule}!render@{render}}
+\index{render@{render}!Arcade::Games::AGameModule@{Arcade::Games::AGameModule}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void Arcade\+::\+Games\+::\+A\+Game\+Module\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&}]{lib }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Default game implementation (out of order) 
+
+Implements \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule}{Arcade\+::\+Games\+::\+I\+Game\+Module}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classArcade_1_1Games_1_1Nibbler_afd52ee2fad66523b58f94f9eb582145e}{Arcade\+::\+Games\+::\+Nibbler}}, and \mbox{\hyperlink{classArcade_1_1Games_1_1Pacman_ab1a7408f265efbef12b4f9d1a6fb4512}{Arcade\+::\+Games\+::\+Pacman}}.
+
