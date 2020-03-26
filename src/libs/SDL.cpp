@@ -102,6 +102,7 @@ void Arcade::Display::SDL::open()
     }
     SDL_StartTextInput();
     SDL_SetRenderDrawColor(this->_renderer, this->_libColors.at(this->_currentColor).r, this->_libColors.at(this->_currentColor).g, this->_libColors.at(this->_currentColor).b, 255); // set to current color
+    this->_fonts = std::make_unique<std::map<unsigned int, TTF_Font *>>();
 }
 
 bool Arcade::Display::SDL::isOpen() const
@@ -330,11 +331,16 @@ void Arcade::Display::SDL::putFillCircle(float x, float y, float radius) const
 
 void Arcade::Display::SDL::putText(const std::string &text, unsigned int size, float x, float y) const
 {
-    TTF_Font *font = TTF_OpenFont("./assets/pixelmix_bold.ttf", size);
     SDL_Surface *textSurface;
     SDL_Rect textRect;
     SDL_Texture *texture;
 
+    if (this->_fonts->find(size) == this->_fonts->end()) {
+        TTF_Font *newFont = TTF_OpenFont("./assets/pixelmix_bold.ttf", size);
+        if (newFont == nullptr)
+            throw Arcade::Exceptions::BadFileException("Cannot load font", "SDL::putText");
+        this->_fonts->insert({size, newFont});
+    }
     if (x < 0) {
         x *= -1;
         y *= -1;
@@ -342,11 +348,9 @@ void Arcade::Display::SDL::putText(const std::string &text, unsigned int size, f
         x += (FULL_WIDTH - WIDTH) / 2;
         y += (FULL_HEIGHT - HEIGHT) / 2;
     }
-    if (font == NULL)
-        throw Arcade::Exceptions::BadFileException("Cannot load font", "SDL::putText");
-    textSurface = TTF_RenderText_Solid(font, text.c_str(), this->_libColors.at(this->_currentColor));
-    if (textSurface == NULL)
-        throw Arcade::Exceptions::BadInstanciationException("text surface creation failed.", "SDL::putText");
+    textSurface = TTF_RenderText_Solid(this->_fonts->find(size)->second, text.c_str(), this->_libColors.at(this->_currentColor));
+    if (textSurface == nullptr)
+        throw Arcade::Exceptions::BadInstanciationException("Text surface creation failed.", "SDL::putText");
     texture = SDL_CreateTextureFromSurface(this->_renderer, textSurface);
     textRect.x = (int)x;
     textRect.y = (int)y;
@@ -355,7 +359,6 @@ void Arcade::Display::SDL::putText(const std::string &text, unsigned int size, f
     SDL_FreeSurface(textSurface);
     SDL_QueryTexture(texture, NULL, NULL, &textRect.w, &textRect.h);
     SDL_RenderCopy(this->_renderer, texture, NULL, &textRect);
-    TTF_CloseFont(font);
     SDL_DestroyTexture(texture);
 }
 

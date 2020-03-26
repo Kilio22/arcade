@@ -59,6 +59,7 @@ namespace Arcade::Display
             Colors _currentColor;
             std::vector<bool> _events;
             char _keyCode;
+            std::unique_ptr<sf::Font> _font;
 
             static const std::string _libName;
             static const std::vector<sf::Color> _libColors;

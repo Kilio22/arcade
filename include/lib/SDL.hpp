@@ -9,6 +9,7 @@
 #define SDL_HPP_
 
 #include <memory>
+#include <map>
 #include <SDL2/SDL.h>
 #include "IDisplayModule.hpp"
 
@@ -58,6 +59,7 @@ namespace Arcade::Display
             SDL_Window *_window;
             SDL_Surface *_surface;
             SDL_Renderer *_renderer;
+            std::unique_ptr<std::map<unsigned int, TTF_Font *>> _fonts;
             Colors _currentColor;
             std::vector<bool> _events;
             char _keyCode;

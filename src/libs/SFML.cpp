@@ -59,8 +59,10 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 }
 
 Arcade::Display::SFML::SFML()
-    : _window(nullptr), _currentColor(Colors::DEFAULT), _events(Keys::KEYS_END, false), _keyCode('\0')
+    : _window(nullptr), _currentColor(Colors::DEFAULT), _events(Keys::KEYS_END, false), _keyCode('\0'), _font(std::make_unique<sf::Font>())
 {
+    if (this->_font->loadFromFile("./assets/pixelmix_bold.ttf") == false)
+        throw Arcade::Exceptions::BadFileException("Cannot load font", "SFML::SFML");
 }
 
 Arcade::Display::SFML::~SFML()
@@ -282,7 +284,6 @@ void Arcade::Display::SFML::putFillCircle(float x, float y, float rad) const
 void Arcade::Display::SFML::putText(const std::string &text, unsigned int size, float x, float y) const
 {
     sf::Text newText;
-    sf::Font newFont;
 
     if (x < 0) {
         x *= -1;
@@ -291,9 +292,7 @@ void Arcade::Display::SFML::putText(const std::string &text, unsigned int size, 
         x += (FULL_WIDTH - WIDTH) / 2;
         y += (FULL_HEIGHT - HEIGHT) / 2;
     }
-    if (newFont.loadFromFile("./assets/pixelmix_bold.ttf") == false)
-        throw Arcade::Exceptions::BadFileException("Cannot load font", "SFML::putText");
-    newText.setFont(newFont);
+    newText.setFont(*this->_font);
     newText.setFillColor(this->_libColors.at(this->_currentColor));
     newText.setCharacterSize(size);
     newText.setString(text);
