@@ -41,7 +41,6 @@ namespace Arcade::Games
 
             void spawnFruit();
             bool isDead();
-            void saveScore();
 
             void updateDirection(const Arcade::Display::IDisplayModule &displayModule);
             void updateSnake();
@@ -55,7 +54,6 @@ namespace Arcade::Games
             float frameCount;
             Direction direction;
             Direction lastDirection;
-            int score;
             std::pair<int, int> fruit;
             std::list<std::pair<int, int>> snake;
     };

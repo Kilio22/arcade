@@ -13,7 +13,7 @@
 #include "Exceptions/BadFileException.hpp"
 #include "Exceptions/InvalidLibraryException.hpp"
 
-const char *defaultUsername = "Michel Forevertonight";
+const char *defaultUsername = "Michel";
 
 Arcade::Core::Core(const std::string &startLibraryPath)
     : username(defaultUsername),
@@ -75,6 +75,8 @@ void Arcade::Core::menuEvents()
         if (this->gameModule == nullptr)
             throw Exceptions::InvalidLibraryException("Unexpected error while loading game.", "Core::menuEvents");
         this->gameModule->setPlayerName(this->username);
+        if (this->gameModule->loadFromFile() == false)
+            Logger::log(Logger::ERROR, "Could not load scores.");
         Logger::log(Logger::DEBUG, "Selected game: ", this->gameModule->getLibName(), " [", this->iGame, "]");
         return;
     }
@@ -130,13 +132,6 @@ void Arcade::Core::gameDisplay() const
 
 void Arcade::Core::displayOverlay() const
 {
-    std::vector<std::tuple<std::string, int>> xdd = {
-        {"Jean-pol", 55555},
-        {"Jean-patrick", 4444},
-        {"Jean-pierre", 333},
-        {"Jean-padernier", 22},
-        {"Jean-putaing", 1},
-    };
     int y = -70;
 
     this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_GREEN);
@@ -161,7 +156,7 @@ void Arcade::Core::displayOverlay() const
             this->displayModule->putText("    None yet...", 20, -10, y -= 40);
         else {
             for (auto &score : scores)
-                this->displayModule->putText("    " + score.first + ": " + std::to_string(std::get<1>(score)), 20, -10, y -= 40);
+                this->displayModule->putText("    " + score.first + ": " + std::to_string(score.second), 20, -10, y -= 40);
         }
     }
     this->displayControls();
@@ -225,6 +220,8 @@ void Arcade::Core::switchGame(Direction direction)
     if (this->gameModule == nullptr)
         throw Exceptions::InvalidLibraryException("Unexpected error while switching game.", "Core::switchGame");
     this->gameModule->setPlayerName(this->username);
+    if (this->gameModule->loadFromFile() == false)
+        Logger::log(Logger::ERROR, "Could not load scores.");
     Logger::log(Logger::DEBUG, "New game: ", this->gameModule->getLibName(), " [", this->iGame, "]");
     auto scores = this->gameModule->getBestScores();
 }

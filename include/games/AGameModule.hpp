@@ -18,7 +18,7 @@ namespace Arcade::Games
     {
         public:
             AGameModule(std::string const &libname);
-            virtual ~AGameModule() = default;
+            virtual ~AGameModule();
 
             bool loadFromFile(const std::string &filepath) final;
             bool loadFromFile() final;
@@ -41,6 +41,7 @@ namespace Arcade::Games
         protected:
             void addToBestScores(int nb);
             int _currentScore;
+
         private:
             std::string _playerName;
             std::string _libName;

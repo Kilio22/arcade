@@ -52,8 +52,10 @@ void Arcade::Games::Pacman::update(const Arcade::Display::IDisplayModule &displa
         this->moveMonsters();
         this->move();
         this->eat();
-        if (this->isDead())
+        if (this->isDead()) {
+            this->addToBestScores(this->_currentScore);
             this->reset();
+        }
         this->_framesCount = 0;
     }
 }

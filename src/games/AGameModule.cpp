@@ -14,6 +14,12 @@ Arcade::Games::AGameModule::AGameModule(std::string const &libname)
 {
 }
 
+Arcade::Games::AGameModule::~AGameModule()
+{
+    if (this->_highscores.empty() == false)
+        this->saveToFile();
+}
+
 bool Arcade::Games::AGameModule::loadFromFile(const std::string &filepath)
 {
     std::ifstream ifs;
@@ -54,7 +60,7 @@ bool Arcade::Games::AGameModule::saveToFile(const std::string &filepath) const
 
     ofs.open(filepath);
     for (auto tuple : this->_highscores) {
-        ofs << std::get<0>(tuple) << ":" << std::get<1>(tuple) << std::endl;
+        ofs << tuple.first << ":" << tuple.second << std::endl;
     }
     ofs.close();
     return false;
@@ -66,7 +72,7 @@ bool Arcade::Games::AGameModule::saveToFile() const
 
     ofs.open(SAVE_PATH + this->_libName);
     for (auto tuple : this->_highscores) {
-        ofs << std::get<0>(tuple) << ":" << std::get<1>(tuple) << std::endl;
+        ofs << tuple.first << ":" << tuple.second << std::endl;
     }
     ofs.close();
     return false;
