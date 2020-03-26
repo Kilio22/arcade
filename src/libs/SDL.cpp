@@ -8,6 +8,7 @@
 #include <functional>
 #include <SDL2/SDL_keycode.h>
 #include <SDL2/SDL_ttf.h>
+#include <time.h>
 #include "lib/SDL.hpp"
 #include "Exceptions/BadInstanciationException.hpp"
 #include "Exceptions/BadFileException.hpp"
@@ -194,6 +195,7 @@ void Arcade::Display::SDL::update()
 
 void Arcade::Display::SDL::render() const
 {
+    SDL_Delay(1000 / 60);
     SDL_RenderPresent(this->_renderer);
 }
 

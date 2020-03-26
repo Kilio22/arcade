@@ -81,6 +81,7 @@ void Arcade::Display::SFML::reset()
 void Arcade::Display::SFML::open()
 {
     this->_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(FULL_WIDTH, FULL_HEIGHT), "Arcade");
+    this->_window->setFramerateLimit(60);
 }
 
 bool Arcade::Display::SFML::isOpen() const
