@@ -34,6 +34,7 @@ bool Arcade::Games::AGameModule::loadFromFile(const std::string &filepath)
         this->_highscores.push_back({line.substr(0, line.find(':')), std::stoi(line.substr(line.find(':') + 1))});
     }
     ifs.close();
+    this->sortHighscores();
     return true;
 }
 
@@ -51,6 +52,7 @@ bool Arcade::Games::AGameModule::loadFromFile()
         this->_highscores.push_back({line.substr(0, line.find(':')), std::stoi(line.substr(line.find(':') + 1))});
     }
     ifs.close();
+    this->sortHighscores();
     return true;
 }
 
@@ -110,5 +112,16 @@ void Arcade::Games::AGameModule::render(Arcade::Display::IDisplayModule &lib) co
 void Arcade::Games::AGameModule::addToBestScores(int nb)
 {
     this->_highscores.push_back({this->_playerName, nb});
-    std::sort(this->_highscores.begin(), this->_highscores.end(), std::greater<>());
+    this->sortHighscores();
+}
+
+void Arcade::Games::AGameModule::sortHighscores(void)
+{
+    std::sort(this->_highscores.begin(), this->_highscores.end(), [](std::pair<std::string, int> const &first, std::pair<std::string, int> const &second){
+        if (first.second != second.second) {
+            return first.second > second.second;
+        } else {
+            return first.first < second.first;
+        }
+    });
 }

@@ -40,6 +40,7 @@ namespace Arcade::Games
 
         protected:
             void addToBestScores(int nb);
+            void sortHighscores(void);
             int _currentScore;
 
         private:
