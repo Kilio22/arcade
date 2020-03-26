@@ -6,6 +6,7 @@
 */
 
 #include <algorithm>
+#include <cctype>
 #include "arcade.h"
 #include "DLLoader.hpp"
 #include "Core.hpp"
@@ -88,12 +89,14 @@ void Arcade::Core::menuEvents()
         if (this->iGame < 0)
             this->iGame = this->games.size() - 1;
     }
-    if (this->displayModule->getKeyCode() != '\0') {
-        if (this->displayModule->getKeyCode() == '\b') {
+    auto key = this->displayModule->getKeyCode();
+    if (key != '\0') {
+        std::cerr << (int)key << std::endl;
+        if (key == '\b') {
             if (this->username.empty() == false)
                 this->username = this->username.substr(0, this->username.length() - 1);
-        } else if (this->displayModule->getKeyCode() != '\n')
-            this->username.append(std::string(1, this->displayModule->getKeyCode()));
+        } else if (std::isalnum(static_cast<unsigned char>(key)) != false)
+            this->username.append(std::string(1, key));
     }
 }
 
