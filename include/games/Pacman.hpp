@@ -43,12 +43,13 @@ namespace Arcade::Games
             bool isDead(void);
             void eat(void);
             void moveMonsters(void);
+            void moveMonster(std::pair<circle_t, Direction> &monster);
 
             std::vector<rectangle_t> _walls;
             std::vector<rectangle_t> _path;
             std::vector<std::pair<rectangle_t, rectangle_t>> _bonuses;
             std::vector<std::pair<rectangle_t, circle_t>> _tokens;
-            std::vector<circle_t> _monsters;
+            std::vector<std::pair<circle_t, Pacman::Direction>> _monsters;
             circle_t _pacman;
             Direction _direction;
             bool _canEatMonsters;
