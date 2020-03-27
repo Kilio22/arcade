@@ -15,13 +15,13 @@
 namespace Arcade::Display
 {
     /**
-     * @brief Libcaca library
+     * @brief Libncurses library
      */
-    class Libcaca : public IDisplayModule
+    class Ncurses : public IDisplayModule
     {
         public:
-            Libcaca();
-            ~Libcaca();
+            Ncurses();
+            ~Ncurses();
 
             void reset() final;
             void open() final;
