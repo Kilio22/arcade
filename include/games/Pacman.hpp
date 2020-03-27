@@ -47,6 +47,8 @@ namespace Arcade::Games
             void moveMonsters(void);
             bool moveEntity(std::pair<circle_t, Direction> &entity) const;
             void moveRandomDirection(std::pair<circle_t, Direction> &monster) const;
+            void generateMonsters(void);
+            void generateTokens(void);
 
             std::vector<rectangle_t> _walls;
             std::vector<rectangle_t> _path;

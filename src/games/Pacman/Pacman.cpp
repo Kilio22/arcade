@@ -187,11 +187,28 @@ void Arcade::Games::Pacman::eat(void)
         }
         return false;
     }), this->_monsters.end());
+    this->generateMonsters();
+    this->generateTokens();
+}
+
+void Arcade::Games::Pacman::generateMonsters(void)
+{
     if (this->_monsters.size() != 4) {
         for (size_t i = this->_monsters.size(); i < 4; i++) {
             int monsterPosition = std::rand() % this->_monstersPositions.size();
             this->_monsters.push_back({{this->_monstersPositions[monsterPosition].first, this->_monstersPositions[monsterPosition].first, 4, static_cast<Arcade::Display::IDisplayModule::Colors>(std::rand() % Arcade::Display::IDisplayModule::Colors::COLORS_END)}, Direction::UP});
         }
+    }
+}
+
+void Arcade::Games::Pacman::generateTokens(void)
+{
+    if (this->_tokens.size() == 0) {
+        for (auto const &bloc : this->_path) {
+            this->_tokens.push_back({{bloc.x, bloc.y, 15, 15, Arcade::Display::IDisplayModule::Colors::BLACK}, {bloc.x + 4, bloc.y + 6, 1, Arcade::Display::IDisplayModule::Colors::YELLOW}});
+        }
+        if (this->_framesToStep > 4)
+            this->_framesToStep -= 1;
     }
 }
 
