@@ -12,6 +12,9 @@
 
 namespace Arcade::Games
 {
+    /**
+     * @brief Qix game
+     */
     class Qix : public AGameModule
     {
         public:

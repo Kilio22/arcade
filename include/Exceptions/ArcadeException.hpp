@@ -42,5 +42,4 @@ namespace Arcade::Exceptions
     };
 }
 
-
 #endif /* !ARCADEEXCEPTION_HPP_ */

@@ -13,6 +13,9 @@
 
 namespace Arcade::Games
 {
+    /**
+     * @brief Nibbler game
+     */
     class Nibbler : public AGameModule
     {
         private:

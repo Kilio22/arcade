@@ -14,6 +14,9 @@
 
 namespace Arcade::Games
 {
+    /**
+     * @brief Pacman game
+     */
     class Pacman : public AGameModule
     {
         public:

@@ -14,6 +14,9 @@
 
 namespace Arcade::Display
 {
+    /**
+     * @brief Libcaca library
+     */
     class Libcaca : public IDisplayModule
     {
         public:

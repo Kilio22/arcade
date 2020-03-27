@@ -15,6 +15,9 @@
 
 namespace Arcade::Display
 {
+    /**
+     * @brief SDL library
+     */
     class SDL : public IDisplayModule
     {
         public:

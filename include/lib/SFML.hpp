@@ -14,6 +14,9 @@
 
 namespace Arcade::Display
 {
+    /**
+     * @brief SFML library
+     */
     class SFML : public IDisplayModule
     {
         public:

@@ -12,6 +12,9 @@
 
 namespace Arcade::Games
 {
+    /**
+     * @brief Solarfox game
+     */
     class Solarfox : public AGameModule
     {
         public:

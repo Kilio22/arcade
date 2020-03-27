@@ -28,5 +28,4 @@ namespace Arcade::Exceptions
     };
 }
 
-
 #endif /* !BADINSTANCIATION_HPP_ */

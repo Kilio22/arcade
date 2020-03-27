@@ -12,6 +12,9 @@
 
 namespace Arcade::Games
 {
+    /**
+     * @brief Centipede game
+     */
     class Centipede : public AGameModule
     {
         public:
