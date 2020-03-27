@@ -1,6 +1,13 @@
 var hierarchy =
 [
     [ "Arcade::Core", "classArcade_1_1Core.html", null ],
+    [ "exception", null, [
+      [ "Arcade::Exceptions::ArcadeException", "classArcade_1_1Exceptions_1_1ArcadeException.html", [
+        [ "Arcade::Exceptions::BadFileException", "classArcade_1_1Exceptions_1_1BadFileException.html", null ],
+        [ "Arcade::Exceptions::BadInstanciationException", "classArcade_1_1Exceptions_1_1BadInstanciationException.html", null ],
+        [ "Arcade::Exceptions::InvalidLibraryException", "classArcade_1_1Exceptions_1_1InvalidLibraryException.html", null ]
+      ] ]
+    ] ],
     [ "Arcade::Display::IDisplayModule", "classArcade_1_1Display_1_1IDisplayModule.html", [
       [ "Arcade::Display::Libcaca", "classArcade_1_1Display_1_1Libcaca.html", null ],
       [ "Arcade::Display::SDL", "classArcade_1_1Display_1_1SDL.html", null ],
@@ -13,13 +20,6 @@ var hierarchy =
         [ "Arcade::Games::Pacman", "classArcade_1_1Games_1_1Pacman.html", null ],
         [ "Arcade::Games::Qix", "classArcade_1_1Games_1_1Qix.html", null ],
         [ "Arcade::Games::Solarfox", "classArcade_1_1Games_1_1Solarfox.html", null ]
-      ] ]
-    ] ],
-    [ "runtime_error", null, [
-      [ "Arcade::Exceptions::ArcadeException", "classArcade_1_1Exceptions_1_1ArcadeException.html", [
-        [ "Arcade::Exceptions::BadFileException", "classArcade_1_1Exceptions_1_1BadFileException.html", null ],
-        [ "Arcade::Exceptions::BadInstanciationException", "classArcade_1_1Exceptions_1_1BadInstanciationException.html", null ],
-        [ "Arcade::Exceptions::InvalidLibraryException", "classArcade_1_1Exceptions_1_1InvalidLibraryException.html", null ]
       ] ]
     ] ]
 ];

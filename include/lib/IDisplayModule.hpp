@@ -73,7 +73,7 @@ namespace Arcade::Display
                 W, ///< W key
                 X, ///< X key
                 SPACE, ///< Space key
-                ESCAPE, ///< Backspace key
+                ESCAPE, ///< Escape key
                 J, ///< J key
                 K, ///< K key
                 U, ///< U key

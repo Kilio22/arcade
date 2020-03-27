@@ -117,6 +117,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a054c4f79319af87bfbbe79fa03809b38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Exceptions_1_1ArcadeException.html#a054c4f79319af87bfbbe79fa03809b38">ArcadeException</a> (std::string const &amp;message, std::string const &amp;component)</td></tr>
 <tr class="memdesc:a054c4f79319af87bfbbe79fa03809b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="namespaceArcade.html">Arcade</a> Exception object.  <a href="#a054c4f79319af87bfbbe79fa03809b38">More...</a><br /></td></tr>
 <tr class="separator:a054c4f79319af87bfbbe79fa03809b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab80ccd97194d7c5484ad4d32135eecd1"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Exceptions_1_1ArcadeException.html#ab80ccd97194d7c5484ad4d32135eecd1">what</a> (void) const noexcept override</td></tr>
+<tr class="memdesc:ab80ccd97194d7c5484ad4d32135eecd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the error message which describe why the exception occured.  <a href="#ab80ccd97194d7c5484ad4d32135eecd1">More...</a><br /></td></tr>
+<tr class="separator:ab80ccd97194d7c5484ad4d32135eecd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa000c618b4fbe4a3612f511074243ce9"><td class="memItemLeft" align="right" valign="top">std::string const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Exceptions_1_1ArcadeException.html#aa000c618b4fbe4a3612f511074243ce9">getComponent</a> (void) const noexcept</td></tr>
 <tr class="memdesc:aa000c618b4fbe4a3612f511074243ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of component where the exception occured.  <a href="#aa000c618b4fbe4a3612f511074243ce9">More...</a><br /></td></tr>
 <tr class="separator:aa000c618b4fbe4a3612f511074243ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,6 +191,35 @@ Public Member Functions</h2></td></tr>
 
 <p>Gets the name of component where the exception occured. </p>
 <dl class="section return"><dt>Returns</dt><dd>The component name </dd></dl>
+
+</div>
+</div>
+<a id="ab80ccd97194d7c5484ad4d32135eecd1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab80ccd97194d7c5484ad4d32135eecd1">&#9670;&nbsp;</a></span>what()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* Arcade::Exceptions::ArcadeException::what </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the error message which describe why the exception occured. </p>
+<dl class="section return"><dt>Returns</dt><dd>The error message </dd></dl>
 
 </div>
 </div>

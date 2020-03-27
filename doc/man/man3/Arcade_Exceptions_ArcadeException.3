@@ -10,7 +10,7 @@ Arcade::Exceptions::ArcadeException \- Base exception class for this projects' e
 .PP
 \fC#include <ArcadeException\&.hpp>\fP
 .PP
-Inherits runtime_error\&.
+Inherits exception\&.
 .PP
 Inherited by \fBArcade::Exceptions::BadFileException\fP, \fBArcade::Exceptions::BadInstanciationException\fP, and \fBArcade::Exceptions::InvalidLibraryException\fP\&.
 .SS "Public Member Functions"
@@ -20,6 +20,10 @@ Inherited by \fBArcade::Exceptions::BadFileException\fP, \fBArcade::Exceptions::
 .RI "\fBArcadeException\fP (std::string const &message, std::string const &component)"
 .br
 .RI "Construct a new \fBArcade\fP Exception object\&. "
+.ti -1c
+.RI "const char * \fBwhat\fP (void) const noexcept override"
+.br
+.RI "Gets the error message which describe why the exception occured\&. "
 .ti -1c
 .RI "std::string const  & \fBgetComponent\fP (void) const noexcept"
 .br
@@ -53,6 +57,17 @@ Gets the name of component where the exception occured\&.
 \fBReturns:\fP
 .RS 4
 The component name 
+.RE
+.PP
+
+.SS "const char* Arcade::Exceptions::ArcadeException::what (void) const\fC [override]\fP, \fC [noexcept]\fP"
+
+.PP
+Gets the error message which describe why the exception occured\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The error message 
 .RE
 .PP
 

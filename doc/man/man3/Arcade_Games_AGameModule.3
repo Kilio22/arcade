@@ -63,6 +63,10 @@ Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBAr
 .RI "void \fBaddToBestScores\fP (int nb)"
 .br
 .RI "Adds a score to the scoreboard\&. "
+.ti -1c
+.RI "void \fBdisplayGameOver\fP (\fBArcade::Display::IDisplayModule\fP &displayModule) const"
+.br
+.RI "\fBDisplay\fP game over screen\&. "
 .in -1c
 .SS "Protected Attributes"
 
@@ -71,6 +75,9 @@ Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBAr
 .RI "int \fB_currentScore\fP"
 .br
 .RI "The current score of the active game session\&. "
+.ti -1c
+.RI "bool \fB_isDead\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -98,6 +105,17 @@ Adds a score to the scoreboard\&.
 \fBParameters:\fP
 .RS 4
 \fInb\fP The score value 
+.RE
+.PP
+
+.SS "void Arcade::Games::AGameModule::displayGameOver (\fBArcade::Display::IDisplayModule\fP & displayModule) const\fC [protected]\fP"
+
+.PP
+\fBDisplay\fP game over screen\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdisplayModule\fP The display module 
 .RE
 .PP
 

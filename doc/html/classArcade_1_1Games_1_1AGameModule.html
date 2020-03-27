@@ -162,6 +162,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a961c4a606bcc5d2ab1ead8b3c0bb3408"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a961c4a606bcc5d2ab1ead8b3c0bb3408">addToBestScores</a> (int nb)</td></tr>
 <tr class="memdesc:a961c4a606bcc5d2ab1ead8b3c0bb3408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a score to the scoreboard.  <a href="#a961c4a606bcc5d2ab1ead8b3c0bb3408">More...</a><br /></td></tr>
 <tr class="separator:a961c4a606bcc5d2ab1ead8b3c0bb3408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57720bc39e4b181450d1f78518123399"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a57720bc39e4b181450d1f78518123399">displayGameOver</a> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">Arcade::Display::IDisplayModule</a> &amp;displayModule) const</td></tr>
+<tr class="memdesc:a57720bc39e4b181450d1f78518123399"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespaceArcade_1_1Display.html">Display</a> game over screen.  <a href="#a57720bc39e4b181450d1f78518123399">More...</a><br /></td></tr>
+<tr class="separator:a57720bc39e4b181450d1f78518123399"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -169,6 +172,9 @@ Protected Attributes</h2></td></tr>
 int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1AGameModule.html#aec19427e257bb35879871c6853f51a8f">_currentScore</a></td></tr>
 <tr class="memdesc:aec19427e257bb35879871c6853f51a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current score of the active game session. <br /></td></tr>
 <tr class="separator:aec19427e257bb35879871c6853f51a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f22ebc10582d404cf7393d8028cb0c2"><td class="memItemLeft" align="right" valign="top"><a id="a0f22ebc10582d404cf7393d8028cb0c2"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>_isDead</b></td></tr>
+<tr class="separator:a0f22ebc10582d404cf7393d8028cb0c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Abstract class implementing key methods of the <a class="el" href="classArcade_1_1Games_1_1IGameModule.html" title="Interface for the game modules used to handle games.">IGameModule</a> interface. </p>
@@ -228,6 +234,40 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">nb</td><td>The score value </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a57720bc39e4b181450d1f78518123399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57720bc39e4b181450d1f78518123399">&#9670;&nbsp;</a></span>displayGameOver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Arcade::Games::AGameModule::displayGameOver </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">Arcade::Display::IDisplayModule</a> &amp;&#160;</td>
+          <td class="paramname"><em>displayModule</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="namespaceArcade_1_1Display.html">Display</a> game over screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">displayModule</td><td>The display module </td></tr>
   </table>
   </dd>
 </dl>

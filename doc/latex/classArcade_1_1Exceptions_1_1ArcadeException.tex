@@ -20,6 +20,8 @@ Inheritance diagram for Arcade\+::Exceptions\+::Arcade\+Exception\+:\begin{figur
 \item 
 \mbox{\hyperlink{classArcade_1_1Exceptions_1_1ArcadeException_a054c4f79319af87bfbbe79fa03809b38}{Arcade\+Exception}} (std\+::string const \&message, std\+::string const \&component)
 \begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{namespaceArcade}{Arcade}} Exception object. \end{DoxyCompactList}\item 
+const char $\ast$ \mbox{\hyperlink{classArcade_1_1Exceptions_1_1ArcadeException_ab80ccd97194d7c5484ad4d32135eecd1}{what}} (void) const noexcept override
+\begin{DoxyCompactList}\small\item\em Gets the error message which describe why the exception occured. \end{DoxyCompactList}\item 
 std\+::string const  \& \mbox{\hyperlink{classArcade_1_1Exceptions_1_1ArcadeException_aa000c618b4fbe4a3612f511074243ce9}{get\+Component}} (void) const noexcept
 \begin{DoxyCompactList}\small\item\em Gets the name of component where the exception occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -60,4 +62,17 @@ Gets the name of component where the exception occured.
 
 \begin{DoxyReturn}{Returns}
 The component name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1Exceptions_1_1ArcadeException_ab80ccd97194d7c5484ad4d32135eecd1}\label{classArcade_1_1Exceptions_1_1ArcadeException_ab80ccd97194d7c5484ad4d32135eecd1}} 
+\index{Arcade::Exceptions::ArcadeException@{Arcade::Exceptions::ArcadeException}!what@{what}}
+\index{what@{what}!Arcade::Exceptions::ArcadeException@{Arcade::Exceptions::ArcadeException}}
+\subsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ Arcade\+::\+Exceptions\+::\+Arcade\+Exception\+::what (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+
+
+Gets the error message which describe why the exception occured. 
+
+\begin{DoxyReturn}{Returns}
+The error message 
 \end{DoxyReturn}

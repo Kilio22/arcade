@@ -42,13 +42,18 @@ const std\+::string \& \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a324
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a961c4a606bcc5d2ab1ead8b3c0bb3408}{add\+To\+Best\+Scores}} (int nb)
-\begin{DoxyCompactList}\small\item\em Adds a score to the scoreboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Adds a score to the scoreboard. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a57720bc39e4b181450d1f78518123399}{display\+Game\+Over}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&display\+Module) const
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespaceArcade_1_1Display}{Display}} game over screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_aec19427e257bb35879871c6853f51a8f}\label{classArcade_1_1Games_1_1AGameModule_aec19427e257bb35879871c6853f51a8f}} 
 int \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_aec19427e257bb35879871c6853f51a8f}{\+\_\+current\+Score}}
-\begin{DoxyCompactList}\small\item\em The current score of the active game session. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The current score of the active game session. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a0f22ebc10582d404cf7393d8028cb0c2}\label{classArcade_1_1Games_1_1AGameModule_a0f22ebc10582d404cf7393d8028cb0c2}} 
+bool {\bfseries \+\_\+is\+Dead}
+\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -86,6 +91,21 @@ Adds a score to the scoreboard.
 
 \begin{DoxyParams}{Parameters}
 {\em nb} & The score value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a57720bc39e4b181450d1f78518123399}\label{classArcade_1_1Games_1_1AGameModule_a57720bc39e4b181450d1f78518123399}} 
+\index{Arcade::Games::AGameModule@{Arcade::Games::AGameModule}!displayGameOver@{displayGameOver}}
+\index{displayGameOver@{displayGameOver}!Arcade::Games::AGameModule@{Arcade::Games::AGameModule}}
+\subsubsection{\texorpdfstring{displayGameOver()}{displayGameOver()}}
+{\footnotesize\ttfamily void Arcade\+::\+Games\+::\+A\+Game\+Module\+::display\+Game\+Over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&}]{display\+Module }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+\mbox{\hyperlink{namespaceArcade_1_1Display}{Display}} game over screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Module} & The display module \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_aaebba3bd5236f97cb18867fe99c7135b}\label{classArcade_1_1Games_1_1AGameModule_aaebba3bd5236f97cb18867fe99c7135b}} 
