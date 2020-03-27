@@ -17,7 +17,6 @@ const std::vector<std::tuple<float, float, Arcade::Display::IDisplayModule::Colo
     {322, 234, Arcade::Display::IDisplayModule::Colors::LIGHT_GRAY}
 };
 
-
 extern "C" std::unique_ptr<Arcade::Games::IGameModule> createLib(void)
 {
     return std::make_unique<Arcade::Games::Pacman>();
@@ -69,8 +68,7 @@ void Arcade::Games::Pacman::update(const Arcade::Display::IDisplayModule &displa
     }
 }
 
-void Arcade::Games::Pacman::updatePacmanDirection(const Arcade::Display::IDisplayModule &displayModule)
-{
+void Arcade::Games::Pacman::updatePacmanDirection(const Arcade::Display::IDisplayModule &displayModule) {
     if ((displayModule.isKeyPressed(Arcade::Display::IDisplayModule::Keys::Z)
       || displayModule.isKeyPressed(Display::IDisplayModule::UP))
     && this->canMove(this->_pacman.first.x, this->_pacman.first.y - 15) == true) {
