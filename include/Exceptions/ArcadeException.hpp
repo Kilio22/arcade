@@ -19,7 +19,7 @@ namespace Arcade::Exceptions
     /**
      * @brief Base exception class for this projects' exceptions
      */
-    class ArcadeException : public std::runtime_error
+    class ArcadeException : public std::exception
     {
         public:
             /**
@@ -29,6 +29,12 @@ namespace Arcade::Exceptions
              */
             ArcadeException(std::string const &message, std::string const &component);
             ~ArcadeException() = default;
+
+            /**
+             * @brief Gets the error message which describe why the exception occured.
+             * @return The error message
+             */
+            const char *what(void) const noexcept override;
 
             /**
              * @brief Gets the name of component where the exception occured.
