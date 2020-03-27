@@ -13,13 +13,19 @@
 
 namespace Arcade
 {
+    /**
+     * @brief Used to display error messages depending on the set log level.
+     */
     class Logger
     {
         public:
+            /**
+             * @brief Available log levels.
+             */
             enum LogLevel
             {
-                ERROR,
-                DEBUG
+                ERROR, ///< Displays unexpected errors */
+                DEBUG  ///< Used for debugging */
             };
 
         private:
@@ -30,6 +36,11 @@ namespace Arcade
 
             void operator=(const Logger &) = delete;
 
+            /**
+             * @brief Logs the given message to the output
+             * @param level The log level of the message
+             * @param args Every argument are going to be assembled using std::cerr << ... << args
+             */
             template <typename ... Args>
             static void log(LogLevel level, Args &&...args)
             {
@@ -37,6 +48,10 @@ namespace Arcade
                     (std::cerr << ... << args) << std::endl;
             }
 
+            /**
+             * @brief Sets the current log level.
+             * @param level Log level value.
+             */
             static void setLogLevel(LogLevel level);
 
         private:

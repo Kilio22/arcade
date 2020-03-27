@@ -13,8 +13,14 @@
 #include "games/IGameModule.hpp"
 #include "lib/IDisplayModule.hpp"
 
+/** \namespace Arcade
+ *  Default namespace for the project.
+ */
 namespace Arcade
 {
+    /**
+     * @brief Core class that handles all the interactions between the library modules and the game modules.
+     */
     class Core
     {
         private:
@@ -25,9 +31,16 @@ namespace Arcade
             };
 
         public:
+            /**
+             * @brief Construct a new Core object
+             * @param startLibraryPath The library path that will be first used when the program will be started.
+             */
             explicit Core(const std::string &startLibraryPath);
             ~Core() = default;
 
+            /**
+             * @brief Starts the arcade program.
+             */
             void play();
 
         private:

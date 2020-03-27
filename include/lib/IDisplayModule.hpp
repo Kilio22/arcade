@@ -17,131 +17,257 @@
 #define WIDTH 640
 #define HEIGHT 480
 
+/** \namespace Arcade::Display
+ *  Contains elements related to the display libraries of the Arcade project.
+ */
 namespace Arcade::Display
 {
+    /**
+     * @brief Interface for the display modules used to display things.
+     */
     class IDisplayModule
     {
         public:
             virtual ~IDisplayModule() = default;
 
-            // Limited to the bash color codes in case colors aren't handled by a library
+            /**
+             * @brief Available colors.
+             */
             enum Colors
             {
-                DEFAULT,
-                BLACK,
-                RED,
-                GREEN,
-                YELLOW,
-                BLUE,
-                MAGENTA,
-                CYAN,
-                LIGHT_GRAY,
-                DARK_GRAY,
-                LIGHT_RED,
-                LIGHT_GREEN,
-                LIGHT_YELLOW,
-                LIGHT_BLUE,
-                LIGHT_MAGENTA,
-                LIGHT_CYAN,
-                WHITE,
-                COLORS_END
+                DEFAULT, ///< The color the window clears to
+                BLACK, ///< Black color
+                RED, ///< Red color
+                GREEN, ///< Green color
+                YELLOW, ///< Yellow color
+                BLUE, ///< Blue color
+                MAGENTA, ///< Magenta color
+                CYAN, ///< Cyan color
+                LIGHT_GRAY, ///< Light gray color
+                DARK_GRAY, ///< Dark gray color
+                LIGHT_RED, ///< Light red color
+                LIGHT_GREEN, ///< Light green color
+                LIGHT_YELLOW, ///< Light yellow color
+                LIGHT_BLUE, ///< Light blue color
+                LIGHT_MAGENTA, ///< Light magenta color
+                LIGHT_CYAN, ///< Light cyan color
+                WHITE, ///< White color
+                COLORS_END ///< Color count
             };
 
-            // Keys you have to implement, there are enough keys to have multiple keyboard configurations for every game
-            // You only need 6 keys for the core and 6 for the games.
+            /**
+             * @brief Available keys
+             */
             enum Keys
             {
-                LEFT,
-                RIGHT,
-                UP,
-                DOWN,
-                Z,
-                Q,
-                S,
-                D,
-                A,
-                E,
-                W,
-                X,
-                SPACE,
-                ESCAPE,
-                J,
-                K,
-                U,
-                I,
-                M,
-                R,
-                ENTER,
-                KEYS_END
+                LEFT, ///< Left key
+                RIGHT, ///< Right key
+                UP, ///< Up key
+                DOWN, ///< Down key
+                Z, ///< Z key
+                Q, ///< Q key
+                S, ///< S key
+                D, ///< D key
+                A, ///< A key
+                E, ///< E key
+                W, ///< W key
+                X, ///< X key
+                SPACE, ///< Space key
+                ESCAPE, ///< Backspace key
+                J, ///< J key
+                K, ///< K key
+                U, ///< U key
+                I, ///< I key
+                M, ///< M key
+                R, ///< R key
+                ENTER, ///< Return key
+                KEYS_END ///< Key count
             };
 
-            // For the core
-            // Reset the library
+
+            /**
+             * @brief Resets the library
+             */
             virtual void reset() = 0;
-            // Opens / inits the window
+
+            /**
+             * @brief Opens / initializes the window.
+             */
             virtual void open() = 0;
-            // Check if the window is open
+
+            /**
+             * @brief Check window status
+             * @return true Window is open
+             * @return false Window is closed
+             */
             virtual bool isOpen() const = 0;
 
-            // Handle switching libs & games (the names are explicit)
-            // Those are all key presses
-            // Those must be different than the keys listed in the Keys enum.
-            // The keys enum only lists keys used by games, not special keys to switch libraries.
+
+            /**
+             * @brief Checks whether you need to change the current display library.
+             * @return true Switch to next available library
+             * @return false Do nothing
+             */
             virtual bool switchToNextLib() const = 0;
+
+            /**
+             * @brief Checks whether you need to change the current display library.
+             * @return true Switch to previous available library
+             * @return false Do nothing
+             */
             virtual bool switchToPreviousLib() const = 0;
+
+            /**
+             * @brief Checks whether you need to change the current game library.
+             * @return true Switch to next available library
+             * @return false Do nothing
+             */
             virtual bool switchToNextGame() const = 0;
+
+            /**
+             * @brief Checks whether you need to change the current game library.
+             * @return true Switch to previous available library
+             * @return false Do nothing
+             */
             virtual bool switchToPreviousGame() const = 0;
-            // From the pdf
+
+            /**
+             * @brief Checks whether you need to restart the current game.
+             * @return true Restart the game
+             * @return false Do nothing
+             */
             virtual bool shouldBeRestarted() const = 0;
+
+            /**
+             * @brief Checks whether you need to go back to the menu.
+             * @return true Go back to menu
+             * @return false Do nothing
+             */
             virtual bool shouldGoToMenu() const = 0;
+
+            /**
+             * @brief Checks whether you need to exit the program.
+             * @return true Exit the program
+             * @return false Do nothing
+             */
             virtual bool shouldExit() const = 0;
 
-            // Handle Inputs & Events
+
+            /**
+             * @brief Checks whether the current key is being pressed.
+             * @return true Key is pressed
+             * @return false Key is not pressed
+             */
             virtual bool isKeyPressed(IDisplayModule::Keys) const = 0;
+
+            /**
+             * @brief Checks whether the current key was pressed during the last frame.
+             * @return true Key is pressed
+             * @return false Key is not pressed
+             */
             virtual bool isKeyPressedOnce(IDisplayModule::Keys) const = 0;
-            // Get the number of frames that passed between two calls to this function
-            // The games should not be frame dependant!! That's why this is here.
+
+
+            /**
+             * @brief Gets the number of frames since last update
+             * @return float Frame count
+             */
             virtual float getDelta() const = 0;
 
-            // Handle Loop
-            virtual void clear() const = 0;
-            virtual void update() = 0;
-            virtual void render() const = 0;
-            // You don't need all three of them, only one should be enough but we added the three of them
-            // in case some of you want to seperate each step
-            // Your core (or games) should nonetheless call all of these functions in this specific order :
-            // clear -> update -> render
 
-            // Handle Text Input
-            // We need to ask for the player's name (check the pdf before complaining and asking about this function)
-            // Get key Presses.
-            // returns \n if enter was pressed & \0 if nothing was pressed.
-            // it returns \b if backspace was pressed (to delete a character from the name).
+            /**
+             * @brief Clears the canvas
+             */
+            virtual void clear() const = 0;
+
+            /**
+             * @brief Runs an update over the events that occured.
+             */
+            virtual void update() = 0;
+
+            /**
+             * @brief Renders the canvas
+             */
+            virtual void render() const = 0;
+
+
+            /**
+             * @brief Gets the last pressed character from the keyboard
+             * @return \0 if nothing was pressed, \\b if backspace was pressed, \\n if return was pressed,
+             * otherwise, a character.
+             */
             virtual char getKeyCode() const = 0;
 
-            // Display Stuff
-            // Sets the color for all the following draw functions.
-            // everything you display after this will have the selected color
+
+            /**
+             * @brief Defines the color of the elements that will be drawn.
+             * @param col The color
+             */
             virtual void setColor(IDisplayModule::Colors col) = 0;
-            // Display a pixel
+
+            /**
+             * @brief Displays a pixel
+             * @param x X coordinates
+             * @param y Y coordinates
+             */
             virtual void putPixel(float x, float y) const = 0;
-            // Display a line
+
+            /**
+             * @brief Displays a line
+             * @param x1 X coordinates for the first point
+             * @param y1 Y coordinates for the first point
+             * @param x2 X coordinates for the second point
+             * @param y2 Y coordinates for the second point
+             */
             virtual void putLine(float x1, float y1, float x2, float y2) const = 0;
-            // Display an empty rectangle
+
+            /**
+             * @brief Displays a rectangle
+             * @param x X coordinates
+             * @param y Y coordinates
+             * @param w Width of the rectangle
+             * @param h Height of the rectangle
+             */
             virtual void putRect(float x, float y, float w, float h) const = 0;
-            // Display a full rectangle
+
+            /**
+             * @brief Displays a filled rectangle
+             * @param x X coordinates
+             * @param y Y coordinates
+             * @param w Width of the rectangle
+             * @param h Height of the rectangle
+             */
             virtual void putFillRect(float x, float y, float w, float h) const = 0;
-            // Display an empty circle
+
+            /**
+             * @brief Displays a cirle
+             * @param x X coordinates
+             * @param y Y coordinates
+             * @param rad Radius of the circle
+             */
             virtual void putCircle(float x, float y, float rad) const = 0;
-            // Display a full circle
+
+            /**
+             * @brief Displays a filled cirle
+             * @param x X coordinates
+             * @param y Y coordinates
+             * @param rad Radius of the circle
+             */
             virtual void putFillCircle(float x, float y, float rad) const = 0;
-            // Display some text
+
+            /**
+             * @brief Displays text
+             * @param text The text content
+             * @param size The text size
+             * @param x X coordinates
+             * @param y Y coordinates
+             */
             virtual void putText(const std::string &text, unsigned int size, float x, float y) const = 0;
 
-            // We chose not to display images because some library can't and it would cause other problems
-            // You can still parse a file and display pixel art images by displaying pixels manually if you want.
-
-            // Strictly for debugging purposes, get the library's name (ncurses/sfm/sdl/libcaca etc etc)
+            /**
+             * @brief Gets the library name
+             * @return The library's name
+             */
             virtual const std::string &getLibName() const = 0;
     };
 } // namespace Arcade::Display

@@ -1,5 +1,14 @@
 \hypertarget{classArcade_1_1Games_1_1IGameModule}{}\section{Arcade\+::Games\+::I\+Game\+Module Class Reference}
 \label{classArcade_1_1Games_1_1IGameModule}\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+
+
+Interface for the game modules used to handle games.  
+
+
+
+
+{\ttfamily \#include $<$I\+Game\+Module.\+hpp$>$}
+
 Inheritance diagram for Arcade\+::Games\+::I\+Game\+Module\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,35 +19,225 @@ Inheritance diagram for Arcade\+::Games\+::I\+Game\+Module\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a8934b25efb3c948c8b3be7caa141626d}\label{classArcade_1_1Games_1_1IGameModule_a8934b25efb3c948c8b3be7caa141626d}} 
-virtual void {\bfseries reset} ()=0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a2a8cdd7c90677b6ebd0f97d99254d256}\label{classArcade_1_1Games_1_1IGameModule_a2a8cdd7c90677b6ebd0f97d99254d256}} 
-virtual bool {\bfseries load\+From\+File} (const std\+::string \&filepath)=0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_add4c3468c03cc41fde2baf671a4bd026}\label{classArcade_1_1Games_1_1IGameModule_add4c3468c03cc41fde2baf671a4bd026}} 
-virtual bool {\bfseries load\+From\+File} ()=0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a3cf053ce2f4ccfe13e9c10d8549f7c82}\label{classArcade_1_1Games_1_1IGameModule_a3cf053ce2f4ccfe13e9c10d8549f7c82}} 
-virtual bool {\bfseries save\+To\+File} (const std\+::string \&filepath) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_ada0aa1d3d52bcdedcdb35b95d956c8ee}\label{classArcade_1_1Games_1_1IGameModule_ada0aa1d3d52bcdedcdb35b95d956c8ee}} 
-virtual bool {\bfseries save\+To\+File} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_aad433296fe8a4582ebfdad5827a13d59}\label{classArcade_1_1Games_1_1IGameModule_aad433296fe8a4582ebfdad5827a13d59}} 
-virtual void {\bfseries set\+Player\+Name} (const std\+::string \&name)=0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_ad84a0b04bb998a4eb3682c76d0fababf}\label{classArcade_1_1Games_1_1IGameModule_ad84a0b04bb998a4eb3682c76d0fababf}} 
-virtual std\+::pair$<$ std\+::string, int $>$ {\bfseries get\+Score} () const =0
-\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_a8934b25efb3c948c8b3be7caa141626d}{reset}} ()=0
+\begin{DoxyCompactList}\small\item\em Resets and restarts the game. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_a2a8cdd7c90677b6ebd0f97d99254d256}{load\+From\+File}} (const std\+::string \&filepath)=0
+\begin{DoxyCompactList}\small\item\em Loads highscores from a file. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_add4c3468c03cc41fde2baf671a4bd026}{load\+From\+File}} ()=0
+\begin{DoxyCompactList}\small\item\em Loads highscores from the default save file. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_a3cf053ce2f4ccfe13e9c10d8549f7c82}{save\+To\+File}} (const std\+::string \&filepath) const =0
+\begin{DoxyCompactList}\small\item\em Saves highscores to a file. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_ada0aa1d3d52bcdedcdb35b95d956c8ee}{save\+To\+File}} () const =0
+\begin{DoxyCompactList}\small\item\em Saves highscores from the default save file. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_aad433296fe8a4582ebfdad5827a13d59}{set\+Player\+Name}} (const std\+::string \&name)=0
+\begin{DoxyCompactList}\small\item\em Sets the player name. \end{DoxyCompactList}\item 
+virtual std\+::pair$<$ std\+::string, int $>$ \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_ad84a0b04bb998a4eb3682c76d0fababf}{get\+Score}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the current score. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_afaec4931b0051ba589fbe1b14d20131b}{get\+Best\+Scores}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the best 16 scores. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_a421d1064fcc112dfc7ea025fc7f88aa7}{update}} (const \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&lib)=0
+\begin{DoxyCompactList}\small\item\em Updates the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_afd5ec66681e77038e3d4dc17f43e1ee9}{render}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&lib) const =0
+\begin{DoxyCompactList}\small\item\em Renders the game on the display module. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_a30966cbaa00abbd2a211cf152ea595f2}{get\+Lib\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the library name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for the game modules used to handle games. 
+
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_afaec4931b0051ba589fbe1b14d20131b}\label{classArcade_1_1Games_1_1IGameModule_afaec4931b0051ba589fbe1b14d20131b}} 
-virtual std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ {\bfseries get\+Best\+Scores} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a421d1064fcc112dfc7ea025fc7f88aa7}\label{classArcade_1_1Games_1_1IGameModule_a421d1064fcc112dfc7ea025fc7f88aa7}} 
-virtual void {\bfseries update} (const \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&lib)=0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_afd5ec66681e77038e3d4dc17f43e1ee9}\label{classArcade_1_1Games_1_1IGameModule_afd5ec66681e77038e3d4dc17f43e1ee9}} 
-virtual void {\bfseries render} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&lib) const =0
-\item 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!getBestScores@{getBestScores}}
+\index{getBestScores@{getBestScores}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{getBestScores()}{getBestScores()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$std\+::pair$<$std\+::string, int$>$ $>$ Arcade\+::\+Games\+::\+I\+Game\+Module\+::get\+Best\+Scores (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the best 16 scores. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::pair$<$std\+::string, int$>$$>$ Vector of \mbox{[}name, score\mbox{]} value pairs 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_aaebba3bd5236f97cb18867fe99c7135b}{Arcade\+::\+Games\+::\+A\+Game\+Module}}.
+
 \mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a30966cbaa00abbd2a211cf152ea595f2}\label{classArcade_1_1Games_1_1IGameModule_a30966cbaa00abbd2a211cf152ea595f2}} 
-virtual const std\+::string \& {\bfseries get\+Lib\+Name} () const =0
-\end{DoxyCompactItemize}
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!getLibName@{getLibName}}
+\index{getLibName@{getLibName}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{getLibName()}{getLibName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& Arcade\+::\+Games\+::\+I\+Game\+Module\+::get\+Lib\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the library name. 
+
+\begin{DoxyReturn}{Returns}
+The library\textquotesingle{}s name 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a3245a3ba2eac74eadf5041bc3806ed6b}{Arcade\+::\+Games\+::\+A\+Game\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_ad84a0b04bb998a4eb3682c76d0fababf}\label{classArcade_1_1Games_1_1IGameModule_ad84a0b04bb998a4eb3682c76d0fababf}} 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!getScore@{getScore}}
+\index{getScore@{getScore}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily virtual std\+::pair$<$std\+::string, int$>$ Arcade\+::\+Games\+::\+I\+Game\+Module\+::get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the current score. 
+
+\begin{DoxyReturn}{Returns}
+std\+::pair$<$std\+::string, int$>$ \mbox{[}Name, score\mbox{]} value pairs 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a83dbf1572ae5e25174bc7b81fed7ba77}{Arcade\+::\+Games\+::\+A\+Game\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a2a8cdd7c90677b6ebd0f97d99254d256}\label{classArcade_1_1Games_1_1IGameModule_a2a8cdd7c90677b6ebd0f97d99254d256}} 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Games\+::\+I\+Game\+Module\+::load\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Loads highscores from a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The file path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Highscores were loaded 
+
+false An error occured 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a1f7e26d79d4c392458407edfe934ff5f}{Arcade\+::\+Games\+::\+A\+Game\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_add4c3468c03cc41fde2baf671a4bd026}\label{classArcade_1_1Games_1_1IGameModule_add4c3468c03cc41fde2baf671a4bd026}} 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!loadFromFile@{loadFromFile}}
+\index{loadFromFile@{loadFromFile}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{loadFromFile()}{loadFromFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Games\+::\+I\+Game\+Module\+::load\+From\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Loads highscores from the default save file. 
+
+\begin{DoxyReturn}{Returns}
+true Highscores were loaded 
+
+false An error occured 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a61be4a5123cb5933b10fa0a4c34d8b06}{Arcade\+::\+Games\+::\+A\+Game\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_afd5ec66681e77038e3d4dc17f43e1ee9}\label{classArcade_1_1Games_1_1IGameModule_afd5ec66681e77038e3d4dc17f43e1ee9}} 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!render@{render}}
+\index{render@{render}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Games\+::\+I\+Game\+Module\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&}]{lib }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Renders the game on the display module. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib} & The display module that will be used to put things on a canvas. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a5897780d42d5faba3287c29b87f2b498}{Arcade\+::\+Games\+::\+A\+Game\+Module}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Nibbler_afd52ee2fad66523b58f94f9eb582145e}{Arcade\+::\+Games\+::\+Nibbler}}, and \mbox{\hyperlink{classArcade_1_1Games_1_1Pacman_ab1a7408f265efbef12b4f9d1a6fb4512}{Arcade\+::\+Games\+::\+Pacman}}.
+
+\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a3cf053ce2f4ccfe13e9c10d8549f7c82}\label{classArcade_1_1Games_1_1IGameModule_a3cf053ce2f4ccfe13e9c10d8549f7c82}} 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{saveToFile()}{saveToFile()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Games\+::\+I\+Game\+Module\+::save\+To\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filepath }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Saves highscores to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & The file path \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Highscores were saved 
+
+false An error occured 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a16425d9ca7518acbc60fbece4a974009}{Arcade\+::\+Games\+::\+A\+Game\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_ada0aa1d3d52bcdedcdb35b95d956c8ee}\label{classArcade_1_1Games_1_1IGameModule_ada0aa1d3d52bcdedcdb35b95d956c8ee}} 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!saveToFile@{saveToFile}}
+\index{saveToFile@{saveToFile}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{saveToFile()}{saveToFile()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Games\+::\+I\+Game\+Module\+::save\+To\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Saves highscores from the default save file. 
+
+\begin{DoxyReturn}{Returns}
+true Highscores were saved 
+
+false An error occured 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a82fdd06480edd7f727504f5073730812}{Arcade\+::\+Games\+::\+A\+Game\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_aad433296fe8a4582ebfdad5827a13d59}\label{classArcade_1_1Games_1_1IGameModule_aad433296fe8a4582ebfdad5827a13d59}} 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!setPlayerName@{setPlayerName}}
+\index{setPlayerName@{setPlayerName}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{setPlayerName()}{setPlayerName()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Games\+::\+I\+Game\+Module\+::set\+Player\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Sets the player name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The player name \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_abdbf4cf008033b5f339d9758d7f2b8a2}{Arcade\+::\+Games\+::\+A\+Game\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a421d1064fcc112dfc7ea025fc7f88aa7}\label{classArcade_1_1Games_1_1IGameModule_a421d1064fcc112dfc7ea025fc7f88aa7}} 
+\index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!update@{update}}
+\index{update@{update}!Arcade::Games::IGameModule@{Arcade::Games::IGameModule}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Games\+::\+I\+Game\+Module\+::update (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&}]{lib }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Updates the game. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib} & The display module that will be used to get events that occured \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1Nibbler_a6a44a75ab1905647587d7a6314155955}{Arcade\+::\+Games\+::\+Nibbler}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Pacman_aa6bc227c3f14cc8d66d11f2d32bed3ec}{Arcade\+::\+Games\+::\+Pacman}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Centipede_a11a932a0abda301ae6037c6b97532e79}{Arcade\+::\+Games\+::\+Centipede}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Qix_aab6bfb0ecf8571da19c4fcbfc9de263e}{Arcade\+::\+Games\+::\+Qix}}, and \mbox{\hyperlink{classArcade_1_1Games_1_1Solarfox_a87d7898dc7b5d8c658a18c45d35be991}{Arcade\+::\+Games\+::\+Solarfox}}.
+

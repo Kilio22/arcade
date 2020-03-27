@@ -1,11 +1,14 @@
-.TH "Arcade::Exceptions::ArcadeException" 3 "Thu Mar 26 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Exceptions::ArcadeException" 3 "Fri Mar 27 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Arcade::Exceptions::ArcadeException
+Arcade::Exceptions::ArcadeException \- Base exception class for this projects' exceptions\&.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <ArcadeException\&.hpp>\fP
 .PP
 Inherits runtime_error\&.
 .PP
@@ -16,10 +19,43 @@ Inherited by \fBArcade::Exceptions::BadFileException\fP, \fBArcade::Exceptions::
 .ti -1c
 .RI "\fBArcadeException\fP (std::string const &message, std::string const &component)"
 .br
+.RI "Construct a new \fBArcade\fP Exception object\&. "
 .ti -1c
 .RI "std::string const  & \fBgetComponent\fP (void) const noexcept"
 .br
+.RI "Gets the name of component where the exception occured\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Base exception class for this projects' exceptions\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Arcade::Exceptions::ArcadeException::ArcadeException (std::string const & message, std::string const & component)"
+
+.PP
+Construct a new \fBArcade\fP Exception object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP Message explaining the problem\&. 
+.br
+\fIcomponent\fP Additional information on where the problem occured\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string const& Arcade::Exceptions::ArcadeException::getComponent (void) const\fC [noexcept]\fP"
+
+.PP
+Gets the name of component where the exception occured\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The component name 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

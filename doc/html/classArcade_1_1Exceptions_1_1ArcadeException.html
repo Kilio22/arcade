@@ -95,33 +95,108 @@ $(document).ready(function(){initNavTree('classArcade_1_1Exceptions_1_1ArcadeExc
 <div class="title">Arcade::Exceptions::ArcadeException Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Base exception class for this projects' exceptions.  
+ <a href="classArcade_1_1Exceptions_1_1ArcadeException.html#details">More...</a></p>
+
+<p><code>#include &lt;ArcadeException.hpp&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Arcade::Exceptions::ArcadeException:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classArcade_1_1Exceptions_1_1ArcadeException.png" usemap="#Arcade::Exceptions::ArcadeException_map" alt=""/>
   <map id="Arcade::Exceptions::ArcadeException_map" name="Arcade::Exceptions::ArcadeException_map">
-<area href="classArcade_1_1Exceptions_1_1BadFileException.html" alt="Arcade::Exceptions::BadFileException" shape="rect" coords="0,112,274,136"/>
-<area href="classArcade_1_1Exceptions_1_1BadInstanciationException.html" alt="Arcade::Exceptions::BadInstanciationException" shape="rect" coords="284,112,558,136"/>
-<area href="classArcade_1_1Exceptions_1_1InvalidLibraryException.html" alt="Arcade::Exceptions::InvalidLibraryException" shape="rect" coords="568,112,842,136"/>
+<area href="classArcade_1_1Exceptions_1_1BadFileException.html" title="Thrown when looking up to an external file that is inexistant." alt="Arcade::Exceptions::BadFileException" shape="rect" coords="0,112,274,136"/>
+<area href="classArcade_1_1Exceptions_1_1BadInstanciationException.html" title="Thrown when library objects failed to be instanciated." alt="Arcade::Exceptions::BadInstanciationException" shape="rect" coords="284,112,558,136"/>
+<area href="classArcade_1_1Exceptions_1_1InvalidLibraryException.html" title="Thrown when trying to use an invalid library file." alt="Arcade::Exceptions::InvalidLibraryException" shape="rect" coords="568,112,842,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a054c4f79319af87bfbbe79fa03809b38"><td class="memItemLeft" align="right" valign="top"><a id="a054c4f79319af87bfbbe79fa03809b38"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ArcadeException</b> (std::string const &amp;message, std::string const &amp;component)</td></tr>
+<tr class="memitem:a054c4f79319af87bfbbe79fa03809b38"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Exceptions_1_1ArcadeException.html#a054c4f79319af87bfbbe79fa03809b38">ArcadeException</a> (std::string const &amp;message, std::string const &amp;component)</td></tr>
+<tr class="memdesc:a054c4f79319af87bfbbe79fa03809b38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="namespaceArcade.html">Arcade</a> Exception object.  <a href="#a054c4f79319af87bfbbe79fa03809b38">More...</a><br /></td></tr>
 <tr class="separator:a054c4f79319af87bfbbe79fa03809b38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa000c618b4fbe4a3612f511074243ce9"><td class="memItemLeft" align="right" valign="top"><a id="aa000c618b4fbe4a3612f511074243ce9"></a>
-std::string const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getComponent</b> (void) const noexcept</td></tr>
+<tr class="memitem:aa000c618b4fbe4a3612f511074243ce9"><td class="memItemLeft" align="right" valign="top">std::string const  &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Exceptions_1_1ArcadeException.html#aa000c618b4fbe4a3612f511074243ce9">getComponent</a> (void) const noexcept</td></tr>
+<tr class="memdesc:aa000c618b4fbe4a3612f511074243ce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of component where the exception occured.  <a href="#aa000c618b4fbe4a3612f511074243ce9">More...</a><br /></td></tr>
 <tr class="separator:aa000c618b4fbe4a3612f511074243ce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Base exception class for this projects' exceptions. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a054c4f79319af87bfbbe79fa03809b38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a054c4f79319af87bfbbe79fa03809b38">&#9670;&nbsp;</a></span>ArcadeException()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Arcade::Exceptions::ArcadeException::ArcadeException </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>message</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>component</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a new <a class="el" href="namespaceArcade.html">Arcade</a> Exception object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">message</td><td>Message explaining the problem. </td></tr>
+    <tr><td class="paramname">component</td><td>Additional information on where the problem occured. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa000c618b4fbe4a3612f511074243ce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa000c618b4fbe4a3612f511074243ce9">&#9670;&nbsp;</a></span>getComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string const&amp; Arcade::Exceptions::ArcadeException::getComponent </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the name of component where the exception occured. </p>
+<dl class="section return"><dt>Returns</dt><dd>The component name </dd></dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Arcade</b></li><li class="navelem"><b>Exceptions</b></li><li class="navelem"><a class="el" href="classArcade_1_1Exceptions_1_1ArcadeException.html">ArcadeException</a></li>
+    <li class="navelem"><a class="el" href="namespaceArcade.html">Arcade</a></li><li class="navelem"><a class="el" href="namespaceArcade_1_1Exceptions.html">Exceptions</a></li><li class="navelem"><a class="el" href="classArcade_1_1Exceptions_1_1ArcadeException.html">ArcadeException</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>

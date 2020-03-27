@@ -96,15 +96,20 @@ $(document).ready(function(){initNavTree('index.html','');});
 <ul>
 <li>First, you wanna create a c++ class implementing the <a class="el" href="classArcade_1_1Games_1_1IGameModule.html">IGameModule</a> interface.</li>
 <li>Next you wanna compile it into a dynamic library (.so file).</li>
-<li>Put that library file in the <code>games/</code> folder located at the root of the arcade repository.</li>
+<li>Put that library file in the <code>games/</code> folder located at the root of the arcade repository.<ul>
+<li>Note that it must follow the following naming expression : <em>lib_arcade_.+\.so</em>, so that means a name like <b>lib_arcade_$gamename.so</b>.</li>
 </ul>
-<p>Every class contained by the libraries located in the <code>games/</code> folder are</p>
-<p>going to be instanciated thanks to the symbol <code>createLib</code> that your library <b>must</b> contain.</p>
+</li>
+</ul>
+<p>Every class contained by the libraries located in the <code>games/</code> folder are going to be instanciated thanks to the symbol <code>createLib</code> that your library <b>must</b> contain.</p>
 <div class="fragment"><div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> std::unique_ptr&lt;Arcade::Games::IGameModule&gt; createLib(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    <span class="keywordflow">return</span> std::make_unique&lt;MyGameModule&gt;();</div><div class="line">}</div></div><!-- fragment --><h2>Library</h2>
 <ul>
 <li>First, you wanna create a c++ class implementing the <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">IDisplayModule</a> interface.</li>
 <li>Next you wanna compile it into a dynamic library (.so file).</li>
-<li>Put that library file in the <code>lib/</code> folder located at the root of the arcade repository.</li>
+<li>Put that library file in the <code>lib/</code> folder located at the root of the arcade repository.<ul>
+<li>Note that it must follow the following naming expression : <em>lib_arcade_.+\.so</em>, so that means a name like <b>lib_arcade_$libraryname.so</b>.</li>
+</ul>
+</li>
 </ul>
 <p>Every class contained by the libraries located in the <code>lib/</code> folder are going to be instanciated thanks to the symbol <code>createLib</code> that your library <b>must</b> contain.</p>
 <div class="fragment"><div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> std::unique_ptr&lt;Arcade::Display::IDisplayModule&gt; createLib(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    <span class="keywordflow">return</span> std::make_unique&lt;MyDisplayModule&gt;();</div><div class="line">}</div></div><!-- fragment --> </div></div><!-- PageDoc -->

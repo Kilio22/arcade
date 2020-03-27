@@ -1,5 +1,14 @@
 \hypertarget{classArcade_1_1Display_1_1IDisplayModule}{}\section{Arcade\+::Display\+::I\+Display\+Module Class Reference}
 \label{classArcade_1_1Display_1_1IDisplayModule}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+
+
+Interface for the display modules used to display things.  
+
+
+
+
+{\ttfamily \#include $<$I\+Display\+Module.\+hpp$>$}
+
 Inheritance diagram for Arcade\+::Display\+::I\+Display\+Module\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,141 +18,738 @@ Inheritance diagram for Arcade\+::Display\+::I\+Display\+Module\+:\begin{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}} 
-enum {\bfseries Colors} \{ \newline
-{\bfseries D\+E\+F\+A\+U\+LT}, 
-{\bfseries B\+L\+A\+CK}, 
-{\bfseries R\+ED}, 
-{\bfseries G\+R\+E\+EN}, 
+enum \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{Colors}} \{ \newline
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a97b14535da9ba3118f74c84bccd6bea6}{D\+E\+F\+A\+U\+LT}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a1c67777fb06a0d66f05cdd2a8685ed5a}{B\+L\+A\+CK}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a79331907757dab44637effb28c44fe9c}{R\+ED}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a558d0d452dbd38db8b2e98b60e734360}{G\+R\+E\+EN}}, 
 \newline
-{\bfseries Y\+E\+L\+L\+OW}, 
-{\bfseries B\+L\+UE}, 
-{\bfseries M\+A\+G\+E\+N\+TA}, 
-{\bfseries C\+Y\+AN}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a5182b562c1a3c6905c70b4a95b979edd}{Y\+E\+L\+L\+OW}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a7c73e92bce65990e3b9330f426aefe26}{B\+L\+UE}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a2eab1a4a064091617f41ccb2fa2bf03e}{M\+A\+G\+E\+N\+TA}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a168ed0ef0ca3bf512fbc497bc527fc43}{C\+Y\+AN}}, 
 \newline
-{\bfseries L\+I\+G\+H\+T\+\_\+\+G\+R\+AY}, 
-{\bfseries D\+A\+R\+K\+\_\+\+G\+R\+AY}, 
-{\bfseries L\+I\+G\+H\+T\+\_\+\+R\+ED}, 
-{\bfseries L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a310720f4feb7c4e92899f872cadb374b}{L\+I\+G\+H\+T\+\_\+\+G\+R\+AY}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a625bce50e9e5e0050b5e4c4110e54125}{D\+A\+R\+K\+\_\+\+G\+R\+AY}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a762cf50a4b1613d9a63a232aa65634b3}{L\+I\+G\+H\+T\+\_\+\+R\+ED}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a78e695a04719081932f4a0cd0cd0708c}{L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN}}, 
 \newline
-{\bfseries L\+I\+G\+H\+T\+\_\+\+Y\+E\+L\+L\+OW}, 
-{\bfseries L\+I\+G\+H\+T\+\_\+\+B\+L\+UE}, 
-{\bfseries L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA}, 
-{\bfseries L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2ae5c66d286ad0d55543dcc0dff78d6aef}{L\+I\+G\+H\+T\+\_\+\+Y\+E\+L\+L\+OW}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a366101170408645fff26aa02f6f3a2fc}{L\+I\+G\+H\+T\+\_\+\+B\+L\+UE}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a9e5aabbfc7addda246ef57ec1f93f433}{L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2aaa12eda5f91bfd6596475be5305b1ce7}{L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN}}, 
 \newline
-{\bfseries W\+H\+I\+TE}, 
-{\bfseries C\+O\+L\+O\+R\+S\+\_\+\+E\+ND}
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a1ec4d44fc2c922441109f7458dde2db4}{W\+H\+I\+TE}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2aaa28860fad72f13d38ad0befc8ee0d25}{C\+O\+L\+O\+R\+S\+\_\+\+E\+ND}}
  \}
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}} 
-enum {\bfseries Keys} \{ \newline
-{\bfseries L\+E\+FT}, 
-{\bfseries R\+I\+G\+HT}, 
-{\bfseries UP}, 
-{\bfseries D\+O\+WN}, 
+\begin{DoxyCompactList}\small\item\em Available colors. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{Keys}} \{ \newline
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a818e2dccdb9b68e41b790ae2a61db553}{L\+E\+FT}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a261791c937494e2581ff6ddc2ba42173}{R\+I\+G\+HT}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a0177bbfc52c33bfb6abdc05fe7a53df8}{UP}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a82b474880dd56a4c28c7298c1ab120da}{D\+O\+WN}}, 
 \newline
-{\bfseries Z}, 
-{\bfseries Q}, 
-{\bfseries S}, 
-{\bfseries D}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a457a822c96dbba393d2ffafaf9f43bec}{Z}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aaeeac0ff2f628b4ac34e4bbe0239d993}{Q}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619afb417589f985aaea0be8900360e7f469}{S}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aa3c9ee81076346ed3dbfa528cf7bc4bc}{D}}, 
 \newline
-{\bfseries A}, 
-{\bfseries E}, 
-{\bfseries W}, 
-{\bfseries X}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a40802d1c2d6d0264c1587e81766ba93c}{A}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aba77117d46ed839583fc8ca5e3c9739b}{E}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a650d85dbf743244d133a7df059db6271}{W}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a86961510513635f43811af02a3c8109f}{X}}, 
 \newline
-{\bfseries S\+P\+A\+CE}, 
-{\bfseries E\+S\+C\+A\+PE}, 
-{\bfseries J}, 
-{\bfseries K}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a3430304d70e67924c13f9d94a6408972}{S\+P\+A\+CE}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619ad1b1ac6f452dea617fbb934982337489}{E\+S\+C\+A\+PE}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a0c140f14b83636f7fe7414b08358b90b}{J}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a1c1441de93240fe7825ce259386711f7}{K}}, 
 \newline
-{\bfseries U}, 
-{\bfseries I}, 
-{\bfseries M}, 
-{\bfseries R}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a45fba52257ce70f9852f2a68cce3433b}{U}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a6fffaf02bfc1f8daca3170117278201c}{I}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a640599f16655db27faaac3040720803b}{M}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a26e3f67a357a68ddecf4f52c6361d432}{R}}, 
 \newline
-{\bfseries E\+N\+T\+ER}, 
-{\bfseries K\+E\+Y\+S\+\_\+\+E\+ND}
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619ada1332022cfc2797051d2e4cc2f23d8f}{E\+N\+T\+ER}}, 
+\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a3f201e9856c9114d96b28e3312ad05f7}{K\+E\+Y\+S\+\_\+\+E\+ND}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Available keys. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a2a05e0a55f30774cb8a75be63663b6f9}\label{classArcade_1_1Display_1_1IDisplayModule_a2a05e0a55f30774cb8a75be63663b6f9}} 
-virtual void {\bfseries reset} ()=0
-\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a2a05e0a55f30774cb8a75be63663b6f9}{reset}} ()=0
+\begin{DoxyCompactList}\small\item\em Resets the library. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae1984127ec0c8a73e4f26ee4517bd226}\label{classArcade_1_1Display_1_1IDisplayModule_ae1984127ec0c8a73e4f26ee4517bd226}} 
-virtual void {\bfseries open} ()=0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a34c86dd2e7aa60a70c0cc06ccbd34e47}\label{classArcade_1_1Display_1_1IDisplayModule_a34c86dd2e7aa60a70c0cc06ccbd34e47}} 
-virtual bool {\bfseries is\+Open} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a0de47361c9d47bf8fc52070b945f23b7}\label{classArcade_1_1Display_1_1IDisplayModule_a0de47361c9d47bf8fc52070b945f23b7}} 
-virtual bool {\bfseries switch\+To\+Next\+Lib} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a498d51597164e9f92e97ec2afee426b0}\label{classArcade_1_1Display_1_1IDisplayModule_a498d51597164e9f92e97ec2afee426b0}} 
-virtual bool {\bfseries switch\+To\+Previous\+Lib} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a9584cb0ca3b157c9a4ec94509e4f8e32}\label{classArcade_1_1Display_1_1IDisplayModule_a9584cb0ca3b157c9a4ec94509e4f8e32}} 
-virtual bool {\bfseries switch\+To\+Next\+Game} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a3bbbfe00907c8f3e4c7ef1aadedcc513}\label{classArcade_1_1Display_1_1IDisplayModule_a3bbbfe00907c8f3e4c7ef1aadedcc513}} 
-virtual bool {\bfseries switch\+To\+Previous\+Game} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_adc5d499229aa5899bbd4bae14f00cb27}\label{classArcade_1_1Display_1_1IDisplayModule_adc5d499229aa5899bbd4bae14f00cb27}} 
-virtual bool {\bfseries should\+Be\+Restarted} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ad060f6b99f2adffaf02a4226fc40d0ab}\label{classArcade_1_1Display_1_1IDisplayModule_ad060f6b99f2adffaf02a4226fc40d0ab}} 
-virtual bool {\bfseries should\+Go\+To\+Menu} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a550877fb92d58325404b9ebe9e71f6ff}\label{classArcade_1_1Display_1_1IDisplayModule_a550877fb92d58325404b9ebe9e71f6ff}} 
-virtual bool {\bfseries should\+Exit} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ab3d02b76c08ff2deb728dc9f0d557f43}\label{classArcade_1_1Display_1_1IDisplayModule_ab3d02b76c08ff2deb728dc9f0d557f43}} 
-virtual bool {\bfseries is\+Key\+Pressed} (I\+Display\+Module\+::\+Keys) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ac347fc77c01e12c5ce23be99d357008d}\label{classArcade_1_1Display_1_1IDisplayModule_ac347fc77c01e12c5ce23be99d357008d}} 
-virtual bool {\bfseries is\+Key\+Pressed\+Once} (I\+Display\+Module\+::\+Keys) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_aab078d82e6fdd32682553947c20226ac}\label{classArcade_1_1Display_1_1IDisplayModule_aab078d82e6fdd32682553947c20226ac}} 
-virtual float {\bfseries get\+Delta} () const =0
-\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae1984127ec0c8a73e4f26ee4517bd226}{open}} ()=0
+\begin{DoxyCompactList}\small\item\em Opens / initializes the window. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a34c86dd2e7aa60a70c0cc06ccbd34e47}{is\+Open}} () const =0
+\begin{DoxyCompactList}\small\item\em Check window status. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a0de47361c9d47bf8fc52070b945f23b7}{switch\+To\+Next\+Lib}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks whether you need to change the current display library. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a498d51597164e9f92e97ec2afee426b0}{switch\+To\+Previous\+Lib}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks whether you need to change the current display library. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9584cb0ca3b157c9a4ec94509e4f8e32}{switch\+To\+Next\+Game}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks whether you need to change the current game library. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a3bbbfe00907c8f3e4c7ef1aadedcc513}{switch\+To\+Previous\+Game}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks whether you need to change the current game library. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_adc5d499229aa5899bbd4bae14f00cb27}{should\+Be\+Restarted}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks whether you need to restart the current game. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ad060f6b99f2adffaf02a4226fc40d0ab}{should\+Go\+To\+Menu}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks whether you need to go back to the menu. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a550877fb92d58325404b9ebe9e71f6ff}{should\+Exit}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks whether you need to exit the program. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ab3d02b76c08ff2deb728dc9f0d557f43}{is\+Key\+Pressed}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}) const =0
+\begin{DoxyCompactList}\small\item\em Checks whether the current key is being pressed. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ac347fc77c01e12c5ce23be99d357008d}{is\+Key\+Pressed\+Once}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}) const =0
+\begin{DoxyCompactList}\small\item\em Checks whether the current key was pressed during the last frame. \end{DoxyCompactList}\item 
+virtual float \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_aab078d82e6fdd32682553947c20226ac}{get\+Delta}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the number of frames since last update. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a4892b758c6710f45d4dcebe70f801639}\label{classArcade_1_1Display_1_1IDisplayModule_a4892b758c6710f45d4dcebe70f801639}} 
-virtual void {\bfseries clear} () const =0
-\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a4892b758c6710f45d4dcebe70f801639}{clear}} () const =0
+\begin{DoxyCompactList}\small\item\em Clears the canvas. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a1ca0c1052dccb78eb470e36e6f557e60}\label{classArcade_1_1Display_1_1IDisplayModule_a1ca0c1052dccb78eb470e36e6f557e60}} 
-virtual void {\bfseries update} ()=0
-\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a1ca0c1052dccb78eb470e36e6f557e60}{update}} ()=0
+\begin{DoxyCompactList}\small\item\em Runs an update over the events that occured. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a012f5804e7dc45515ef8e85e7ca8de5a}\label{classArcade_1_1Display_1_1IDisplayModule_a012f5804e7dc45515ef8e85e7ca8de5a}} 
-virtual void {\bfseries render} () const =0
-\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a012f5804e7dc45515ef8e85e7ca8de5a}{render}} () const =0
+\begin{DoxyCompactList}\small\item\em Renders the canvas. \end{DoxyCompactList}\item 
+virtual char \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a403f8a0f065dad707a881ef3cee79805}{get\+Key\+Code}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the last pressed character from the keyboard. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a89ff355335d968e2bd3de8d200d3b535}{set\+Color}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}} col)=0
+\begin{DoxyCompactList}\small\item\em Defines the color of the elements that will be drawn. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a86a61eaa1d0cf2ddfdedbaa04054da90}{put\+Pixel}} (float x, float y) const =0
+\begin{DoxyCompactList}\small\item\em Displays a pixel. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a669da8dd0fc5360d11c735d68c17bc6e}{put\+Line}} (float x1, float y1, float x2, float y2) const =0
+\begin{DoxyCompactList}\small\item\em Displays a line. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a4c4072d7444006b9a0ba134c684e58b5}{put\+Rect}} (float x, float y, float w, float h) const =0
+\begin{DoxyCompactList}\small\item\em Displays a rectangle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a1e9f08e3568ac005e92191eea6c0ae4d}{put\+Fill\+Rect}} (float x, float y, float w, float h) const =0
+\begin{DoxyCompactList}\small\item\em Displays a filled rectangle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a68b7b140a378dc416ec278d97dc76e9e}{put\+Circle}} (float x, float y, float rad) const =0
+\begin{DoxyCompactList}\small\item\em Displays a cirle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_aa3d23b9294132b6efb28dbc932892d1b}{put\+Fill\+Circle}} (float x, float y, float rad) const =0
+\begin{DoxyCompactList}\small\item\em Displays a filled cirle. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9740f30e3135d3a51851bdca07ef88a3}{put\+Text}} (const std\+::string \&text, unsigned int size, float x, float y) const =0
+\begin{DoxyCompactList}\small\item\em Displays text. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a0d8e957815e94766bdefbd7a5043e81a}{get\+Lib\+Name}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the library name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for the display modules used to display things. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!Colors@{Colors}}
+\index{Colors@{Colors}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{Colors}{Colors}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{Arcade\+::\+Display\+::\+I\+Display\+Module\+::\+Colors}}}
+
+
+
+Available colors. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEFAULT@{DEFAULT}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!DEFAULT@{DEFAULT}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a97b14535da9ba3118f74c84bccd6bea6}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a97b14535da9ba3118f74c84bccd6bea6}} 
+D\+E\+F\+A\+U\+LT&The color the window clears to. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLACK@{BLACK}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!BLACK@{BLACK}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a1c67777fb06a0d66f05cdd2a8685ed5a}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a1c67777fb06a0d66f05cdd2a8685ed5a}} 
+B\+L\+A\+CK&Black color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RED@{RED}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!RED@{RED}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a79331907757dab44637effb28c44fe9c}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a79331907757dab44637effb28c44fe9c}} 
+R\+ED&Red color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GREEN@{GREEN}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!GREEN@{GREEN}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a558d0d452dbd38db8b2e98b60e734360}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a558d0d452dbd38db8b2e98b60e734360}} 
+G\+R\+E\+EN&Green color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{YELLOW@{YELLOW}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!YELLOW@{YELLOW}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a5182b562c1a3c6905c70b4a95b979edd}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a5182b562c1a3c6905c70b4a95b979edd}} 
+Y\+E\+L\+L\+OW&Yellow color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLUE@{BLUE}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!BLUE@{BLUE}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a7c73e92bce65990e3b9330f426aefe26}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a7c73e92bce65990e3b9330f426aefe26}} 
+B\+L\+UE&Blue color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAGENTA@{MAGENTA}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!MAGENTA@{MAGENTA}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a2eab1a4a064091617f41ccb2fa2bf03e}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a2eab1a4a064091617f41ccb2fa2bf03e}} 
+M\+A\+G\+E\+N\+TA&Magenta color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CYAN@{CYAN}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!CYAN@{CYAN}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a168ed0ef0ca3bf512fbc497bc527fc43}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a168ed0ef0ca3bf512fbc497bc527fc43}} 
+C\+Y\+AN&Cyan color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHT\_GRAY@{LIGHT\_GRAY}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!LIGHT\_GRAY@{LIGHT\_GRAY}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a310720f4feb7c4e92899f872cadb374b}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a310720f4feb7c4e92899f872cadb374b}} 
+L\+I\+G\+H\+T\+\_\+\+G\+R\+AY&Light gray color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DARK\_GRAY@{DARK\_GRAY}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!DARK\_GRAY@{DARK\_GRAY}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a625bce50e9e5e0050b5e4c4110e54125}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a625bce50e9e5e0050b5e4c4110e54125}} 
+D\+A\+R\+K\+\_\+\+G\+R\+AY&Dark gray color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHT\_RED@{LIGHT\_RED}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!LIGHT\_RED@{LIGHT\_RED}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a762cf50a4b1613d9a63a232aa65634b3}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a762cf50a4b1613d9a63a232aa65634b3}} 
+L\+I\+G\+H\+T\+\_\+\+R\+ED&Light red color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHT\_GREEN@{LIGHT\_GREEN}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!LIGHT\_GREEN@{LIGHT\_GREEN}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a78e695a04719081932f4a0cd0cd0708c}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a78e695a04719081932f4a0cd0cd0708c}} 
+L\+I\+G\+H\+T\+\_\+\+G\+R\+E\+EN&Light green color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHT\_YELLOW@{LIGHT\_YELLOW}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!LIGHT\_YELLOW@{LIGHT\_YELLOW}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2ae5c66d286ad0d55543dcc0dff78d6aef}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2ae5c66d286ad0d55543dcc0dff78d6aef}} 
+L\+I\+G\+H\+T\+\_\+\+Y\+E\+L\+L\+OW&Light yellow color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHT\_BLUE@{LIGHT\_BLUE}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!LIGHT\_BLUE@{LIGHT\_BLUE}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a366101170408645fff26aa02f6f3a2fc}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a366101170408645fff26aa02f6f3a2fc}} 
+L\+I\+G\+H\+T\+\_\+\+B\+L\+UE&Light blue color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHT\_MAGENTA@{LIGHT\_MAGENTA}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!LIGHT\_MAGENTA@{LIGHT\_MAGENTA}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a9e5aabbfc7addda246ef57ec1f93f433}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a9e5aabbfc7addda246ef57ec1f93f433}} 
+L\+I\+G\+H\+T\+\_\+\+M\+A\+G\+E\+N\+TA&Light magenta color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHT\_CYAN@{LIGHT\_CYAN}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!LIGHT\_CYAN@{LIGHT\_CYAN}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2aaa12eda5f91bfd6596475be5305b1ce7}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2aaa12eda5f91bfd6596475be5305b1ce7}} 
+L\+I\+G\+H\+T\+\_\+\+C\+Y\+AN&Light cyan color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WHITE@{WHITE}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!WHITE@{WHITE}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a1ec4d44fc2c922441109f7458dde2db4}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2a1ec4d44fc2c922441109f7458dde2db4}} 
+W\+H\+I\+TE&White color. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COLORS\_END@{COLORS\_END}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!COLORS\_END@{COLORS\_END}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2aaa28860fad72f13d38ad0befc8ee0d25}\label{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2aaa28860fad72f13d38ad0befc8ee0d25}} 
+C\+O\+L\+O\+R\+S\+\_\+\+E\+ND&Color count. \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!Keys@{Keys}}
+\index{Keys@{Keys}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{Keys}{Keys}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{Arcade\+::\+Display\+::\+I\+Display\+Module\+::\+Keys}}}
+
+
+
+Available keys. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LEFT@{LEFT}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!LEFT@{LEFT}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a818e2dccdb9b68e41b790ae2a61db553}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a818e2dccdb9b68e41b790ae2a61db553}} 
+L\+E\+FT&Left key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RIGHT@{RIGHT}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!RIGHT@{RIGHT}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a261791c937494e2581ff6ddc2ba42173}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a261791c937494e2581ff6ddc2ba42173}} 
+R\+I\+G\+HT&Right key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UP@{UP}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!UP@{UP}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a0177bbfc52c33bfb6abdc05fe7a53df8}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a0177bbfc52c33bfb6abdc05fe7a53df8}} 
+UP&Up key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DOWN@{DOWN}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!DOWN@{DOWN}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a82b474880dd56a4c28c7298c1ab120da}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a82b474880dd56a4c28c7298c1ab120da}} 
+D\+O\+WN&Down key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Z@{Z}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!Z@{Z}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a457a822c96dbba393d2ffafaf9f43bec}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a457a822c96dbba393d2ffafaf9f43bec}} 
+Z&Z key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Q@{Q}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!Q@{Q}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aaeeac0ff2f628b4ac34e4bbe0239d993}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aaeeac0ff2f628b4ac34e4bbe0239d993}} 
+Q&Q key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{S@{S}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!S@{S}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619afb417589f985aaea0be8900360e7f469}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619afb417589f985aaea0be8900360e7f469}} 
+S&S key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D@{D}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!D@{D}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aa3c9ee81076346ed3dbfa528cf7bc4bc}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aa3c9ee81076346ed3dbfa528cf7bc4bc}} 
+D&D key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A@{A}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!A@{A}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a40802d1c2d6d0264c1587e81766ba93c}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a40802d1c2d6d0264c1587e81766ba93c}} 
+A&A key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{E@{E}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!E@{E}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aba77117d46ed839583fc8ca5e3c9739b}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619aba77117d46ed839583fc8ca5e3c9739b}} 
+E&E key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{W@{W}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!W@{W}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a650d85dbf743244d133a7df059db6271}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a650d85dbf743244d133a7df059db6271}} 
+W&W key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{X@{X}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!X@{X}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a86961510513635f43811af02a3c8109f}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a86961510513635f43811af02a3c8109f}} 
+X&X key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPACE@{SPACE}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!SPACE@{SPACE}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a3430304d70e67924c13f9d94a6408972}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a3430304d70e67924c13f9d94a6408972}} 
+S\+P\+A\+CE&Space key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ESCAPE@{ESCAPE}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!ESCAPE@{ESCAPE}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619ad1b1ac6f452dea617fbb934982337489}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619ad1b1ac6f452dea617fbb934982337489}} 
+E\+S\+C\+A\+PE&Backspace key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{J@{J}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!J@{J}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a0c140f14b83636f7fe7414b08358b90b}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a0c140f14b83636f7fe7414b08358b90b}} 
+J&J key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{K@{K}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!K@{K}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a1c1441de93240fe7825ce259386711f7}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a1c1441de93240fe7825ce259386711f7}} 
+K&K key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{U@{U}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!U@{U}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a45fba52257ce70f9852f2a68cce3433b}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a45fba52257ce70f9852f2a68cce3433b}} 
+U&U key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I@{I}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!I@{I}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a6fffaf02bfc1f8daca3170117278201c}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a6fffaf02bfc1f8daca3170117278201c}} 
+I&I key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{M@{M}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!M@{M}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a640599f16655db27faaac3040720803b}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a640599f16655db27faaac3040720803b}} 
+M&M key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R@{R}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!R@{R}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a26e3f67a357a68ddecf4f52c6361d432}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a26e3f67a357a68ddecf4f52c6361d432}} 
+R&R key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENTER@{ENTER}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!ENTER@{ENTER}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619ada1332022cfc2797051d2e4cc2f23d8f}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619ada1332022cfc2797051d2e4cc2f23d8f}} 
+E\+N\+T\+ER&Return key. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{KEYS\_END@{KEYS\_END}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!KEYS\_END@{KEYS\_END}}}\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a3f201e9856c9114d96b28e3312ad05f7}\label{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619a3f201e9856c9114d96b28e3312ad05f7}} 
+K\+E\+Y\+S\+\_\+\+E\+ND&Key count. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_aab078d82e6fdd32682553947c20226ac}\label{classArcade_1_1Display_1_1IDisplayModule_aab078d82e6fdd32682553947c20226ac}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!getDelta@{getDelta}}
+\index{getDelta@{getDelta}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{getDelta()}{getDelta()}}
+{\footnotesize\ttfamily virtual float Arcade\+::\+Display\+::\+I\+Display\+Module\+::get\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the number of frames since last update. 
+
+\begin{DoxyReturn}{Returns}
+float Frame count 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a1ca09d130dea3bec2481eb72a49c0f03}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a6aee007c10e66709680d1ec80f2662a4}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_ae1466db8c13b08e99ebe5ffab68884c7}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
 \mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a403f8a0f065dad707a881ef3cee79805}\label{classArcade_1_1Display_1_1IDisplayModule_a403f8a0f065dad707a881ef3cee79805}} 
-virtual char {\bfseries get\+Key\+Code} () const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a89ff355335d968e2bd3de8d200d3b535}\label{classArcade_1_1Display_1_1IDisplayModule_a89ff355335d968e2bd3de8d200d3b535}} 
-virtual void {\bfseries set\+Color} (I\+Display\+Module\+::\+Colors col)=0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a86a61eaa1d0cf2ddfdedbaa04054da90}\label{classArcade_1_1Display_1_1IDisplayModule_a86a61eaa1d0cf2ddfdedbaa04054da90}} 
-virtual void {\bfseries put\+Pixel} (float x, float y) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a669da8dd0fc5360d11c735d68c17bc6e}\label{classArcade_1_1Display_1_1IDisplayModule_a669da8dd0fc5360d11c735d68c17bc6e}} 
-virtual void {\bfseries put\+Line} (float x1, float y1, float x2, float y2) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a4c4072d7444006b9a0ba134c684e58b5}\label{classArcade_1_1Display_1_1IDisplayModule_a4c4072d7444006b9a0ba134c684e58b5}} 
-virtual void {\bfseries put\+Rect} (float x, float y, float w, float h) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a1e9f08e3568ac005e92191eea6c0ae4d}\label{classArcade_1_1Display_1_1IDisplayModule_a1e9f08e3568ac005e92191eea6c0ae4d}} 
-virtual void {\bfseries put\+Fill\+Rect} (float x, float y, float w, float h) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a68b7b140a378dc416ec278d97dc76e9e}\label{classArcade_1_1Display_1_1IDisplayModule_a68b7b140a378dc416ec278d97dc76e9e}} 
-virtual void {\bfseries put\+Circle} (float x, float y, float rad) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_aa3d23b9294132b6efb28dbc932892d1b}\label{classArcade_1_1Display_1_1IDisplayModule_aa3d23b9294132b6efb28dbc932892d1b}} 
-virtual void {\bfseries put\+Fill\+Circle} (float x, float y, float rad) const =0
-\item 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a9740f30e3135d3a51851bdca07ef88a3}\label{classArcade_1_1Display_1_1IDisplayModule_a9740f30e3135d3a51851bdca07ef88a3}} 
-virtual void {\bfseries put\+Text} (const std\+::string \&text, unsigned int size, float x, float y) const =0
-\item 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!getKeyCode@{getKeyCode}}
+\index{getKeyCode@{getKeyCode}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{getKeyCode()}{getKeyCode()}}
+{\footnotesize\ttfamily virtual char Arcade\+::\+Display\+::\+I\+Display\+Module\+::get\+Key\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the last pressed character from the keyboard. 
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}0 if nothing was pressed, \textbackslash{}b if backspace was pressed, \textbackslash{}n if return was pressed, otherwise, a character. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a3ba94b49b72c9e189f52af7b97f4ad91}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a741fdec5c2e77cc7959e5f3444f8c8ac}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_ae2bf9e9c157a9f0ae8d1b60bd072e881}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
 \mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a0d8e957815e94766bdefbd7a5043e81a}\label{classArcade_1_1Display_1_1IDisplayModule_a0d8e957815e94766bdefbd7a5043e81a}} 
-virtual const std\+::string \& {\bfseries get\+Lib\+Name} () const =0
-\end{DoxyCompactItemize}
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!getLibName@{getLibName}}
+\index{getLibName@{getLibName}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{getLibName()}{getLibName()}}
+{\footnotesize\ttfamily virtual const std\+::string\& Arcade\+::\+Display\+::\+I\+Display\+Module\+::get\+Lib\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the library name. 
+
+\begin{DoxyReturn}{Returns}
+The library\textquotesingle{}s name 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_aa549d6ec470b99b545db63a1d4a2b58e}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a26e6dd02a853963fdcb812bddb3dee1e}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a8c323cea968403cb2edf791d37dc7887}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ab3d02b76c08ff2deb728dc9f0d557f43}\label{classArcade_1_1Display_1_1IDisplayModule_ab3d02b76c08ff2deb728dc9f0d557f43}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether the current key is being pressed. 
+
+\begin{DoxyReturn}{Returns}
+true Key is pressed 
+
+false Key is not pressed 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a375ea86360c510415d86a198f5cd3e30}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a4d76639289eee2453a416ff0fc051fe3}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a760b5a751030b18d6c92eed5640f2c76}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ac347fc77c01e12c5ce23be99d357008d}\label{classArcade_1_1Display_1_1IDisplayModule_ac347fc77c01e12c5ce23be99d357008d}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!isKeyPressedOnce@{isKeyPressedOnce}}
+\index{isKeyPressedOnce@{isKeyPressedOnce}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{isKeyPressedOnce()}{isKeyPressedOnce()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::is\+Key\+Pressed\+Once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether the current key was pressed during the last frame. 
+
+\begin{DoxyReturn}{Returns}
+true Key is pressed 
+
+false Key is not pressed 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a883547b9f495cdf800225bc32b0ffe40}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a2de2c9cd935fbee371fa5215bd45c137}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a499cc23f5567f0d9f8a9ba71cf30add9}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a34c86dd2e7aa60a70c0cc06ccbd34e47}\label{classArcade_1_1Display_1_1IDisplayModule_a34c86dd2e7aa60a70c0cc06ccbd34e47}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Check window status. 
+
+\begin{DoxyReturn}{Returns}
+true Window is open 
+
+false Window is closed 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a7d86c934d5dde9283e9c70816cf9c8a5}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_aae9aa5b1c54a2086c4fa92e7710fc845}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a77be7097a8ed969dcf1fca6f960d0c4c}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a68b7b140a378dc416ec278d97dc76e9e}\label{classArcade_1_1Display_1_1IDisplayModule_a68b7b140a378dc416ec278d97dc76e9e}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!putCircle@{putCircle}}
+\index{putCircle@{putCircle}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{putCircle()}{putCircle()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Display\+::\+I\+Display\+Module\+::put\+Circle (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays a cirle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+{\em rad} & Radius of the circle \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_af289c27eb970e81918b4cca36f25e0cf}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a1a718ada53339b195c532fa52600e164}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a46143388a143114f2513a408d2237d7c}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_aa3d23b9294132b6efb28dbc932892d1b}\label{classArcade_1_1Display_1_1IDisplayModule_aa3d23b9294132b6efb28dbc932892d1b}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!putFillCircle@{putFillCircle}}
+\index{putFillCircle@{putFillCircle}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{putFillCircle()}{putFillCircle()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Display\+::\+I\+Display\+Module\+::put\+Fill\+Circle (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays a filled cirle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+{\em rad} & Radius of the circle \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a95422e57b7ce4222f7e8d4aa022f36b4}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_aab9a63f5507cd00121c3b91c7ca15aa3}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a6ca75268a9d059b40c64098841bd2475}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a1e9f08e3568ac005e92191eea6c0ae4d}\label{classArcade_1_1Display_1_1IDisplayModule_a1e9f08e3568ac005e92191eea6c0ae4d}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!putFillRect@{putFillRect}}
+\index{putFillRect@{putFillRect}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{putFillRect()}{putFillRect()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Display\+::\+I\+Display\+Module\+::put\+Fill\+Rect (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays a filled rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+{\em w} & Width of the rectangle \\
+\hline
+{\em h} & Height of the rectangle \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a83252dfdf7260a64e6c1bad921c6a2fa}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_ae07479000ed6c518053cd593a4aba092}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_acb25e2345face39175b447a06b8b8dc1}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a669da8dd0fc5360d11c735d68c17bc6e}\label{classArcade_1_1Display_1_1IDisplayModule_a669da8dd0fc5360d11c735d68c17bc6e}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!putLine@{putLine}}
+\index{putLine@{putLine}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{putLine()}{putLine()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Display\+::\+I\+Display\+Module\+::put\+Line (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{x2,  }\item[{float}]{y2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays a line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & X coordinates for the first point \\
+\hline
+{\em y1} & Y coordinates for the first point \\
+\hline
+{\em x2} & X coordinates for the second point \\
+\hline
+{\em y2} & Y coordinates for the second point \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a4bfe74035db304e935265aae7d85f21a}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_ab3dfb33242807ae65707f8396db171cf}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a7e6da03013c96af1362b584282d9ba01}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a86a61eaa1d0cf2ddfdedbaa04054da90}\label{classArcade_1_1Display_1_1IDisplayModule_a86a61eaa1d0cf2ddfdedbaa04054da90}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!putPixel@{putPixel}}
+\index{putPixel@{putPixel}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{putPixel()}{putPixel()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Display\+::\+I\+Display\+Module\+::put\+Pixel (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays a pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a5c3f965b3394c9654f3537cab1201c1c}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a857080fd758f300ef2b05563d5814a1f}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a68417ef6b0450c6c7e6fa022699a2c3b}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a4c4072d7444006b9a0ba134c684e58b5}\label{classArcade_1_1Display_1_1IDisplayModule_a4c4072d7444006b9a0ba134c684e58b5}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!putRect@{putRect}}
+\index{putRect@{putRect}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{putRect()}{putRect()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Display\+::\+I\+Display\+Module\+::put\+Rect (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays a rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+{\em w} & Width of the rectangle \\
+\hline
+{\em h} & Height of the rectangle \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a81a7dc1e2ec20a453ca12d24b079968e}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a740ea092d0df2e07478fafb6bff8122a}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a177bbd0afd21be8a66bc970b8007e7cd}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a9740f30e3135d3a51851bdca07ef88a3}\label{classArcade_1_1Display_1_1IDisplayModule_a9740f30e3135d3a51851bdca07ef88a3}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!putText@{putText}}
+\index{putText@{putText}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{putText()}{putText()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Display\+::\+I\+Display\+Module\+::put\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{unsigned int}]{size,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Displays text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text content \\
+\hline
+{\em size} & The text size \\
+\hline
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_aa3bd454c083beb16300bb799ed268ef7}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a2d4198dc8e383672ac00114d10b11e01}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a88bb03b669afd0df748fd66bf24d45f3}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a89ff355335d968e2bd3de8d200d3b535}\label{classArcade_1_1Display_1_1IDisplayModule_a89ff355335d968e2bd3de8d200d3b535}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!setColor@{setColor}}
+\index{setColor@{setColor}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily virtual void Arcade\+::\+Display\+::\+I\+Display\+Module\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Defines the color of the elements that will be drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em col} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a061a0536f59a8a27a370c9d39bf2f39f}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_aec7af72c1ffd1a3af05b4d8cf3edf84e}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a20555c4dd9cf956c5ffae5acab8e79b2}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_adc5d499229aa5899bbd4bae14f00cb27}\label{classArcade_1_1Display_1_1IDisplayModule_adc5d499229aa5899bbd4bae14f00cb27}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!shouldBeRestarted@{shouldBeRestarted}}
+\index{shouldBeRestarted@{shouldBeRestarted}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{shouldBeRestarted()}{shouldBeRestarted()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::should\+Be\+Restarted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether you need to restart the current game. 
+
+\begin{DoxyReturn}{Returns}
+true Restart the game 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_aaeeb1aa505c0eab3c8b5c34265c89845}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_acccbe7d671cc860dded39937073d2298}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a7c276ccbf48700092eb637d73b78e0d1}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a550877fb92d58325404b9ebe9e71f6ff}\label{classArcade_1_1Display_1_1IDisplayModule_a550877fb92d58325404b9ebe9e71f6ff}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!shouldExit@{shouldExit}}
+\index{shouldExit@{shouldExit}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{shouldExit()}{shouldExit()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::should\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether you need to exit the program. 
+
+\begin{DoxyReturn}{Returns}
+true Exit the program 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_adb5d8837174b0ca120a27a521320f9c0}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a5920c296d51d72df55b5079c0749031e}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a780a71713551c8dffd1f008802f96767}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_ad060f6b99f2adffaf02a4226fc40d0ab}\label{classArcade_1_1Display_1_1IDisplayModule_ad060f6b99f2adffaf02a4226fc40d0ab}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!shouldGoToMenu@{shouldGoToMenu}}
+\index{shouldGoToMenu@{shouldGoToMenu}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{shouldGoToMenu()}{shouldGoToMenu()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::should\+Go\+To\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether you need to go back to the menu. 
+
+\begin{DoxyReturn}{Returns}
+true Go back to menu 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a044e009d7fc03813fce09abed3a6694c}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_aaa4a4a114dee18576dd93ca09808004e}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a3072fbe4dd92685154da10cbd602bc3b}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a9584cb0ca3b157c9a4ec94509e4f8e32}\label{classArcade_1_1Display_1_1IDisplayModule_a9584cb0ca3b157c9a4ec94509e4f8e32}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!switchToNextGame@{switchToNextGame}}
+\index{switchToNextGame@{switchToNextGame}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{switchToNextGame()}{switchToNextGame()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::switch\+To\+Next\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether you need to change the current game library. 
+
+\begin{DoxyReturn}{Returns}
+true Switch to next available library 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a3f197b6ea176410b4eb472d7e848eb10}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_ab9f5be320196e902e43db50e0cdcce5e}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_af47adddb8c2f26b5ee0109abce03e27a}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a0de47361c9d47bf8fc52070b945f23b7}\label{classArcade_1_1Display_1_1IDisplayModule_a0de47361c9d47bf8fc52070b945f23b7}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!switchToNextLib@{switchToNextLib}}
+\index{switchToNextLib@{switchToNextLib}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{switchToNextLib()}{switchToNextLib()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::switch\+To\+Next\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether you need to change the current display library. 
+
+\begin{DoxyReturn}{Returns}
+true Switch to next available library 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a91bee5a87dfcacb4da9d6d148dc52a2b}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_ada47921d3d90780e6817bddd1efcd017}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_a3e7d385aaa46e9137f41e4d78d5e233c}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a3bbbfe00907c8f3e4c7ef1aadedcc513}\label{classArcade_1_1Display_1_1IDisplayModule_a3bbbfe00907c8f3e4c7ef1aadedcc513}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!switchToPreviousGame@{switchToPreviousGame}}
+\index{switchToPreviousGame@{switchToPreviousGame}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{switchToPreviousGame()}{switchToPreviousGame()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::switch\+To\+Previous\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether you need to change the current game library. 
+
+\begin{DoxyReturn}{Returns}
+true Switch to previous available library 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_ad9bf495fb4e7499c81b2d65a0602e7f1}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a2bb528b251b6845c1f429f9f7dc58f4f}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_ae5dbff9dd547fb0a09e478e11bf74c11}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1IDisplayModule_a498d51597164e9f92e97ec2afee426b0}\label{classArcade_1_1Display_1_1IDisplayModule_a498d51597164e9f92e97ec2afee426b0}} 
+\index{Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}!switchToPreviousLib@{switchToPreviousLib}}
+\index{switchToPreviousLib@{switchToPreviousLib}!Arcade::Display::IDisplayModule@{Arcade::Display::IDisplayModule}}
+\subsubsection{\texorpdfstring{switchToPreviousLib()}{switchToPreviousLib()}}
+{\footnotesize\ttfamily virtual bool Arcade\+::\+Display\+::\+I\+Display\+Module\+::switch\+To\+Previous\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks whether you need to change the current display library. 
+
+\begin{DoxyReturn}{Returns}
+true Switch to previous available library 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a27364feeadd0eb907f91e9e4c2ec1ef2}{Arcade\+::\+Display\+::\+S\+DL}}, \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a2a195b508b59233ca226adfb9716754b}{Arcade\+::\+Display\+::\+Libcaca}}, and \mbox{\hyperlink{classArcade_1_1Display_1_1SFML_ae77df516bddc7ed5a4c0acdcf2443225}{Arcade\+::\+Display\+::\+S\+F\+ML}}.
+

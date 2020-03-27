@@ -1,11 +1,14 @@
-.TH "Arcade::Exceptions::BadInstanciationException" 3 "Thu Mar 26 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Exceptions::BadInstanciationException" 3 "Fri Mar 27 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Arcade::Exceptions::BadInstanciationException
+Arcade::Exceptions::BadInstanciationException \- Thrown when library objects failed to be instanciated\&.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <BadInstanciationException\&.hpp>\fP
 .PP
 Inherits \fBArcade::Exceptions::ArcadeException\fP\&.
 .SS "Public Member Functions"
@@ -14,7 +17,26 @@ Inherits \fBArcade::Exceptions::ArcadeException\fP\&.
 .ti -1c
 .RI "\fBBadInstanciationException\fP (std::string const &message, std::string const &component)"
 .br
+.RI "Construct a new Bad Instanciation Exception object\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Thrown when library objects failed to be instanciated\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Arcade::Exceptions::BadInstanciationException::BadInstanciationException (std::string const & message, std::string const & component)"
+
+.PP
+Construct a new Bad Instanciation Exception object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP Message explaining the problem\&. 
+.br
+\fIcomponent\fP Additional information on where the problem occured\&. 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

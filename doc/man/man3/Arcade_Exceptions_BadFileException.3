@@ -1,11 +1,14 @@
-.TH "Arcade::Exceptions::BadFileException" 3 "Thu Mar 26 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Exceptions::BadFileException" 3 "Fri Mar 27 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Arcade::Exceptions::BadFileException
+Arcade::Exceptions::BadFileException \- Thrown when looking up to an external file that is inexistant\&.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <BadFileException\&.hpp>\fP
 .PP
 Inherits \fBArcade::Exceptions::ArcadeException\fP\&.
 .SS "Public Member Functions"
@@ -14,7 +17,26 @@ Inherits \fBArcade::Exceptions::ArcadeException\fP\&.
 .ti -1c
 .RI "\fBBadFileException\fP (std::string const &message, std::string const &component)"
 .br
+.RI "Construct a new Bad File Exception object\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Thrown when looking up to an external file that is inexistant\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Arcade::Exceptions::BadFileException::BadFileException (std::string const & message, std::string const & component)"
+
+.PP
+Construct a new Bad File Exception object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fImessage\fP Message explaining the problem\&. 
+.br
+\fIcomponent\fP Additional information on where the problem occured\&. 
+.RE
+.PP
+
 
 .SH "Author"
 .PP 

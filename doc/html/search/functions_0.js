@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['render',['render',['../classArcade_1_1Games_1_1AGameModule.html#a5897780d42d5faba3287c29b87f2b498',1,'Arcade::Games::AGameModule::render()'],['../classArcade_1_1Games_1_1Nibbler.html#afd52ee2fad66523b58f94f9eb582145e',1,'Arcade::Games::Nibbler::render()'],['../classArcade_1_1Games_1_1Pacman.html#ab1a7408f265efbef12b4f9d1a6fb4512',1,'Arcade::Games::Pacman::render()']]]
+  ['addtobestscores',['addToBestScores',['../classArcade_1_1Games_1_1AGameModule.html#a961c4a606bcc5d2ab1ead8b3c0bb3408',1,'Arcade::Games::AGameModule']]],
+  ['agamemodule',['AGameModule',['../classArcade_1_1Games_1_1AGameModule.html#a489ae3b9ad35cf20ee05be8e3f365a99',1,'Arcade::Games::AGameModule']]],
+  ['arcadeexception',['ArcadeException',['../classArcade_1_1Exceptions_1_1ArcadeException.html#a054c4f79319af87bfbbe79fa03809b38',1,'Arcade::Exceptions::ArcadeException']]]
 ];

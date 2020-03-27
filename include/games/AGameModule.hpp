@@ -14,9 +14,16 @@
 
 namespace Arcade::Games
 {
+    /**
+     * @brief Abstract class implementing key methods of the IGameModule interface
+     */
     class AGameModule : public IGameModule
     {
         public:
+            /**
+             * @brief Construct a new AGameModule object
+             * @param libname THe library's name
+             */
             AGameModule(std::string const &libname);
             virtual ~AGameModule();
 
@@ -39,8 +46,15 @@ namespace Arcade::Games
             const std::string &getLibName() const final;
 
         protected:
+            /**
+             * @brief Adds a score to the scoreboard
+             * @param nb The score value
+             */
             void addToBestScores(int nb);
-            void sortHighscores(void);
+
+            /**
+             * @brief The current score of the active game session
+             */
             int _currentScore;
 
         private:
@@ -49,6 +63,8 @@ namespace Arcade::Games
             std::vector<std::pair<std::string, int>> _highscores;
 
             static const std::regex highscoreRegex;
+
+            void sortHighscores(void);
     };
 }
 

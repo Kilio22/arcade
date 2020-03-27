@@ -1,4 +1,4 @@
-.TH "Arcade::Games::Pacman" 3 "Thu Mar 26 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Games::Pacman" 3 "Fri Mar 27 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,9 +14,11 @@ Inherits \fBArcade::Games::AGameModule\fP\&.
 .ti -1c
 .RI "void \fBreset\fP () final"
 .br
+.RI "Resets and restarts the game\&. "
 .ti -1c
 .RI "void \fBupdate\fP (const \fBArcade::Display::IDisplayModule\fP &lib) final"
 .br
+.RI "Updates the game\&. "
 .ti -1c
 .RI "void \fBrender\fP (\fBArcade::Display::IDisplayModule\fP &lib) const final"
 .br
@@ -28,6 +30,19 @@ Inherits \fBArcade::Games::AGameModule\fP\&.
 Default game implementation (out of order) 
 .PP
 Reimplemented from \fBArcade::Games::AGameModule\fP\&.
+.SS "void Arcade::Games::Pacman::update (const \fBArcade::Display::IDisplayModule\fP & lib)\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Updates the game\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlib\fP The display module that will be used to get events that occured 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
 
 .SH "Author"
 .PP 

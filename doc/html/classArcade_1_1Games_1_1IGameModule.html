@@ -95,13 +95,18 @@ $(document).ready(function(){initNavTree('classArcade_1_1Games_1_1IGameModule.ht
 <div class="title">Arcade::Games::IGameModule Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Interface for the game modules used to handle games.  
+ <a href="classArcade_1_1Games_1_1IGameModule.html#details">More...</a></p>
+
+<p><code>#include &lt;IGameModule.hpp&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Arcade::Games::IGameModule:</div>
 <div class="dyncontent">
  <div class="center">
   <img src="classArcade_1_1Games_1_1IGameModule.png" usemap="#Arcade::Games::IGameModule_map" alt=""/>
   <map id="Arcade::Games::IGameModule_map" name="Arcade::Games::IGameModule_map">
-<area href="classArcade_1_1Games_1_1AGameModule.html" alt="Arcade::Games::AGameModule" shape="rect" coords="394,56,581,80"/>
+<area href="classArcade_1_1Games_1_1AGameModule.html" title="Abstract class implementing key methods of the IGameModule interface." alt="Arcade::Games::AGameModule" shape="rect" coords="394,56,581,80"/>
 <area href="classArcade_1_1Games_1_1Centipede.html" alt="Arcade::Games::Centipede" shape="rect" coords="0,112,187,136"/>
 <area href="classArcade_1_1Games_1_1Nibbler.html" alt="Arcade::Games::Nibbler" shape="rect" coords="197,112,384,136"/>
 <area href="classArcade_1_1Games_1_1Pacman.html" alt="Arcade::Games::Pacman" shape="rect" coords="394,112,581,136"/>
@@ -113,45 +118,389 @@ Inheritance diagram for Arcade::Games::IGameModule:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8934b25efb3c948c8b3be7caa141626d"><td class="memItemLeft" align="right" valign="top"><a id="a8934b25efb3c948c8b3be7caa141626d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()=0</td></tr>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#a8934b25efb3c948c8b3be7caa141626d">reset</a> ()=0</td></tr>
+<tr class="memdesc:a8934b25efb3c948c8b3be7caa141626d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resets and restarts the game. <br /></td></tr>
 <tr class="separator:a8934b25efb3c948c8b3be7caa141626d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2a8cdd7c90677b6ebd0f97d99254d256"><td class="memItemLeft" align="right" valign="top"><a id="a2a8cdd7c90677b6ebd0f97d99254d256"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadFromFile</b> (const std::string &amp;filepath)=0</td></tr>
+<tr class="memitem:a2a8cdd7c90677b6ebd0f97d99254d256"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#a2a8cdd7c90677b6ebd0f97d99254d256">loadFromFile</a> (const std::string &amp;filepath)=0</td></tr>
+<tr class="memdesc:a2a8cdd7c90677b6ebd0f97d99254d256"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads highscores from a file.  <a href="#a2a8cdd7c90677b6ebd0f97d99254d256">More...</a><br /></td></tr>
 <tr class="separator:a2a8cdd7c90677b6ebd0f97d99254d256"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add4c3468c03cc41fde2baf671a4bd026"><td class="memItemLeft" align="right" valign="top"><a id="add4c3468c03cc41fde2baf671a4bd026"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>loadFromFile</b> ()=0</td></tr>
+<tr class="memitem:add4c3468c03cc41fde2baf671a4bd026"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#add4c3468c03cc41fde2baf671a4bd026">loadFromFile</a> ()=0</td></tr>
+<tr class="memdesc:add4c3468c03cc41fde2baf671a4bd026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads highscores from the default save file.  <a href="#add4c3468c03cc41fde2baf671a4bd026">More...</a><br /></td></tr>
 <tr class="separator:add4c3468c03cc41fde2baf671a4bd026"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cf053ce2f4ccfe13e9c10d8549f7c82"><td class="memItemLeft" align="right" valign="top"><a id="a3cf053ce2f4ccfe13e9c10d8549f7c82"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveToFile</b> (const std::string &amp;filepath) const =0</td></tr>
+<tr class="memitem:a3cf053ce2f4ccfe13e9c10d8549f7c82"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#a3cf053ce2f4ccfe13e9c10d8549f7c82">saveToFile</a> (const std::string &amp;filepath) const =0</td></tr>
+<tr class="memdesc:a3cf053ce2f4ccfe13e9c10d8549f7c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves highscores to a file.  <a href="#a3cf053ce2f4ccfe13e9c10d8549f7c82">More...</a><br /></td></tr>
 <tr class="separator:a3cf053ce2f4ccfe13e9c10d8549f7c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada0aa1d3d52bcdedcdb35b95d956c8ee"><td class="memItemLeft" align="right" valign="top"><a id="ada0aa1d3d52bcdedcdb35b95d956c8ee"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveToFile</b> () const =0</td></tr>
+<tr class="memitem:ada0aa1d3d52bcdedcdb35b95d956c8ee"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#ada0aa1d3d52bcdedcdb35b95d956c8ee">saveToFile</a> () const =0</td></tr>
+<tr class="memdesc:ada0aa1d3d52bcdedcdb35b95d956c8ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves highscores from the default save file.  <a href="#ada0aa1d3d52bcdedcdb35b95d956c8ee">More...</a><br /></td></tr>
 <tr class="separator:ada0aa1d3d52bcdedcdb35b95d956c8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad433296fe8a4582ebfdad5827a13d59"><td class="memItemLeft" align="right" valign="top"><a id="aad433296fe8a4582ebfdad5827a13d59"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setPlayerName</b> (const std::string &amp;name)=0</td></tr>
+<tr class="memitem:aad433296fe8a4582ebfdad5827a13d59"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#aad433296fe8a4582ebfdad5827a13d59">setPlayerName</a> (const std::string &amp;name)=0</td></tr>
+<tr class="memdesc:aad433296fe8a4582ebfdad5827a13d59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the player name.  <a href="#aad433296fe8a4582ebfdad5827a13d59">More...</a><br /></td></tr>
 <tr class="separator:aad433296fe8a4582ebfdad5827a13d59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad84a0b04bb998a4eb3682c76d0fababf"><td class="memItemLeft" align="right" valign="top"><a id="ad84a0b04bb998a4eb3682c76d0fababf"></a>
-virtual std::pair&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getScore</b> () const =0</td></tr>
+<tr class="memitem:ad84a0b04bb998a4eb3682c76d0fababf"><td class="memItemLeft" align="right" valign="top">virtual std::pair&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#ad84a0b04bb998a4eb3682c76d0fababf">getScore</a> () const =0</td></tr>
+<tr class="memdesc:ad84a0b04bb998a4eb3682c76d0fababf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current score.  <a href="#ad84a0b04bb998a4eb3682c76d0fababf">More...</a><br /></td></tr>
 <tr class="separator:ad84a0b04bb998a4eb3682c76d0fababf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaec4931b0051ba589fbe1b14d20131b"><td class="memItemLeft" align="right" valign="top"><a id="afaec4931b0051ba589fbe1b14d20131b"></a>
-virtual std::vector&lt; std::pair&lt; std::string, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getBestScores</b> () const =0</td></tr>
+<tr class="memitem:afaec4931b0051ba589fbe1b14d20131b"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; std::pair&lt; std::string, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#afaec4931b0051ba589fbe1b14d20131b">getBestScores</a> () const =0</td></tr>
+<tr class="memdesc:afaec4931b0051ba589fbe1b14d20131b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the best 16 scores.  <a href="#afaec4931b0051ba589fbe1b14d20131b">More...</a><br /></td></tr>
 <tr class="separator:afaec4931b0051ba589fbe1b14d20131b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a421d1064fcc112dfc7ea025fc7f88aa7"><td class="memItemLeft" align="right" valign="top"><a id="a421d1064fcc112dfc7ea025fc7f88aa7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> (const <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">Arcade::Display::IDisplayModule</a> &amp;lib)=0</td></tr>
+<tr class="memitem:a421d1064fcc112dfc7ea025fc7f88aa7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#a421d1064fcc112dfc7ea025fc7f88aa7">update</a> (const <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">Arcade::Display::IDisplayModule</a> &amp;lib)=0</td></tr>
+<tr class="memdesc:a421d1064fcc112dfc7ea025fc7f88aa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the game.  <a href="#a421d1064fcc112dfc7ea025fc7f88aa7">More...</a><br /></td></tr>
 <tr class="separator:a421d1064fcc112dfc7ea025fc7f88aa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd5ec66681e77038e3d4dc17f43e1ee9"><td class="memItemLeft" align="right" valign="top"><a id="afd5ec66681e77038e3d4dc17f43e1ee9"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">Arcade::Display::IDisplayModule</a> &amp;lib) const =0</td></tr>
+<tr class="memitem:afd5ec66681e77038e3d4dc17f43e1ee9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#afd5ec66681e77038e3d4dc17f43e1ee9">render</a> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">Arcade::Display::IDisplayModule</a> &amp;lib) const =0</td></tr>
+<tr class="memdesc:afd5ec66681e77038e3d4dc17f43e1ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renders the game on the display module.  <a href="#afd5ec66681e77038e3d4dc17f43e1ee9">More...</a><br /></td></tr>
 <tr class="separator:afd5ec66681e77038e3d4dc17f43e1ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30966cbaa00abbd2a211cf152ea595f2"><td class="memItemLeft" align="right" valign="top"><a id="a30966cbaa00abbd2a211cf152ea595f2"></a>
-virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getLibName</b> () const =0</td></tr>
+<tr class="memitem:a30966cbaa00abbd2a211cf152ea595f2"><td class="memItemLeft" align="right" valign="top">virtual const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html#a30966cbaa00abbd2a211cf152ea595f2">getLibName</a> () const =0</td></tr>
+<tr class="memdesc:a30966cbaa00abbd2a211cf152ea595f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the library name.  <a href="#a30966cbaa00abbd2a211cf152ea595f2">More...</a><br /></td></tr>
 <tr class="separator:a30966cbaa00abbd2a211cf152ea595f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Interface for the game modules used to handle games. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="afaec4931b0051ba589fbe1b14d20131b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaec4931b0051ba589fbe1b14d20131b">&#9670;&nbsp;</a></span>getBestScores()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::vector&lt;std::pair&lt;std::string, int&gt; &gt; Arcade::Games::IGameModule::getBestScores </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the best 16 scores. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::pair&lt;std::string, int&gt;&gt; Vector of [name, score] value pairs </dd></dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#aaebba3bd5236f97cb18867fe99c7135b">Arcade::Games::AGameModule</a>.</p>
+
+</div>
+</div>
+<a id="a30966cbaa00abbd2a211cf152ea595f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30966cbaa00abbd2a211cf152ea595f2">&#9670;&nbsp;</a></span>getLibName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::string&amp; Arcade::Games::IGameModule::getLibName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the library name. </p>
+<dl class="section return"><dt>Returns</dt><dd>The library's name </dd></dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a3245a3ba2eac74eadf5041bc3806ed6b">Arcade::Games::AGameModule</a>.</p>
+
+</div>
+</div>
+<a id="ad84a0b04bb998a4eb3682c76d0fababf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84a0b04bb998a4eb3682c76d0fababf">&#9670;&nbsp;</a></span>getScore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::pair&lt;std::string, int&gt; Arcade::Games::IGameModule::getScore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current score. </p>
+<dl class="section return"><dt>Returns</dt><dd>std::pair&lt;std::string, int&gt; [Name, score] value pairs </dd></dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a83dbf1572ae5e25174bc7b81fed7ba77">Arcade::Games::AGameModule</a>.</p>
+
+</div>
+</div>
+<a id="a2a8cdd7c90677b6ebd0f97d99254d256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a8cdd7c90677b6ebd0f97d99254d256">&#9670;&nbsp;</a></span>loadFromFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Arcade::Games::IGameModule::loadFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads highscores from a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Highscores were loaded </dd>
+<dd>
+false An error occured </dd></dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a1f7e26d79d4c392458407edfe934ff5f">Arcade::Games::AGameModule</a>.</p>
+
+</div>
+</div>
+<a id="add4c3468c03cc41fde2baf671a4bd026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add4c3468c03cc41fde2baf671a4bd026">&#9670;&nbsp;</a></span>loadFromFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Arcade::Games::IGameModule::loadFromFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads highscores from the default save file. </p>
+<dl class="section return"><dt>Returns</dt><dd>true Highscores were loaded </dd>
+<dd>
+false An error occured </dd></dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a61be4a5123cb5933b10fa0a4c34d8b06">Arcade::Games::AGameModule</a>.</p>
+
+</div>
+</div>
+<a id="afd5ec66681e77038e3d4dc17f43e1ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd5ec66681e77038e3d4dc17f43e1ee9">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Arcade::Games::IGameModule::render </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">Arcade::Display::IDisplayModule</a> &amp;&#160;</td>
+          <td class="paramname"><em>lib</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Renders the game on the display module. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lib</td><td>The display module that will be used to put things on a canvas. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a5897780d42d5faba3287c29b87f2b498">Arcade::Games::AGameModule</a>, <a class="el" href="classArcade_1_1Games_1_1Nibbler.html#afd52ee2fad66523b58f94f9eb582145e">Arcade::Games::Nibbler</a>, and <a class="el" href="classArcade_1_1Games_1_1Pacman.html#ab1a7408f265efbef12b4f9d1a6fb4512">Arcade::Games::Pacman</a>.</p>
+
+</div>
+</div>
+<a id="a3cf053ce2f4ccfe13e9c10d8549f7c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cf053ce2f4ccfe13e9c10d8549f7c82">&#9670;&nbsp;</a></span>saveToFile() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Arcade::Games::IGameModule::saveToFile </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>filepath</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves highscores to a file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filepath</td><td>The file path </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true Highscores were saved </dd>
+<dd>
+false An error occured </dd></dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a16425d9ca7518acbc60fbece4a974009">Arcade::Games::AGameModule</a>.</p>
+
+</div>
+</div>
+<a id="ada0aa1d3d52bcdedcdb35b95d956c8ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada0aa1d3d52bcdedcdb35b95d956c8ee">&#9670;&nbsp;</a></span>saveToFile() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Arcade::Games::IGameModule::saveToFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves highscores from the default save file. </p>
+<dl class="section return"><dt>Returns</dt><dd>true Highscores were saved </dd>
+<dd>
+false An error occured </dd></dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#a82fdd06480edd7f727504f5073730812">Arcade::Games::AGameModule</a>.</p>
+
+</div>
+</div>
+<a id="aad433296fe8a4582ebfdad5827a13d59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad433296fe8a4582ebfdad5827a13d59">&#9670;&nbsp;</a></span>setPlayerName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Arcade::Games::IGameModule::setPlayerName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the player name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>The player name </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1AGameModule.html#abdbf4cf008033b5f339d9758d7f2b8a2">Arcade::Games::AGameModule</a>.</p>
+
+</div>
+</div>
+<a id="a421d1064fcc112dfc7ea025fc7f88aa7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421d1064fcc112dfc7ea025fc7f88aa7">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Arcade::Games::IGameModule::update </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">Arcade::Display::IDisplayModule</a> &amp;&#160;</td>
+          <td class="paramname"><em>lib</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the game. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lib</td><td>The display module that will be used to get events that occured </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classArcade_1_1Games_1_1Nibbler.html#a6a44a75ab1905647587d7a6314155955">Arcade::Games::Nibbler</a>, <a class="el" href="classArcade_1_1Games_1_1Pacman.html#aa6bc227c3f14cc8d66d11f2d32bed3ec">Arcade::Games::Pacman</a>, <a class="el" href="classArcade_1_1Games_1_1Centipede.html#a11a932a0abda301ae6037c6b97532e79">Arcade::Games::Centipede</a>, <a class="el" href="classArcade_1_1Games_1_1Qix.html#aab6bfb0ecf8571da19c4fcbfc9de263e">Arcade::Games::Qix</a>, and <a class="el" href="classArcade_1_1Games_1_1Solarfox.html#a87d7898dc7b5d8c658a18c45d35be991">Arcade::Games::Solarfox</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>Arcade</b></li><li class="navelem"><b>Games</b></li><li class="navelem"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html">IGameModule</a></li>
+    <li class="navelem"><a class="el" href="namespaceArcade.html">Arcade</a></li><li class="navelem"><a class="el" href="namespaceArcade_1_1Games.html">Games</a></li><li class="navelem"><a class="el" href="classArcade_1_1Games_1_1IGameModule.html">IGameModule</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>

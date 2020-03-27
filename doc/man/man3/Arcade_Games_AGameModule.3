@@ -1,11 +1,14 @@
-.TH "Arcade::Games::AGameModule" 3 "Thu Mar 26 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Games::AGameModule" 3 "Fri Mar 27 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Arcade::Games::AGameModule
+Arcade::Games::AGameModule \- Abstract class implementing key methods of the \fBIGameModule\fP interface\&.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <AGameModule\&.hpp>\fP
 .PP
 Inherits \fBArcade::Games::IGameModule\fP\&.
 .PP
@@ -16,33 +19,42 @@ Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBAr
 .ti -1c
 .RI "\fBAGameModule\fP (std::string const &libname)"
 .br
+.RI "Construct a new \fBAGameModule\fP object\&. "
 .ti -1c
 .RI "bool \fBloadFromFile\fP (const std::string &filepath) final"
 .br
+.RI "Loads highscores from a file\&. "
 .ti -1c
 .RI "bool \fBloadFromFile\fP () final"
 .br
+.RI "Loads highscores from the default save file\&. "
 .ti -1c
 .RI "bool \fBsaveToFile\fP (const std::string &filepath) const final"
 .br
+.RI "Saves highscores to a file\&. "
 .ti -1c
 .RI "bool \fBsaveToFile\fP () const final"
 .br
+.RI "Saves highscores from the default save file\&. "
 .ti -1c
 .RI "void \fBsetPlayerName\fP (const std::string &name) final"
 .br
+.RI "Sets the player name\&. "
 .ti -1c
 .RI "std::pair< std::string, int > \fBgetScore\fP () const final"
 .br
+.RI "Gets the current score\&. "
 .ti -1c
 .RI "std::vector< std::pair< std::string, int > > \fBgetBestScores\fP () const final"
 .br
+.RI "Gets the best 16 scores\&. "
 .ti -1c
 .RI "void \fBrender\fP (\fBArcade::Display::IDisplayModule\fP &lib) const override"
 .br
 .ti -1c
 .RI "const std::string & \fBgetLibName\fP () const final"
 .br
+.RI "Gets the library name\&. "
 .in -1c
 .SS "Protected Member Functions"
 
@@ -50,6 +62,7 @@ Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBAr
 .ti -1c
 .RI "void \fBaddToBestScores\fP (int nb)"
 .br
+.RI "Adds a score to the scoreboard\&. "
 .in -1c
 .SS "Protected Attributes"
 
@@ -57,15 +70,165 @@ Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBAr
 .ti -1c
 .RI "int \fB_currentScore\fP"
 .br
+.RI "The current score of the active game session\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Abstract class implementing key methods of the \fBIGameModule\fP interface\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Arcade::Games::AGameModule::AGameModule (std::string const & libname)"
+
+.PP
+Construct a new \fBAGameModule\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlibname\fP THe library's name 
+.RE
+.PP
+
 .SH "Member Function Documentation"
 .PP 
+.SS "void Arcade::Games::AGameModule::addToBestScores (int nb)\fC [protected]\fP"
+
+.PP
+Adds a score to the scoreboard\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fInb\fP The score value 
+.RE
+.PP
+
+.SS "std::vector<std::pair<std::string, int> > Arcade::Games::AGameModule::getBestScores () const\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Gets the best 16 scores\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+std::vector<std::pair<std::string, int>> Vector of [name, score] value pairs 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
+.SS "const std::string& Arcade::Games::AGameModule::getLibName () const\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Gets the library name\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The library's name 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
+.SS "std::pair<std::string, int> Arcade::Games::AGameModule::getScore () const\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Gets the current score\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+std::pair<std::string, int> [Name, score] value pairs 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
+.SS "bool Arcade::Games::AGameModule::loadFromFile (const std::string & filepath)\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Loads highscores from a file\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilepath\fP The file path 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true Highscores were loaded 
+.PP
+false An error occured 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
+.SS "bool Arcade::Games::AGameModule::loadFromFile ()\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Loads highscores from the default save file\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Highscores were loaded 
+.PP
+false An error occured 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
 .SS "void Arcade::Games::AGameModule::render (\fBArcade::Display::IDisplayModule\fP & lib) const\fC [override]\fP, \fC [virtual]\fP"
 Default game implementation (out of order) 
 .PP
 Implements \fBArcade::Games::IGameModule\fP\&.
 .PP
 Reimplemented in \fBArcade::Games::Nibbler\fP, and \fBArcade::Games::Pacman\fP\&.
+.SS "bool Arcade::Games::AGameModule::saveToFile (const std::string & filepath) const\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Saves highscores to a file\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfilepath\fP The file path 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true Highscores were saved 
+.PP
+false An error occured 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
+.SS "bool Arcade::Games::AGameModule::saveToFile () const\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Saves highscores from the default save file\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Highscores were saved 
+.PP
+false An error occured 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
+.SS "void Arcade::Games::AGameModule::setPlayerName (const std::string & name)\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Sets the player name\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP The player name 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Games::IGameModule\fP\&.
 
 .SH "Author"
 .PP 

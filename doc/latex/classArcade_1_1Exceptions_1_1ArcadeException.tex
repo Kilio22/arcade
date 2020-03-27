@@ -1,5 +1,14 @@
 \hypertarget{classArcade_1_1Exceptions_1_1ArcadeException}{}\section{Arcade\+::Exceptions\+::Arcade\+Exception Class Reference}
 \label{classArcade_1_1Exceptions_1_1ArcadeException}\index{Arcade::Exceptions::ArcadeException@{Arcade::Exceptions::ArcadeException}}
+
+
+Base exception class for this projects\textquotesingle{} exceptions.  
+
+
+
+
+{\ttfamily \#include $<$Arcade\+Exception.\+hpp$>$}
+
 Inheritance diagram for Arcade\+::Exceptions\+::Arcade\+Exception\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,9 +18,46 @@ Inheritance diagram for Arcade\+::Exceptions\+::Arcade\+Exception\+:\begin{figur
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classArcade_1_1Exceptions_1_1ArcadeException_a054c4f79319af87bfbbe79fa03809b38}{Arcade\+Exception}} (std\+::string const \&message, std\+::string const \&component)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{namespaceArcade}{Arcade}} Exception object. \end{DoxyCompactList}\item 
+std\+::string const  \& \mbox{\hyperlink{classArcade_1_1Exceptions_1_1ArcadeException_aa000c618b4fbe4a3612f511074243ce9}{get\+Component}} (void) const noexcept
+\begin{DoxyCompactList}\small\item\em Gets the name of component where the exception occured. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base exception class for this projects\textquotesingle{} exceptions. 
+
+\subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classArcade_1_1Exceptions_1_1ArcadeException_a054c4f79319af87bfbbe79fa03809b38}\label{classArcade_1_1Exceptions_1_1ArcadeException_a054c4f79319af87bfbbe79fa03809b38}} 
-{\bfseries Arcade\+Exception} (std\+::string const \&message, std\+::string const \&component)
-\item 
+\index{Arcade::Exceptions::ArcadeException@{Arcade::Exceptions::ArcadeException}!ArcadeException@{ArcadeException}}
+\index{ArcadeException@{ArcadeException}!Arcade::Exceptions::ArcadeException@{Arcade::Exceptions::ArcadeException}}
+\subsubsection{\texorpdfstring{ArcadeException()}{ArcadeException()}}
+{\footnotesize\ttfamily Arcade\+::\+Exceptions\+::\+Arcade\+Exception\+::\+Arcade\+Exception (\begin{DoxyParamCaption}\item[{std\+::string const \&}]{message,  }\item[{std\+::string const \&}]{component }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{namespaceArcade}{Arcade}} Exception object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message explaining the problem. \\
+\hline
+{\em component} & Additional information on where the problem occured. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
 \mbox{\Hypertarget{classArcade_1_1Exceptions_1_1ArcadeException_aa000c618b4fbe4a3612f511074243ce9}\label{classArcade_1_1Exceptions_1_1ArcadeException_aa000c618b4fbe4a3612f511074243ce9}} 
-std\+::string const  \& {\bfseries get\+Component} (void) const noexcept
-\end{DoxyCompactItemize}
+\index{Arcade::Exceptions::ArcadeException@{Arcade::Exceptions::ArcadeException}!getComponent@{getComponent}}
+\index{getComponent@{getComponent}!Arcade::Exceptions::ArcadeException@{Arcade::Exceptions::ArcadeException}}
+\subsubsection{\texorpdfstring{getComponent()}{getComponent()}}
+{\footnotesize\ttfamily std\+::string const\& Arcade\+::\+Exceptions\+::\+Arcade\+Exception\+::get\+Component (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Gets the name of component where the exception occured. 
+
+\begin{DoxyReturn}{Returns}
+The component name 
+\end{DoxyReturn}

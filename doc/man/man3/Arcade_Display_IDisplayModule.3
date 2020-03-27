@@ -1,11 +1,14 @@
-.TH "Arcade::Display::IDisplayModule" 3 "Thu Mar 26 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Display::IDisplayModule" 3 "Fri Mar 27 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Arcade::Display::IDisplayModule
+Arcade::Display::IDisplayModule \- Interface for the display modules used to display things\&.  
+
 .SH SYNOPSIS
 .br
 .PP
+.PP
+\fC#include <IDisplayModule\&.hpp>\fP
 .PP
 Inherited by \fBArcade::Display::Libcaca\fP, \fBArcade::Display::SDL\fP, and \fBArcade::Display::SFML\fP\&.
 .SS "Public Types"
@@ -14,9 +17,11 @@ Inherited by \fBArcade::Display::Libcaca\fP, \fBArcade::Display::SDL\fP, and \fB
 .ti -1c
 .RI "enum \fBColors\fP { \fBDEFAULT\fP, \fBBLACK\fP, \fBRED\fP, \fBGREEN\fP, \fBYELLOW\fP, \fBBLUE\fP, \fBMAGENTA\fP, \fBCYAN\fP, \fBLIGHT_GRAY\fP, \fBDARK_GRAY\fP, \fBLIGHT_RED\fP, \fBLIGHT_GREEN\fP, \fBLIGHT_YELLOW\fP, \fBLIGHT_BLUE\fP, \fBLIGHT_MAGENTA\fP, \fBLIGHT_CYAN\fP, \fBWHITE\fP, \fBCOLORS_END\fP }"
 .br
+.RI "Available colors\&. "
 .ti -1c
 .RI "enum \fBKeys\fP { \fBLEFT\fP, \fBRIGHT\fP, \fBUP\fP, \fBDOWN\fP, \fBZ\fP, \fBQ\fP, \fBS\fP, \fBD\fP, \fBA\fP, \fBE\fP, \fBW\fP, \fBX\fP, \fBSPACE\fP, \fBESCAPE\fP, \fBJ\fP, \fBK\fP, \fBU\fP, \fBI\fP, \fBM\fP, \fBR\fP, \fBENTER\fP, \fBKEYS_END\fP }"
 .br
+.RI "Available keys\&. "
 .in -1c
 .SS "Public Member Functions"
 
@@ -24,82 +29,576 @@ Inherited by \fBArcade::Display::Libcaca\fP, \fBArcade::Display::SDL\fP, and \fB
 .ti -1c
 .RI "virtual void \fBreset\fP ()=0"
 .br
+.RI "Resets the library\&. "
 .ti -1c
 .RI "virtual void \fBopen\fP ()=0"
 .br
+.RI "Opens / initializes the window\&. "
 .ti -1c
 .RI "virtual bool \fBisOpen\fP () const =0"
 .br
+.RI "Check window status\&. "
 .ti -1c
 .RI "virtual bool \fBswitchToNextLib\fP () const =0"
 .br
+.RI "Checks whether you need to change the current display library\&. "
 .ti -1c
 .RI "virtual bool \fBswitchToPreviousLib\fP () const =0"
 .br
+.RI "Checks whether you need to change the current display library\&. "
 .ti -1c
 .RI "virtual bool \fBswitchToNextGame\fP () const =0"
 .br
+.RI "Checks whether you need to change the current game library\&. "
 .ti -1c
 .RI "virtual bool \fBswitchToPreviousGame\fP () const =0"
 .br
+.RI "Checks whether you need to change the current game library\&. "
 .ti -1c
 .RI "virtual bool \fBshouldBeRestarted\fP () const =0"
 .br
+.RI "Checks whether you need to restart the current game\&. "
 .ti -1c
 .RI "virtual bool \fBshouldGoToMenu\fP () const =0"
 .br
+.RI "Checks whether you need to go back to the menu\&. "
 .ti -1c
 .RI "virtual bool \fBshouldExit\fP () const =0"
 .br
+.RI "Checks whether you need to exit the program\&. "
 .ti -1c
-.RI "virtual bool \fBisKeyPressed\fP (IDisplayModule::Keys) const =0"
+.RI "virtual bool \fBisKeyPressed\fP (\fBIDisplayModule::Keys\fP) const =0"
 .br
+.RI "Checks whether the current key is being pressed\&. "
 .ti -1c
-.RI "virtual bool \fBisKeyPressedOnce\fP (IDisplayModule::Keys) const =0"
+.RI "virtual bool \fBisKeyPressedOnce\fP (\fBIDisplayModule::Keys\fP) const =0"
 .br
+.RI "Checks whether the current key was pressed during the last frame\&. "
 .ti -1c
 .RI "virtual float \fBgetDelta\fP () const =0"
 .br
+.RI "Gets the number of frames since last update\&. "
 .ti -1c
 .RI "virtual void \fBclear\fP () const =0"
 .br
+.RI "Clears the canvas\&. "
 .ti -1c
 .RI "virtual void \fBupdate\fP ()=0"
 .br
+.RI "Runs an update over the events that occured\&. "
 .ti -1c
 .RI "virtual void \fBrender\fP () const =0"
 .br
+.RI "Renders the canvas\&. "
 .ti -1c
 .RI "virtual char \fBgetKeyCode\fP () const =0"
 .br
+.RI "Gets the last pressed character from the keyboard\&. "
 .ti -1c
-.RI "virtual void \fBsetColor\fP (IDisplayModule::Colors col)=0"
+.RI "virtual void \fBsetColor\fP (\fBIDisplayModule::Colors\fP col)=0"
 .br
+.RI "Defines the color of the elements that will be drawn\&. "
 .ti -1c
 .RI "virtual void \fBputPixel\fP (float x, float y) const =0"
 .br
+.RI "Displays a pixel\&. "
 .ti -1c
 .RI "virtual void \fBputLine\fP (float x1, float y1, float x2, float y2) const =0"
 .br
+.RI "Displays a line\&. "
 .ti -1c
 .RI "virtual void \fBputRect\fP (float x, float y, float w, float h) const =0"
 .br
+.RI "Displays a rectangle\&. "
 .ti -1c
 .RI "virtual void \fBputFillRect\fP (float x, float y, float w, float h) const =0"
 .br
+.RI "Displays a filled rectangle\&. "
 .ti -1c
 .RI "virtual void \fBputCircle\fP (float x, float y, float rad) const =0"
 .br
+.RI "Displays a cirle\&. "
 .ti -1c
 .RI "virtual void \fBputFillCircle\fP (float x, float y, float rad) const =0"
 .br
+.RI "Displays a filled cirle\&. "
 .ti -1c
 .RI "virtual void \fBputText\fP (const std::string &text, unsigned int size, float x, float y) const =0"
 .br
+.RI "Displays text\&. "
 .ti -1c
 .RI "virtual const std::string & \fBgetLibName\fP () const =0"
 .br
+.RI "Gets the library name\&. "
 .in -1c
+.SH "Detailed Description"
+.PP 
+Interface for the display modules used to display things\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBArcade::Display::IDisplayModule::Colors\fP"
+
+.PP
+Available colors\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIDEFAULT \fP\fP
+The color the window clears to\&. 
+.TP
+\fB\fIBLACK \fP\fP
+Black color\&. 
+.TP
+\fB\fIRED \fP\fP
+Red color\&. 
+.TP
+\fB\fIGREEN \fP\fP
+Green color\&. 
+.TP
+\fB\fIYELLOW \fP\fP
+Yellow color\&. 
+.TP
+\fB\fIBLUE \fP\fP
+Blue color\&. 
+.TP
+\fB\fIMAGENTA \fP\fP
+Magenta color\&. 
+.TP
+\fB\fICYAN \fP\fP
+Cyan color\&. 
+.TP
+\fB\fILIGHT_GRAY \fP\fP
+Light gray color\&. 
+.TP
+\fB\fIDARK_GRAY \fP\fP
+Dark gray color\&. 
+.TP
+\fB\fILIGHT_RED \fP\fP
+Light red color\&. 
+.TP
+\fB\fILIGHT_GREEN \fP\fP
+Light green color\&. 
+.TP
+\fB\fILIGHT_YELLOW \fP\fP
+Light yellow color\&. 
+.TP
+\fB\fILIGHT_BLUE \fP\fP
+Light blue color\&. 
+.TP
+\fB\fILIGHT_MAGENTA \fP\fP
+Light magenta color\&. 
+.TP
+\fB\fILIGHT_CYAN \fP\fP
+Light cyan color\&. 
+.TP
+\fB\fIWHITE \fP\fP
+White color\&. 
+.TP
+\fB\fICOLORS_END \fP\fP
+Color count\&. 
+.SS "enum \fBArcade::Display::IDisplayModule::Keys\fP"
+
+.PP
+Available keys\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fILEFT \fP\fP
+Left key\&. 
+.TP
+\fB\fIRIGHT \fP\fP
+Right key\&. 
+.TP
+\fB\fIUP \fP\fP
+Up key\&. 
+.TP
+\fB\fIDOWN \fP\fP
+Down key\&. 
+.TP
+\fB\fIZ \fP\fP
+Z key\&. 
+.TP
+\fB\fIQ \fP\fP
+Q key\&. 
+.TP
+\fB\fIS \fP\fP
+S key\&. 
+.TP
+\fB\fID \fP\fP
+D key\&. 
+.TP
+\fB\fIA \fP\fP
+A key\&. 
+.TP
+\fB\fIE \fP\fP
+E key\&. 
+.TP
+\fB\fIW \fP\fP
+W key\&. 
+.TP
+\fB\fIX \fP\fP
+X key\&. 
+.TP
+\fB\fISPACE \fP\fP
+Space key\&. 
+.TP
+\fB\fIESCAPE \fP\fP
+Backspace key\&. 
+.TP
+\fB\fIJ \fP\fP
+J key\&. 
+.TP
+\fB\fIK \fP\fP
+K key\&. 
+.TP
+\fB\fIU \fP\fP
+U key\&. 
+.TP
+\fB\fII \fP\fP
+I key\&. 
+.TP
+\fB\fIM \fP\fP
+M key\&. 
+.TP
+\fB\fIR \fP\fP
+R key\&. 
+.TP
+\fB\fIENTER \fP\fP
+Return key\&. 
+.TP
+\fB\fIKEYS_END \fP\fP
+Key count\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual float Arcade::Display::IDisplayModule::getDelta () const\fC [pure virtual]\fP"
+
+.PP
+Gets the number of frames since last update\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+float Frame count 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual char Arcade::Display::IDisplayModule::getKeyCode () const\fC [pure virtual]\fP"
+
+.PP
+Gets the last pressed character from the keyboard\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+\\0 if nothing was pressed, \\b if backspace was pressed, \\n if return was pressed, otherwise, a character\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual const std::string& Arcade::Display::IDisplayModule::getLibName () const\fC [pure virtual]\fP"
+
+.PP
+Gets the library name\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The library's name 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::isKeyPressed (\fBIDisplayModule::Keys\fP) const\fC [pure virtual]\fP"
+
+.PP
+Checks whether the current key is being pressed\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Key is pressed 
+.PP
+false Key is not pressed 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::isKeyPressedOnce (\fBIDisplayModule::Keys\fP) const\fC [pure virtual]\fP"
+
+.PP
+Checks whether the current key was pressed during the last frame\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Key is pressed 
+.PP
+false Key is not pressed 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::isOpen () const\fC [pure virtual]\fP"
+
+.PP
+Check window status\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Window is open 
+.PP
+false Window is closed 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual void Arcade::Display::IDisplayModule::putCircle (float x, float y, float rad) const\fC [pure virtual]\fP"
+
+.PP
+Displays a cirle\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP X coordinates 
+.br
+\fIy\fP Y coordinates 
+.br
+\fIrad\fP Radius of the circle 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual void Arcade::Display::IDisplayModule::putFillCircle (float x, float y, float rad) const\fC [pure virtual]\fP"
+
+.PP
+Displays a filled cirle\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP X coordinates 
+.br
+\fIy\fP Y coordinates 
+.br
+\fIrad\fP Radius of the circle 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual void Arcade::Display::IDisplayModule::putFillRect (float x, float y, float w, float h) const\fC [pure virtual]\fP"
+
+.PP
+Displays a filled rectangle\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP X coordinates 
+.br
+\fIy\fP Y coordinates 
+.br
+\fIw\fP Width of the rectangle 
+.br
+\fIh\fP Height of the rectangle 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual void Arcade::Display::IDisplayModule::putLine (float x1, float y1, float x2, float y2) const\fC [pure virtual]\fP"
+
+.PP
+Displays a line\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx1\fP X coordinates for the first point 
+.br
+\fIy1\fP Y coordinates for the first point 
+.br
+\fIx2\fP X coordinates for the second point 
+.br
+\fIy2\fP Y coordinates for the second point 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual void Arcade::Display::IDisplayModule::putPixel (float x, float y) const\fC [pure virtual]\fP"
+
+.PP
+Displays a pixel\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP X coordinates 
+.br
+\fIy\fP Y coordinates 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual void Arcade::Display::IDisplayModule::putRect (float x, float y, float w, float h) const\fC [pure virtual]\fP"
+
+.PP
+Displays a rectangle\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIx\fP X coordinates 
+.br
+\fIy\fP Y coordinates 
+.br
+\fIw\fP Width of the rectangle 
+.br
+\fIh\fP Height of the rectangle 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual void Arcade::Display::IDisplayModule::putText (const std::string & text, unsigned int size, float x, float y) const\fC [pure virtual]\fP"
+
+.PP
+Displays text\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fItext\fP The text content 
+.br
+\fIsize\fP The text size 
+.br
+\fIx\fP X coordinates 
+.br
+\fIy\fP Y coordinates 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual void Arcade::Display::IDisplayModule::setColor (\fBIDisplayModule::Colors\fP col)\fC [pure virtual]\fP"
+
+.PP
+Defines the color of the elements that will be drawn\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcol\fP The color 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::shouldBeRestarted () const\fC [pure virtual]\fP"
+
+.PP
+Checks whether you need to restart the current game\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Restart the game 
+.PP
+false Do nothing 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::shouldExit () const\fC [pure virtual]\fP"
+
+.PP
+Checks whether you need to exit the program\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Exit the program 
+.PP
+false Do nothing 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::shouldGoToMenu () const\fC [pure virtual]\fP"
+
+.PP
+Checks whether you need to go back to the menu\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Go back to menu 
+.PP
+false Do nothing 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::switchToNextGame () const\fC [pure virtual]\fP"
+
+.PP
+Checks whether you need to change the current game library\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Switch to next available library 
+.PP
+false Do nothing 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::switchToNextLib () const\fC [pure virtual]\fP"
+
+.PP
+Checks whether you need to change the current display library\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Switch to next available library 
+.PP
+false Do nothing 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::switchToPreviousGame () const\fC [pure virtual]\fP"
+
+.PP
+Checks whether you need to change the current game library\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Switch to previous available library 
+.PP
+false Do nothing 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::switchToPreviousLib () const\fC [pure virtual]\fP"
+
+.PP
+Checks whether you need to change the current display library\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true Switch to previous available library 
+.PP
+false Do nothing 
+.RE
+.PP
+
+.PP
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
 
 .SH "Author"
 .PP 
