@@ -11,14 +11,14 @@
 #include <memory>
 #include <map>
 #include <SDL2/SDL.h>
-#include "IDisplayModule.hpp"
+#include "ADisplayModule.hpp"
 
 namespace Arcade::Display
 {
     /**
      * @brief SDL library
      */
-    class SDL : public IDisplayModule
+    class SDL : public ADisplayModule
     {
         public:
             SDL();
@@ -37,8 +37,8 @@ namespace Arcade::Display
             bool shouldGoToMenu() const final;
             bool shouldExit() const final;
 
-            bool isKeyPressed(IDisplayModule::Keys) const final;
-            bool isKeyPressedOnce(IDisplayModule::Keys) const final;
+            bool isKeyPressed(IDisplayModule::Keys key) const final;
+            bool isKeyPressedOnce(IDisplayModule::Keys key) const final;
             float getDelta() const final;
 
             void clear() const final;
@@ -47,7 +47,7 @@ namespace Arcade::Display
 
             char getKeyCode() const final;
 
-            void setColor(IDisplayModule::Colors col) final;
+            void setColor(IDisplayModule::Colors color) final;
             void putPixel(float x, float y) const final;
             void putLine(float x1, float y1, float x2, float y2) const final;
             void putRect(float x, float y, float w, float h) const final;
@@ -55,8 +55,6 @@ namespace Arcade::Display
             void putCircle(float x, float y, float rad) const final;
             void putFillCircle(float x, float y, float rad) const final;
             void putText(const std::string &text, unsigned int size, float x, float y) const final;
-
-            const std::string &getLibName() const final;
 
         private:
             SDL_Window *_window;

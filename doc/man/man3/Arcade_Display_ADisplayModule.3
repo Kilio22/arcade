@@ -1,0 +1,71 @@
+.TH "Arcade::Display::ADisplayModule" 3 "Fri Mar 27 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Arcade::Display::ADisplayModule \- Abstract class adding utilities and an enum to the \fBIDisplayModule\fP interface\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ADisplayModule\&.hpp>\fP
+.PP
+Inherits \fBArcade::Display::IDisplayModule\fP\&.
+.PP
+Inherited by \fBArcade::Display::Libcaca\fP, \fBArcade::Display::SDL\fP, and \fBArcade::Display::SFML\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBADisplayModule\fP (const std::string &libName)"
+.br
+.RI "Construct a new \fBADisplayModule\fP object\&. "
+.ti -1c
+.RI "const std::string & \fBgetLibName\fP () const final"
+.br
+.RI "Gets the library name\&. "
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBSystemKeys\fP { \fBESCAPE\fP = Keys::KEYS_END, \fBM\fP, \fBR\fP, \fBSYSKEYS_END\fP }"
+.br
+.RI "Additional keys that are used by the library\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Abstract class adding utilities and an enum to the \fBIDisplayModule\fP interface\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Arcade::Display::ADisplayModule::ADisplayModule (const std::string & libName)"
+
+.PP
+Construct a new \fBADisplayModule\fP object\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlibName\fP The library's name 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "const std::string& Arcade::Display::ADisplayModule::getLibName () const\fC [final]\fP, \fC [virtual]\fP"
+
+.PP
+Gets the library name\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The library's name 
+.RE
+.PP
+
+.PP
+Implements \fBArcade::Display::IDisplayModule\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

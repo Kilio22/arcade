@@ -22,9 +22,9 @@ namespace Arcade::Games
         public:
             /**
              * @brief Construct a new AGameModule object
-             * @param libname THe library's name
+             * @param libName The library's name
              */
-            AGameModule(std::string const &libname);
+            AGameModule(std::string const &libName);
             virtual ~AGameModule();
 
             bool loadFromFile(const std::string &filepath) final;

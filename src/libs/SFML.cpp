@@ -8,7 +8,6 @@
 #include "lib/SFML.hpp"
 #include "Exceptions/BadFileException.hpp"
 
-const std::string Arcade::Display::SFML::_libName = "SFML";
 const std::vector<sf::Color> Arcade::Display::SFML::_libColors = {
     sf::Color::Black,
     sf::Color::Black,
@@ -43,14 +42,14 @@ const std::vector<sf::Keyboard::Key> Arcade::Display::SFML::_libKeys = {
     sf::Keyboard::W,
     sf::Keyboard::X,
     sf::Keyboard::Space,
-    sf::Keyboard::Escape,
     sf::Keyboard::J,
     sf::Keyboard::K,
     sf::Keyboard::U,
     sf::Keyboard::I,
+    sf::Keyboard::Return,
+    sf::Keyboard::Escape,
     sf::Keyboard::M,
     sf::Keyboard::R,
-    sf::Keyboard::Return
 };
 
 extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
@@ -59,7 +58,8 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 }
 
 Arcade::Display::SFML::SFML()
-    : _window(nullptr), _currentColor(Colors::DEFAULT), _events(Keys::KEYS_END, false), _keyCode('\0'), _font(std::make_unique<sf::Font>())
+    : ADisplayModule("SFML"),
+    _window(nullptr), _currentColor(Colors::DEFAULT), _events(SystemKeys::SYSKEYS_END, false), _keyCode('\0'), _font(std::make_unique<sf::Font>())
 {
     if (this->_font->loadFromFile("./assets/pixelmix_bold.ttf") == false)
         throw Arcade::Exceptions::BadFileException("Cannot load font", "SFML::SFML");
@@ -111,17 +111,17 @@ bool Arcade::Display::SFML::switchToPreviousGame() const
 
 bool Arcade::Display::SFML::shouldBeRestarted() const
 {
-    return this->_events.at(Keys::R);
+    return this->_events.at(SystemKeys::R);
 }
 
 bool Arcade::Display::SFML::shouldGoToMenu() const
 {
-    return this->_events.at(Keys::M);
+    return this->_events.at(SystemKeys::M);
 }
 
 bool Arcade::Display::SFML::shouldExit() const
 {
-    return this->_events.at(Keys::ESCAPE);
+    return this->_events.at(SystemKeys::ESCAPE);
 }
 
 bool Arcade::Display::SFML::isKeyPressed(Keys key) const
@@ -148,7 +148,7 @@ void Arcade::Display::SFML::update()
 {
     sf::Event event;
 
-    this->_events.assign(Keys::KEYS_END, false);
+    this->_events.assign(SystemKeys::SYSKEYS_END, false);
     this->_keyCode = '\0';
     while (this->_window->pollEvent(event)) {
         if (event.type == sf::Event::KeyPressed) {
@@ -299,9 +299,4 @@ void Arcade::Display::SFML::putText(const std::string &text, unsigned int size, 
     newText.setString(text);
     newText.setPosition(sf::Vector2f(x, y));
     this->_window->draw(newText);
-}
-
-const std::string &Arcade::Display::SFML::getLibName() const
-{
-    return this->_libName;
 }

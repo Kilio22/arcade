@@ -16,177 +16,180 @@
 \contentsline {section}{\numberline {5.4}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games Namespace Reference}{10}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Detailed Description}{10}{subsection.5.4.1}
 \contentsline {chapter}{\numberline {6}Class Documentation}{11}{chapter.6}
-\contentsline {section}{\numberline {6.1}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Module Class Reference}{11}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{12}{subsection.6.1.1}
+\contentsline {section}{\numberline {6.1}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Module Class Reference}{11}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{11}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Constructor \& Destructor Documentation}{12}{subsection.6.1.2}
-\contentsline {subsubsection}{\numberline {6.1.2.1}AGameModule()}{12}{subsubsection.6.1.2.1}
+\contentsline {subsubsection}{\numberline {6.1.2.1}ADisplayModule()}{12}{subsubsection.6.1.2.1}
 \contentsline {subsection}{\numberline {6.1.3}Member Function Documentation}{12}{subsection.6.1.3}
-\contentsline {subsubsection}{\numberline {6.1.3.1}addToBestScores()}{12}{subsubsection.6.1.3.1}
-\contentsline {subsubsection}{\numberline {6.1.3.2}drawGameOver()}{13}{subsubsection.6.1.3.2}
-\contentsline {subsubsection}{\numberline {6.1.3.3}getBestScores()}{13}{subsubsection.6.1.3.3}
-\contentsline {subsubsection}{\numberline {6.1.3.4}getLibName()}{13}{subsubsection.6.1.3.4}
-\contentsline {subsubsection}{\numberline {6.1.3.5}getScore()}{14}{subsubsection.6.1.3.5}
-\contentsline {subsubsection}{\numberline {6.1.3.6}loadFromFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{14}{subsubsection.6.1.3.6}
-\contentsline {subsubsection}{\numberline {6.1.3.7}loadFromFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{14}{subsubsection.6.1.3.7}
-\contentsline {subsubsection}{\numberline {6.1.3.8}render()}{14}{subsubsection.6.1.3.8}
-\contentsline {subsubsection}{\numberline {6.1.3.9}saveToFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{15}{subsubsection.6.1.3.9}
-\contentsline {subsubsection}{\numberline {6.1.3.10}saveToFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{15}{subsubsection.6.1.3.10}
-\contentsline {subsubsection}{\numberline {6.1.3.11}setPlayerName()}{15}{subsubsection.6.1.3.11}
-\contentsline {section}{\numberline {6.2}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Exceptions\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Exception Class Reference}{16}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{16}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Constructor \& Destructor Documentation}{16}{subsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.2.1}ArcadeException()}{16}{subsubsection.6.2.2.1}
-\contentsline {subsection}{\numberline {6.2.3}Member Function Documentation}{17}{subsection.6.2.3}
-\contentsline {subsubsection}{\numberline {6.2.3.1}getComponent()}{17}{subsubsection.6.2.3.1}
-\contentsline {subsubsection}{\numberline {6.2.3.2}what()}{17}{subsubsection.6.2.3.2}
-\contentsline {section}{\numberline {6.3}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Exceptions\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Bad\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}File\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Exception Class Reference}{17}{section.6.3}
+\contentsline {subsubsection}{\numberline {6.1.3.1}getLibName()}{12}{subsubsection.6.1.3.1}
+\contentsline {section}{\numberline {6.2}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::A\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Module Class Reference}{12}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{13}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Constructor \& Destructor Documentation}{13}{subsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.2.1}AGameModule()}{13}{subsubsection.6.2.2.1}
+\contentsline {subsection}{\numberline {6.2.3}Member Function Documentation}{14}{subsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.3.1}addToBestScores()}{14}{subsubsection.6.2.3.1}
+\contentsline {subsubsection}{\numberline {6.2.3.2}drawGameOver()}{14}{subsubsection.6.2.3.2}
+\contentsline {subsubsection}{\numberline {6.2.3.3}getBestScores()}{14}{subsubsection.6.2.3.3}
+\contentsline {subsubsection}{\numberline {6.2.3.4}getLibName()}{15}{subsubsection.6.2.3.4}
+\contentsline {subsubsection}{\numberline {6.2.3.5}getScore()}{15}{subsubsection.6.2.3.5}
+\contentsline {subsubsection}{\numberline {6.2.3.6}loadFromFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{15}{subsubsection.6.2.3.6}
+\contentsline {subsubsection}{\numberline {6.2.3.7}loadFromFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{16}{subsubsection.6.2.3.7}
+\contentsline {subsubsection}{\numberline {6.2.3.8}render()}{16}{subsubsection.6.2.3.8}
+\contentsline {subsubsection}{\numberline {6.2.3.9}saveToFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{16}{subsubsection.6.2.3.9}
+\contentsline {subsubsection}{\numberline {6.2.3.10}saveToFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{17}{subsubsection.6.2.3.10}
+\contentsline {subsubsection}{\numberline {6.2.3.11}setPlayerName()}{17}{subsubsection.6.2.3.11}
+\contentsline {section}{\numberline {6.3}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Exceptions\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Exception Class Reference}{17}{section.6.3}
 \contentsline {subsection}{\numberline {6.3.1}Detailed Description}{18}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Constructor \& Destructor Documentation}{18}{subsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.2.1}BadFileException()}{18}{subsubsection.6.3.2.1}
-\contentsline {section}{\numberline {6.4}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Exceptions\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Bad\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instanciation\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Exception Class Reference}{18}{section.6.4}
+\contentsline {subsubsection}{\numberline {6.3.2.1}ArcadeException()}{18}{subsubsection.6.3.2.1}
+\contentsline {subsection}{\numberline {6.3.3}Member Function Documentation}{18}{subsection.6.3.3}
+\contentsline {subsubsection}{\numberline {6.3.3.1}getComponent()}{18}{subsubsection.6.3.3.1}
+\contentsline {subsubsection}{\numberline {6.3.3.2}what()}{18}{subsubsection.6.3.3.2}
+\contentsline {section}{\numberline {6.4}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Exceptions\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Bad\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}File\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Exception Class Reference}{19}{section.6.4}
 \contentsline {subsection}{\numberline {6.4.1}Detailed Description}{19}{subsection.6.4.1}
 \contentsline {subsection}{\numberline {6.4.2}Constructor \& Destructor Documentation}{19}{subsection.6.4.2}
-\contentsline {subsubsection}{\numberline {6.4.2.1}BadInstanciationException()}{19}{subsubsection.6.4.2.1}
-\contentsline {section}{\numberline {6.5}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Centipede Class Reference}{19}{section.6.5}
+\contentsline {subsubsection}{\numberline {6.4.2.1}BadFileException()}{19}{subsubsection.6.4.2.1}
+\contentsline {section}{\numberline {6.5}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Exceptions\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Bad\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Instanciation\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Exception Class Reference}{19}{section.6.5}
 \contentsline {subsection}{\numberline {6.5.1}Detailed Description}{20}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Member Function Documentation}{20}{subsection.6.5.2}
-\contentsline {subsubsection}{\numberline {6.5.2.1}update()}{20}{subsubsection.6.5.2.1}
-\contentsline {section}{\numberline {6.6}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Core Class Reference}{20}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{20}{subsection.6.6.1}
-\contentsline {subsection}{\numberline {6.6.2}Constructor \& Destructor Documentation}{20}{subsection.6.6.2}
-\contentsline {subsubsection}{\numberline {6.6.2.1}Core()}{21}{subsubsection.6.6.2.1}
-\contentsline {section}{\numberline {6.7}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Module Class Reference}{22}{section.6.7}
-\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{23}{subsection.6.7.1}
-\contentsline {subsection}{\numberline {6.7.2}Member Enumeration Documentation}{23}{subsection.6.7.2}
-\contentsline {subsubsection}{\numberline {6.7.2.1}Colors}{24}{subsubsection.6.7.2.1}
-\contentsline {subsubsection}{\numberline {6.7.2.2}Keys}{24}{subsubsection.6.7.2.2}
-\contentsline {subsection}{\numberline {6.7.3}Member Function Documentation}{25}{subsection.6.7.3}
-\contentsline {subsubsection}{\numberline {6.7.3.1}getDelta()}{25}{subsubsection.6.7.3.1}
-\contentsline {subsubsection}{\numberline {6.7.3.2}getKeyCode()}{25}{subsubsection.6.7.3.2}
-\contentsline {subsubsection}{\numberline {6.7.3.3}getLibName()}{26}{subsubsection.6.7.3.3}
-\contentsline {subsubsection}{\numberline {6.7.3.4}isKeyPressed()}{26}{subsubsection.6.7.3.4}
-\contentsline {subsubsection}{\numberline {6.7.3.5}isKeyPressedOnce()}{26}{subsubsection.6.7.3.5}
-\contentsline {subsubsection}{\numberline {6.7.3.6}isOpen()}{27}{subsubsection.6.7.3.6}
-\contentsline {subsubsection}{\numberline {6.7.3.7}putCircle()}{27}{subsubsection.6.7.3.7}
-\contentsline {subsubsection}{\numberline {6.7.3.8}putFillCircle()}{27}{subsubsection.6.7.3.8}
-\contentsline {subsubsection}{\numberline {6.7.3.9}putFillRect()}{28}{subsubsection.6.7.3.9}
-\contentsline {subsubsection}{\numberline {6.7.3.10}putLine()}{28}{subsubsection.6.7.3.10}
-\contentsline {subsubsection}{\numberline {6.7.3.11}putPixel()}{28}{subsubsection.6.7.3.11}
-\contentsline {subsubsection}{\numberline {6.7.3.12}putRect()}{29}{subsubsection.6.7.3.12}
-\contentsline {subsubsection}{\numberline {6.7.3.13}putText()}{29}{subsubsection.6.7.3.13}
-\contentsline {subsubsection}{\numberline {6.7.3.14}setColor()}{30}{subsubsection.6.7.3.14}
-\contentsline {subsubsection}{\numberline {6.7.3.15}shouldBeRestarted()}{30}{subsubsection.6.7.3.15}
-\contentsline {subsubsection}{\numberline {6.7.3.16}shouldExit()}{30}{subsubsection.6.7.3.16}
-\contentsline {subsubsection}{\numberline {6.7.3.17}shouldGoToMenu()}{31}{subsubsection.6.7.3.17}
-\contentsline {subsubsection}{\numberline {6.7.3.18}switchToNextGame()}{31}{subsubsection.6.7.3.18}
-\contentsline {subsubsection}{\numberline {6.7.3.19}switchToNextLib()}{31}{subsubsection.6.7.3.19}
-\contentsline {subsubsection}{\numberline {6.7.3.20}switchToPreviousGame()}{32}{subsubsection.6.7.3.20}
-\contentsline {subsubsection}{\numberline {6.7.3.21}switchToPreviousLib()}{32}{subsubsection.6.7.3.21}
-\contentsline {section}{\numberline {6.8}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Module Class Reference}{32}{section.6.8}
-\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{33}{subsection.6.8.1}
-\contentsline {subsection}{\numberline {6.8.2}Member Function Documentation}{33}{subsection.6.8.2}
-\contentsline {subsubsection}{\numberline {6.8.2.1}getBestScores()}{33}{subsubsection.6.8.2.1}
-\contentsline {subsubsection}{\numberline {6.8.2.2}getLibName()}{34}{subsubsection.6.8.2.2}
-\contentsline {subsubsection}{\numberline {6.8.2.3}getScore()}{34}{subsubsection.6.8.2.3}
-\contentsline {subsubsection}{\numberline {6.8.2.4}loadFromFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{34}{subsubsection.6.8.2.4}
-\contentsline {subsubsection}{\numberline {6.8.2.5}loadFromFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{35}{subsubsection.6.8.2.5}
-\contentsline {subsubsection}{\numberline {6.8.2.6}render()}{35}{subsubsection.6.8.2.6}
-\contentsline {subsubsection}{\numberline {6.8.2.7}saveToFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{35}{subsubsection.6.8.2.7}
-\contentsline {subsubsection}{\numberline {6.8.2.8}saveToFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{36}{subsubsection.6.8.2.8}
-\contentsline {subsubsection}{\numberline {6.8.2.9}setPlayerName()}{36}{subsubsection.6.8.2.9}
-\contentsline {subsubsection}{\numberline {6.8.2.10}update()}{36}{subsubsection.6.8.2.10}
-\contentsline {section}{\numberline {6.9}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Exceptions\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Invalid\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Library\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Exception Class Reference}{36}{section.6.9}
-\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{37}{subsection.6.9.1}
-\contentsline {subsection}{\numberline {6.9.2}Constructor \& Destructor Documentation}{37}{subsection.6.9.2}
-\contentsline {subsubsection}{\numberline {6.9.2.1}InvalidLibraryException()}{37}{subsubsection.6.9.2.1}
-\contentsline {section}{\numberline {6.10}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Libcaca Class Reference}{37}{section.6.10}
-\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{39}{subsection.6.10.1}
-\contentsline {subsection}{\numberline {6.10.2}Member Function Documentation}{39}{subsection.6.10.2}
-\contentsline {subsubsection}{\numberline {6.10.2.1}getDelta()}{39}{subsubsection.6.10.2.1}
-\contentsline {subsubsection}{\numberline {6.10.2.2}getKeyCode()}{39}{subsubsection.6.10.2.2}
-\contentsline {subsubsection}{\numberline {6.10.2.3}getLibName()}{40}{subsubsection.6.10.2.3}
-\contentsline {subsubsection}{\numberline {6.10.2.4}isKeyPressed()}{40}{subsubsection.6.10.2.4}
-\contentsline {subsubsection}{\numberline {6.10.2.5}isKeyPressedOnce()}{40}{subsubsection.6.10.2.5}
-\contentsline {subsubsection}{\numberline {6.10.2.6}isOpen()}{41}{subsubsection.6.10.2.6}
-\contentsline {subsubsection}{\numberline {6.10.2.7}putCircle()}{41}{subsubsection.6.10.2.7}
-\contentsline {subsubsection}{\numberline {6.10.2.8}putFillCircle()}{41}{subsubsection.6.10.2.8}
-\contentsline {subsubsection}{\numberline {6.10.2.9}putFillRect()}{42}{subsubsection.6.10.2.9}
-\contentsline {subsubsection}{\numberline {6.10.2.10}putLine()}{42}{subsubsection.6.10.2.10}
-\contentsline {subsubsection}{\numberline {6.10.2.11}putPixel()}{42}{subsubsection.6.10.2.11}
-\contentsline {subsubsection}{\numberline {6.10.2.12}putRect()}{43}{subsubsection.6.10.2.12}
-\contentsline {subsubsection}{\numberline {6.10.2.13}putText()}{43}{subsubsection.6.10.2.13}
-\contentsline {subsubsection}{\numberline {6.10.2.14}setColor()}{44}{subsubsection.6.10.2.14}
-\contentsline {subsubsection}{\numberline {6.10.2.15}shouldBeRestarted()}{44}{subsubsection.6.10.2.15}
-\contentsline {subsubsection}{\numberline {6.10.2.16}shouldExit()}{44}{subsubsection.6.10.2.16}
-\contentsline {subsubsection}{\numberline {6.10.2.17}shouldGoToMenu()}{45}{subsubsection.6.10.2.17}
-\contentsline {subsubsection}{\numberline {6.10.2.18}switchToNextGame()}{45}{subsubsection.6.10.2.18}
-\contentsline {subsubsection}{\numberline {6.10.2.19}switchToNextLib()}{45}{subsubsection.6.10.2.19}
-\contentsline {subsubsection}{\numberline {6.10.2.20}switchToPreviousGame()}{46}{subsubsection.6.10.2.20}
-\contentsline {subsubsection}{\numberline {6.10.2.21}switchToPreviousLib()}{46}{subsubsection.6.10.2.21}
-\contentsline {section}{\numberline {6.11}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Nibbler Class Reference}{46}{section.6.11}
-\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{47}{subsection.6.11.1}
-\contentsline {subsection}{\numberline {6.11.2}Member Function Documentation}{47}{subsection.6.11.2}
-\contentsline {subsubsection}{\numberline {6.11.2.1}render()}{47}{subsubsection.6.11.2.1}
-\contentsline {subsubsection}{\numberline {6.11.2.2}update()}{47}{subsubsection.6.11.2.2}
-\contentsline {section}{\numberline {6.12}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Pacman Class Reference}{47}{section.6.12}
-\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{48}{subsection.6.12.1}
-\contentsline {subsection}{\numberline {6.12.2}Member Function Documentation}{48}{subsection.6.12.2}
-\contentsline {subsubsection}{\numberline {6.12.2.1}render()}{48}{subsubsection.6.12.2.1}
-\contentsline {subsubsection}{\numberline {6.12.2.2}update()}{48}{subsubsection.6.12.2.2}
-\contentsline {section}{\numberline {6.13}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Qix Class Reference}{50}{section.6.13}
-\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{50}{subsection.6.13.1}
-\contentsline {subsection}{\numberline {6.13.2}Member Function Documentation}{50}{subsection.6.13.2}
-\contentsline {subsubsection}{\numberline {6.13.2.1}update()}{50}{subsubsection.6.13.2.1}
-\contentsline {section}{\numberline {6.14}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}DL Class Reference}{51}{section.6.14}
-\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{52}{subsection.6.14.1}
-\contentsline {subsection}{\numberline {6.14.2}Member Function Documentation}{52}{subsection.6.14.2}
-\contentsline {subsubsection}{\numberline {6.14.2.1}getDelta()}{52}{subsubsection.6.14.2.1}
-\contentsline {subsubsection}{\numberline {6.14.2.2}getKeyCode()}{53}{subsubsection.6.14.2.2}
-\contentsline {subsubsection}{\numberline {6.14.2.3}getLibName()}{53}{subsubsection.6.14.2.3}
-\contentsline {subsubsection}{\numberline {6.14.2.4}isKeyPressed()}{53}{subsubsection.6.14.2.4}
-\contentsline {subsubsection}{\numberline {6.14.2.5}isKeyPressedOnce()}{54}{subsubsection.6.14.2.5}
-\contentsline {subsubsection}{\numberline {6.14.2.6}isOpen()}{54}{subsubsection.6.14.2.6}
-\contentsline {subsubsection}{\numberline {6.14.2.7}putCircle()}{54}{subsubsection.6.14.2.7}
-\contentsline {subsubsection}{\numberline {6.14.2.8}putFillCircle()}{55}{subsubsection.6.14.2.8}
-\contentsline {subsubsection}{\numberline {6.14.2.9}putFillRect()}{55}{subsubsection.6.14.2.9}
-\contentsline {subsubsection}{\numberline {6.14.2.10}putLine()}{55}{subsubsection.6.14.2.10}
-\contentsline {subsubsection}{\numberline {6.14.2.11}putPixel()}{56}{subsubsection.6.14.2.11}
-\contentsline {subsubsection}{\numberline {6.14.2.12}putRect()}{56}{subsubsection.6.14.2.12}
-\contentsline {subsubsection}{\numberline {6.14.2.13}putText()}{57}{subsubsection.6.14.2.13}
-\contentsline {subsubsection}{\numberline {6.14.2.14}setColor()}{57}{subsubsection.6.14.2.14}
-\contentsline {subsubsection}{\numberline {6.14.2.15}shouldBeRestarted()}{57}{subsubsection.6.14.2.15}
-\contentsline {subsubsection}{\numberline {6.14.2.16}shouldExit()}{58}{subsubsection.6.14.2.16}
-\contentsline {subsubsection}{\numberline {6.14.2.17}shouldGoToMenu()}{58}{subsubsection.6.14.2.17}
-\contentsline {subsubsection}{\numberline {6.14.2.18}switchToNextGame()}{58}{subsubsection.6.14.2.18}
-\contentsline {subsubsection}{\numberline {6.14.2.19}switchToNextLib()}{59}{subsubsection.6.14.2.19}
-\contentsline {subsubsection}{\numberline {6.14.2.20}switchToPreviousGame()}{59}{subsubsection.6.14.2.20}
-\contentsline {subsubsection}{\numberline {6.14.2.21}switchToPreviousLib()}{59}{subsubsection.6.14.2.21}
-\contentsline {section}{\numberline {6.15}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}ML Class Reference}{59}{section.6.15}
-\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{61}{subsection.6.15.1}
-\contentsline {subsection}{\numberline {6.15.2}Member Function Documentation}{61}{subsection.6.15.2}
-\contentsline {subsubsection}{\numberline {6.15.2.1}getDelta()}{61}{subsubsection.6.15.2.1}
-\contentsline {subsubsection}{\numberline {6.15.2.2}getKeyCode()}{61}{subsubsection.6.15.2.2}
-\contentsline {subsubsection}{\numberline {6.15.2.3}getLibName()}{61}{subsubsection.6.15.2.3}
-\contentsline {subsubsection}{\numberline {6.15.2.4}isKeyPressed()}{62}{subsubsection.6.15.2.4}
-\contentsline {subsubsection}{\numberline {6.15.2.5}isKeyPressedOnce()}{62}{subsubsection.6.15.2.5}
-\contentsline {subsubsection}{\numberline {6.15.2.6}isOpen()}{62}{subsubsection.6.15.2.6}
-\contentsline {subsubsection}{\numberline {6.15.2.7}putCircle()}{62}{subsubsection.6.15.2.7}
-\contentsline {subsubsection}{\numberline {6.15.2.8}putFillCircle()}{63}{subsubsection.6.15.2.8}
-\contentsline {subsubsection}{\numberline {6.15.2.9}putFillRect()}{63}{subsubsection.6.15.2.9}
-\contentsline {subsubsection}{\numberline {6.15.2.10}putLine()}{64}{subsubsection.6.15.2.10}
-\contentsline {subsubsection}{\numberline {6.15.2.11}putPixel()}{64}{subsubsection.6.15.2.11}
-\contentsline {subsubsection}{\numberline {6.15.2.12}putRect()}{64}{subsubsection.6.15.2.12}
-\contentsline {subsubsection}{\numberline {6.15.2.13}putText()}{65}{subsubsection.6.15.2.13}
-\contentsline {subsubsection}{\numberline {6.15.2.14}setColor()}{65}{subsubsection.6.15.2.14}
-\contentsline {subsubsection}{\numberline {6.15.2.15}shouldBeRestarted()}{65}{subsubsection.6.15.2.15}
-\contentsline {subsubsection}{\numberline {6.15.2.16}shouldExit()}{66}{subsubsection.6.15.2.16}
-\contentsline {subsubsection}{\numberline {6.15.2.17}shouldGoToMenu()}{66}{subsubsection.6.15.2.17}
-\contentsline {subsubsection}{\numberline {6.15.2.18}switchToNextGame()}{66}{subsubsection.6.15.2.18}
-\contentsline {subsubsection}{\numberline {6.15.2.19}switchToNextLib()}{67}{subsubsection.6.15.2.19}
-\contentsline {subsubsection}{\numberline {6.15.2.20}switchToPreviousGame()}{67}{subsubsection.6.15.2.20}
-\contentsline {subsubsection}{\numberline {6.15.2.21}switchToPreviousLib()}{67}{subsubsection.6.15.2.21}
-\contentsline {section}{\numberline {6.16}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Solarfox Class Reference}{68}{section.6.16}
-\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{68}{subsection.6.16.1}
-\contentsline {subsection}{\numberline {6.16.2}Member Function Documentation}{68}{subsection.6.16.2}
-\contentsline {subsubsection}{\numberline {6.16.2.1}update()}{68}{subsubsection.6.16.2.1}
-\contentsline {chapter}{Index}{69}{section*.50}
+\contentsline {subsection}{\numberline {6.5.2}Constructor \& Destructor Documentation}{20}{subsection.6.5.2}
+\contentsline {subsubsection}{\numberline {6.5.2.1}BadInstanciationException()}{20}{subsubsection.6.5.2.1}
+\contentsline {section}{\numberline {6.6}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Centipede Class Reference}{20}{section.6.6}
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{21}{subsection.6.6.1}
+\contentsline {subsection}{\numberline {6.6.2}Member Function Documentation}{21}{subsection.6.6.2}
+\contentsline {subsubsection}{\numberline {6.6.2.1}update()}{21}{subsubsection.6.6.2.1}
+\contentsline {section}{\numberline {6.7}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Core Class Reference}{21}{section.6.7}
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{22}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.7.2}Constructor \& Destructor Documentation}{22}{subsection.6.7.2}
+\contentsline {subsubsection}{\numberline {6.7.2.1}Core()}{22}{subsubsection.6.7.2.1}
+\contentsline {section}{\numberline {6.8}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Module Class Reference}{22}{section.6.8}
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{24}{subsection.6.8.1}
+\contentsline {subsection}{\numberline {6.8.2}Member Enumeration Documentation}{24}{subsection.6.8.2}
+\contentsline {subsubsection}{\numberline {6.8.2.1}Colors}{24}{subsubsection.6.8.2.1}
+\contentsline {subsubsection}{\numberline {6.8.2.2}Keys}{25}{subsubsection.6.8.2.2}
+\contentsline {subsection}{\numberline {6.8.3}Member Function Documentation}{25}{subsection.6.8.3}
+\contentsline {subsubsection}{\numberline {6.8.3.1}getDelta()}{25}{subsubsection.6.8.3.1}
+\contentsline {subsubsection}{\numberline {6.8.3.2}getKeyCode()}{26}{subsubsection.6.8.3.2}
+\contentsline {subsubsection}{\numberline {6.8.3.3}getLibName()}{26}{subsubsection.6.8.3.3}
+\contentsline {subsubsection}{\numberline {6.8.3.4}isKeyPressed()}{26}{subsubsection.6.8.3.4}
+\contentsline {subsubsection}{\numberline {6.8.3.5}isKeyPressedOnce()}{27}{subsubsection.6.8.3.5}
+\contentsline {subsubsection}{\numberline {6.8.3.6}isOpen()}{27}{subsubsection.6.8.3.6}
+\contentsline {subsubsection}{\numberline {6.8.3.7}putCircle()}{27}{subsubsection.6.8.3.7}
+\contentsline {subsubsection}{\numberline {6.8.3.8}putFillCircle()}{28}{subsubsection.6.8.3.8}
+\contentsline {subsubsection}{\numberline {6.8.3.9}putFillRect()}{28}{subsubsection.6.8.3.9}
+\contentsline {subsubsection}{\numberline {6.8.3.10}putLine()}{28}{subsubsection.6.8.3.10}
+\contentsline {subsubsection}{\numberline {6.8.3.11}putPixel()}{29}{subsubsection.6.8.3.11}
+\contentsline {subsubsection}{\numberline {6.8.3.12}putRect()}{29}{subsubsection.6.8.3.12}
+\contentsline {subsubsection}{\numberline {6.8.3.13}putText()}{30}{subsubsection.6.8.3.13}
+\contentsline {subsubsection}{\numberline {6.8.3.14}setColor()}{30}{subsubsection.6.8.3.14}
+\contentsline {subsubsection}{\numberline {6.8.3.15}shouldBeRestarted()}{30}{subsubsection.6.8.3.15}
+\contentsline {subsubsection}{\numberline {6.8.3.16}shouldExit()}{31}{subsubsection.6.8.3.16}
+\contentsline {subsubsection}{\numberline {6.8.3.17}shouldGoToMenu()}{31}{subsubsection.6.8.3.17}
+\contentsline {subsubsection}{\numberline {6.8.3.18}switchToNextGame()}{31}{subsubsection.6.8.3.18}
+\contentsline {subsubsection}{\numberline {6.8.3.19}switchToNextLib()}{32}{subsubsection.6.8.3.19}
+\contentsline {subsubsection}{\numberline {6.8.3.20}switchToPreviousGame()}{32}{subsubsection.6.8.3.20}
+\contentsline {subsubsection}{\numberline {6.8.3.21}switchToPreviousLib()}{32}{subsubsection.6.8.3.21}
+\contentsline {section}{\numberline {6.9}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::I\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Game\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Module Class Reference}{32}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{33}{subsection.6.9.1}
+\contentsline {subsection}{\numberline {6.9.2}Member Function Documentation}{33}{subsection.6.9.2}
+\contentsline {subsubsection}{\numberline {6.9.2.1}getBestScores()}{33}{subsubsection.6.9.2.1}
+\contentsline {subsubsection}{\numberline {6.9.2.2}getLibName()}{34}{subsubsection.6.9.2.2}
+\contentsline {subsubsection}{\numberline {6.9.2.3}getScore()}{34}{subsubsection.6.9.2.3}
+\contentsline {subsubsection}{\numberline {6.9.2.4}loadFromFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{34}{subsubsection.6.9.2.4}
+\contentsline {subsubsection}{\numberline {6.9.2.5}loadFromFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{35}{subsubsection.6.9.2.5}
+\contentsline {subsubsection}{\numberline {6.9.2.6}render()}{35}{subsubsection.6.9.2.6}
+\contentsline {subsubsection}{\numberline {6.9.2.7}saveToFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [1/2]}}{35}{subsubsection.6.9.2.7}
+\contentsline {subsubsection}{\numberline {6.9.2.8}saveToFile()\hspace {0.1cm}{\relax \fontsize {8}{9.5}\selectfont \abovedisplayskip 6\p@ plus2\p@ minus4\p@ \abovedisplayshortskip \z@ plus\p@ \belowdisplayshortskip 3\p@ plus\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip \ttfamily [2/2]}}{36}{subsubsection.6.9.2.8}
+\contentsline {subsubsection}{\numberline {6.9.2.9}setPlayerName()}{36}{subsubsection.6.9.2.9}
+\contentsline {subsubsection}{\numberline {6.9.2.10}update()}{36}{subsubsection.6.9.2.10}
+\contentsline {section}{\numberline {6.10}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Exceptions\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Invalid\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Library\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}Exception Class Reference}{36}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{37}{subsection.6.10.1}
+\contentsline {subsection}{\numberline {6.10.2}Constructor \& Destructor Documentation}{37}{subsection.6.10.2}
+\contentsline {subsubsection}{\numberline {6.10.2.1}InvalidLibraryException()}{37}{subsubsection.6.10.2.1}
+\contentsline {section}{\numberline {6.11}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Libcaca Class Reference}{37}{section.6.11}
+\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{39}{subsection.6.11.1}
+\contentsline {subsection}{\numberline {6.11.2}Member Function Documentation}{39}{subsection.6.11.2}
+\contentsline {subsubsection}{\numberline {6.11.2.1}getDelta()}{39}{subsubsection.6.11.2.1}
+\contentsline {subsubsection}{\numberline {6.11.2.2}getKeyCode()}{39}{subsubsection.6.11.2.2}
+\contentsline {subsubsection}{\numberline {6.11.2.3}isKeyPressed()}{39}{subsubsection.6.11.2.3}
+\contentsline {subsubsection}{\numberline {6.11.2.4}isKeyPressedOnce()}{40}{subsubsection.6.11.2.4}
+\contentsline {subsubsection}{\numberline {6.11.2.5}isOpen()}{40}{subsubsection.6.11.2.5}
+\contentsline {subsubsection}{\numberline {6.11.2.6}putCircle()}{40}{subsubsection.6.11.2.6}
+\contentsline {subsubsection}{\numberline {6.11.2.7}putFillCircle()}{41}{subsubsection.6.11.2.7}
+\contentsline {subsubsection}{\numberline {6.11.2.8}putFillRect()}{41}{subsubsection.6.11.2.8}
+\contentsline {subsubsection}{\numberline {6.11.2.9}putLine()}{42}{subsubsection.6.11.2.9}
+\contentsline {subsubsection}{\numberline {6.11.2.10}putPixel()}{42}{subsubsection.6.11.2.10}
+\contentsline {subsubsection}{\numberline {6.11.2.11}putRect()}{42}{subsubsection.6.11.2.11}
+\contentsline {subsubsection}{\numberline {6.11.2.12}putText()}{43}{subsubsection.6.11.2.12}
+\contentsline {subsubsection}{\numberline {6.11.2.13}setColor()}{43}{subsubsection.6.11.2.13}
+\contentsline {subsubsection}{\numberline {6.11.2.14}shouldBeRestarted()}{43}{subsubsection.6.11.2.14}
+\contentsline {subsubsection}{\numberline {6.11.2.15}shouldExit()}{44}{subsubsection.6.11.2.15}
+\contentsline {subsubsection}{\numberline {6.11.2.16}shouldGoToMenu()}{44}{subsubsection.6.11.2.16}
+\contentsline {subsubsection}{\numberline {6.11.2.17}switchToNextGame()}{44}{subsubsection.6.11.2.17}
+\contentsline {subsubsection}{\numberline {6.11.2.18}switchToNextLib()}{45}{subsubsection.6.11.2.18}
+\contentsline {subsubsection}{\numberline {6.11.2.19}switchToPreviousGame()}{45}{subsubsection.6.11.2.19}
+\contentsline {subsubsection}{\numberline {6.11.2.20}switchToPreviousLib()}{45}{subsubsection.6.11.2.20}
+\contentsline {section}{\numberline {6.12}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Nibbler Class Reference}{46}{section.6.12}
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{46}{subsection.6.12.1}
+\contentsline {subsection}{\numberline {6.12.2}Member Function Documentation}{46}{subsection.6.12.2}
+\contentsline {subsubsection}{\numberline {6.12.2.1}render()}{46}{subsubsection.6.12.2.1}
+\contentsline {subsubsection}{\numberline {6.12.2.2}update()}{47}{subsubsection.6.12.2.2}
+\contentsline {section}{\numberline {6.13}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Pacman Class Reference}{47}{section.6.13}
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{47}{subsection.6.13.1}
+\contentsline {subsection}{\numberline {6.13.2}Member Function Documentation}{48}{subsection.6.13.2}
+\contentsline {subsubsection}{\numberline {6.13.2.1}render()}{48}{subsubsection.6.13.2.1}
+\contentsline {subsubsection}{\numberline {6.13.2.2}update()}{48}{subsubsection.6.13.2.2}
+\contentsline {section}{\numberline {6.14}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Qix Class Reference}{48}{section.6.14}
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{49}{subsection.6.14.1}
+\contentsline {subsection}{\numberline {6.14.2}Member Function Documentation}{49}{subsection.6.14.2}
+\contentsline {subsubsection}{\numberline {6.14.2.1}update()}{49}{subsubsection.6.14.2.1}
+\contentsline {section}{\numberline {6.15}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}DL Class Reference}{49}{section.6.15}
+\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{51}{subsection.6.15.1}
+\contentsline {subsection}{\numberline {6.15.2}Member Function Documentation}{51}{subsection.6.15.2}
+\contentsline {subsubsection}{\numberline {6.15.2.1}getDelta()}{51}{subsubsection.6.15.2.1}
+\contentsline {subsubsection}{\numberline {6.15.2.2}getKeyCode()}{51}{subsubsection.6.15.2.2}
+\contentsline {subsubsection}{\numberline {6.15.2.3}isKeyPressed()}{51}{subsubsection.6.15.2.3}
+\contentsline {subsubsection}{\numberline {6.15.2.4}isKeyPressedOnce()}{52}{subsubsection.6.15.2.4}
+\contentsline {subsubsection}{\numberline {6.15.2.5}isOpen()}{52}{subsubsection.6.15.2.5}
+\contentsline {subsubsection}{\numberline {6.15.2.6}putCircle()}{52}{subsubsection.6.15.2.6}
+\contentsline {subsubsection}{\numberline {6.15.2.7}putFillCircle()}{53}{subsubsection.6.15.2.7}
+\contentsline {subsubsection}{\numberline {6.15.2.8}putFillRect()}{53}{subsubsection.6.15.2.8}
+\contentsline {subsubsection}{\numberline {6.15.2.9}putLine()}{54}{subsubsection.6.15.2.9}
+\contentsline {subsubsection}{\numberline {6.15.2.10}putPixel()}{54}{subsubsection.6.15.2.10}
+\contentsline {subsubsection}{\numberline {6.15.2.11}putRect()}{54}{subsubsection.6.15.2.11}
+\contentsline {subsubsection}{\numberline {6.15.2.12}putText()}{55}{subsubsection.6.15.2.12}
+\contentsline {subsubsection}{\numberline {6.15.2.13}setColor()}{55}{subsubsection.6.15.2.13}
+\contentsline {subsubsection}{\numberline {6.15.2.14}shouldBeRestarted()}{55}{subsubsection.6.15.2.14}
+\contentsline {subsubsection}{\numberline {6.15.2.15}shouldExit()}{56}{subsubsection.6.15.2.15}
+\contentsline {subsubsection}{\numberline {6.15.2.16}shouldGoToMenu()}{56}{subsubsection.6.15.2.16}
+\contentsline {subsubsection}{\numberline {6.15.2.17}switchToNextGame()}{56}{subsubsection.6.15.2.17}
+\contentsline {subsubsection}{\numberline {6.15.2.18}switchToNextLib()}{57}{subsubsection.6.15.2.18}
+\contentsline {subsubsection}{\numberline {6.15.2.19}switchToPreviousGame()}{57}{subsubsection.6.15.2.19}
+\contentsline {subsubsection}{\numberline {6.15.2.20}switchToPreviousLib()}{57}{subsubsection.6.15.2.20}
+\contentsline {section}{\numberline {6.16}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Display\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::S\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}F\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}ML Class Reference}{58}{section.6.16}
+\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{59}{subsection.6.16.1}
+\contentsline {subsection}{\numberline {6.16.2}Member Function Documentation}{59}{subsection.6.16.2}
+\contentsline {subsubsection}{\numberline {6.16.2.1}getDelta()}{59}{subsubsection.6.16.2.1}
+\contentsline {subsubsection}{\numberline {6.16.2.2}getKeyCode()}{60}{subsubsection.6.16.2.2}
+\contentsline {subsubsection}{\numberline {6.16.2.3}isKeyPressed()}{60}{subsubsection.6.16.2.3}
+\contentsline {subsubsection}{\numberline {6.16.2.4}isKeyPressedOnce()}{60}{subsubsection.6.16.2.4}
+\contentsline {subsubsection}{\numberline {6.16.2.5}isOpen()}{61}{subsubsection.6.16.2.5}
+\contentsline {subsubsection}{\numberline {6.16.2.6}putCircle()}{61}{subsubsection.6.16.2.6}
+\contentsline {subsubsection}{\numberline {6.16.2.7}putFillCircle()}{61}{subsubsection.6.16.2.7}
+\contentsline {subsubsection}{\numberline {6.16.2.8}putFillRect()}{62}{subsubsection.6.16.2.8}
+\contentsline {subsubsection}{\numberline {6.16.2.9}putLine()}{62}{subsubsection.6.16.2.9}
+\contentsline {subsubsection}{\numberline {6.16.2.10}putPixel()}{62}{subsubsection.6.16.2.10}
+\contentsline {subsubsection}{\numberline {6.16.2.11}putRect()}{63}{subsubsection.6.16.2.11}
+\contentsline {subsubsection}{\numberline {6.16.2.12}putText()}{63}{subsubsection.6.16.2.12}
+\contentsline {subsubsection}{\numberline {6.16.2.13}setColor()}{64}{subsubsection.6.16.2.13}
+\contentsline {subsubsection}{\numberline {6.16.2.14}shouldBeRestarted()}{64}{subsubsection.6.16.2.14}
+\contentsline {subsubsection}{\numberline {6.16.2.15}shouldExit()}{64}{subsubsection.6.16.2.15}
+\contentsline {subsubsection}{\numberline {6.16.2.16}shouldGoToMenu()}{65}{subsubsection.6.16.2.16}
+\contentsline {subsubsection}{\numberline {6.16.2.17}switchToNextGame()}{65}{subsubsection.6.16.2.17}
+\contentsline {subsubsection}{\numberline {6.16.2.18}switchToNextLib()}{65}{subsubsection.6.16.2.18}
+\contentsline {subsubsection}{\numberline {6.16.2.19}switchToPreviousGame()}{66}{subsubsection.6.16.2.19}
+\contentsline {subsubsection}{\numberline {6.16.2.20}switchToPreviousLib()}{66}{subsubsection.6.16.2.20}
+\contentsline {section}{\numberline {6.17}Arcade\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Games\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}::Solarfox Class Reference}{66}{section.6.17}
+\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{67}{subsection.6.17.1}
+\contentsline {subsection}{\numberline {6.17.2}Member Function Documentation}{67}{subsection.6.17.2}
+\contentsline {subsubsection}{\numberline {6.17.2.1}update()}{67}{subsubsection.6.17.2.1}
+\contentsline {chapter}{Index}{69}{section*.54}

@@ -12,7 +12,7 @@
 Inheritance diagram for Arcade\+::Display\+::Libcaca\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classArcade_1_1Display_1_1Libcaca}
+\includegraphics[height=3.000000cm]{classArcade_1_1Display_1_1Libcaca}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -40,9 +40,9 @@ bool \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_aaa4a4a114dee18576dd93ca
 \begin{DoxyCompactList}\small\item\em Checks whether you need to go back to the menu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a5920c296d51d72df55b5079c0749031e}{should\+Exit}} () const final
 \begin{DoxyCompactList}\small\item\em Checks whether you need to exit the program. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a4d76639289eee2453a416ff0fc051fe3}{is\+Key\+Pressed}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}) const final
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_aad274dc246f3140fe623bbd3b260da07}{is\+Key\+Pressed}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}} key) const final
 \begin{DoxyCompactList}\small\item\em Checks whether the current key is being pressed. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a2de2c9cd935fbee371fa5215bd45c137}{is\+Key\+Pressed\+Once}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}) const final
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a8b7cc724a0aad2647938f80a167e0d33}{is\+Key\+Pressed\+Once}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}} key) const final
 \begin{DoxyCompactList}\small\item\em Checks whether the current key was pressed during the last frame. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a6aee007c10e66709680d1ec80f2662a4}{get\+Delta}} () const final
 \begin{DoxyCompactList}\small\item\em Gets the number of frames since last update. \end{DoxyCompactList}\item 
@@ -57,7 +57,7 @@ void \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_ae41aaff01de7010cab07d8e
 \begin{DoxyCompactList}\small\item\em Renders the canvas. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a741fdec5c2e77cc7959e5f3444f8c8ac}{get\+Key\+Code}} () const final
 \begin{DoxyCompactList}\small\item\em Gets the last pressed character from the keyboard. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_aec7af72c1ffd1a3af05b4d8cf3edf84e}{set\+Color}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}} col) final
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_ab79d34610f9dcfb503122ea6ad3fa97c}{set\+Color}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}} color) final
 \begin{DoxyCompactList}\small\item\em Defines the color of the elements that will be drawn. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a857080fd758f300ef2b05563d5814a1f}{put\+Pixel}} (float x, float y) const final
 \begin{DoxyCompactList}\small\item\em Displays a pixel. \end{DoxyCompactList}\item 
@@ -72,9 +72,7 @@ void \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a1a718ada53339b195c532fa
 void \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_aab9a63f5507cd00121c3b91c7ca15aa3}{put\+Fill\+Circle}} (float x, float y, float rad) const final
 \begin{DoxyCompactList}\small\item\em Displays a filled cirle. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a2d4198dc8e383672ac00114d10b11e01}{put\+Text}} (const std\+::string \&text, unsigned int size, float x, float y) const final
-\begin{DoxyCompactList}\small\item\em Displays text. \end{DoxyCompactList}\item 
-const std\+::string \& \mbox{\hyperlink{classArcade_1_1Display_1_1Libcaca_a26e6dd02a853963fdcb812bddb3dee1e}{get\+Lib\+Name}} () const final
-\begin{DoxyCompactList}\small\item\em Gets the library name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Displays text. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -116,33 +114,21 @@ Gets the last pressed character from the keyboard.
 
 Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a403f8a0f065dad707a881ef3cee79805}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_a26e6dd02a853963fdcb812bddb3dee1e}\label{classArcade_1_1Display_1_1Libcaca_a26e6dd02a853963fdcb812bddb3dee1e}} 
-\index{Arcade::Display::Libcaca@{Arcade::Display::Libcaca}!getLibName@{getLibName}}
-\index{getLibName@{getLibName}!Arcade::Display::Libcaca@{Arcade::Display::Libcaca}}
-\subsubsection{\texorpdfstring{getLibName()}{getLibName()}}
-{\footnotesize\ttfamily const std\+::string\& Arcade\+::\+Display\+::\+Libcaca\+::get\+Lib\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
-
-
-
-Gets the library name. 
-
-\begin{DoxyReturn}{Returns}
-The library\textquotesingle{}s name 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a0d8e957815e94766bdefbd7a5043e81a}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
-
-\mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_a4d76639289eee2453a416ff0fc051fe3}\label{classArcade_1_1Display_1_1Libcaca_a4d76639289eee2453a416ff0fc051fe3}} 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_aad274dc246f3140fe623bbd3b260da07}\label{classArcade_1_1Display_1_1Libcaca_aad274dc246f3140fe623bbd3b260da07}} 
 \index{Arcade::Display::Libcaca@{Arcade::Display::Libcaca}!isKeyPressed@{isKeyPressed}}
 \index{isKeyPressed@{isKeyPressed}!Arcade::Display::Libcaca@{Arcade::Display::Libcaca}}
 \subsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}}
-{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Libcaca\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Libcaca\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
 Checks whether the current key is being pressed. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true Key is pressed 
 
@@ -150,18 +136,23 @@ false Key is not pressed
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ab3d02b76c08ff2deb728dc9f0d557f43}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_af871661ff84c21581cd7233ba6f27aa0}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_a2de2c9cd935fbee371fa5215bd45c137}\label{classArcade_1_1Display_1_1Libcaca_a2de2c9cd935fbee371fa5215bd45c137}} 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_a8b7cc724a0aad2647938f80a167e0d33}\label{classArcade_1_1Display_1_1Libcaca_a8b7cc724a0aad2647938f80a167e0d33}} 
 \index{Arcade::Display::Libcaca@{Arcade::Display::Libcaca}!isKeyPressedOnce@{isKeyPressedOnce}}
 \index{isKeyPressedOnce@{isKeyPressedOnce}!Arcade::Display::Libcaca@{Arcade::Display::Libcaca}}
 \subsubsection{\texorpdfstring{isKeyPressedOnce()}{isKeyPressedOnce()}}
-{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Libcaca\+::is\+Key\+Pressed\+Once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Libcaca\+::is\+Key\+Pressed\+Once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
 Checks whether the current key was pressed during the last frame. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true Key is pressed 
 
@@ -169,7 +160,7 @@ false Key is not pressed
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ac347fc77c01e12c5ce23be99d357008d}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a531b700b332e077d9b714bafac05ebe1}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_aae9aa5b1c54a2086c4fa92e7710fc845}\label{classArcade_1_1Display_1_1Libcaca_aae9aa5b1c54a2086c4fa92e7710fc845}} 
 \index{Arcade::Display::Libcaca@{Arcade::Display::Libcaca}!isOpen@{isOpen}}
@@ -357,11 +348,11 @@ Displays text.
 
 Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9740f30e3135d3a51851bdca07ef88a3}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_aec7af72c1ffd1a3af05b4d8cf3edf84e}\label{classArcade_1_1Display_1_1Libcaca_aec7af72c1ffd1a3af05b4d8cf3edf84e}} 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_ab79d34610f9dcfb503122ea6ad3fa97c}\label{classArcade_1_1Display_1_1Libcaca_ab79d34610f9dcfb503122ea6ad3fa97c}} 
 \index{Arcade::Display::Libcaca@{Arcade::Display::Libcaca}!setColor@{setColor}}
 \index{setColor@{setColor}!Arcade::Display::Libcaca@{Arcade::Display::Libcaca}}
 \subsubsection{\texorpdfstring{setColor()}{setColor()}}
-{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Libcaca\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Libcaca\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
@@ -369,12 +360,12 @@ Defines the color of the elements that will be drawn.
 
 
 \begin{DoxyParams}{Parameters}
-{\em col} & The color \\
+{\em color} & The color \\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a89ff355335d968e2bd3de8d200d3b535}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9f81148f93a249d6fc91307819911b4e}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1Libcaca_acccbe7d671cc860dded39937073d2298}\label{classArcade_1_1Display_1_1Libcaca_acccbe7d671cc860dded39937073d2298}} 
 \index{Arcade::Display::Libcaca@{Arcade::Display::Libcaca}!shouldBeRestarted@{shouldBeRestarted}}

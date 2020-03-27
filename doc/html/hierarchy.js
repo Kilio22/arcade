@@ -9,9 +9,11 @@ var hierarchy =
       ] ]
     ] ],
     [ "Arcade::Display::IDisplayModule", "classArcade_1_1Display_1_1IDisplayModule.html", [
-      [ "Arcade::Display::Libcaca", "classArcade_1_1Display_1_1Libcaca.html", null ],
-      [ "Arcade::Display::SDL", "classArcade_1_1Display_1_1SDL.html", null ],
-      [ "Arcade::Display::SFML", "classArcade_1_1Display_1_1SFML.html", null ]
+      [ "Arcade::Display::ADisplayModule", "classArcade_1_1Display_1_1ADisplayModule.html", [
+        [ "Arcade::Display::Libcaca", "classArcade_1_1Display_1_1Libcaca.html", null ],
+        [ "Arcade::Display::SDL", "classArcade_1_1Display_1_1SDL.html", null ],
+        [ "Arcade::Display::SFML", "classArcade_1_1Display_1_1SFML.html", null ]
+      ] ]
     ] ],
     [ "Arcade::Games::IGameModule", "classArcade_1_1Games_1_1IGameModule.html", [
       [ "Arcade::Games::AGameModule", "classArcade_1_1Games_1_1AGameModule.html", [

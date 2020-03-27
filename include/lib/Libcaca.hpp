@@ -10,14 +10,14 @@
 
 #include <memory>
 #include <caca.h>
-#include "IDisplayModule.hpp"
+#include "ADisplayModule.hpp"
 
 namespace Arcade::Display
 {
     /**
      * @brief Libcaca library
      */
-    class Libcaca : public IDisplayModule
+    class Libcaca : public ADisplayModule
     {
         public:
             Libcaca();
@@ -36,8 +36,8 @@ namespace Arcade::Display
             bool shouldGoToMenu() const final;
             bool shouldExit() const final;
 
-            bool isKeyPressed(IDisplayModule::Keys) const final;
-            bool isKeyPressedOnce(IDisplayModule::Keys) const final;
+            bool isKeyPressed(IDisplayModule::Keys key) const final;
+            bool isKeyPressedOnce(IDisplayModule::Keys key) const final;
             float getDelta() const final;
 
             void clear() const final;
@@ -46,7 +46,7 @@ namespace Arcade::Display
 
             char getKeyCode() const final;
 
-            void setColor(IDisplayModule::Colors col) final;
+            void setColor(IDisplayModule::Colors color) final;
             void putPixel(float x, float y) const final;
             void putLine(float x1, float y1, float x2, float y2) const final;
             void putRect(float x, float y, float w, float h) const final;
@@ -55,13 +55,10 @@ namespace Arcade::Display
             void putFillCircle(float x, float y, float rad) const final;
             void putText(const std::string &text, unsigned int size, float x, float y) const final;
 
-            const std::string &getLibName() const final;
-
         private:
             caca_canvas_t *_canvas;
             caca_display_t *_display;
 
-            static const std::string _libName;
             static const std::vector<caca_key> _libKeys;
             static const std::vector<caca_color> _libColors;
     };

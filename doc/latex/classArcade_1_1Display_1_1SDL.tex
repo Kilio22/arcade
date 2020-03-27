@@ -12,7 +12,7 @@
 Inheritance diagram for Arcade\+::Display\+::S\+DL\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{classArcade_1_1Display_1_1SDL}
+\includegraphics[height=3.000000cm]{classArcade_1_1Display_1_1SDL}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -40,9 +40,9 @@ bool \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a044e009d7fc03813fce09abed3a
 \begin{DoxyCompactList}\small\item\em Checks whether you need to go back to the menu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_adb5d8837174b0ca120a27a521320f9c0}{should\+Exit}} () const final
 \begin{DoxyCompactList}\small\item\em Checks whether you need to exit the program. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a375ea86360c510415d86a198f5cd3e30}{is\+Key\+Pressed}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}) const final
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_ab7a692d8968af7633a92042ee006b83a}{is\+Key\+Pressed}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}} key) const final
 \begin{DoxyCompactList}\small\item\em Checks whether the current key is being pressed. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a883547b9f495cdf800225bc32b0ffe40}{is\+Key\+Pressed\+Once}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}) const final
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a14dd612e3902b1daa1d31cca71efcf00}{is\+Key\+Pressed\+Once}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}} key) const final
 \begin{DoxyCompactList}\small\item\em Checks whether the current key was pressed during the last frame. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a1ca09d130dea3bec2481eb72a49c0f03}{get\+Delta}} () const final
 \begin{DoxyCompactList}\small\item\em Gets the number of frames since last update. \end{DoxyCompactList}\item 
@@ -57,7 +57,7 @@ void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a81d987b70ba70d67f92b9c93e2f
 \begin{DoxyCompactList}\small\item\em Renders the canvas. \end{DoxyCompactList}\item 
 char \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a3ba94b49b72c9e189f52af7b97f4ad91}{get\+Key\+Code}} () const final
 \begin{DoxyCompactList}\small\item\em Gets the last pressed character from the keyboard. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a061a0536f59a8a27a370c9d39bf2f39f}{set\+Color}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}} col) final
+void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a857d2a5ab8266a1e11f528f398e3f55d}{set\+Color}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}} color) final
 \begin{DoxyCompactList}\small\item\em Defines the color of the elements that will be drawn. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a5c3f965b3394c9654f3537cab1201c1c}{put\+Pixel}} (float x, float y) const final
 \begin{DoxyCompactList}\small\item\em Displays a pixel. \end{DoxyCompactList}\item 
@@ -72,9 +72,7 @@ void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_af289c27eb970e81918b4cca36f2
 void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a95422e57b7ce4222f7e8d4aa022f36b4}{put\+Fill\+Circle}} (float x, float y, float rad) const final
 \begin{DoxyCompactList}\small\item\em Displays a filled cirle. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_aa3bd454c083beb16300bb799ed268ef7}{put\+Text}} (const std\+::string \&text, unsigned int size, float x, float y) const final
-\begin{DoxyCompactList}\small\item\em Displays text. \end{DoxyCompactList}\item 
-const std\+::string \& \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_aa549d6ec470b99b545db63a1d4a2b58e}{get\+Lib\+Name}} () const final
-\begin{DoxyCompactList}\small\item\em Gets the library name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Displays text. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -116,33 +114,21 @@ Gets the last pressed character from the keyboard.
 
 Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a403f8a0f065dad707a881ef3cee79805}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_aa549d6ec470b99b545db63a1d4a2b58e}\label{classArcade_1_1Display_1_1SDL_aa549d6ec470b99b545db63a1d4a2b58e}} 
-\index{Arcade::Display::SDL@{Arcade::Display::SDL}!getLibName@{getLibName}}
-\index{getLibName@{getLibName}!Arcade::Display::SDL@{Arcade::Display::SDL}}
-\subsubsection{\texorpdfstring{getLibName()}{getLibName()}}
-{\footnotesize\ttfamily const std\+::string\& Arcade\+::\+Display\+::\+S\+D\+L\+::get\+Lib\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
-
-
-
-Gets the library name. 
-
-\begin{DoxyReturn}{Returns}
-The library\textquotesingle{}s name 
-\end{DoxyReturn}
-
-
-Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a0d8e957815e94766bdefbd7a5043e81a}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
-
-\mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a375ea86360c510415d86a198f5cd3e30}\label{classArcade_1_1Display_1_1SDL_a375ea86360c510415d86a198f5cd3e30}} 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_ab7a692d8968af7633a92042ee006b83a}\label{classArcade_1_1Display_1_1SDL_ab7a692d8968af7633a92042ee006b83a}} 
 \index{Arcade::Display::SDL@{Arcade::Display::SDL}!isKeyPressed@{isKeyPressed}}
 \index{isKeyPressed@{isKeyPressed}!Arcade::Display::SDL@{Arcade::Display::SDL}}
 \subsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}}
-{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+S\+D\+L\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+S\+D\+L\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
 Checks whether the current key is being pressed. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true Key is pressed 
 
@@ -150,18 +136,23 @@ false Key is not pressed
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ab3d02b76c08ff2deb728dc9f0d557f43}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_af871661ff84c21581cd7233ba6f27aa0}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a883547b9f495cdf800225bc32b0ffe40}\label{classArcade_1_1Display_1_1SDL_a883547b9f495cdf800225bc32b0ffe40}} 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a14dd612e3902b1daa1d31cca71efcf00}\label{classArcade_1_1Display_1_1SDL_a14dd612e3902b1daa1d31cca71efcf00}} 
 \index{Arcade::Display::SDL@{Arcade::Display::SDL}!isKeyPressedOnce@{isKeyPressedOnce}}
 \index{isKeyPressedOnce@{isKeyPressedOnce}!Arcade::Display::SDL@{Arcade::Display::SDL}}
 \subsubsection{\texorpdfstring{isKeyPressedOnce()}{isKeyPressedOnce()}}
-{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+S\+D\+L\+::is\+Key\+Pressed\+Once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+S\+D\+L\+::is\+Key\+Pressed\+Once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
 Checks whether the current key was pressed during the last frame. 
 
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key \\
+\hline
+\end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 true Key is pressed 
 
@@ -169,7 +160,7 @@ false Key is not pressed
 \end{DoxyReturn}
 
 
-Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ac347fc77c01e12c5ce23be99d357008d}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a531b700b332e077d9b714bafac05ebe1}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a7d86c934d5dde9283e9c70816cf9c8a5}\label{classArcade_1_1Display_1_1SDL_a7d86c934d5dde9283e9c70816cf9c8a5}} 
 \index{Arcade::Display::SDL@{Arcade::Display::SDL}!isOpen@{isOpen}}
@@ -357,11 +348,11 @@ Displays text.
 
 Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9740f30e3135d3a51851bdca07ef88a3}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
-\mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a061a0536f59a8a27a370c9d39bf2f39f}\label{classArcade_1_1Display_1_1SDL_a061a0536f59a8a27a370c9d39bf2f39f}} 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a857d2a5ab8266a1e11f528f398e3f55d}\label{classArcade_1_1Display_1_1SDL_a857d2a5ab8266a1e11f528f398e3f55d}} 
 \index{Arcade::Display::SDL@{Arcade::Display::SDL}!setColor@{setColor}}
 \index{setColor@{setColor}!Arcade::Display::SDL@{Arcade::Display::SDL}}
 \subsubsection{\texorpdfstring{setColor()}{setColor()}}
-{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+S\+D\+L\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}}}]{col }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+S\+D\+L\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
 
 
 
@@ -369,12 +360,12 @@ Defines the color of the elements that will be drawn.
 
 
 \begin{DoxyParams}{Parameters}
-{\em col} & The color \\
+{\em color} & The color \\
 \hline
 \end{DoxyParams}
 
 
-Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a89ff355335d968e2bd3de8d200d3b535}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9f81148f93a249d6fc91307819911b4e}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_aaeeb1aa505c0eab3c8b5c34265c89845}\label{classArcade_1_1Display_1_1SDL_aaeeb1aa505c0eab3c8b5c34265c89845}} 
 \index{Arcade::Display::SDL@{Arcade::Display::SDL}!shouldBeRestarted@{shouldBeRestarted}}

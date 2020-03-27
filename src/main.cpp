@@ -36,7 +36,8 @@ int main(int ac, char *av[])
     {
         std::cerr << "An error occured while running the program : \"";
         std::cerr << ex.what();
-        std::cerr << "\"" << std::endl;
+        std::cerr << "\"";
+        std::cerr << "at: " << ex.getComponent() << std::endl;
     }
     catch (const std::exception &ex)
     {

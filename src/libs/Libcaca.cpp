@@ -13,10 +13,9 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
     return std::make_unique<Arcade::Display::Libcaca>();
 }
 
-const std::string Arcade::Display::Libcaca::_libName = "Libcaca";
-
 Arcade::Display::Libcaca::Libcaca()
-    : _canvas(nullptr), _display(nullptr)
+    : ADisplayModule("Libcaca"),
+    _canvas(nullptr), _display(nullptr)
 {
 }
 
@@ -52,9 +51,4 @@ void Arcade::Display::Libcaca::update()
 void Arcade::Display::Libcaca::render() const
 {
     //caca_render_canvas(_canvas,)
-}
-
-const std::string &Arcade::Display::Libcaca::getLibName() const
-{
-    return this->_libName;
 }

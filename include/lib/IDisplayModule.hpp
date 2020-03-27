@@ -73,13 +73,10 @@ namespace Arcade::Display
                 W, ///< W key
                 X, ///< X key
                 SPACE, ///< Space key
-                ESCAPE, ///< Escape key
                 J, ///< J key
                 K, ///< K key
                 U, ///< U key
                 I, ///< I key
-                M, ///< M key
-                R, ///< R key
                 ENTER, ///< Return key
                 KEYS_END ///< Key count
             };
@@ -155,17 +152,19 @@ namespace Arcade::Display
 
             /**
              * @brief Checks whether the current key is being pressed.
+             * @param key The key
              * @return true Key is pressed
              * @return false Key is not pressed
              */
-            virtual bool isKeyPressed(IDisplayModule::Keys) const = 0;
+            virtual bool isKeyPressed(IDisplayModule::Keys key) const = 0;
 
             /**
              * @brief Checks whether the current key was pressed during the last frame.
+             * @param key The key
              * @return true Key is pressed
              * @return false Key is not pressed
              */
-            virtual bool isKeyPressedOnce(IDisplayModule::Keys) const = 0;
+            virtual bool isKeyPressedOnce(IDisplayModule::Keys key) const = 0;
 
 
             /**
@@ -201,9 +200,9 @@ namespace Arcade::Display
 
             /**
              * @brief Defines the color of the elements that will be drawn.
-             * @param col The color
+             * @param color The color
              */
-            virtual void setColor(IDisplayModule::Colors col) = 0;
+            virtual void setColor(IDisplayModule::Colors color) = 0;
 
             /**
              * @brief Displays a pixel

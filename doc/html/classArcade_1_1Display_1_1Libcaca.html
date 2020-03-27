@@ -106,7 +106,8 @@ Inheritance diagram for Arcade::Display::Libcaca:</div>
  <div class="center">
   <img src="classArcade_1_1Display_1_1Libcaca.png" usemap="#Arcade::Display::Libcaca_map" alt=""/>
   <map id="Arcade::Display::Libcaca_map" name="Arcade::Display::Libcaca_map">
-<area href="classArcade_1_1Display_1_1IDisplayModule.html" title="Interface for the display modules used to display things." alt="Arcade::Display::IDisplayModule" shape="rect" coords="0,0,195,24"/>
+<area href="classArcade_1_1Display_1_1ADisplayModule.html" title="Abstract class adding utilities and an enum to the IDisplayModule interface." alt="Arcade::Display::ADisplayModule" shape="rect" coords="0,56,201,80"/>
+<area href="classArcade_1_1Display_1_1IDisplayModule.html" title="Interface for the display modules used to display things." alt="Arcade::Display::IDisplayModule" shape="rect" coords="0,0,201,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -144,12 +145,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a5920c296d51d72df55b5079c0749031e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a5920c296d51d72df55b5079c0749031e">shouldExit</a> () const final</td></tr>
 <tr class="memdesc:a5920c296d51d72df55b5079c0749031e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether you need to exit the program.  <a href="#a5920c296d51d72df55b5079c0749031e">More...</a><br /></td></tr>
 <tr class="separator:a5920c296d51d72df55b5079c0749031e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d76639289eee2453a416ff0fc051fe3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a4d76639289eee2453a416ff0fc051fe3">isKeyPressed</a> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619">IDisplayModule::Keys</a>) const final</td></tr>
-<tr class="memdesc:a4d76639289eee2453a416ff0fc051fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the current key is being pressed.  <a href="#a4d76639289eee2453a416ff0fc051fe3">More...</a><br /></td></tr>
-<tr class="separator:a4d76639289eee2453a416ff0fc051fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2de2c9cd935fbee371fa5215bd45c137"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a2de2c9cd935fbee371fa5215bd45c137">isKeyPressedOnce</a> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619">IDisplayModule::Keys</a>) const final</td></tr>
-<tr class="memdesc:a2de2c9cd935fbee371fa5215bd45c137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the current key was pressed during the last frame.  <a href="#a2de2c9cd935fbee371fa5215bd45c137">More...</a><br /></td></tr>
-<tr class="separator:a2de2c9cd935fbee371fa5215bd45c137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad274dc246f3140fe623bbd3b260da07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#aad274dc246f3140fe623bbd3b260da07">isKeyPressed</a> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619">IDisplayModule::Keys</a> key) const final</td></tr>
+<tr class="memdesc:aad274dc246f3140fe623bbd3b260da07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the current key is being pressed.  <a href="#aad274dc246f3140fe623bbd3b260da07">More...</a><br /></td></tr>
+<tr class="separator:aad274dc246f3140fe623bbd3b260da07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7cc724a0aad2647938f80a167e0d33"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a8b7cc724a0aad2647938f80a167e0d33">isKeyPressedOnce</a> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619">IDisplayModule::Keys</a> key) const final</td></tr>
+<tr class="memdesc:a8b7cc724a0aad2647938f80a167e0d33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether the current key was pressed during the last frame.  <a href="#a8b7cc724a0aad2647938f80a167e0d33">More...</a><br /></td></tr>
+<tr class="separator:a8b7cc724a0aad2647938f80a167e0d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aee007c10e66709680d1ec80f2662a4"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a6aee007c10e66709680d1ec80f2662a4">getDelta</a> () const final</td></tr>
 <tr class="memdesc:a6aee007c10e66709680d1ec80f2662a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the number of frames since last update.  <a href="#a6aee007c10e66709680d1ec80f2662a4">More...</a><br /></td></tr>
 <tr class="separator:a6aee007c10e66709680d1ec80f2662a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,9 +169,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a741fdec5c2e77cc7959e5f3444f8c8ac"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a741fdec5c2e77cc7959e5f3444f8c8ac">getKeyCode</a> () const final</td></tr>
 <tr class="memdesc:a741fdec5c2e77cc7959e5f3444f8c8ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the last pressed character from the keyboard.  <a href="#a741fdec5c2e77cc7959e5f3444f8c8ac">More...</a><br /></td></tr>
 <tr class="separator:a741fdec5c2e77cc7959e5f3444f8c8ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec7af72c1ffd1a3af05b4d8cf3edf84e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#aec7af72c1ffd1a3af05b4d8cf3edf84e">setColor</a> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#ae0a776be9163d096051c522e21c007b2">IDisplayModule::Colors</a> col) final</td></tr>
-<tr class="memdesc:aec7af72c1ffd1a3af05b4d8cf3edf84e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the color of the elements that will be drawn.  <a href="#aec7af72c1ffd1a3af05b4d8cf3edf84e">More...</a><br /></td></tr>
-<tr class="separator:aec7af72c1ffd1a3af05b4d8cf3edf84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab79d34610f9dcfb503122ea6ad3fa97c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#ab79d34610f9dcfb503122ea6ad3fa97c">setColor</a> (<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#ae0a776be9163d096051c522e21c007b2">IDisplayModule::Colors</a> color) final</td></tr>
+<tr class="memdesc:ab79d34610f9dcfb503122ea6ad3fa97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the color of the elements that will be drawn.  <a href="#ab79d34610f9dcfb503122ea6ad3fa97c">More...</a><br /></td></tr>
+<tr class="separator:ab79d34610f9dcfb503122ea6ad3fa97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a857080fd758f300ef2b05563d5814a1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a857080fd758f300ef2b05563d5814a1f">putPixel</a> (float x, float y) const final</td></tr>
 <tr class="memdesc:a857080fd758f300ef2b05563d5814a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays a pixel.  <a href="#a857080fd758f300ef2b05563d5814a1f">More...</a><br /></td></tr>
 <tr class="separator:a857080fd758f300ef2b05563d5814a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,9 +193,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <tr class="memitem:a2d4198dc8e383672ac00114d10b11e01"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a2d4198dc8e383672ac00114d10b11e01">putText</a> (const std::string &amp;text, unsigned int size, float x, float y) const final</td></tr>
 <tr class="memdesc:a2d4198dc8e383672ac00114d10b11e01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays text.  <a href="#a2d4198dc8e383672ac00114d10b11e01">More...</a><br /></td></tr>
 <tr class="separator:a2d4198dc8e383672ac00114d10b11e01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26e6dd02a853963fdcb812bddb3dee1e"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1Libcaca.html#a26e6dd02a853963fdcb812bddb3dee1e">getLibName</a> () const final</td></tr>
-<tr class="memdesc:a26e6dd02a853963fdcb812bddb3dee1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the library name.  <a href="#a26e6dd02a853963fdcb812bddb3dee1e">More...</a><br /></td></tr>
-<tr class="separator:a26e6dd02a853963fdcb812bddb3dee1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classArcade_1_1Display_1_1ADisplayModule"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classArcade_1_1Display_1_1ADisplayModule')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classArcade_1_1Display_1_1ADisplayModule.html">Arcade::Display::ADisplayModule</a></td></tr>
+<tr class="memitem:a0aee6322d97b3a421e301c8f0830733e inherit pub_methods_classArcade_1_1Display_1_1ADisplayModule"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1ADisplayModule.html#a0aee6322d97b3a421e301c8f0830733e">ADisplayModule</a> (const std::string &amp;libName)</td></tr>
+<tr class="memdesc:a0aee6322d97b3a421e301c8f0830733e inherit pub_methods_classArcade_1_1Display_1_1ADisplayModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classArcade_1_1Display_1_1ADisplayModule.html" title="Abstract class adding utilities and an enum to the IDisplayModule interface.">ADisplayModule</a> object.  <a href="classArcade_1_1Display_1_1ADisplayModule.html#a0aee6322d97b3a421e301c8f0830733e">More...</a><br /></td></tr>
+<tr class="separator:a0aee6322d97b3a421e301c8f0830733e inherit pub_methods_classArcade_1_1Display_1_1ADisplayModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7d98b279058994f41978b17bb14222 inherit pub_methods_classArcade_1_1Display_1_1ADisplayModule"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1ADisplayModule.html#a0f7d98b279058994f41978b17bb14222">getLibName</a> () const final</td></tr>
+<tr class="memdesc:a0f7d98b279058994f41978b17bb14222 inherit pub_methods_classArcade_1_1Display_1_1ADisplayModule"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the library name.  <a href="classArcade_1_1Display_1_1ADisplayModule.html#a0f7d98b279058994f41978b17bb14222">More...</a><br /></td></tr>
+<tr class="separator:a0f7d98b279058994f41978b17bb14222 inherit pub_methods_classArcade_1_1Display_1_1ADisplayModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -243,21 +248,25 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a86961510513635f43811af02a3c8109f">X</a>, 
 <br />
 &#160;&#160;<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a3430304d70e67924c13f9d94a6408972">SPACE</a>, 
-<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619ad1b1ac6f452dea617fbb934982337489">ESCAPE</a>, 
 <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a0c140f14b83636f7fe7414b08358b90b">J</a>, 
 <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a1c1441de93240fe7825ce259386711f7">K</a>, 
+<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a45fba52257ce70f9852f2a68cce3433b">U</a>, 
 <br />
-&#160;&#160;<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a45fba52257ce70f9852f2a68cce3433b">U</a>, 
-<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a6fffaf02bfc1f8daca3170117278201c">I</a>, 
-<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a640599f16655db27faaac3040720803b">M</a>, 
-<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a26e3f67a357a68ddecf4f52c6361d432">R</a>, 
-<br />
-&#160;&#160;<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619ada1332022cfc2797051d2e4cc2f23d8f">ENTER</a>, 
+&#160;&#160;<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a6fffaf02bfc1f8daca3170117278201c">I</a>, 
+<a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619ada1332022cfc2797051d2e4cc2f23d8f">ENTER</a>, 
 <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a3f201e9856c9114d96b28e3312ad05f7">KEYS_END</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a8da3f6b309ca0581473ae8cc8789b619"><td class="mdescLeft">&#160;</td><td class="mdescRight">Available keys.  <a href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619">More...</a><br /></td></tr>
 <tr class="separator:a8da3f6b309ca0581473ae8cc8789b619 inherit pub_types_classArcade_1_1Display_1_1IDisplayModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_types_classArcade_1_1Display_1_1ADisplayModule"><td colspan="2" onclick="javascript:toggleInherit('pro_types_classArcade_1_1Display_1_1ADisplayModule')"><img src="closed.png" alt="-"/>&#160;Protected Types inherited from <a class="el" href="classArcade_1_1Display_1_1ADisplayModule.html">Arcade::Display::ADisplayModule</a></td></tr>
+<tr class="memitem:ac438501e449afdad548b42ee2897eabc inherit pro_types_classArcade_1_1Display_1_1ADisplayModule"><td class="memItemLeft" align="right" valign="top"><a id="ac438501e449afdad548b42ee2897eabc"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1Display_1_1ADisplayModule.html#ac438501e449afdad548b42ee2897eabc">SystemKeys</a> { <b>ESCAPE</b> = Keys::KEYS_END, 
+<b>M</b>, 
+<b>R</b>, 
+<b>SYSKEYS_END</b>
+ }</td></tr>
+<tr class="memdesc:ac438501e449afdad548b42ee2897eabc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional keys that are used by the library. <br /></td></tr>
+<tr class="separator:ac438501e449afdad548b42ee2897eabc inherit pro_types_classArcade_1_1Display_1_1ADisplayModule"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classArcade_1_1Display_1_1Libcaca.html" title="Libcaca library.">Libcaca</a> library. </p>
@@ -322,38 +331,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a26e6dd02a853963fdcb812bddb3dee1e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26e6dd02a853963fdcb812bddb3dee1e">&#9670;&nbsp;</a></span>getLibName()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string&amp; Arcade::Display::Libcaca::getLibName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">final</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Gets the library name. </p>
-<dl class="section return"><dt>Returns</dt><dd>The library's name </dd></dl>
-
-<p>Implements <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a0d8e957815e94766bdefbd7a5043e81a">Arcade::Display::IDisplayModule</a>.</p>
-
-</div>
-</div>
-<a id="a4d76639289eee2453a416ff0fc051fe3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d76639289eee2453a416ff0fc051fe3">&#9670;&nbsp;</a></span>isKeyPressed()</h2>
+<a id="aad274dc246f3140fe623bbd3b260da07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad274dc246f3140fe623bbd3b260da07">&#9670;&nbsp;</a></span>isKeyPressed()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -365,7 +344,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">bool Arcade::Display::Libcaca::isKeyPressed </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619">IDisplayModule::Keys</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -377,16 +356,22 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Checks whether the current key is being pressed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>true Key is pressed </dd>
 <dd>
 false Key is not pressed </dd></dl>
 
-<p>Implements <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#ab3d02b76c08ff2deb728dc9f0d557f43">Arcade::Display::IDisplayModule</a>.</p>
+<p>Implements <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#af871661ff84c21581cd7233ba6f27aa0">Arcade::Display::IDisplayModule</a>.</p>
 
 </div>
 </div>
-<a id="a2de2c9cd935fbee371fa5215bd45c137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2de2c9cd935fbee371fa5215bd45c137">&#9670;&nbsp;</a></span>isKeyPressedOnce()</h2>
+<a id="a8b7cc724a0aad2647938f80a167e0d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7cc724a0aad2647938f80a167e0d33">&#9670;&nbsp;</a></span>isKeyPressedOnce()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -398,7 +383,7 @@ false Key is not pressed </dd></dl>
           <td class="memname">bool Arcade::Display::Libcaca::isKeyPressedOnce </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619">IDisplayModule::Keys</a>&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -410,11 +395,17 @@ false Key is not pressed </dd></dl>
 </div><div class="memdoc">
 
 <p>Checks whether the current key was pressed during the last frame. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>The key </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd>true Key is pressed </dd>
 <dd>
 false Key is not pressed </dd></dl>
 
-<p>Implements <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#ac347fc77c01e12c5ce23be99d357008d">Arcade::Display::IDisplayModule</a>.</p>
+<p>Implements <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a531b700b332e077d9b714bafac05ebe1">Arcade::Display::IDisplayModule</a>.</p>
 
 </div>
 </div>
@@ -849,8 +840,8 @@ false Window is closed </dd></dl>
 
 </div>
 </div>
-<a id="aec7af72c1ffd1a3af05b4d8cf3edf84e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec7af72c1ffd1a3af05b4d8cf3edf84e">&#9670;&nbsp;</a></span>setColor()</h2>
+<a id="ab79d34610f9dcfb503122ea6ad3fa97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab79d34610f9dcfb503122ea6ad3fa97c">&#9670;&nbsp;</a></span>setColor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -862,7 +853,7 @@ false Window is closed </dd></dl>
           <td class="memname">void Arcade::Display::Libcaca::setColor </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#ae0a776be9163d096051c522e21c007b2">IDisplayModule::Colors</a>&#160;</td>
-          <td class="paramname"><em>col</em></td><td>)</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -876,12 +867,12 @@ false Window is closed </dd></dl>
 <p>Defines the color of the elements that will be drawn. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">col</td><td>The color </td></tr>
+    <tr><td class="paramname">color</td><td>The color </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Implements <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a89ff355335d968e2bd3de8d200d3b535">Arcade::Display::IDisplayModule</a>.</p>
+<p>Implements <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html#a9f81148f93a249d6fc91307819911b4e">Arcade::Display::IDisplayModule</a>.</p>
 
 </div>
 </div>

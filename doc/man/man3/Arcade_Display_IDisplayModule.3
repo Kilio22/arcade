@@ -10,7 +10,7 @@ Arcade::Display::IDisplayModule \- Interface for the display modules used to dis
 .PP
 \fC#include <IDisplayModule\&.hpp>\fP
 .PP
-Inherited by \fBArcade::Display::Libcaca\fP, \fBArcade::Display::SDL\fP, and \fBArcade::Display::SFML\fP\&.
+Inherited by \fBArcade::Display::ADisplayModule\fP\&.
 .SS "Public Types"
 
 .in +1c
@@ -19,7 +19,7 @@ Inherited by \fBArcade::Display::Libcaca\fP, \fBArcade::Display::SDL\fP, and \fB
 .br
 .RI "Available colors\&. "
 .ti -1c
-.RI "enum \fBKeys\fP { \fBLEFT\fP, \fBRIGHT\fP, \fBUP\fP, \fBDOWN\fP, \fBZ\fP, \fBQ\fP, \fBS\fP, \fBD\fP, \fBA\fP, \fBE\fP, \fBW\fP, \fBX\fP, \fBSPACE\fP, \fBESCAPE\fP, \fBJ\fP, \fBK\fP, \fBU\fP, \fBI\fP, \fBM\fP, \fBR\fP, \fBENTER\fP, \fBKEYS_END\fP }"
+.RI "enum \fBKeys\fP { \fBLEFT\fP, \fBRIGHT\fP, \fBUP\fP, \fBDOWN\fP, \fBZ\fP, \fBQ\fP, \fBS\fP, \fBD\fP, \fBA\fP, \fBE\fP, \fBW\fP, \fBX\fP, \fBSPACE\fP, \fBJ\fP, \fBK\fP, \fBU\fP, \fBI\fP, \fBENTER\fP, \fBKEYS_END\fP }"
 .br
 .RI "Available keys\&. "
 .in -1c
@@ -67,11 +67,11 @@ Inherited by \fBArcade::Display::Libcaca\fP, \fBArcade::Display::SDL\fP, and \fB
 .br
 .RI "Checks whether you need to exit the program\&. "
 .ti -1c
-.RI "virtual bool \fBisKeyPressed\fP (\fBIDisplayModule::Keys\fP) const =0"
+.RI "virtual bool \fBisKeyPressed\fP (\fBIDisplayModule::Keys\fP key) const =0"
 .br
 .RI "Checks whether the current key is being pressed\&. "
 .ti -1c
-.RI "virtual bool \fBisKeyPressedOnce\fP (\fBIDisplayModule::Keys\fP) const =0"
+.RI "virtual bool \fBisKeyPressedOnce\fP (\fBIDisplayModule::Keys\fP key) const =0"
 .br
 .RI "Checks whether the current key was pressed during the last frame\&. "
 .ti -1c
@@ -95,7 +95,7 @@ Inherited by \fBArcade::Display::Libcaca\fP, \fBArcade::Display::SDL\fP, and \fB
 .br
 .RI "Gets the last pressed character from the keyboard\&. "
 .ti -1c
-.RI "virtual void \fBsetColor\fP (\fBIDisplayModule::Colors\fP col)=0"
+.RI "virtual void \fBsetColor\fP (\fBIDisplayModule::Colors\fP color)=0"
 .br
 .RI "Defines the color of the elements that will be drawn\&. "
 .ti -1c
@@ -244,9 +244,6 @@ X key\&.
 \fB\fISPACE \fP\fP
 Space key\&. 
 .TP
-\fB\fIESCAPE \fP\fP
-Escape key\&. 
-.TP
 \fB\fIJ \fP\fP
 J key\&. 
 .TP
@@ -258,12 +255,6 @@ U key\&.
 .TP
 \fB\fII \fP\fP
 I key\&. 
-.TP
-\fB\fIM \fP\fP
-M key\&. 
-.TP
-\fB\fIR \fP\fP
-R key\&. 
 .TP
 \fB\fIENTER \fP\fP
 Return key\&. 
@@ -310,11 +301,16 @@ The library's name
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
-.SS "virtual bool Arcade::Display::IDisplayModule::isKeyPressed (\fBIDisplayModule::Keys\fP) const\fC [pure virtual]\fP"
+Implemented in \fBArcade::Display::ADisplayModule\fP\&.
+.SS "virtual bool Arcade::Display::IDisplayModule::isKeyPressed (\fBIDisplayModule::Keys\fP key) const\fC [pure virtual]\fP"
 
 .PP
 Checks whether the current key is being pressed\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP The key 
+.RE
 .PP
 \fBReturns:\fP
 .RS 4
@@ -326,10 +322,15 @@ false Key is not pressed
 
 .PP
 Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
-.SS "virtual bool Arcade::Display::IDisplayModule::isKeyPressedOnce (\fBIDisplayModule::Keys\fP) const\fC [pure virtual]\fP"
+.SS "virtual bool Arcade::Display::IDisplayModule::isKeyPressedOnce (\fBIDisplayModule::Keys\fP key) const\fC [pure virtual]\fP"
 
 .PP
 Checks whether the current key was pressed during the last frame\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP The key 
+.RE
 .PP
 \fBReturns:\fP
 .RS 4
@@ -481,14 +482,14 @@ Displays text\&.
 
 .PP
 Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
-.SS "virtual void Arcade::Display::IDisplayModule::setColor (\fBIDisplayModule::Colors\fP col)\fC [pure virtual]\fP"
+.SS "virtual void Arcade::Display::IDisplayModule::setColor (\fBIDisplayModule::Colors\fP color)\fC [pure virtual]\fP"
 
 .PP
 Defines the color of the elements that will be drawn\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIcol\fP The color 
+\fIcolor\fP The color 
 .RE
 .PP
 

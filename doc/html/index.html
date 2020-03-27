@@ -101,7 +101,8 @@ $(document).ready(function(){initNavTree('index.html','');});
 </ul>
 </li>
 </ul>
-<p>Every class contained by the libraries located in the <code>games/</code> folder are going to be instanciated thanks to the symbol <code>createLib</code> that your library <b>must</b> contain.</p>
+<p>Every class contained by the libraries located in the <code>games/</code> folder are going to be instanciated using the symbol <code>createLib</code> that your library <b>must</b> contain.</p>
+<p>It should be as following:</p>
 <div class="fragment"><div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> std::unique_ptr&lt;Arcade::Games::IGameModule&gt; createLib(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    <span class="keywordflow">return</span> std::make_unique&lt;MyGameModule&gt;();</div><div class="line">}</div></div><!-- fragment --><h2>Library</h2>
 <ul>
 <li>First, you wanna create a c++ class implementing the <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html">IDisplayModule</a> interface.</li>
@@ -111,7 +112,8 @@ $(document).ready(function(){initNavTree('index.html','');});
 </ul>
 </li>
 </ul>
-<p>Every class contained by the libraries located in the <code>lib/</code> folder are going to be instanciated thanks to the symbol <code>createLib</code> that your library <b>must</b> contain.</p>
+<p>Every class contained by the libraries located in the <code>lib/</code> folder are going to be instanciated using the symbol <code>createLib</code> that your library <b>must</b> contain.</p>
+<p>It should be as following:</p>
 <div class="fragment"><div class="line"><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> std::unique_ptr&lt;Arcade::Display::IDisplayModule&gt; createLib(<span class="keywordtype">void</span>)</div><div class="line">{</div><div class="line">    <span class="keywordflow">return</span> std::make_unique&lt;MyDisplayModule&gt;();</div><div class="line">}</div></div><!-- fragment --> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

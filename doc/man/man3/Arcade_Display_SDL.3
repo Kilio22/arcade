@@ -10,7 +10,7 @@ Arcade::Display::SDL \- \fBSDL\fP library\&.
 .PP
 \fC#include <SDL\&.hpp>\fP
 .PP
-Inherits \fBArcade::Display::IDisplayModule\fP\&.
+Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .SS "Public Member Functions"
 
 .in +1c
@@ -55,11 +55,11 @@ Inherits \fBArcade::Display::IDisplayModule\fP\&.
 .br
 .RI "Checks whether you need to exit the program\&. "
 .ti -1c
-.RI "bool \fBisKeyPressed\fP (\fBIDisplayModule::Keys\fP) const final"
+.RI "bool \fBisKeyPressed\fP (\fBIDisplayModule::Keys\fP key) const final"
 .br
 .RI "Checks whether the current key is being pressed\&. "
 .ti -1c
-.RI "bool \fBisKeyPressedOnce\fP (\fBIDisplayModule::Keys\fP) const final"
+.RI "bool \fBisKeyPressedOnce\fP (\fBIDisplayModule::Keys\fP key) const final"
 .br
 .RI "Checks whether the current key was pressed during the last frame\&. "
 .ti -1c
@@ -83,7 +83,7 @@ Inherits \fBArcade::Display::IDisplayModule\fP\&.
 .br
 .RI "Gets the last pressed character from the keyboard\&. "
 .ti -1c
-.RI "void \fBsetColor\fP (\fBIDisplayModule::Colors\fP col) final"
+.RI "void \fBsetColor\fP (\fBIDisplayModule::Colors\fP color) final"
 .br
 .RI "Defines the color of the elements that will be drawn\&. "
 .ti -1c
@@ -114,10 +114,6 @@ Inherits \fBArcade::Display::IDisplayModule\fP\&.
 .RI "void \fBputText\fP (const std::string &text, unsigned int size, float x, float y) const final"
 .br
 .RI "Displays text\&. "
-.ti -1c
-.RI "const std::string & \fBgetLibName\fP () const final"
-.br
-.RI "Gets the library name\&. "
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"
@@ -151,23 +147,15 @@ Gets the last pressed character from the keyboard\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "const std::string& Arcade::Display::SDL::getLibName () const\fC [final]\fP, \fC [virtual]\fP"
-
-.PP
-Gets the library name\&. 
-.PP
-\fBReturns:\fP
-.RS 4
-The library's name 
-.RE
-.PP
-
-.PP
-Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SDL::isKeyPressed (\fBIDisplayModule::Keys\fP) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::SDL::isKeyPressed (\fBIDisplayModule::Keys\fP key) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether the current key is being pressed\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP The key 
+.RE
 .PP
 \fBReturns:\fP
 .RS 4
@@ -179,10 +167,15 @@ false Key is not pressed
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SDL::isKeyPressedOnce (\fBIDisplayModule::Keys\fP) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::SDL::isKeyPressedOnce (\fBIDisplayModule::Keys\fP key) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether the current key was pressed during the last frame\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIkey\fP The key 
+.RE
 .PP
 \fBReturns:\fP
 .RS 4
@@ -334,14 +327,14 @@ Displays text\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SDL::setColor (\fBIDisplayModule::Colors\fP col)\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::SDL::setColor (\fBIDisplayModule::Colors\fP color)\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Defines the color of the elements that will be drawn\&. 
 .PP
 \fBParameters:\fP
 .RS 4
-\fIcol\fP The color 
+\fIcolor\fP The color 
 .RE
 .PP
 

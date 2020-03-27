@@ -27,18 +27,21 @@ SRC_DEFAULT	=	\
 SRC_GAMES	=	$(SRC_DEFAULT) \
 	src/games/AGameModule.cpp
 
+SRC_GRAPHICALS	=	$(SRC_DEFAULT) \
+	src/libs/ADisplayModule.cpp
+
 SRC_CORE	=	$(SRC_DEFAULT) \
 	src/DLLoader.cpp \
 	src/Core.cpp \
 	src/main.cpp
 
-SRC_LIBCACA	=	$(SRC_DEFAULT) \
+SRC_LIBCACA	=	$(SRC_GRAPHICALS) \
 	src/libs/Libcaca.cpp
 
-SRC_SDL	=	$(SRC_DEFAULT) \
+SRC_SDL	=	$(SRC_GRAPHICALS) \
 	src/libs/SDL.cpp
 
-SRC_SFML	=	$(SRC_DEFAULT) \
+SRC_SFML	=	$(SRC_GRAPHICALS) \
 	src/libs/SFML.cpp
 
 SRC_CENTIPEDE	=	$(SRC_GAMES) \

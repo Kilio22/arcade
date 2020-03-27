@@ -13,31 +13,6 @@
 #include "Exceptions/BadInstanciationException.hpp"
 #include "Exceptions/BadFileException.hpp"
 
-const std::vector<SDL_Keycode> Arcade::Display::SDL::_libKeys =
-{
-    SDLK_LEFT,
-    SDLK_RIGHT,
-    SDLK_UP,
-    SDLK_DOWN,
-    SDLK_z,
-    SDLK_q,
-    SDLK_s,
-    SDLK_d,
-    SDLK_a,
-    SDLK_e,
-    SDLK_w,
-    SDLK_x,
-    SDLK_SPACE,
-    SDLK_ESCAPE,
-    SDLK_j,
-    SDLK_k,
-    SDLK_u,
-    SDLK_i,
-    SDLK_m,
-    SDLK_r,
-    SDLK_RETURN
-};
-
 const std::vector<SDL_Color> Arcade::Display::SDL::_libColors =
 {
     {0, 0, 0, 255},
@@ -59,7 +34,30 @@ const std::vector<SDL_Color> Arcade::Display::SDL::_libColors =
     {255, 255, 255, 255}
 };
 
-const std::string Arcade::Display::SDL::_libName = "SDL";
+const std::vector<SDL_Keycode> Arcade::Display::SDL::_libKeys =
+{
+    SDLK_LEFT,
+    SDLK_RIGHT,
+    SDLK_UP,
+    SDLK_DOWN,
+    SDLK_z,
+    SDLK_q,
+    SDLK_s,
+    SDLK_d,
+    SDLK_a,
+    SDLK_e,
+    SDLK_w,
+    SDLK_x,
+    SDLK_SPACE,
+    SDLK_j,
+    SDLK_k,
+    SDLK_u,
+    SDLK_i,
+    SDLK_RETURN,
+    SDLK_ESCAPE,
+    SDLK_m,
+    SDLK_r,
+};
 
 extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 {
@@ -67,7 +65,8 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 }
 
 Arcade::Display::SDL::SDL()
-    : _window(nullptr), _currentColor(Colors::DEFAULT), _events(Keys::KEYS_END, false), _keyCode('\0')
+    : ADisplayModule("SDL"),
+    _window(nullptr), _currentColor(Colors::DEFAULT), _events(SystemKeys::SYSKEYS_END, false), _keyCode('\0')
 {
 }
 
@@ -133,17 +132,17 @@ bool Arcade::Display::SDL::switchToPreviousGame() const
 
 bool Arcade::Display::SDL::shouldBeRestarted() const
 {
-    return this->_events.at(Keys::R);
+    return this->_events.at(SystemKeys::R);
 }
 
 bool Arcade::Display::SDL::shouldGoToMenu() const
 {
-    return this->_events.at(Keys::M);
+    return this->_events.at(SystemKeys::M);
 }
 
 bool Arcade::Display::SDL::shouldExit() const
 {
-    return this->_events.at(Keys::ESCAPE);
+    return this->_events.at(SystemKeys::ESCAPE);
 }
 
 bool Arcade::Display::SDL::isKeyPressed(IDisplayModule::Keys key) const
@@ -174,7 +173,7 @@ void Arcade::Display::SDL::update()
 {
     SDL_Event event;
 
-    this->_events.assign(Keys::KEYS_END, false);
+    this->_events.assign(SystemKeys::SYSKEYS_END, false);
     this->_keyCode = '\0';
     while (SDL_PollEvent(&event)) {
         if (event.type == SDL_KEYDOWN) {
@@ -362,9 +361,4 @@ void Arcade::Display::SDL::putText(const std::string &text, unsigned int size, f
     SDL_QueryTexture(texture, NULL, NULL, &textRect.w, &textRect.h);
     SDL_RenderCopy(this->_renderer, texture, NULL, &textRect);
     SDL_DestroyTexture(texture);
-}
-
-const std::string &Arcade::Display::SDL::getLibName() const
-{
-    return this->_libName;
 }

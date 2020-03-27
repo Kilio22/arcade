@@ -1,6 +1,6 @@
 var classArcade_1_1Games_1_1AGameModule =
 [
-    [ "AGameModule", "classArcade_1_1Games_1_1AGameModule.html#a489ae3b9ad35cf20ee05be8e3f365a99", null ],
+    [ "AGameModule", "classArcade_1_1Games_1_1AGameModule.html#a0f8d2149171d7eacf1d16a84fb0d9aa2", null ],
     [ "~AGameModule", "classArcade_1_1Games_1_1AGameModule.html#a55497e717217fe636c9ed7dc625cf150", null ],
     [ "addToBestScores", "classArcade_1_1Games_1_1AGameModule.html#a961c4a606bcc5d2ab1ead8b3c0bb3408", null ],
     [ "drawGameOver", "classArcade_1_1Games_1_1AGameModule.html#ad3df1b3c8b78912656e5312e16a0dac5", null ],
