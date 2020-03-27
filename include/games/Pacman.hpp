@@ -40,13 +40,13 @@ namespace Arcade::Games
             void drawMonsters(Arcade::Display::IDisplayModule &displayModule) const;
             void initMaze(void);
             void initEntities(void);
-            void updateDirection(const Arcade::Display::IDisplayModule &displayModule);
-            bool moveEntity(std::pair<circle_t, Direction> &entity);
-            bool canMove(float x, float y);
+            void updatePacmanDirection(const Arcade::Display::IDisplayModule &displayModule);
+            bool canMove(const float x, const float y) const;
             bool isDead(void);
             void eat(void);
             void moveMonsters(void);
-            void moveRandomDirection(std::pair<circle_t, Direction> &monster);
+            bool moveEntity(std::pair<circle_t, Direction> &entity) const;
+            void moveRandomDirection(std::pair<circle_t, Direction> &monster) const;
 
             std::vector<rectangle_t> _walls;
             std::vector<rectangle_t> _path;
@@ -54,11 +54,13 @@ namespace Arcade::Games
             std::vector<std::pair<rectangle_t, circle_t>> _tokens;
             std::vector<std::pair<circle_t, Pacman::Direction>> _monsters;
             std::pair<circle_t, Pacman::Direction> _pacman;
-            bool _canEatMonsters;
             clock_t _eatClock;
             int _framesToStep;
             int _framesCount;
+            bool _canEatMonsters;
+
             static const std::string _mapPath;
+            static const std::vector<std::pair<float, float>> _monstersPositions;
     };
 }
 
