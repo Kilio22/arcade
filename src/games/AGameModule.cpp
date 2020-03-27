@@ -10,7 +10,7 @@
 const std::regex Arcade::Games::AGameModule::highscoreRegex("\\w*:\\d*$");
 
 Arcade::Games::AGameModule::AGameModule(std::string const &libname)
-    : _playerName(""), _libName(libname)
+    : _currentScore(0), _isDead(false), _playerName(""), _libName(libname)
 {
 }
 
@@ -117,11 +117,19 @@ void Arcade::Games::AGameModule::addToBestScores(int nb)
 
 void Arcade::Games::AGameModule::sortHighscores(void)
 {
-    std::sort(this->_highscores.begin(), this->_highscores.end(), [](std::pair<std::string, int> const &first, std::pair<std::string, int> const &second){
+    std::sort(this->_highscores.begin(), this->_highscores.end(), [](std::pair<std::string, int> const &first, std::pair<std::string, int> const &second) {
         if (first.second != second.second) {
             return first.second > second.second;
         } else {
             return first.first < second.first;
         }
     });
+}
+
+void Arcade::Games::AGameModule::displayGameOver(Arcade::Display::IDisplayModule &displayModule) const
+{
+    displayModule.setColor(Arcade::Display::IDisplayModule::Colors::WHITE);
+    displayModule.putText("GAME OVER", 25, 230, 200);
+    displayModule.putText("Press 'm' to go back to menu,", 20, 100, 300);
+    displayModule.putText("or 'r' to reset the game.", 20, 130, 340);
 }

@@ -53,9 +53,16 @@ namespace Arcade::Games
             void addToBestScores(int nb);
 
             /**
+             * @brief Display game over screen
+             * @param displayModule The display module
+             */
+            void displayGameOver(Arcade::Display::IDisplayModule &displayModule) const;
+
+            /**
              * @brief The current score of the active game session
              */
             int _currentScore;
+            bool _isDead;
 
         private:
             std::string _playerName;
