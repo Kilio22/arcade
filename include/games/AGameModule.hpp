@@ -38,8 +38,8 @@ namespace Arcade::Games
             std::vector<std::pair<std::string, int>> getBestScores() const final;
 
             /**
-             * Default game implementation
-             * (out of order)
+             * @brief Default game implementation (out of order)
+             * @param lib The display module that will be used to put things on a canvas.
              */
             void render(Arcade::Display::IDisplayModule &lib) const override;
 
@@ -56,13 +56,10 @@ namespace Arcade::Games
              * @brief Display game over screen
              * @param displayModule The display module
              */
-            void displayGameOver(Arcade::Display::IDisplayModule &displayModule) const;
+            void drawGameOver(Arcade::Display::IDisplayModule &displayModule) const;
 
-            /**
-             * @brief The current score of the active game session
-             */
-            int _currentScore;
-            bool _isDead;
+            int _currentScore; ///< The current score of the active game session
+            bool _isDead; ///< True if the player is dead
 
         private:
             std::string _playerName;

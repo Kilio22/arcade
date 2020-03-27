@@ -111,6 +111,8 @@ void Arcade::Games::AGameModule::render(Arcade::Display::IDisplayModule &lib) co
 
 void Arcade::Games::AGameModule::addToBestScores(int nb)
 {
+    if (nb == 0)
+        return;
     this->_highscores.push_back({this->_playerName, nb});
     this->sortHighscores();
 }
@@ -126,7 +128,7 @@ void Arcade::Games::AGameModule::sortHighscores(void)
     });
 }
 
-void Arcade::Games::AGameModule::displayGameOver(Arcade::Display::IDisplayModule &displayModule) const
+void Arcade::Games::AGameModule::drawGameOver(Arcade::Display::IDisplayModule &displayModule) const
 {
     displayModule.setColor(Arcade::Display::IDisplayModule::Colors::WHITE);
     displayModule.putText("GAME OVER", 25, 230, 200);

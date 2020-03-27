@@ -51,6 +51,7 @@ Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBAr
 .ti -1c
 .RI "void \fBrender\fP (\fBArcade::Display::IDisplayModule\fP &lib) const override"
 .br
+.RI "Default game implementation (out of order) "
 .ti -1c
 .RI "const std::string & \fBgetLibName\fP () const final"
 .br
@@ -64,7 +65,7 @@ Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBAr
 .br
 .RI "Adds a score to the scoreboard\&. "
 .ti -1c
-.RI "void \fBdisplayGameOver\fP (\fBArcade::Display::IDisplayModule\fP &displayModule) const"
+.RI "void \fBdrawGameOver\fP (\fBArcade::Display::IDisplayModule\fP &displayModule) const"
 .br
 .RI "\fBDisplay\fP game over screen\&. "
 .in -1c
@@ -78,6 +79,7 @@ Inherited by \fBArcade::Games::Centipede\fP, \fBArcade::Games::Nibbler\fP, \fBAr
 .ti -1c
 .RI "bool \fB_isDead\fP"
 .br
+.RI "True if the player is dead\&. "
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -108,7 +110,7 @@ Adds a score to the scoreboard\&.
 .RE
 .PP
 
-.SS "void Arcade::Games::AGameModule::displayGameOver (\fBArcade::Display::IDisplayModule\fP & displayModule) const\fC [protected]\fP"
+.SS "void Arcade::Games::AGameModule::drawGameOver (\fBArcade::Display::IDisplayModule\fP & displayModule) const\fC [protected]\fP"
 
 .PP
 \fBDisplay\fP game over screen\&. 
@@ -194,7 +196,16 @@ false An error occured
 .PP
 Implements \fBArcade::Games::IGameModule\fP\&.
 .SS "void Arcade::Games::AGameModule::render (\fBArcade::Display::IDisplayModule\fP & lib) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
 Default game implementation (out of order) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlib\fP The display module that will be used to put things on a canvas\&. 
+.RE
+.PP
+
 .PP
 Implements \fBArcade::Games::IGameModule\fP\&.
 .PP

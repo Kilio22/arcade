@@ -219,7 +219,7 @@ void Arcade::Games::Pacman::render(Arcade::Display::IDisplayModule &displayModul
     displayModule.setColor(this->_pacman.first.color);
     displayModule.putFillCircle(this->_pacman.first.x, this->_pacman.first.y, this->_pacman.first.radius);
     if (this->_isDead == true)
-        this->displayGameOver(displayModule);
+        this->drawGameOver(displayModule);
 }
 
 void Arcade::Games::Pacman::drawMaze(Arcade::Display::IDisplayModule &displayModule) const

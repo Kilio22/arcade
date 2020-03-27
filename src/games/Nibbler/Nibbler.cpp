@@ -20,11 +20,12 @@ Arcade::Games::Nibbler::Nibbler()
 
 void Arcade::Games::Nibbler::reset()
 {
+    this->_isDead = false;
+    this->_currentScore = 0;
     this->framesToStep = 10;
     this->frameCount = 0;
     this->direction = UP;
     this->lastDirection = UP;
-    this->_currentScore = 0;
     this->spawnFruit();
     this->snake = {{10, 10}, {10, 11}, {10, 12}, {10, 13}};
 }
@@ -51,8 +52,9 @@ bool Arcade::Games::Nibbler::isDead()
 
 void Arcade::Games::Nibbler::update(const Arcade::Display::IDisplayModule &displayModule)
 {
+    if (this->_isDead == true)
+        return;
     this->frameCount += displayModule.getDelta();
-
     this->updateDirection(displayModule);
     if (displayModule.isKeyPressed(Display::IDisplayModule::Keys::SPACE))
         this->frameCount = this->framesToStep;
@@ -60,7 +62,7 @@ void Arcade::Games::Nibbler::update(const Arcade::Display::IDisplayModule &displ
         this->updateSnake();
         if (this->isDead() == true) {
             this->addToBestScores(this->_currentScore);
-            this->reset();
+            this->_isDead = true;
         }
     }
 }
@@ -118,6 +120,8 @@ void Arcade::Games::Nibbler::render(Arcade::Display::IDisplayModule &displayModu
     this->drawFruit(displayModule);
     this->drawSnake(displayModule);
     this->drawControls(displayModule);
+    if (this->_isDead == true)
+        this->drawGameOver(displayModule);
 }
 
 void Arcade::Games::Nibbler::drawBorder(Arcade::Display::IDisplayModule &displayModule) const

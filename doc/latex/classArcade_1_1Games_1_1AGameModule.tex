@@ -35,7 +35,7 @@ std\+::pair$<$ std\+::string, int $>$ \mbox{\hyperlink{classArcade_1_1Games_1_1A
 std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_aaebba3bd5236f97cb18867fe99c7135b}{get\+Best\+Scores}} () const final
 \begin{DoxyCompactList}\small\item\em Gets the best 16 scores. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a5897780d42d5faba3287c29b87f2b498}{render}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&lib) const override
-\item 
+\begin{DoxyCompactList}\small\item\em Default game implementation (out of order) \end{DoxyCompactList}\item 
 const std\+::string \& \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a3245a3ba2eac74eadf5041bc3806ed6b}{get\+Lib\+Name}} () const final
 \begin{DoxyCompactList}\small\item\em Gets the library name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
@@ -43,7 +43,7 @@ const std\+::string \& \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a324
 \item 
 void \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a961c4a606bcc5d2ab1ead8b3c0bb3408}{add\+To\+Best\+Scores}} (int nb)
 \begin{DoxyCompactList}\small\item\em Adds a score to the scoreboard. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a57720bc39e4b181450d1f78518123399}{display\+Game\+Over}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&display\+Module) const
+void \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_ad3df1b3c8b78912656e5312e16a0dac5}{draw\+Game\+Over}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&display\+Module) const
 \begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{namespaceArcade_1_1Display}{Display}} game over screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -52,8 +52,8 @@ void \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a57720bc39e4b181450d1f
 int \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_aec19427e257bb35879871c6853f51a8f}{\+\_\+current\+Score}}
 \begin{DoxyCompactList}\small\item\em The current score of the active game session. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a0f22ebc10582d404cf7393d8028cb0c2}\label{classArcade_1_1Games_1_1AGameModule_a0f22ebc10582d404cf7393d8028cb0c2}} 
-bool {\bfseries \+\_\+is\+Dead}
-\end{DoxyCompactItemize}
+bool \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a0f22ebc10582d404cf7393d8028cb0c2}{\+\_\+is\+Dead}}
+\begin{DoxyCompactList}\small\item\em True if the player is dead. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -93,11 +93,11 @@ Adds a score to the scoreboard.
 {\em nb} & The score value \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_a57720bc39e4b181450d1f78518123399}\label{classArcade_1_1Games_1_1AGameModule_a57720bc39e4b181450d1f78518123399}} 
-\index{Arcade::Games::AGameModule@{Arcade::Games::AGameModule}!displayGameOver@{displayGameOver}}
-\index{displayGameOver@{displayGameOver}!Arcade::Games::AGameModule@{Arcade::Games::AGameModule}}
-\subsubsection{\texorpdfstring{displayGameOver()}{displayGameOver()}}
-{\footnotesize\ttfamily void Arcade\+::\+Games\+::\+A\+Game\+Module\+::display\+Game\+Over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&}]{display\+Module }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+\mbox{\Hypertarget{classArcade_1_1Games_1_1AGameModule_ad3df1b3c8b78912656e5312e16a0dac5}\label{classArcade_1_1Games_1_1AGameModule_ad3df1b3c8b78912656e5312e16a0dac5}} 
+\index{Arcade::Games::AGameModule@{Arcade::Games::AGameModule}!drawGameOver@{drawGameOver}}
+\index{drawGameOver@{drawGameOver}!Arcade::Games::AGameModule@{Arcade::Games::AGameModule}}
+\subsubsection{\texorpdfstring{drawGameOver()}{drawGameOver()}}
+{\footnotesize\ttfamily void Arcade\+::\+Games\+::\+A\+Game\+Module\+::draw\+Game\+Over (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&}]{display\+Module }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
 
 
 
@@ -208,7 +208,16 @@ Implements \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_add4c3468c03cc41
 \subsubsection{\texorpdfstring{render()}{render()}}
 {\footnotesize\ttfamily void Arcade\+::\+Games\+::\+A\+Game\+Module\+::render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&}]{lib }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
+
+
 Default game implementation (out of order) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lib} & The display module that will be used to put things on a canvas. \\
+\hline
+\end{DoxyParams}
+
 
 Implements \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_afd5ec66681e77038e3d4dc17f43e1ee9}{Arcade\+::\+Games\+::\+I\+Game\+Module}}.
 

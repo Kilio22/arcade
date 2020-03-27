@@ -154,7 +154,7 @@ void Arcade::Core::displayOverlay() const
         this->displayModule->putText(this->gameModule->getLibName() + ": " + std::to_string(this->gameModule->getScore().second), 20, -(FULL_WIDTH / 2) + 75, -50);
         auto scores = this->gameModule->getBestScores();
         this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_YELLOW);
-        this->displayModule->putText("Lastest scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
+        this->displayModule->putText("Best scores: " + std::to_string(scores.size()), 20, -10, y -= 60);
         if (scores.empty())
             this->displayModule->putText("    None yet...", 20, -10, y -= 40);
         else {

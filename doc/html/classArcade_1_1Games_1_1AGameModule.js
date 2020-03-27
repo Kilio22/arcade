@@ -3,7 +3,7 @@ var classArcade_1_1Games_1_1AGameModule =
     [ "AGameModule", "classArcade_1_1Games_1_1AGameModule.html#a489ae3b9ad35cf20ee05be8e3f365a99", null ],
     [ "~AGameModule", "classArcade_1_1Games_1_1AGameModule.html#a55497e717217fe636c9ed7dc625cf150", null ],
     [ "addToBestScores", "classArcade_1_1Games_1_1AGameModule.html#a961c4a606bcc5d2ab1ead8b3c0bb3408", null ],
-    [ "displayGameOver", "classArcade_1_1Games_1_1AGameModule.html#a57720bc39e4b181450d1f78518123399", null ],
+    [ "drawGameOver", "classArcade_1_1Games_1_1AGameModule.html#ad3df1b3c8b78912656e5312e16a0dac5", null ],
     [ "getBestScores", "classArcade_1_1Games_1_1AGameModule.html#aaebba3bd5236f97cb18867fe99c7135b", null ],
     [ "getLibName", "classArcade_1_1Games_1_1AGameModule.html#a3245a3ba2eac74eadf5041bc3806ed6b", null ],
     [ "getScore", "classArcade_1_1Games_1_1AGameModule.html#a83dbf1572ae5e25174bc7b81fed7ba77", null ],
