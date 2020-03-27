@@ -65,6 +65,8 @@ namespace Arcade::Display
             std::vector<bool> _events;
             char _keyCode;
 
+            bool _shouldClose;
+
             static const std::vector<SDL_Keycode> _libKeys;
             static const std::vector<SDL_Color> _libColors;
             static const std::string _libName;

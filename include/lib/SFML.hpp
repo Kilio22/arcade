@@ -62,6 +62,8 @@ namespace Arcade::Display
             char _keyCode;
             std::unique_ptr<sf::Font> _font;
 
+            bool _shouldClose;
+
             static const std::vector<sf::Color> _libColors;
             static const std::vector<sf::Keyboard::Key> _libKeys;
     };

@@ -59,7 +59,8 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 
 Arcade::Display::SFML::SFML()
     : ADisplayModule("SFML"),
-    _window(nullptr), _currentColor(Colors::DEFAULT), _events(SystemKeys::SYSKEYS_END, false), _keyCode('\0'), _font(std::make_unique<sf::Font>())
+    _window(nullptr), _currentColor(Colors::DEFAULT), _events(SystemKeys::SYSKEYS_END, false), _keyCode('\0'), _font(std::make_unique<sf::Font>()),
+    _shouldClose(false)
 {
     if (this->_font->loadFromFile("./assets/pixelmix_bold.ttf") == false)
         throw Arcade::Exceptions::BadFileException("Cannot load font", "SFML::SFML");
@@ -121,7 +122,7 @@ bool Arcade::Display::SFML::shouldGoToMenu() const
 
 bool Arcade::Display::SFML::shouldExit() const
 {
-    return this->_events.at(SystemKeys::ESCAPE);
+    return this->_events.at(SystemKeys::ESCAPE) || this->_shouldClose;
 }
 
 bool Arcade::Display::SFML::isKeyPressed(Keys key) const
@@ -151,6 +152,8 @@ void Arcade::Display::SFML::update()
     this->_events.assign(SystemKeys::SYSKEYS_END, false);
     this->_keyCode = '\0';
     while (this->_window->pollEvent(event)) {
+        if (event.type == sf::Event::Closed)
+            this->_shouldClose = true;
         if (event.type == sf::Event::KeyPressed) {
             auto found = std::find(this->_libKeys.begin(),this->_libKeys.end(), event.key.code);
             if (found != this->_libKeys.end())

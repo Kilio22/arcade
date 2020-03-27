@@ -66,7 +66,8 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 
 Arcade::Display::SDL::SDL()
     : ADisplayModule("SDL"),
-    _window(nullptr), _currentColor(Colors::DEFAULT), _events(SystemKeys::SYSKEYS_END, false), _keyCode('\0')
+    _window(nullptr), _currentColor(Colors::DEFAULT), _events(SystemKeys::SYSKEYS_END, false), _keyCode('\0'),
+    _shouldClose(false)
 {
 }
 
@@ -142,7 +143,7 @@ bool Arcade::Display::SDL::shouldGoToMenu() const
 
 bool Arcade::Display::SDL::shouldExit() const
 {
-    return this->_events.at(SystemKeys::ESCAPE);
+    return this->_events.at(SystemKeys::ESCAPE) || this->_shouldClose;
 }
 
 bool Arcade::Display::SDL::isKeyPressed(IDisplayModule::Keys key) const
@@ -176,6 +177,10 @@ void Arcade::Display::SDL::update()
     this->_events.assign(SystemKeys::SYSKEYS_END, false);
     this->_keyCode = '\0';
     while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_WINDOWEVENT) {
+            if (event.window.event == SDL_WINDOWEVENT_CLOSE)
+                this->_shouldClose = true;
+        }
         if (event.type == SDL_KEYDOWN) {
             auto found = std::find(this->_libKeys.begin(), this->_libKeys.end(), event.key.keysym.sym);
             if (found != this->_libKeys.end()) {
