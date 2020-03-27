@@ -10,11 +10,11 @@
 
 const std::string Arcade::Games::Pacman::_mapPath = "./src/games/Pacman/maze.txt";
 
-const std::vector<std::pair<float, float>> Arcade::Games::Pacman::_monstersPositions = {
-    {307, 220},
-    {322, 220},
-    {307, 234},
-    {322, 234}
+const std::vector<std::tuple<float, float, Arcade::Display::IDisplayModule::Colors>> Arcade::Games::Pacman::_monstersPositions = {
+    {307, 220, Arcade::Display::IDisplayModule::Colors::LIGHT_BLUE},
+    {322, 220, Arcade::Display::IDisplayModule::Colors::LIGHT_CYAN},
+    {307, 234, Arcade::Display::IDisplayModule::Colors::LIGHT_GREEN},
+    {322, 234, Arcade::Display::IDisplayModule::Colors::LIGHT_GRAY}
 };
 
 
@@ -71,20 +71,24 @@ void Arcade::Games::Pacman::update(const Arcade::Display::IDisplayModule &displa
 
 void Arcade::Games::Pacman::updatePacmanDirection(const Arcade::Display::IDisplayModule &displayModule)
 {
-    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::Z)
-    || displayModule.isKeyPressedOnce(Display::IDisplayModule::UP)) {
+    if ((displayModule.isKeyPressed(Arcade::Display::IDisplayModule::Keys::Z)
+      || displayModule.isKeyPressed(Display::IDisplayModule::UP))
+    && this->canMove(this->_pacman.first.x, this->_pacman.first.y - 15) == true) {
         this->_pacman.second = Direction::UP;
     }
-    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::S)
-    || displayModule.isKeyPressedOnce(Display::IDisplayModule::DOWN)) {
+    if ((displayModule.isKeyPressed(Arcade::Display::IDisplayModule::Keys::S)
+      || displayModule.isKeyPressed(Display::IDisplayModule::DOWN))
+    && this->canMove(this->_pacman.first.x, this->_pacman.first.y + 15) == true) {
         this->_pacman.second = Direction::DOWN;
     }
-    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::D)
-    || displayModule.isKeyPressedOnce(Display::IDisplayModule::RIGHT)) {
+    if ((displayModule.isKeyPressed(Arcade::Display::IDisplayModule::Keys::D)
+      || displayModule.isKeyPressed(Display::IDisplayModule::RIGHT))
+    && this->canMove(this->_pacman.first.x + 15, this->_pacman.first.y) == true) {
         this->_pacman.second = Direction::RIGHT;
     }
-    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::Q)
-    || displayModule.isKeyPressedOnce(Display::IDisplayModule::LEFT)) {
+    if ((displayModule.isKeyPressed(Arcade::Display::IDisplayModule::Keys::Q)
+      || displayModule.isKeyPressed(Display::IDisplayModule::LEFT))
+    && this->canMove(this->_pacman.first.x - 15, this->_pacman.first.y) == true) {
         this->_pacman.second = Direction::LEFT;
     }
 }
@@ -200,7 +204,7 @@ void Arcade::Games::Pacman::generateMonsters(void)
     if (this->_monsters.size() != 4) {
         for (size_t i = this->_monsters.size(); i < 4; i++) {
             int monsterPosition = std::rand() % this->_monstersPositions.size();
-            this->_monsters.push_back({{this->_monstersPositions[monsterPosition].first, this->_monstersPositions[monsterPosition].first, 4, static_cast<Arcade::Display::IDisplayModule::Colors>(std::rand() % Arcade::Display::IDisplayModule::Colors::COLORS_END)}, Direction::UP});
+            this->_monsters.push_back({{std::get<0>(this->_monstersPositions[monsterPosition]), std::get<1>(this->_monstersPositions[monsterPosition]), 4, static_cast<Arcade::Display::IDisplayModule::Colors>(std::get<2>(this->_monstersPositions[monsterPosition]))}, Direction::UP});
         }
     }
 }
@@ -263,7 +267,7 @@ void Arcade::Games::Pacman::initMaze(void)
     bool hasWall = false;
 
     if (ifs.is_open() == false)
-        throw Arcade::Exceptions::BadFileException("Cannot load pacman map.", "Pacman::Pacman");
+        throw Arcade::Exceptions::BadFileException("Cannot load pacman map.", "Pacman::initMaze");
     std::getline(ifs, line);
     int lineSize = line.size();
     ifs.clear();
@@ -293,9 +297,9 @@ void Arcade::Games::Pacman::initMaze(void)
 
 void Arcade::Games::Pacman::initEntities(void)
 {
-    this->_monsters.push_back({{this->_monstersPositions[0].first, this->_monstersPositions[0].second, 4, Arcade::Display::IDisplayModule::Colors::LIGHT_BLUE}, Direction::UP});
-    this->_monsters.push_back({{this->_monstersPositions[1].first, this->_monstersPositions[1].second, 4, Arcade::Display::IDisplayModule::Colors::LIGHT_CYAN}, Direction::UP});
-    this->_monsters.push_back({{this->_monstersPositions[2].first, this->_monstersPositions[2].second, 4, Arcade::Display::IDisplayModule::Colors::LIGHT_GREEN}, Direction::UP});
-    this->_monsters.push_back({{this->_monstersPositions[3].first, this->_monstersPositions[3].second, 4, Arcade::Display::IDisplayModule::Colors::LIGHT_GRAY}, Direction::UP});
+    this->_monsters.push_back({{std::get<0>(this->_monstersPositions[0]), std::get<1>(this->_monstersPositions[0]), 4, std::get<2>(this->_monstersPositions[0])}, Direction::UP});
+    this->_monsters.push_back({{std::get<0>(this->_monstersPositions[1]), std::get<1>(this->_monstersPositions[1]), 4, std::get<2>(this->_monstersPositions[1])}, Direction::UP});
+    this->_monsters.push_back({{std::get<0>(this->_monstersPositions[2]), std::get<1>(this->_monstersPositions[2]), 4, std::get<2>(this->_monstersPositions[2])}, Direction::UP});
+    this->_monsters.push_back({{std::get<0>(this->_monstersPositions[3]), std::get<1>(this->_monstersPositions[3]), 4, std::get<2>(this->_monstersPositions[3])}, Direction::UP});
     this->_pacman = {{322, 355, 4, Arcade::Display::IDisplayModule::Colors::YELLOW}, Direction::UP};
 }

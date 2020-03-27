@@ -62,7 +62,7 @@ namespace Arcade::Games
             bool _canEatMonsters;
 
             static const std::string _mapPath;
-            static const std::vector<std::pair<float, float>> _monstersPositions;
+            static const std::vector<std::tuple<float, float, Display::IDisplayModule::Colors>> _monstersPositions;
     };
 }
 
