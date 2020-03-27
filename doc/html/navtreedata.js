@@ -46,7 +46,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"namespaceArcade_1_1Games.html"
+"namespaceArcade_1_1Display.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
