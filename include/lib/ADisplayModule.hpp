@@ -26,6 +26,10 @@ namespace Arcade::Display
                 ESCAPE = Keys::KEYS_END,
                 M,
                 R,
+                F1,
+                F2,
+                F3,
+                F4,
                 SYSKEYS_END
             };
 

@@ -71,16 +71,20 @@ void Arcade::Games::Pacman::update(const Arcade::Display::IDisplayModule &displa
 
 void Arcade::Games::Pacman::updatePacmanDirection(const Arcade::Display::IDisplayModule &displayModule)
 {
-    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::Z)) {
+    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::Z)
+    || displayModule.isKeyPressedOnce(Display::IDisplayModule::UP)) {
         this->_pacman.second = Direction::UP;
     }
-    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::S)) {
+    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::S)
+    || displayModule.isKeyPressedOnce(Display::IDisplayModule::DOWN)) {
         this->_pacman.second = Direction::DOWN;
     }
-    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::D)) {
+    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::D)
+    || displayModule.isKeyPressedOnce(Display::IDisplayModule::RIGHT)) {
         this->_pacman.second = Direction::RIGHT;
     }
-    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::Q)) {
+    if (displayModule.isKeyPressedOnce(Arcade::Display::IDisplayModule::Keys::Q)
+    || displayModule.isKeyPressedOnce(Display::IDisplayModule::LEFT)) {
         this->_pacman.second = Direction::LEFT;
     }
 }

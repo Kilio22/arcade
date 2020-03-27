@@ -81,10 +81,12 @@ void Arcade::Core::menuEvents()
         Logger::log(Logger::DEBUG, "Selected game: ", this->gameModule->getLibName(), " [", this->iGame, "]");
         return;
     }
-    if (this->displayModule->switchToNextGame() == true) {
+    if (this->displayModule->switchToNextGame() == true
+    || this->displayModule->isKeyPressedOnce(Display::IDisplayModule::Keys::UP) == true) {
         this->iGame = (this->iGame + 1) % this->games.size();
     }
-    if (this->displayModule->switchToPreviousGame() == true) {
+    if (this->displayModule->switchToPreviousGame() == true
+    || this->displayModule->isKeyPressedOnce(Display::IDisplayModule::Keys::DOWN) == true) {
         --this->iGame;
         if (this->iGame < 0)
             this->iGame = this->games.size() - 1;
@@ -102,10 +104,11 @@ void Arcade::Core::menuEvents()
 
 void Arcade::Core::menuDisplay() const
 {
+    int y = 0;
+
     this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_BLUE);
     this->displayModule->putFillRect(0, 0, WIDTH, HEIGHT);
     this->displayModule->setColor(Display::IDisplayModule::Colors::CYAN);
-    int y = 0;
     for (int i = this->games.size() - 1; i >= 0; --i) {
         if (this->iGame == i)
             this->displayModule->setColor(Display::IDisplayModule::Colors::BLUE);
@@ -178,13 +181,13 @@ void Arcade::Core::displayControls() const
     this->displayModule->putText(str, 15, -1350, y -= 30);
     sprintf(str, "%39s", "Press M to go back to the menu.");
     this->displayModule->putText(str, 15, -1350, y -= 30);
-    sprintf(str, "%39s", "Press DOWN to use the previous game.");
+    sprintf(str, "%39s", "Press F1 to use the previous library.");
     this->displayModule->putText(str, 15, -1350, y -= 30);
-    sprintf(str, "%39s", "Press UP to use the next game.");
+    sprintf(str, "%39s", "Press F2 to use the next library.");
     this->displayModule->putText(str, 15, -1350, y -= 30);
-    sprintf(str, "%39s", "Press LEFT to use the previous library.");
+    sprintf(str, "%39s", "Press F3 to use the previous game.");
     this->displayModule->putText(str, 15, -1350, y -= 30);
-    sprintf(str, "%39s", "Press RIGHT to use the next library.");
+    sprintf(str, "%39s", "Press F4 to use the next game.");
     this->displayModule->putText(str, 15, -1350, y -= 30);
 }
 

@@ -57,6 +57,10 @@ const std::vector<SDL_Keycode> Arcade::Display::SDL::_libKeys =
     SDLK_ESCAPE,
     SDLK_m,
     SDLK_r,
+    SDLK_F1,
+    SDLK_F2,
+    SDLK_F3,
+    SDLK_F4,
 };
 
 extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
@@ -113,22 +117,22 @@ bool Arcade::Display::SDL::isOpen() const
 
 bool Arcade::Display::SDL::switchToNextLib() const
 {
-    return this->_events.at(Keys::RIGHT);
+    return this->_events.at(SystemKeys::F2);
 }
 
 bool Arcade::Display::SDL::switchToPreviousLib() const
 {
-    return this->_events.at(Keys::LEFT);
+    return this->_events.at(SystemKeys::F1);
 }
 
 bool Arcade::Display::SDL::switchToNextGame() const
 {
-    return this->_events.at(Keys::UP);
+    return this->_events.at(SystemKeys::F4);
 }
 
 bool Arcade::Display::SDL::switchToPreviousGame() const
 {
-    return this->_events.at(Keys::DOWN);
+    return this->_events.at(SystemKeys::F3);
 }
 
 bool Arcade::Display::SDL::shouldBeRestarted() const

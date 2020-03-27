@@ -69,13 +69,21 @@ void Arcade::Games::Nibbler::update(const Arcade::Display::IDisplayModule &displ
 
 void Arcade::Games::Nibbler::updateDirection(const Arcade::Display::IDisplayModule &displayModule)
 {
-    if (displayModule.isKeyPressedOnce(Display::IDisplayModule::Q) && this->lastDirection != RIGHT) {
+    if ((displayModule.isKeyPressedOnce(Display::IDisplayModule::Q)
+      || displayModule.isKeyPressedOnce(Display::IDisplayModule::LEFT))
+    && this->lastDirection != RIGHT) {
         this->direction = LEFT;
-    } else if (displayModule.isKeyPressedOnce(Display::IDisplayModule::D) && this->lastDirection != LEFT) {
+    } else if ((displayModule.isKeyPressedOnce(Display::IDisplayModule::D)
+      || displayModule.isKeyPressedOnce(Display::IDisplayModule::RIGHT))
+    && this->lastDirection != LEFT) {
         this->direction = RIGHT;
-    } else if (displayModule.isKeyPressedOnce(Display::IDisplayModule::Z) && this->lastDirection != DOWN) {
+    } else if ((displayModule.isKeyPressedOnce(Display::IDisplayModule::Z)
+      || displayModule.isKeyPressedOnce(Display::IDisplayModule::UP))
+    && this->lastDirection != DOWN) {
         this->direction = UP;
-    } else if (displayModule.isKeyPressedOnce(Display::IDisplayModule::S) && this->lastDirection != UP) {
+    } else if ((displayModule.isKeyPressedOnce(Display::IDisplayModule::S)
+      || displayModule.isKeyPressedOnce(Display::IDisplayModule::DOWN))
+    && this->lastDirection != UP) {
         this->direction = DOWN;
     }
 }

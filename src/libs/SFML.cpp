@@ -50,6 +50,10 @@ const std::vector<sf::Keyboard::Key> Arcade::Display::SFML::_libKeys = {
     sf::Keyboard::Escape,
     sf::Keyboard::M,
     sf::Keyboard::R,
+    sf::Keyboard::F1,
+    sf::Keyboard::F2,
+    sf::Keyboard::F3,
+    sf::Keyboard::F4,
 };
 
 extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
@@ -92,22 +96,22 @@ bool Arcade::Display::SFML::isOpen() const
 
 bool Arcade::Display::SFML::switchToNextLib() const
 {
-    return this->_events.at(Keys::RIGHT);
+    return this->_events.at(SystemKeys::F1);
 }
 
 bool Arcade::Display::SFML::switchToPreviousLib() const
 {
-    return this->_events.at(Keys::LEFT);
+    return this->_events.at(SystemKeys::F2);
 }
 
 bool Arcade::Display::SFML::switchToNextGame() const
 {
-    return this->_events.at(Keys::UP);
+    return this->_events.at(SystemKeys::F3);
 }
 
 bool Arcade::Display::SFML::switchToPreviousGame() const
 {
-    return this->_events.at(Keys::DOWN);
+    return this->_events.at(SystemKeys::F4);
 }
 
 bool Arcade::Display::SFML::shouldBeRestarted() const
