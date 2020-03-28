@@ -5,6 +5,8 @@
 ** Libcaca
 */
 
+#include <algorithm>
+#include <unistd.h>
 #include "lib/Ncurses.hpp"
 #include "Exceptions/BadInstanciationException.hpp"
 
@@ -13,11 +15,290 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
     return std::make_unique<Arcade::Display::Ncurses>();
 }
 
+const std::vector<int> Arcade::Display::Ncurses::_libKeys = {
+    KEY_LEFT,
+    KEY_RIGHT,
+    KEY_UP,
+    KEY_DOWN,
+    'z',
+    'q',
+    's',
+    'd',
+    'a',
+    'e',
+    'w',
+    'x',
+    ' ',
+    'j',
+    'k',
+    'u',
+    'i',
+    '\n',
+    27, // ESCAPE
+    'm',
+    'r',
+    265, // F1
+    266, // F2
+    267, // F3
+    268, // F4
+};
+
+const std::vector<std::pair<int, int>> Arcade::Display::Ncurses::_colorsToInit = {
+    {COLOR_BLACK, COLOR_BLACK},
+    {COLOR_BLACK, COLOR_BLACK},
+    {COLOR_RED, COLOR_RED},
+    {COLOR_GREEN, COLOR_GREEN},
+    {COLOR_YELLOW, COLOR_YELLOW},
+    {COLOR_BLUE, COLOR_BLUE},
+    {COLOR_MAGENTA, COLOR_MAGENTA},
+    {COLOR_CYAN, COLOR_CYAN},
+    {8, 8},
+    {8, 8},
+    {12, 12},
+    {10, 10},
+    {14, 14},
+    {9, COLOR_CYAN},
+    {11, 11},
+    {15, 15},
+    {COLOR_BLACK, COLOR_BLACK},
+    {COLOR_BLACK, COLOR_BLACK},
+    {COLOR_RED, COLOR_BLACK},
+    {COLOR_GREEN, COLOR_BLACK},
+    {COLOR_YELLOW, COLOR_BLACK},
+    {COLOR_BLUE, COLOR_BLACK},
+    {COLOR_MAGENTA, COLOR_BLACK},
+    {COLOR_CYAN, COLOR_BLACK},
+    {8, COLOR_BLACK},
+    {8, COLOR_BLACK},
+    {12, COLOR_BLACK},
+    {10, COLOR_BLACK},
+    {14, COLOR_BLACK},
+    {9, COLOR_BLACK},
+    {11, COLOR_BLACK},
+    {15, COLOR_BLACK}
+};
+
 Arcade::Display::Ncurses::Ncurses()
-    : ADisplayModule("Ncurses")
+    : ADisplayModule("Ncurses"), _events(SystemKeys::SYSKEYS_END, false), _currentColor(Colors::DEFAULT)
 {
 }
 
 Arcade::Display::Ncurses::~Ncurses()
 {
+    endwin();
+}
+
+void Arcade::Display::Ncurses::reset()
+{
+
+}
+
+void Arcade::Display::Ncurses::open()
+{
+    int i = 1;
+
+    initscr();
+    if (has_colors() == false) {
+        endwin();
+        throw Arcade::Exceptions::BadInstanciationException("This terminal does not have colors.", "Ncurses::open");
+    }
+    noecho();
+    curs_set(0);
+    keypad(stdscr, true);
+    timeout(1000 / 60);
+    start_color();
+    for (auto const &value : this->_colorsToInit) {
+        init_pair(i, value.first, value.second);
+        i++;
+    }
+}
+
+bool Arcade::Display::Ncurses::isOpen() const
+{
+    return true;
+}
+
+bool Arcade::Display::Ncurses::switchToNextLib() const
+{
+    return this->_events.at(SystemKeys::F1);
+}
+
+bool Arcade::Display::Ncurses::switchToPreviousLib() const
+{
+    return this->_events.at(SystemKeys::F2);
+}
+
+bool Arcade::Display::Ncurses::switchToNextGame() const
+{
+    return this->_events.at(SystemKeys::F3);
+}
+
+bool Arcade::Display::Ncurses::switchToPreviousGame() const
+{
+    return this->_events.at(SystemKeys::F4);
+}
+
+bool Arcade::Display::Ncurses::shouldBeRestarted() const
+{
+    return this->_events.at(SystemKeys::R);
+}
+
+bool Arcade::Display::Ncurses::shouldGoToMenu() const
+{
+    return this->_events.at(SystemKeys::M);
+}
+
+bool Arcade::Display::Ncurses::shouldExit() const
+{
+    return this->_events.at(SystemKeys::ESCAPE);
+}
+
+bool Arcade::Display::Ncurses::isKeyPressed(IDisplayModule::Keys key) const
+{
+    return this->_events.at(key);
+}
+
+bool Arcade::Display::Ncurses::isKeyPressedOnce(IDisplayModule::Keys key) const
+{
+    return this->_events.at(key);
+}
+
+float Arcade::Display::Ncurses::getDelta() const
+{
+    return 1;
+}
+
+void Arcade::Display::Ncurses::clear() const
+{
+    wclear(stdscr);
+}
+
+void Arcade::Display::Ncurses::update()
+{
+    int key = getch();
+
+    this->_keyCode = '\0';
+    this->_events.assign(SystemKeys::SYSKEYS_END, false);
+    if (key == ERR)
+        return;
+    this->_keyCode = key;
+    auto found = std::find(this->_libKeys.begin(), this->_libKeys.end(), key);
+    if (found != this->_libKeys.end())
+        this->_events[std::distance(this->_libKeys.begin(), found)] = true;
+}
+
+void Arcade::Display::Ncurses::render() const
+{
+    refresh();
+    usleep(90000);
+}
+
+char Arcade::Display::Ncurses::getKeyCode() const
+{
+    if (this->_keyCode == 263) // Equal to '\b'
+        return '\b';
+    if (this->_keyCode < ' ' || this->_keyCode > 'z')
+        return '\0';
+    return this->_keyCode;
+}
+
+void Arcade::Display::Ncurses::setColor(IDisplayModule::Colors color)
+{
+    this->_currentColor = color;
+}
+
+void Arcade::Display::Ncurses::putPixel(float x, float y) const
+{
+    this->putRect(x, y, 1, 1);
+}
+
+void Arcade::Display::Ncurses::putLine(float x1, float y1, float x2, float y2) const
+{
+    (void)x1;
+    (void)y1;
+    (void)x2;
+    (void)y2;
+}
+
+void Arcade::Display::Ncurses::putRect(float x, float y, float w, float h) const
+{
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+        attron(COLOR_PAIR(this->_currentColor + 1));
+        for (float i = 0; i <= w / 8; i++) {
+            mvprintw(y / 16, x / 8 + i, "  ");
+            mvprintw(y / 16 + h / 16, x / 8 + i, "  ");
+        }
+        for (float i = 0; i <= h / 16; i++) {
+            mvprintw(y / 16 + i, x / 8, "  ");
+            mvprintw(y / 16 + i, x / 8 + w / 8, "  ");
+        }
+        attroff(COLOR_PAIR(this->_currentColor + 1));
+    }
+    else if (x >= 0) {
+        attron(COLOR_PAIR(this->_currentColor + 1));
+        for (float i = 0; i <= w / 8; i++) {
+            mvprintw(y / 16 + LINES / 2 - 10, x / 8 + i + COLS / 2 - 40, "  ");
+            mvprintw(y / 16 + h / 16 + LINES / 2 - 10, x / 8 + i + COLS / 2 - 40, "  ");
+        }
+        for (float i = 0; i <= h / 16; i++) {
+            mvprintw(y / 16 + i + LINES / 2 - 10, x / 8  + COLS / 2 - 40, "  ");
+            mvprintw(y / 16 + i + LINES / 2 - 10, x / 8 + w / 8 + COLS / 2 - 40, "  ");
+        }
+        attroff(COLOR_PAIR(this->_currentColor + 1));
+    }
+}
+
+void Arcade::Display::Ncurses::putFillRect(float x, float y, float w, float h) const
+{
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+        attron(COLOR_PAIR(this->_currentColor + 1));
+        for (float i = 0; i < h / 16; i++) {
+            for (float j = 0; j < w / 8; j++) {
+                mvprintw(y / 16, x / 8 + j, "  ");
+            }
+        }
+        attroff(COLOR_PAIR(this->_currentColor + 1));
+    }
+    else if (x >= 0) {
+        attron(COLOR_PAIR(this->_currentColor + 1));
+        for (float i = 0; i < h / 16; i++) {
+            for (float j = 0; j < w / 8; j++) {
+                mvprintw(y / 16 + i + LINES / 2 - 10, x / 8 + j + COLS / 2 - 40, "  ");
+            }
+        }
+        attroff(COLOR_PAIR(this->_currentColor + 1));
+    }
+}
+
+void Arcade::Display::Ncurses::putCircle(float x, float y, float rad) const
+{
+    (void)x;
+    (void)y;
+    (void)rad;
+}
+
+void Arcade::Display::Ncurses::putFillCircle(float x, float y, float rad) const
+{
+    (void)x;
+    (void)y;
+    (void)rad;
+}
+
+void Arcade::Display::Ncurses::putText(const std::string &text, unsigned int, float x, float y) const
+{
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+        attron(COLOR_PAIR(this->_currentColor + COLORS_END));
+        mvprintw(y / 16, x / 8, text.c_str());
+        attroff(COLOR_PAIR(this->_currentColor + COLORS_END));
+    } else if (x >= 0) {
+        attron(COLOR_PAIR(this->_currentColor + COLORS_END));
+        mvprintw(y / 16 + LINES / 2 - 10, x / 8 + COLS / 2 - 40, text.c_str());
+        attroff(COLOR_PAIR(this->_currentColor + COLORS_END));
+    }
 }
