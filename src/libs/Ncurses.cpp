@@ -7,6 +7,7 @@
 
 #include <algorithm>
 #include <unistd.h>
+#include <math.h>
 #include "lib/Ncurses.hpp"
 #include "Exceptions/BadInstanciationException.hpp"
 
@@ -44,38 +45,40 @@ const std::vector<int> Arcade::Display::Ncurses::_libKeys = {
 };
 
 const std::vector<std::pair<int, int>> Arcade::Display::Ncurses::_colorsToInit = {
-    {COLOR_BLACK, COLOR_BLACK},
-    {COLOR_BLACK, COLOR_BLACK},
-    {COLOR_RED, COLOR_RED},
-    {COLOR_GREEN, COLOR_GREEN},
-    {COLOR_YELLOW, COLOR_YELLOW},
-    {COLOR_BLUE, COLOR_BLUE},
-    {COLOR_MAGENTA, COLOR_MAGENTA},
-    {COLOR_CYAN, COLOR_CYAN},
-    {8, 8},
-    {8, 8},
-    {12, 12},
-    {10, 10},
-    {14, 14},
-    {9, COLOR_CYAN},
-    {11, 11},
-    {15, 15},
-    {COLOR_BLACK, COLOR_BLACK},
-    {COLOR_BLACK, COLOR_BLACK},
-    {COLOR_RED, COLOR_BLACK},
-    {COLOR_GREEN, COLOR_BLACK},
-    {COLOR_YELLOW, COLOR_BLACK},
-    {COLOR_BLUE, COLOR_BLACK},
-    {COLOR_MAGENTA, COLOR_BLACK},
-    {COLOR_CYAN, COLOR_BLACK},
-    {8, COLOR_BLACK},
-    {8, COLOR_BLACK},
-    {12, COLOR_BLACK},
-    {10, COLOR_BLACK},
-    {14, COLOR_BLACK},
-    {9, COLOR_BLACK},
-    {11, COLOR_BLACK},
-    {15, COLOR_BLACK}
+    {COLOR_BLACK, COLOR_BLACK}, // DEFAULT
+    {COLOR_BLACK, COLOR_BLACK}, // BLACK
+    {COLOR_RED, COLOR_RED}, // RED
+    {COLOR_GREEN, COLOR_GREEN}, // GREEN
+    {COLOR_YELLOW, COLOR_YELLOW}, // YELLOW
+    {COLOR_BLUE, COLOR_BLUE}, // BLUE
+    {COLOR_MAGENTA, COLOR_MAGENTA}, // MAGENTA
+    {COLOR_CYAN, COLOR_CYAN}, // CYAN
+    {COLOR_WHITE, COLOR_WHITE}, // LIGHT GRAY
+    {COLOR_WHITE, COLOR_WHITE}, // DARK GRAY
+    {COLOR_RED, COLOR_RED}, // LIGHT RED
+    {COLOR_GREEN, COLOR_GREEN}, // LIGHT GREEN
+    {COLOR_YELLOW, COLOR_YELLOW}, // LIGHT YELLOW
+    {COLOR_BLUE, COLOR_BLUE}, // LIGHT BLUE
+    {COLOR_MAGENTA, COLOR_MAGENTA}, // LIGHT MAGENTA
+    {COLOR_CYAN, COLOR_CYAN}, // LIGHT CYAN
+    {COLOR_WHITE, COLOR_WHITE}, // WHITE
+    {COLOR_BLACK, COLOR_BLACK}, // DEFAULT
+    {COLOR_BLACK, COLOR_BLACK}, // BLACK
+    {COLOR_RED, COLOR_BLACK}, // RED
+    {COLOR_GREEN, COLOR_BLACK}, // GREEN
+    {COLOR_YELLOW, COLOR_BLACK}, // YELLOW
+    {COLOR_BLUE, COLOR_BLACK}, // BLUE
+    {COLOR_MAGENTA, COLOR_BLACK}, // MAGENTA
+    {COLOR_CYAN, COLOR_BLACK}, // CYAN
+    {COLOR_WHITE, COLOR_BLACK}, // LIGHT GRAY
+    {COLOR_WHITE, COLOR_BLACK}, // DARK GRAY
+    {COLOR_RED, COLOR_BLACK}, // RED
+    {COLOR_GREEN, COLOR_BLACK}, // GREEN
+    {COLOR_YELLOW, COLOR_BLACK}, // YELLOW
+    {COLOR_BLUE, COLOR_BLACK}, // BLUE
+    {COLOR_MAGENTA, COLOR_BLACK}, // MAGENTA
+    {COLOR_CYAN, COLOR_BLACK}, // CYAN
+    {COLOR_WHITE, COLOR_BLACK} // WHITE
 };
 
 Arcade::Display::Ncurses::Ncurses()
@@ -120,22 +123,22 @@ bool Arcade::Display::Ncurses::isOpen() const
 
 bool Arcade::Display::Ncurses::switchToNextLib() const
 {
-    return this->_events.at(SystemKeys::F1);
+    return this->_events.at(SystemKeys::F2);
 }
 
 bool Arcade::Display::Ncurses::switchToPreviousLib() const
 {
-    return this->_events.at(SystemKeys::F2);
+    return this->_events.at(SystemKeys::F1);
 }
 
 bool Arcade::Display::Ncurses::switchToNextGame() const
 {
-    return this->_events.at(SystemKeys::F3);
+    return this->_events.at(SystemKeys::F4);
 }
 
 bool Arcade::Display::Ncurses::switchToPreviousGame() const
 {
-    return this->_events.at(SystemKeys::F4);
+    return this->_events.at(SystemKeys::F3);
 }
 
 bool Arcade::Display::Ncurses::shouldBeRestarted() const
@@ -214,14 +217,20 @@ void Arcade::Display::Ncurses::putPixel(float x, float y) const
 
 void Arcade::Display::Ncurses::putLine(float x1, float y1, float x2, float y2) const
 {
-    (void)x1;
-    (void)y1;
-    (void)x2;
-    (void)y2;
+    float dx = x2 - x1;
+    float dy = y2 - y1;
+    float y = 0;
+
+    for (float i = x1; i < x2; i++) {
+        y = y1 + dy * (i - x1) / dx;
+        this->putPixel(i, y);
+    }
 }
 
 void Arcade::Display::Ncurses::putRect(float x, float y, float w, float h) const
 {
+    if (w < 32 || h < 32)
+        return this->putFillRect(x, y, w, h);
     if (x < 0) {
         x *= -1;
         y *= -1;
@@ -235,15 +244,14 @@ void Arcade::Display::Ncurses::putRect(float x, float y, float w, float h) const
             mvprintw(y / 16 + i, x / 8 + w / 8, "  ");
         }
         attroff(COLOR_PAIR(this->_currentColor + 1));
-    }
-    else if (x >= 0) {
+    } else if (x >= 0) {
         attron(COLOR_PAIR(this->_currentColor + 1));
         for (float i = 0; i <= w / 8; i++) {
             mvprintw(y / 16 + LINES / 2 - 10, x / 8 + i + COLS / 2 - 40, "  ");
             mvprintw(y / 16 + h / 16 + LINES / 2 - 10, x / 8 + i + COLS / 2 - 40, "  ");
         }
         for (float i = 0; i <= h / 16; i++) {
-            mvprintw(y / 16 + i + LINES / 2 - 10, x / 8  + COLS / 2 - 40, "  ");
+            mvprintw(y / 16 + i + LINES / 2 - 10, x / 8 + COLS / 2 - 40, "  ");
             mvprintw(y / 16 + i + LINES / 2 - 10, x / 8 + w / 8 + COLS / 2 - 40, "  ");
         }
         attroff(COLOR_PAIR(this->_currentColor + 1));
@@ -274,31 +282,55 @@ void Arcade::Display::Ncurses::putFillRect(float x, float y, float w, float h) c
     }
 }
 
-void Arcade::Display::Ncurses::putCircle(float x, float y, float rad) const
+void Arcade::Display::Ncurses::putCircle(float x, float y, float) const
 {
-    (void)x;
-    (void)y;
-    (void)rad;
+    attr_t newColor = COLOR_PAIR(this->_currentColor + COLORS_END + 1);
+
+    if (this->_currentColor + COLORS_END + 1 > 26)
+        newColor |= A_BOLD;
+    attron(newColor);
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+        mvprintw(y / 16, x / 8, "o");
+    } else {
+        mvprintw(y / 16 + LINES / 2 - 10, x / 8 + COLS / 2 - 40, "o");
+    }
+    attroff(newColor);
 }
 
-void Arcade::Display::Ncurses::putFillCircle(float x, float y, float rad) const
+void Arcade::Display::Ncurses::putFillCircle(float x, float y, float ) const
 {
-    (void)x;
-    (void)y;
-    (void)rad;
+    attr_t newColor = COLOR_PAIR(this->_currentColor + COLORS_END + 1);
+
+    if (this->_currentColor + COLORS_END + 1 > 26)
+        newColor |= A_BOLD;
+    attron(newColor);
+    if (x < 0) {
+        x *= -1;
+        y *= -1;
+        mvprintw(y / 16, x / 8, "o");
+    } else {
+        mvprintw(y / 16 + LINES / 2 - 10, x / 8 + COLS / 2 - 40, "o");
+    }
+    attroff(newColor);
 }
 
 void Arcade::Display::Ncurses::putText(const std::string &text, unsigned int, float x, float y) const
 {
+    attr_t newColor = COLOR_PAIR(this->_currentColor + COLORS_END + 1);
+
+    if (this->_currentColor + COLORS_END + 1 > 26)
+        newColor |= A_BOLD;
     if (x < 0) {
         x *= -1;
         y *= -1;
-        attron(COLOR_PAIR(this->_currentColor + COLORS_END));
+        attron(newColor);
         mvprintw(y / 16, x / 8, text.c_str());
-        attroff(COLOR_PAIR(this->_currentColor + COLORS_END));
+        attroff(newColor);
     } else if (x >= 0) {
-        attron(COLOR_PAIR(this->_currentColor + COLORS_END));
+        attron(newColor);
         mvprintw(y / 16 + LINES / 2 - 10, x / 8 + COLS / 2 - 40, text.c_str());
-        attroff(COLOR_PAIR(this->_currentColor + COLORS_END));
+        attroff(newColor);
     }
 }
