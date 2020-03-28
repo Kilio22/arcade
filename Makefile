@@ -126,7 +126,7 @@ ncurses: CXXFLAGS += -fPIC
 ncurses: LDLIBS = -lncurses
 ncurses: $(OBJ_NCURSES) build_ncurses
 
-sdl: NAME = lib/lib_arcade_sdl.so
+sdl: NAME = lib/lib_arcade_sdl2.so
 sdl: OBJ = $(OBJ_SDL)
 sdl: CXXFLAGS += -fPIC
 sdl: LDLIBS = -lSDL2 -lSDL2_ttf
