@@ -5,6 +5,7 @@
 ** Libcaca
 */
 
+#include <algorithm>
 #include "lib/Libcaca.hpp"
 #include "Exceptions/BadInstanciationException.hpp"
 
@@ -13,7 +14,33 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
     return std::make_unique<Arcade::Display::Libcaca>();
 }
 
-const std::string Arcade::Display::Libcaca::_libName = "Libcaca";
+const std::vector<int> Arcade::Display::Libcaca::_libKeys = {
+    CACA_KEY_LEFT,
+    CACA_KEY_RIGHT,
+    CACA_KEY_UP,
+    CACA_KEY_DOWN,
+    'z',
+    'q',
+    's',
+    'd',
+    'a',
+    'e',
+    'w',
+    'x',
+    ' ',
+    'j',
+    'k',
+    'u',
+    'i',
+    '\n',
+    CACA_KEY_ESCAPE,
+    'm',
+    'r',
+    CACA_KEY_F1,
+    CACA_KEY_F2,
+    CACA_KEY_F3,
+    CACA_KEY_F4,
+};
 
 Arcade::Display::Libcaca::Libcaca() : ADisplayModule("Libcaca"),
     _canvas(nullptr), _display(nullptr), _events(Keys::KEYS_END, false), _isOpen(false), _keyCode('\0')
@@ -79,10 +106,13 @@ bool Arcade::Display::Libcaca::shouldExit() const
     return this->_events.at(SystemKeys::ESCAPE);
 }
 
-// bool Arcade::Display::Libcaca::isKeyPressed(Keys key) const
-// {
+bool Arcade::Display::Libcaca::isKeyPressed(Keys key) const
+{
+    caca_event_t event;
 
-// }
+    int cacaKey = caca_get_event_key_ch(&event);
+    return cacaKey == key;
+}
 
 bool Arcade::Display::Libcaca::isKeyPressedOnce(Keys key) const
 {
@@ -102,12 +132,23 @@ void Arcade::Display::Libcaca::clear() const
 
 void Arcade::Display::Libcaca::update()
 {
-	caca_refresh_display(_display);
+    caca_event_t event;
+
+    this->_events.assign(SystemKeys::SYSKEYS_END, false);
+    this->_keyCode = '\0';
+    if (caca_get_event(_display, CACA_EVENT_KEY_PRESS, &event, 0) == 1) {
+        int key = caca_get_event_key_ch(&event);
+        auto found = std::find(this->_libKeys.begin(), this->_libKeys.end(), key);
+        if (found != this->_libKeys.end())
+            this->_events[std::distance(this->_libKeys.begin(), found)] = true;
+    }
 }
 
 void Arcade::Display::Libcaca::render() const
 {
-    //caca_render_canvas(_canvas,)
+	caca_refresh_display(_display);
+    usleep(90000);
+    // caca_render_canvas(_canvas,)
 }
 
 char Arcade::Display::Libcaca::getKeyCode() const

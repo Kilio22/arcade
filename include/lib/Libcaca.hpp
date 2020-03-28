@@ -59,7 +59,7 @@ namespace Arcade::Display
             bool _isOpen;
             char _keyCode;
 
-            static const std::string _libName;
+            static const std::vector<int> _libKeys;
     };
 }
 
