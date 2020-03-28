@@ -34,6 +34,11 @@ namespace Arcade::Games
             void reset() final;
 
             void update(const Arcade::Display::IDisplayModule &displayModule) final;
+
+            /**
+             * @brief Renders the Nibbler game on the display module.
+             * @param displayModule The display module that will be used to put things on a canvas.
+             */
             void render(Arcade::Display::IDisplayModule &displayModule) const final;
 
         private:

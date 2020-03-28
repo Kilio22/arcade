@@ -26,6 +26,11 @@ namespace Arcade::Games
             void reset() final;
 
             void update(const Arcade::Display::IDisplayModule &lib) final;
+
+            /**
+             * @brief Renders the Pacman game on the display module.
+             * @param displayModule The display module that will be used to put things on a canvas.
+             */
             void render(Arcade::Display::IDisplayModule &lib) const final;
 
         private:
@@ -36,6 +41,7 @@ namespace Arcade::Games
                 UP,
                 DOWN
             };
+
             void drawMaze(Arcade::Display::IDisplayModule &displayModule) const;
             void drawMonsters(Arcade::Display::IDisplayModule &displayModule) const;
             void initMaze(void);

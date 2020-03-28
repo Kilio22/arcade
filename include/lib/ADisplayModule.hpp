@@ -23,14 +23,14 @@ namespace Arcade::Display
              */
             enum SystemKeys
             {
-                ESCAPE = Keys::KEYS_END,
-                M,
-                R,
-                F1,
-                F2,
-                F3,
-                F4,
-                SYSKEYS_END
+                ESCAPE = Keys::KEYS_END, ///< Escape key
+                M, ///< M key
+                R, ///< R key
+                F1, ///< F1 key
+                F2, ///< F2 key
+                F3, ///< F3 key
+                F4, ///< F4 key
+                SYSKEYS_END ///< Key count
             };
 
         public:
