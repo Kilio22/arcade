@@ -19,7 +19,7 @@ Arcade::DLLoader< T > \- Used for dynamically loading libraries\&.
 .RI "void \fBoperator=\fP (\fBDLLoader\fP const &)=delete"
 .br
 .ti -1c
-.RI "std::vector< std::pair< std::string, std::string > > \fBgetLibraries\fP (const std::string &dirPath) const"
+.RI "std::vector< \fBDLInfos\fP > \fBgetLibraries\fP (const std::string &dirPath) const"
 .br
 .RI "Gets the available libraries in a given folder\&. "
 .ti -1c
@@ -47,7 +47,7 @@ Used for dynamically loading libraries\&.
 .PP
 \fBTemplate Parameters:\fP
 .RS 4
-\fIT\fP Library class type\&. Either IGameModule or IDisplayModule\&. 
+\fIT\fP Library class type\&. \fBEither \fBArcade::Games::IGameModule\fP or \fBArcade::Display::IDisplayModule\fP\fP\&. 
 .RE
 .PP
 
@@ -64,7 +64,7 @@ The current \fBDLLoader\fP instance\&.
 .RE
 .PP
 
-.SS "template<class T > std::vector<std::pair<std::string, std::string> > \fBArcade::DLLoader\fP< T >::getLibraries (const std::string & dirPath) const"
+.SS "template<class T > std::vector<\fBDLInfos\fP> \fBArcade::DLLoader\fP< T >::getLibraries (const std::string & dirPath) const"
 
 .PP
 Gets the available libraries in a given folder\&. 
@@ -76,7 +76,7 @@ Gets the available libraries in a given folder\&.
 .PP
 \fBReturns:\fP
 .RS 4
-std::vector<std::pair<std::string, std::string>> Vector containing [path, name] pairs\&. 
+std::vector<DLInfos> Vector containing informations about the library\&. 
 .RE
 .PP
 

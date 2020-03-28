@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Arcade::Core", "classArcade_1_1Core.html", null ],
+    [ "Arcade::DLInfos", "structArcade_1_1DLInfos.html", null ],
     [ "Arcade::DLLoader< T >", "classArcade_1_1DLLoader.html", null ],
     [ "exception", null, [
       [ "Arcade::Exceptions::ArcadeException", "classArcade_1_1Exceptions_1_1ArcadeException.html", [

@@ -1,0 +1,38 @@
+.TH "Arcade::DLInfos" 3 "Sat Mar 28 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Arcade::DLInfos \- Contains information about a given library\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DLInfos\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBpath\fP"
+.br
+.RI "Path of the library\&. "
+.ti -1c
+.RI "std::string \fBname\fP"
+.br
+.RI "Name of the library 
+.br
+\fI(\fBArcade::Games::IGameModule::getLibName\fP or \fBArcade::Display::IDisplayModule::getLibName\fP)\fP "
+.ti -1c
+.RI "std::vector< std::pair< std::string, int > > \fBscores\fP"
+.br
+.RI "For \fBArcade::Games::IGameModule\fP, vector containing the best scores \fI(obtained by \fBArcade::Games::IGameModule::getBestScores\fP)\fP\&. 
+.br
+For \fBArcade::Display::IDisplayModule\fP, \fBempty vector\fP\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Contains information about a given library\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

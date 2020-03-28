@@ -1,7 +1,7 @@
 \begin{theindex}
 
   \item {A}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {addToBestScores}
     \subitem {Arcade::Games::AGameModule}, \hyperpage{14}
   \item {ADisplayModule}
@@ -24,133 +24,134 @@
     \subitem {R}, \hyperpage{12}
     \subitem {SYSKEYS\_END}, \hyperpage{12}
     \subitem {SystemKeys}, \hyperpage{12}
-  \item {Arcade::Display::IDisplayModule}, \hyperpage{24}
-    \subitem {A}, \hyperpage{27}
-    \subitem {BLACK}, \hyperpage{26}
-    \subitem {BLUE}, \hyperpage{26}
+  \item {Arcade::Display::IDisplayModule}, \hyperpage{25}
+    \subitem {A}, \hyperpage{28}
+    \subitem {BLACK}, \hyperpage{28}
+    \subitem {BLUE}, \hyperpage{28}
     \subitem {Colors}, \hyperpage{26}
-    \subitem {COLORS\_END}, \hyperpage{26}
-    \subitem {CYAN}, \hyperpage{26}
-    \subitem {D}, \hyperpage{27}
-    \subitem {DARK\_GRAY}, \hyperpage{26}
-    \subitem {DEFAULT}, \hyperpage{26}
-    \subitem {DOWN}, \hyperpage{27}
-    \subitem {E}, \hyperpage{27}
-    \subitem {ENTER}, \hyperpage{27}
-    \subitem {getDelta}, \hyperpage{27}
-    \subitem {getKeyCode}, \hyperpage{27}
-    \subitem {getLibName}, \hyperpage{27}
-    \subitem {GREEN}, \hyperpage{26}
-    \subitem {I}, \hyperpage{27}
-    \subitem {isKeyPressed}, \hyperpage{28}
-    \subitem {isKeyPressedOnce}, \hyperpage{28}
-    \subitem {isOpen}, \hyperpage{29}
-    \subitem {J}, \hyperpage{27}
-    \subitem {K}, \hyperpage{27}
-    \subitem {Keys}, \hyperpage{26}
-    \subitem {KEYS\_END}, \hyperpage{27}
-    \subitem {LEFT}, \hyperpage{26}
-    \subitem {LIGHT\_BLUE}, \hyperpage{26}
-    \subitem {LIGHT\_CYAN}, \hyperpage{26}
-    \subitem {LIGHT\_GRAY}, \hyperpage{26}
-    \subitem {LIGHT\_GREEN}, \hyperpage{26}
-    \subitem {LIGHT\_MAGENTA}, \hyperpage{26}
-    \subitem {LIGHT\_RED}, \hyperpage{26}
-    \subitem {LIGHT\_YELLOW}, \hyperpage{26}
-    \subitem {MAGENTA}, \hyperpage{26}
-    \subitem {putCircle}, \hyperpage{29}
-    \subitem {putFillCircle}, \hyperpage{29}
-    \subitem {putFillRect}, \hyperpage{30}
-    \subitem {putLine}, \hyperpage{30}
-    \subitem {putPixel}, \hyperpage{30}
-    \subitem {putRect}, \hyperpage{31}
-    \subitem {putText}, \hyperpage{31}
-    \subitem {Q}, \hyperpage{27}
-    \subitem {RED}, \hyperpage{26}
-    \subitem {RIGHT}, \hyperpage{26}
-    \subitem {S}, \hyperpage{27}
-    \subitem {setColor}, \hyperpage{32}
-    \subitem {shouldBeRestarted}, \hyperpage{32}
-    \subitem {shouldExit}, \hyperpage{32}
-    \subitem {shouldGoToMenu}, \hyperpage{32}
-    \subitem {SPACE}, \hyperpage{27}
-    \subitem {switchToNextGame}, \hyperpage{33}
-    \subitem {switchToNextLib}, \hyperpage{33}
-    \subitem {switchToPreviousGame}, \hyperpage{33}
-    \subitem {switchToPreviousLib}, \hyperpage{34}
-    \subitem {U}, \hyperpage{27}
-    \subitem {UP}, \hyperpage{27}
-    \subitem {W}, \hyperpage{27}
-    \subitem {WHITE}, \hyperpage{26}
-    \subitem {X}, \hyperpage{27}
-    \subitem {YELLOW}, \hyperpage{26}
-    \subitem {Z}, \hyperpage{27}
-  \item {Arcade::Display::Libcaca}, \hyperpage{39}
-    \subitem {getDelta}, \hyperpage{41}
-    \subitem {getKeyCode}, \hyperpage{41}
-    \subitem {isKeyPressed}, \hyperpage{41}
-    \subitem {isKeyPressedOnce}, \hyperpage{42}
-    \subitem {isOpen}, \hyperpage{42}
-    \subitem {putCircle}, \hyperpage{42}
-    \subitem {putFillCircle}, \hyperpage{43}
-    \subitem {putFillRect}, \hyperpage{43}
-    \subitem {putLine}, \hyperpage{43}
-    \subitem {putPixel}, \hyperpage{44}
-    \subitem {putRect}, \hyperpage{44}
-    \subitem {putText}, \hyperpage{45}
-    \subitem {setColor}, \hyperpage{45}
-    \subitem {shouldBeRestarted}, \hyperpage{45}
-    \subitem {shouldExit}, \hyperpage{46}
-    \subitem {shouldGoToMenu}, \hyperpage{46}
-    \subitem {switchToNextGame}, \hyperpage{46}
-    \subitem {switchToNextLib}, \hyperpage{46}
-    \subitem {switchToPreviousGame}, \hyperpage{47}
-    \subitem {switchToPreviousLib}, \hyperpage{47}
-  \item {Arcade::Display::SDL}, \hyperpage{53}
-    \subitem {getDelta}, \hyperpage{54}
-    \subitem {getKeyCode}, \hyperpage{55}
-    \subitem {isKeyPressed}, \hyperpage{55}
-    \subitem {isKeyPressedOnce}, \hyperpage{55}
-    \subitem {isOpen}, \hyperpage{56}
-    \subitem {putCircle}, \hyperpage{56}
-    \subitem {putFillCircle}, \hyperpage{57}
-    \subitem {putFillRect}, \hyperpage{57}
-    \subitem {putLine}, \hyperpage{57}
-    \subitem {putPixel}, \hyperpage{58}
-    \subitem {putRect}, \hyperpage{58}
-    \subitem {putText}, \hyperpage{59}
-    \subitem {setColor}, \hyperpage{59}
-    \subitem {shouldBeRestarted}, \hyperpage{59}
-    \subitem {shouldExit}, \hyperpage{59}
-    \subitem {shouldGoToMenu}, \hyperpage{60}
-    \subitem {switchToNextGame}, \hyperpage{60}
-    \subitem {switchToNextLib}, \hyperpage{60}
-    \subitem {switchToPreviousGame}, \hyperpage{61}
-    \subitem {switchToPreviousLib}, \hyperpage{61}
-  \item {Arcade::Display::SFML}, \hyperpage{62}
-    \subitem {getDelta}, \hyperpage{63}
-    \subitem {getKeyCode}, \hyperpage{63}
-    \subitem {isKeyPressed}, \hyperpage{64}
-    \subitem {isKeyPressedOnce}, \hyperpage{64}
-    \subitem {isOpen}, \hyperpage{65}
-    \subitem {putCircle}, \hyperpage{65}
-    \subitem {putFillCircle}, \hyperpage{65}
-    \subitem {putFillRect}, \hyperpage{66}
-    \subitem {putLine}, \hyperpage{66}
-    \subitem {putPixel}, \hyperpage{66}
-    \subitem {putRect}, \hyperpage{67}
-    \subitem {putText}, \hyperpage{67}
-    \subitem {setColor}, \hyperpage{68}
-    \subitem {shouldBeRestarted}, \hyperpage{68}
-    \subitem {shouldExit}, \hyperpage{68}
-    \subitem {shouldGoToMenu}, \hyperpage{68}
-    \subitem {switchToNextGame}, \hyperpage{69}
-    \subitem {switchToNextLib}, \hyperpage{69}
-    \subitem {switchToPreviousGame}, \hyperpage{69}
-    \subitem {switchToPreviousLib}, \hyperpage{70}
-  \item {Arcade::DLLoader$<$ T $>$}, \hyperpage{22}
-    \subitem {getInstance}, \hyperpage{23}
-    \subitem {getLibraries}, \hyperpage{23}
+    \subitem {COLORS\_END}, \hyperpage{28}
+    \subitem {CYAN}, \hyperpage{28}
+    \subitem {D}, \hyperpage{28}
+    \subitem {DARK\_GRAY}, \hyperpage{28}
+    \subitem {DEFAULT}, \hyperpage{28}
+    \subitem {DOWN}, \hyperpage{28}
+    \subitem {E}, \hyperpage{28}
+    \subitem {ENTER}, \hyperpage{28}
+    \subitem {getDelta}, \hyperpage{29}
+    \subitem {getKeyCode}, \hyperpage{29}
+    \subitem {getLibName}, \hyperpage{29}
+    \subitem {GREEN}, \hyperpage{28}
+    \subitem {I}, \hyperpage{28}
+    \subitem {isKeyPressed}, \hyperpage{29}
+    \subitem {isKeyPressedOnce}, \hyperpage{30}
+    \subitem {isOpen}, \hyperpage{30}
+    \subitem {J}, \hyperpage{28}
+    \subitem {K}, \hyperpage{28}
+    \subitem {Keys}, \hyperpage{28}
+    \subitem {KEYS\_END}, \hyperpage{28}
+    \subitem {LEFT}, \hyperpage{28}
+    \subitem {LIGHT\_BLUE}, \hyperpage{28}
+    \subitem {LIGHT\_CYAN}, \hyperpage{28}
+    \subitem {LIGHT\_GRAY}, \hyperpage{28}
+    \subitem {LIGHT\_GREEN}, \hyperpage{28}
+    \subitem {LIGHT\_MAGENTA}, \hyperpage{28}
+    \subitem {LIGHT\_RED}, \hyperpage{28}
+    \subitem {LIGHT\_YELLOW}, \hyperpage{28}
+    \subitem {MAGENTA}, \hyperpage{28}
+    \subitem {putCircle}, \hyperpage{30}
+    \subitem {putFillCircle}, \hyperpage{31}
+    \subitem {putFillRect}, \hyperpage{31}
+    \subitem {putLine}, \hyperpage{31}
+    \subitem {putPixel}, \hyperpage{32}
+    \subitem {putRect}, \hyperpage{32}
+    \subitem {putText}, \hyperpage{33}
+    \subitem {Q}, \hyperpage{28}
+    \subitem {RED}, \hyperpage{28}
+    \subitem {RIGHT}, \hyperpage{28}
+    \subitem {S}, \hyperpage{28}
+    \subitem {setColor}, \hyperpage{33}
+    \subitem {shouldBeRestarted}, \hyperpage{33}
+    \subitem {shouldExit}, \hyperpage{34}
+    \subitem {shouldGoToMenu}, \hyperpage{34}
+    \subitem {SPACE}, \hyperpage{28}
+    \subitem {switchToNextGame}, \hyperpage{34}
+    \subitem {switchToNextLib}, \hyperpage{34}
+    \subitem {switchToPreviousGame}, \hyperpage{35}
+    \subitem {switchToPreviousLib}, \hyperpage{35}
+    \subitem {U}, \hyperpage{28}
+    \subitem {UP}, \hyperpage{28}
+    \subitem {W}, \hyperpage{28}
+    \subitem {WHITE}, \hyperpage{28}
+    \subitem {X}, \hyperpage{28}
+    \subitem {YELLOW}, \hyperpage{28}
+    \subitem {Z}, \hyperpage{28}
+  \item {Arcade::Display::Libcaca}, \hyperpage{40}
+    \subitem {getDelta}, \hyperpage{42}
+    \subitem {getKeyCode}, \hyperpage{42}
+    \subitem {isKeyPressed}, \hyperpage{42}
+    \subitem {isKeyPressedOnce}, \hyperpage{43}
+    \subitem {isOpen}, \hyperpage{43}
+    \subitem {putCircle}, \hyperpage{43}
+    \subitem {putFillCircle}, \hyperpage{44}
+    \subitem {putFillRect}, \hyperpage{44}
+    \subitem {putLine}, \hyperpage{44}
+    \subitem {putPixel}, \hyperpage{45}
+    \subitem {putRect}, \hyperpage{45}
+    \subitem {putText}, \hyperpage{46}
+    \subitem {setColor}, \hyperpage{46}
+    \subitem {shouldBeRestarted}, \hyperpage{46}
+    \subitem {shouldExit}, \hyperpage{47}
+    \subitem {shouldGoToMenu}, \hyperpage{47}
+    \subitem {switchToNextGame}, \hyperpage{47}
+    \subitem {switchToNextLib}, \hyperpage{47}
+    \subitem {switchToPreviousGame}, \hyperpage{48}
+    \subitem {switchToPreviousLib}, \hyperpage{48}
+  \item {Arcade::Display::SDL}, \hyperpage{54}
+    \subitem {getDelta}, \hyperpage{55}
+    \subitem {getKeyCode}, \hyperpage{56}
+    \subitem {isKeyPressed}, \hyperpage{56}
+    \subitem {isKeyPressedOnce}, \hyperpage{56}
+    \subitem {isOpen}, \hyperpage{57}
+    \subitem {putCircle}, \hyperpage{57}
+    \subitem {putFillCircle}, \hyperpage{58}
+    \subitem {putFillRect}, \hyperpage{58}
+    \subitem {putLine}, \hyperpage{58}
+    \subitem {putPixel}, \hyperpage{59}
+    \subitem {putRect}, \hyperpage{59}
+    \subitem {putText}, \hyperpage{60}
+    \subitem {setColor}, \hyperpage{60}
+    \subitem {shouldBeRestarted}, \hyperpage{60}
+    \subitem {shouldExit}, \hyperpage{60}
+    \subitem {shouldGoToMenu}, \hyperpage{61}
+    \subitem {switchToNextGame}, \hyperpage{61}
+    \subitem {switchToNextLib}, \hyperpage{61}
+    \subitem {switchToPreviousGame}, \hyperpage{62}
+    \subitem {switchToPreviousLib}, \hyperpage{62}
+  \item {Arcade::Display::SFML}, \hyperpage{63}
+    \subitem {getDelta}, \hyperpage{64}
+    \subitem {getKeyCode}, \hyperpage{64}
+    \subitem {isKeyPressed}, \hyperpage{65}
+    \subitem {isKeyPressedOnce}, \hyperpage{65}
+    \subitem {isOpen}, \hyperpage{66}
+    \subitem {putCircle}, \hyperpage{66}
+    \subitem {putFillCircle}, \hyperpage{66}
+    \subitem {putFillRect}, \hyperpage{67}
+    \subitem {putLine}, \hyperpage{67}
+    \subitem {putPixel}, \hyperpage{67}
+    \subitem {putRect}, \hyperpage{68}
+    \subitem {putText}, \hyperpage{68}
+    \subitem {setColor}, \hyperpage{69}
+    \subitem {shouldBeRestarted}, \hyperpage{69}
+    \subitem {shouldExit}, \hyperpage{69}
+    \subitem {shouldGoToMenu}, \hyperpage{69}
+    \subitem {switchToNextGame}, \hyperpage{70}
+    \subitem {switchToNextLib}, \hyperpage{70}
+    \subitem {switchToPreviousGame}, \hyperpage{70}
+    \subitem {switchToPreviousLib}, \hyperpage{71}
+  \item {Arcade::DLInfos}, \hyperpage{22}
+  \item {Arcade::DLLoader$<$ T $>$}, \hyperpage{23}
+    \subitem {getInstance}, \hyperpage{24}
+    \subitem {getLibraries}, \hyperpage{24}
     \subitem {loadLibrary}, \hyperpage{24}
   \item {Arcade::Exceptions}, \hyperpage{10}
   \item {Arcade::Exceptions::ArcadeException}, \hyperpage{17}
@@ -161,8 +162,8 @@
     \subitem {BadFileException}, \hyperpage{19}
   \item {Arcade::Exceptions::BadInstanciationException}, \hyperpage{20}
     \subitem {BadInstanciationException}, \hyperpage{20}
-  \item {Arcade::Exceptions::InvalidLibraryException}, \hyperpage{38}
-    \subitem {InvalidLibraryException}, \hyperpage{39}
+  \item {Arcade::Exceptions::InvalidLibraryException}, \hyperpage{39}
+    \subitem {InvalidLibraryException}, \hyperpage{40}
   \item {Arcade::Games}, \hyperpage{10}
   \item {Arcade::Games::AGameModule}, \hyperpage{13}
     \subitem {addToBestScores}, \hyperpage{14}
@@ -177,31 +178,31 @@
     \subitem {setPlayerName}, \hyperpage{17}
   \item {Arcade::Games::Centipede}, \hyperpage{21}
     \subitem {update}, \hyperpage{21}
-  \item {Arcade::Games::IGameModule}, \hyperpage{34}
-    \subitem {getBestScores}, \hyperpage{35}
-    \subitem {getLibName}, \hyperpage{35}
-    \subitem {getScore}, \hyperpage{36}
-    \subitem {loadFromFile}, \hyperpage{36}
-    \subitem {render}, \hyperpage{37}
-    \subitem {saveToFile}, \hyperpage{37}
-    \subitem {setPlayerName}, \hyperpage{38}
-    \subitem {update}, \hyperpage{38}
-  \item {Arcade::Games::Nibbler}, \hyperpage{49}
-    \subitem {render}, \hyperpage{50}
-    \subitem {update}, \hyperpage{50}
-  \item {Arcade::Games::Pacman}, \hyperpage{51}
+  \item {Arcade::Games::IGameModule}, \hyperpage{35}
+    \subitem {getBestScores}, \hyperpage{36}
+    \subitem {getLibName}, \hyperpage{36}
+    \subitem {getScore}, \hyperpage{37}
+    \subitem {loadFromFile}, \hyperpage{37}
+    \subitem {render}, \hyperpage{38}
+    \subitem {saveToFile}, \hyperpage{38}
+    \subitem {setPlayerName}, \hyperpage{39}
+    \subitem {update}, \hyperpage{39}
+  \item {Arcade::Games::Nibbler}, \hyperpage{50}
     \subitem {render}, \hyperpage{51}
-    \subitem {update}, \hyperpage{52}
-  \item {Arcade::Games::Qix}, \hyperpage{52}
+    \subitem {update}, \hyperpage{51}
+  \item {Arcade::Games::Pacman}, \hyperpage{52}
+    \subitem {render}, \hyperpage{52}
     \subitem {update}, \hyperpage{53}
-  \item {Arcade::Games::Solarfox}, \hyperpage{70}
-    \subitem {update}, \hyperpage{71}
-  \item {Arcade::Logger}, \hyperpage{47}
-    \subitem {DEBUG}, \hyperpage{48}
-    \subitem {ERROR}, \hyperpage{48}
-    \subitem {log}, \hyperpage{48}
-    \subitem {LogLevel}, \hyperpage{48}
-    \subitem {setLogLevel}, \hyperpage{49}
+  \item {Arcade::Games::Qix}, \hyperpage{53}
+    \subitem {update}, \hyperpage{54}
+  \item {Arcade::Games::Solarfox}, \hyperpage{71}
+    \subitem {update}, \hyperpage{72}
+  \item {Arcade::Logger}, \hyperpage{48}
+    \subitem {DEBUG}, \hyperpage{49}
+    \subitem {ERROR}, \hyperpage{49}
+    \subitem {log}, \hyperpage{49}
+    \subitem {LogLevel}, \hyperpage{49}
+    \subitem {setLogLevel}, \hyperpage{50}
   \item {ArcadeException}
     \subitem {Arcade::Exceptions::ArcadeException}, \hyperpage{18}
 
@@ -213,44 +214,44 @@
     \subitem {Arcade::Exceptions::BadInstanciationException}, 
 		\hyperpage{20}
   \item {BLACK}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {BLUE}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {Colors}
     \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
   \item {COLORS\_END}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {Core}
     \subitem {Arcade::Core}, \hyperpage{22}
   \item {CYAN}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {D}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {DARK\_GRAY}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {DEBUG}
-    \subitem {Arcade::Logger}, \hyperpage{48}
+    \subitem {Arcade::Logger}, \hyperpage{49}
   \item {DEFAULT}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {DOWN}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {drawGameOver}
     \subitem {Arcade::Games::AGameModule}, \hyperpage{14}
 
   \indexspace
 
   \item {E}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {ENTER}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {ERROR}
-    \subitem {Arcade::Logger}, \hyperpage{48}
+    \subitem {Arcade::Logger}, \hyperpage{49}
   \item {ESCAPE}
     \subitem {Arcade::Display::ADisplayModule}, \hyperpage{12}
 
@@ -269,217 +270,217 @@
 
   \item {getBestScores}
     \subitem {Arcade::Games::AGameModule}, \hyperpage{15}
-    \subitem {Arcade::Games::IGameModule}, \hyperpage{35}
+    \subitem {Arcade::Games::IGameModule}, \hyperpage{36}
   \item {getComponent}
     \subitem {Arcade::Exceptions::ArcadeException}, \hyperpage{18}
   \item {getDelta}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{41}
-    \subitem {Arcade::Display::SDL}, \hyperpage{54}
-    \subitem {Arcade::Display::SFML}, \hyperpage{63}
-  \item {getInstance}
-    \subitem {Arcade::DLLoader$<$ T $>$}, \hyperpage{23}
-  \item {getKeyCode}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{41}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{29}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{42}
     \subitem {Arcade::Display::SDL}, \hyperpage{55}
-    \subitem {Arcade::Display::SFML}, \hyperpage{63}
+    \subitem {Arcade::Display::SFML}, \hyperpage{64}
+  \item {getInstance}
+    \subitem {Arcade::DLLoader$<$ T $>$}, \hyperpage{24}
+  \item {getKeyCode}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{29}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{42}
+    \subitem {Arcade::Display::SDL}, \hyperpage{56}
+    \subitem {Arcade::Display::SFML}, \hyperpage{64}
   \item {getLibName}
     \subitem {Arcade::Display::ADisplayModule}, \hyperpage{12}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
-    \subitem {Arcade::Games::AGameModule}, \hyperpage{15}
-    \subitem {Arcade::Games::IGameModule}, \hyperpage{35}
-  \item {getLibraries}
-    \subitem {Arcade::DLLoader$<$ T $>$}, \hyperpage{23}
-  \item {getScore}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{29}
     \subitem {Arcade::Games::AGameModule}, \hyperpage{15}
     \subitem {Arcade::Games::IGameModule}, \hyperpage{36}
+  \item {getLibraries}
+    \subitem {Arcade::DLLoader$<$ T $>$}, \hyperpage{24}
+  \item {getScore}
+    \subitem {Arcade::Games::AGameModule}, \hyperpage{15}
+    \subitem {Arcade::Games::IGameModule}, \hyperpage{37}
   \item {GREEN}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {I}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {InvalidLibraryException}
     \subitem {Arcade::Exceptions::InvalidLibraryException}, 
-		\hyperpage{39}
+		\hyperpage{40}
   \item {isKeyPressed}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{41}
-    \subitem {Arcade::Display::SDL}, \hyperpage{55}
-    \subitem {Arcade::Display::SFML}, \hyperpage{64}
-  \item {isKeyPressedOnce}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{42}
-    \subitem {Arcade::Display::SDL}, \hyperpage{55}
-    \subitem {Arcade::Display::SFML}, \hyperpage{64}
-  \item {isOpen}
     \subitem {Arcade::Display::IDisplayModule}, \hyperpage{29}
     \subitem {Arcade::Display::Libcaca}, \hyperpage{42}
     \subitem {Arcade::Display::SDL}, \hyperpage{56}
     \subitem {Arcade::Display::SFML}, \hyperpage{65}
+  \item {isKeyPressedOnce}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{30}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{43}
+    \subitem {Arcade::Display::SDL}, \hyperpage{56}
+    \subitem {Arcade::Display::SFML}, \hyperpage{65}
+  \item {isOpen}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{30}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{43}
+    \subitem {Arcade::Display::SDL}, \hyperpage{57}
+    \subitem {Arcade::Display::SFML}, \hyperpage{66}
 
   \indexspace
 
   \item {J}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {K}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {Keys}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {KEYS\_END}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {LEFT}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {LIGHT\_BLUE}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {LIGHT\_CYAN}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {LIGHT\_GRAY}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {LIGHT\_GREEN}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {LIGHT\_MAGENTA}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {LIGHT\_RED}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {LIGHT\_YELLOW}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {loadFromFile}
     \subitem {Arcade::Games::AGameModule}, \hyperpage{15, 16}
-    \subitem {Arcade::Games::IGameModule}, \hyperpage{36}
+    \subitem {Arcade::Games::IGameModule}, \hyperpage{37}
   \item {loadLibrary}
     \subitem {Arcade::DLLoader$<$ T $>$}, \hyperpage{24}
   \item {log}
-    \subitem {Arcade::Logger}, \hyperpage{48}
+    \subitem {Arcade::Logger}, \hyperpage{49}
   \item {LogLevel}
-    \subitem {Arcade::Logger}, \hyperpage{48}
+    \subitem {Arcade::Logger}, \hyperpage{49}
 
   \indexspace
 
   \item {M}
     \subitem {Arcade::Display::ADisplayModule}, \hyperpage{12}
   \item {MAGENTA}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {putCircle}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{29}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{42}
-    \subitem {Arcade::Display::SDL}, \hyperpage{56}
-    \subitem {Arcade::Display::SFML}, \hyperpage{65}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{30}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{43}
+    \subitem {Arcade::Display::SDL}, \hyperpage{57}
+    \subitem {Arcade::Display::SFML}, \hyperpage{66}
   \item {putFillCircle}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{29}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{43}
-    \subitem {Arcade::Display::SDL}, \hyperpage{57}
-    \subitem {Arcade::Display::SFML}, \hyperpage{65}
-  \item {putFillRect}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{30}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{43}
-    \subitem {Arcade::Display::SDL}, \hyperpage{57}
-    \subitem {Arcade::Display::SFML}, \hyperpage{66}
-  \item {putLine}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{30}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{43}
-    \subitem {Arcade::Display::SDL}, \hyperpage{57}
-    \subitem {Arcade::Display::SFML}, \hyperpage{66}
-  \item {putPixel}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{30}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{31}
     \subitem {Arcade::Display::Libcaca}, \hyperpage{44}
     \subitem {Arcade::Display::SDL}, \hyperpage{58}
     \subitem {Arcade::Display::SFML}, \hyperpage{66}
-  \item {putRect}
+  \item {putFillRect}
     \subitem {Arcade::Display::IDisplayModule}, \hyperpage{31}
     \subitem {Arcade::Display::Libcaca}, \hyperpage{44}
     \subitem {Arcade::Display::SDL}, \hyperpage{58}
     \subitem {Arcade::Display::SFML}, \hyperpage{67}
-  \item {putText}
+  \item {putLine}
     \subitem {Arcade::Display::IDisplayModule}, \hyperpage{31}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{44}
+    \subitem {Arcade::Display::SDL}, \hyperpage{58}
+    \subitem {Arcade::Display::SFML}, \hyperpage{67}
+  \item {putPixel}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{32}
     \subitem {Arcade::Display::Libcaca}, \hyperpage{45}
     \subitem {Arcade::Display::SDL}, \hyperpage{59}
     \subitem {Arcade::Display::SFML}, \hyperpage{67}
+  \item {putRect}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{32}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{45}
+    \subitem {Arcade::Display::SDL}, \hyperpage{59}
+    \subitem {Arcade::Display::SFML}, \hyperpage{68}
+  \item {putText}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{33}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{46}
+    \subitem {Arcade::Display::SDL}, \hyperpage{60}
+    \subitem {Arcade::Display::SFML}, \hyperpage{68}
 
   \indexspace
 
   \item {Q}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {R}
     \subitem {Arcade::Display::ADisplayModule}, \hyperpage{12}
   \item {RED}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {render}
     \subitem {Arcade::Games::AGameModule}, \hyperpage{16}
-    \subitem {Arcade::Games::IGameModule}, \hyperpage{37}
-    \subitem {Arcade::Games::Nibbler}, \hyperpage{50}
-    \subitem {Arcade::Games::Pacman}, \hyperpage{51}
+    \subitem {Arcade::Games::IGameModule}, \hyperpage{38}
+    \subitem {Arcade::Games::Nibbler}, \hyperpage{51}
+    \subitem {Arcade::Games::Pacman}, \hyperpage{52}
   \item {RIGHT}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {S}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {saveToFile}
     \subitem {Arcade::Games::AGameModule}, \hyperpage{16, 17}
-    \subitem {Arcade::Games::IGameModule}, \hyperpage{37}
+    \subitem {Arcade::Games::IGameModule}, \hyperpage{38}
   \item {setColor}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{32}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{45}
-    \subitem {Arcade::Display::SDL}, \hyperpage{59}
-    \subitem {Arcade::Display::SFML}, \hyperpage{68}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{33}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{46}
+    \subitem {Arcade::Display::SDL}, \hyperpage{60}
+    \subitem {Arcade::Display::SFML}, \hyperpage{69}
   \item {setLogLevel}
-    \subitem {Arcade::Logger}, \hyperpage{49}
+    \subitem {Arcade::Logger}, \hyperpage{50}
   \item {setPlayerName}
     \subitem {Arcade::Games::AGameModule}, \hyperpage{17}
-    \subitem {Arcade::Games::IGameModule}, \hyperpage{38}
+    \subitem {Arcade::Games::IGameModule}, \hyperpage{39}
   \item {shouldBeRestarted}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{32}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{45}
-    \subitem {Arcade::Display::SDL}, \hyperpage{59}
-    \subitem {Arcade::Display::SFML}, \hyperpage{68}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{33}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{46}
+    \subitem {Arcade::Display::SDL}, \hyperpage{60}
+    \subitem {Arcade::Display::SFML}, \hyperpage{69}
   \item {shouldExit}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{32}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{46}
-    \subitem {Arcade::Display::SDL}, \hyperpage{59}
-    \subitem {Arcade::Display::SFML}, \hyperpage{68}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{34}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{47}
+    \subitem {Arcade::Display::SDL}, \hyperpage{60}
+    \subitem {Arcade::Display::SFML}, \hyperpage{69}
   \item {shouldGoToMenu}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{32}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{46}
-    \subitem {Arcade::Display::SDL}, \hyperpage{60}
-    \subitem {Arcade::Display::SFML}, \hyperpage{68}
-  \item {SPACE}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
-  \item {switchToNextGame}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{33}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{46}
-    \subitem {Arcade::Display::SDL}, \hyperpage{60}
-    \subitem {Arcade::Display::SFML}, \hyperpage{69}
-  \item {switchToNextLib}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{33}
-    \subitem {Arcade::Display::Libcaca}, \hyperpage{46}
-    \subitem {Arcade::Display::SDL}, \hyperpage{60}
-    \subitem {Arcade::Display::SFML}, \hyperpage{69}
-  \item {switchToPreviousGame}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{33}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{34}
     \subitem {Arcade::Display::Libcaca}, \hyperpage{47}
     \subitem {Arcade::Display::SDL}, \hyperpage{61}
     \subitem {Arcade::Display::SFML}, \hyperpage{69}
-  \item {switchToPreviousLib}
+  \item {SPACE}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
+  \item {switchToNextGame}
     \subitem {Arcade::Display::IDisplayModule}, \hyperpage{34}
     \subitem {Arcade::Display::Libcaca}, \hyperpage{47}
     \subitem {Arcade::Display::SDL}, \hyperpage{61}
     \subitem {Arcade::Display::SFML}, \hyperpage{70}
+  \item {switchToNextLib}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{34}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{47}
+    \subitem {Arcade::Display::SDL}, \hyperpage{61}
+    \subitem {Arcade::Display::SFML}, \hyperpage{70}
+  \item {switchToPreviousGame}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{35}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{48}
+    \subitem {Arcade::Display::SDL}, \hyperpage{62}
+    \subitem {Arcade::Display::SFML}, \hyperpage{70}
+  \item {switchToPreviousLib}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{35}
+    \subitem {Arcade::Display::Libcaca}, \hyperpage{48}
+    \subitem {Arcade::Display::SDL}, \hyperpage{62}
+    \subitem {Arcade::Display::SFML}, \hyperpage{71}
   \item {SYSKEYS\_END}
     \subitem {Arcade::Display::ADisplayModule}, \hyperpage{12}
   \item {SystemKeys}
@@ -488,39 +489,39 @@
   \indexspace
 
   \item {U}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {UP}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {update}
     \subitem {Arcade::Games::Centipede}, \hyperpage{21}
-    \subitem {Arcade::Games::IGameModule}, \hyperpage{38}
-    \subitem {Arcade::Games::Nibbler}, \hyperpage{50}
-    \subitem {Arcade::Games::Pacman}, \hyperpage{52}
-    \subitem {Arcade::Games::Qix}, \hyperpage{53}
-    \subitem {Arcade::Games::Solarfox}, \hyperpage{71}
+    \subitem {Arcade::Games::IGameModule}, \hyperpage{39}
+    \subitem {Arcade::Games::Nibbler}, \hyperpage{51}
+    \subitem {Arcade::Games::Pacman}, \hyperpage{53}
+    \subitem {Arcade::Games::Qix}, \hyperpage{54}
+    \subitem {Arcade::Games::Solarfox}, \hyperpage{72}
 
   \indexspace
 
   \item {W}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
   \item {what}
     \subitem {Arcade::Exceptions::ArcadeException}, \hyperpage{19}
   \item {WHITE}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {X}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {YELLOW}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{26}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
   \indexspace
 
   \item {Z}
-    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{27}
+    \subitem {Arcade::Display::IDisplayModule}, \hyperpage{28}
 
 \end{theindex}

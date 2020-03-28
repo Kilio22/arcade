@@ -18,7 +18,7 @@ Used for dynamically loading libraries.
 \mbox{\Hypertarget{classArcade_1_1DLLoader_a7669292663e67263a50cfa36be22c5d7}\label{classArcade_1_1DLLoader_a7669292663e67263a50cfa36be22c5d7}} 
 void {\bfseries operator=} (\mbox{\hyperlink{classArcade_1_1DLLoader}{D\+L\+Loader}} const \&)=delete
 \item 
-std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hyperlink{classArcade_1_1DLLoader_ab2d8182befd3ba3dc59cb0c308046de8}{get\+Libraries}} (const std\+::string \&dir\+Path) const
+std\+::vector$<$ \mbox{\hyperlink{structArcade_1_1DLInfos}{D\+L\+Infos}} $>$ \mbox{\hyperlink{classArcade_1_1DLLoader_a3c3fa714d6fbaf4481a1fe015a3e18ab}{get\+Libraries}} (const std\+::string \&dir\+Path) const
 \begin{DoxyCompactList}\small\item\em Gets the available libraries in a given folder. \end{DoxyCompactList}\item 
 std\+::unique\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classArcade_1_1DLLoader_ad9fb1241a01190637402f3866c695272}{load\+Library}} (const std\+::string \&path) const
 \begin{DoxyCompactList}\small\item\em Loads the given library. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -37,7 +37,7 @@ Used for dynamically loading libraries.
 
 
 \begin{DoxyTemplParams}{Template Parameters}
-{\em T} & Library class type. Either I\+Game\+Module or I\+Display\+Module. \\
+{\em T} & Library class type. {\bfseries{Either \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule}{Arcade\+::\+Games\+::\+I\+Game\+Module}} or \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}}}}. \\
 \hline
 \end{DoxyTemplParams}
 
@@ -57,12 +57,12 @@ Gets an instance of this object.
 \begin{DoxyReturn}{Returns}
 The current \mbox{\hyperlink{classArcade_1_1DLLoader}{D\+L\+Loader}} instance. 
 \end{DoxyReturn}
-\mbox{\Hypertarget{classArcade_1_1DLLoader_ab2d8182befd3ba3dc59cb0c308046de8}\label{classArcade_1_1DLLoader_ab2d8182befd3ba3dc59cb0c308046de8}} 
+\mbox{\Hypertarget{classArcade_1_1DLLoader_a3c3fa714d6fbaf4481a1fe015a3e18ab}\label{classArcade_1_1DLLoader_a3c3fa714d6fbaf4481a1fe015a3e18ab}} 
 \index{Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}!getLibraries@{getLibraries}}
 \index{getLibraries@{getLibraries}!Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}}
 \subsubsection{\texorpdfstring{getLibraries()}{getLibraries()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-std\+::vector$<$std\+::pair$<$std\+::string, std\+::string$>$ $>$ \mbox{\hyperlink{classArcade_1_1DLLoader}{Arcade\+::\+D\+L\+Loader}}$<$ T $>$\+::get\+Libraries (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir\+Path }\end{DoxyParamCaption}) const}
+std\+::vector$<$\mbox{\hyperlink{structArcade_1_1DLInfos}{D\+L\+Infos}}$>$ \mbox{\hyperlink{classArcade_1_1DLLoader}{Arcade\+::\+D\+L\+Loader}}$<$ T $>$\+::get\+Libraries (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir\+Path }\end{DoxyParamCaption}) const}
 
 
 
@@ -74,7 +74,7 @@ Gets the available libraries in a given folder.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-std\+::vector$<$std\+::pair$<$std\+::string, std\+::string$>$$>$ Vector containing \mbox{[}path, name\mbox{]} pairs. 
+std\+::vector$<$\+D\+L\+Infos$>$ Vector containing informations about the library. 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classArcade_1_1DLLoader_ad9fb1241a01190637402f3866c695272}\label{classArcade_1_1DLLoader_ad9fb1241a01190637402f3866c695272}} 
 \index{Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}!loadLibrary@{loadLibrary}}

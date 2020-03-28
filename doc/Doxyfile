@@ -819,6 +819,7 @@ INPUT                  = doc/Instructions.md \
                         include/lib \
                         include/Core.hpp \
                         include/DLLoader.hpp \
+                        include/DLInfos.h \
                         include/Logger.hpp
 
 # This tag can be used to specify the character encoding of the source files

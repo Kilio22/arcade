@@ -110,9 +110,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7669292663e67263a50cfa36be22c5d7"><td class="memItemLeft" align="right" valign="top"><a id="a7669292663e67263a50cfa36be22c5d7"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="classArcade_1_1DLLoader.html">DLLoader</a> const &amp;)=delete</td></tr>
 <tr class="separator:a7669292663e67263a50cfa36be22c5d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2d8182befd3ba3dc59cb0c308046de8"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1DLLoader.html#ab2d8182befd3ba3dc59cb0c308046de8">getLibraries</a> (const std::string &amp;dirPath) const</td></tr>
-<tr class="memdesc:ab2d8182befd3ba3dc59cb0c308046de8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the available libraries in a given folder.  <a href="#ab2d8182befd3ba3dc59cb0c308046de8">More...</a><br /></td></tr>
-<tr class="separator:ab2d8182befd3ba3dc59cb0c308046de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c3fa714d6fbaf4481a1fe015a3e18ab"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structArcade_1_1DLInfos.html">DLInfos</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1DLLoader.html#a3c3fa714d6fbaf4481a1fe015a3e18ab">getLibraries</a> (const std::string &amp;dirPath) const</td></tr>
+<tr class="memdesc:a3c3fa714d6fbaf4481a1fe015a3e18ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the available libraries in a given folder.  <a href="#a3c3fa714d6fbaf4481a1fe015a3e18ab">More...</a><br /></td></tr>
+<tr class="separator:a3c3fa714d6fbaf4481a1fe015a3e18ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9fb1241a01190637402f3866c695272"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classArcade_1_1DLLoader.html#ad9fb1241a01190637402f3866c695272">loadLibrary</a> (const std::string &amp;path) const</td></tr>
 <tr class="memdesc:ad9fb1241a01190637402f3866c695272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the given library.  <a href="#ad9fb1241a01190637402f3866c695272">More...</a><br /></td></tr>
 <tr class="separator:ad9fb1241a01190637402f3866c695272"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,7 +130,7 @@ class Arcade::DLLoader&lt; T &gt;</h3>
 <p>Used for dynamically loading libraries. </p>
 <dl class="tparams"><dt>Template Parameters</dt><dd>
   <table class="tparams">
-    <tr><td class="paramname">T</td><td>Library class type. Either IGameModule or IDisplayModule. </td></tr>
+    <tr><td class="paramname">T</td><td>Library class type. <b>Either <a class="el" href="classArcade_1_1Games_1_1IGameModule.html" title="Interface for the game modules used to handle games.">Arcade::Games::IGameModule</a> or <a class="el" href="classArcade_1_1Display_1_1IDisplayModule.html" title="Interface for the display modules used to display things.">Arcade::Display::IDisplayModule</a></b>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -166,8 +166,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="ab2d8182befd3ba3dc59cb0c308046de8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2d8182befd3ba3dc59cb0c308046de8">&#9670;&nbsp;</a></span>getLibraries()</h2>
+<a id="a3c3fa714d6fbaf4481a1fe015a3e18ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c3fa714d6fbaf4481a1fe015a3e18ab">&#9670;&nbsp;</a></span>getLibraries()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,7 +175,7 @@ template&lt;class T &gt; </div>
 template&lt;class T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::pair&lt;std::string, std::string&gt; &gt; <a class="el" href="classArcade_1_1DLLoader.html">Arcade::DLLoader</a>&lt; T &gt;::getLibraries </td>
+          <td class="memname">std::vector&lt;<a class="el" href="structArcade_1_1DLInfos.html">DLInfos</a>&gt; <a class="el" href="classArcade_1_1DLLoader.html">Arcade::DLLoader</a>&lt; T &gt;::getLibraries </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>dirPath</em></td><td>)</td>
@@ -191,7 +191,7 @@ template&lt;class T &gt; </div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;std::pair&lt;std::string, std::string&gt;&gt; Vector containing [path, name] pairs. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;DLInfos&gt; Vector containing informations about the library. </dd></dl>
 
 </div>
 </div>
