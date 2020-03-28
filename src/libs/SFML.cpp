@@ -96,22 +96,22 @@ bool Arcade::Display::SFML::isOpen() const
 
 bool Arcade::Display::SFML::switchToNextLib() const
 {
-    return this->_events.at(SystemKeys::F1);
+    return this->_events.at(SystemKeys::F2);
 }
 
 bool Arcade::Display::SFML::switchToPreviousLib() const
 {
-    return this->_events.at(SystemKeys::F2);
+    return this->_events.at(SystemKeys::F1);
 }
 
 bool Arcade::Display::SFML::switchToNextGame() const
 {
-    return this->_events.at(SystemKeys::F3);
+    return this->_events.at(SystemKeys::F4);
 }
 
 bool Arcade::Display::SFML::switchToPreviousGame() const
 {
-    return this->_events.at(SystemKeys::F4);
+    return this->_events.at(SystemKeys::F3);
 }
 
 bool Arcade::Display::SFML::shouldBeRestarted() const
