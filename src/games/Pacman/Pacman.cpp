@@ -275,14 +275,14 @@ void Arcade::Games::Pacman::initMaze(void)
         for (auto character = line.begin(); character < line.end(); character++) {
             if (*character == ' ' && hasWall == true) {
                 this->_path.push_back({x, y, 15, 15, Arcade::Display::IDisplayModule::Colors::BLACK});
-                this->_tokens.push_back({{x, y, 15, 15, Arcade::Display::IDisplayModule::Colors::BLACK}, {x + 4, y + 6, 1, Arcade::Display::IDisplayModule::Colors::YELLOW}});
+                this->_tokens.push_back({{x, y, 15, 15, Arcade::Display::IDisplayModule::Colors::BLACK}, {x + 4, y + 6, 1, Arcade::Display::IDisplayModule::Colors::GREEN}});
             } else if (*character == '#') {
                 hasWall = true;
                 this->_walls.push_back({x, y, 15, 15, Arcade::Display::IDisplayModule::Colors::RED});
             }
             if (*character == 'O') {
                 this->_path.push_back({x, y, 15, 15, Arcade::Display::IDisplayModule::Colors::BLACK});
-                this->_bonuses.push_back({{x, y, 15, 15, Arcade::Display::IDisplayModule::Colors::BLACK}, {x + 3, y + 3, 8, 8, Arcade::Display::IDisplayModule::Colors::LIGHT_YELLOW}});
+                this->_bonuses.push_back({{x, y, 15, 15, Arcade::Display::IDisplayModule::Colors::BLACK}, {x + 3, y + 3, 8, 8, Arcade::Display::IDisplayModule::Colors::LIGHT_GREEN}});
             }
             x += 15;
         }

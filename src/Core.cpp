@@ -94,7 +94,6 @@ void Arcade::Core::menuEvents()
     }
     auto key = this->displayModule->getKeyCode();
     if (key != '\0') {
-        std::cerr << (int)key << std::endl;
         if (key == '\b') {
             if (this->username.empty() == false)
                 this->username = this->username.substr(0, this->username.length() - 1);

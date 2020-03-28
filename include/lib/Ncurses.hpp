@@ -9,19 +9,19 @@
 #define LIBCACA_HPP_
 
 #include <memory>
-#include <caca.h>
+#include <curses.h>
 #include "ADisplayModule.hpp"
 
 namespace Arcade::Display
 {
     /**
-     * @brief Libcaca library
+     * @brief Libncurses library
      */
-    class Libcaca : public ADisplayModule
+    class Ncurses : public ADisplayModule
     {
         public:
-            Libcaca();
-            ~Libcaca();
+            Ncurses();
+            ~Ncurses();
 
             void reset() final;
             void open() final;
@@ -56,11 +56,12 @@ namespace Arcade::Display
             void putText(const std::string &text, unsigned int size, float x, float y) const final;
 
         private:
-            caca_canvas_t *_canvas;
-            caca_display_t *_display;
+            std::vector<bool> _events;
+            int _keyCode;
+            Colors _currentColor;
 
-            static const std::vector<caca_key> _libKeys;
-            static const std::vector<caca_color> _libColors;
+            static const std::vector<int> _libKeys;
+            static const std::vector<std::pair<int, int>> _colorsToInit;
     };
 }
 

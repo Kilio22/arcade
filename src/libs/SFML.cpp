@@ -96,22 +96,22 @@ bool Arcade::Display::SFML::isOpen() const
 
 bool Arcade::Display::SFML::switchToNextLib() const
 {
-    return this->_events.at(SystemKeys::F1);
+    return this->_events.at(SystemKeys::F2);
 }
 
 bool Arcade::Display::SFML::switchToPreviousLib() const
 {
-    return this->_events.at(SystemKeys::F2);
+    return this->_events.at(SystemKeys::F1);
 }
 
 bool Arcade::Display::SFML::switchToNextGame() const
 {
-    return this->_events.at(SystemKeys::F3);
+    return this->_events.at(SystemKeys::F4);
 }
 
 bool Arcade::Display::SFML::switchToPreviousGame() const
 {
-    return this->_events.at(SystemKeys::F4);
+    return this->_events.at(SystemKeys::F3);
 }
 
 bool Arcade::Display::SFML::shouldBeRestarted() const
@@ -159,7 +159,7 @@ void Arcade::Display::SFML::update()
         if (event.type == sf::Event::Closed)
             this->_shouldClose = true;
         if (event.type == sf::Event::KeyPressed) {
-            auto found = std::find(this->_libKeys.begin(),this->_libKeys.end(), event.key.code);
+            auto found = std::find(this->_libKeys.begin(), this->_libKeys.end(), event.key.code);
             if (found != this->_libKeys.end())
                 this->_events[std::distance(this->_libKeys.begin(), found)] = true;
         }
