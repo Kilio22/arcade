@@ -10,11 +10,11 @@
 
 #include <memory>
 #include <caca.h>
-#include "IDisplayModule.hpp"
+#include "ADisplayModule.hpp"
 
 namespace Arcade::Display
 {
-    class Libcaca : public IDisplayModule
+    class Libcaca : public ADisplayModule
     {
         public:
             Libcaca();
@@ -51,8 +51,6 @@ namespace Arcade::Display
             void putCircle(float x, float y, float rad) const final;
             void putFillCircle(float x, float y, float rad) const final;
             void putText(const std::string &text, unsigned int size, float x, float y) const final;
-
-            const std::string &getLibName() const final;
 
         private:
             caca_canvas_t *_canvas;

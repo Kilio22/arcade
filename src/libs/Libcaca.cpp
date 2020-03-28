@@ -15,8 +15,8 @@ extern "C" std::unique_ptr<Arcade::Display::IDisplayModule> createLib(void)
 
 const std::string Arcade::Display::Libcaca::_libName = "Libcaca";
 
-Arcade::Display::Libcaca::Libcaca()
-    : _canvas(nullptr), _display(nullptr), _events(Keys::KEYS_END, false), _isOpen(false), _keyCode('\0')
+Arcade::Display::Libcaca::Libcaca() : ADisplayModule("Libcaca"),
+    _canvas(nullptr), _display(nullptr), _events(Keys::KEYS_END, false), _isOpen(false), _keyCode('\0')
 {
 }
 
@@ -46,43 +46,43 @@ bool Arcade::Display::Libcaca::isOpen() const
 
 bool Arcade::Display::Libcaca::switchToNextLib() const
 {
-    return this->_events.at(Keys::RIGHT);
+    return this->_events.at(SystemKeys::F2);
 }
 
 bool Arcade::Display::Libcaca::switchToPreviousLib() const
 {
-    return this->_events.at(Keys::LEFT);
+    return this->_events.at(SystemKeys::F1);
 }
 
 bool Arcade::Display::Libcaca::switchToNextGame() const
 {
-    return this->_events.at(Keys::UP);
+    return this->_events.at(SystemKeys::F4);
 }
 
 bool Arcade::Display::Libcaca::switchToPreviousGame() const
 {
-    return this->_events.at(Keys::DOWN);
+    return this->_events.at(SystemKeys::F3);
 }
 
 bool Arcade::Display::Libcaca::shouldBeRestarted() const
 {
-    return this->_events.at(Keys::R);
+    return this->_events.at(SystemKeys::R);
 }
 
 bool Arcade::Display::Libcaca::shouldGoToMenu() const
 {
-    return this->_events.at(Keys::M);
+    return this->_events.at(SystemKeys::M);
 }
 
 bool Arcade::Display::Libcaca::shouldExit() const
 {
-    return this->_events.at(Keys::ESCAPE);
+    return this->_events.at(SystemKeys::ESCAPE);
 }
 
-bool Arcade::Display::Libcaca::isKeyPressed(Keys key) const
-{
+// bool Arcade::Display::Libcaca::isKeyPressed(Keys key) const
+// {
 
-}
+// }
 
 bool Arcade::Display::Libcaca::isKeyPressedOnce(Keys key) const
 {
@@ -119,47 +119,42 @@ char Arcade::Display::Libcaca::getKeyCode() const
     return this->_keyCode;
 }
 
-void Arcade::Display::Libcaca::setColor(IDisplayModule::Colors col)
-{
+// void Arcade::Display::Libcaca::setColor(IDisplayModule::Colors col)
+// {
 
-}
+// }
 
-void Arcade::Display::Libcaca::putPixel(float x, float y) const
-{
+// void Arcade::Display::Libcaca::putPixel(float x, float y) const
+// {
 
-}
+// }
 
-void Arcade::Display::Libcaca::putLine(float x1, float y1, float x2, float y2) const
-{
+// void Arcade::Display::Libcaca::putLine(float x1, float y1, float x2, float y2) const
+// {
 
-}
+// }
 
-void Arcade::Display::Libcaca::putRect(float x, float y, float w, float h) const
-{
+// void Arcade::Display::Libcaca::putRect(float x, float y, float w, float h) const
+// {
 
-}
+// }
 
-void Arcade::Display::Libcaca::putFillRect(float x, float y, float w, float h) const
-{
+// void Arcade::Display::Libcaca::putFillRect(float x, float y, float w, float h) const
+// {
 
-}
+// }
 
-void Arcade::Display::Libcaca::putCircle(float x, float y, float rad) const
-{
+// void Arcade::Display::Libcaca::putCircle(float x, float y, float rad) const
+// {
 
-}
+// }
 
-void Arcade::Display::Libcaca::putFillCircle(float x, float y, float rad) const
-{
+// void Arcade::Display::Libcaca::putFillCircle(float x, float y, float rad) const
+// {
 
-}
+// }
 
-void Arcade::Display::Libcaca::putText(const std::string &text, unsigned int size, float x, float y) const
-{
+// void Arcade::Display::Libcaca::putText(const std::string &text, unsigned int size, float x, float y) const
+// {
 
-}
-
-const std::string &Arcade::Display::Libcaca::getLibName() const
-{
-    return this->_libName;
-}
+// }
