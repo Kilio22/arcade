@@ -18,10 +18,10 @@ const char *defaultUsername = "Michel";
 
 Arcade::Core::Core(const std::string &startLibraryPath)
     : username(defaultUsername),
-    libraries(DLLoader::getInstance().getLibraries<Display::IDisplayModule>(ARCADE_LIB_PATH)),
-    games(DLLoader::getInstance().getLibraries<Games::IGameModule>(ARCADE_GAMES_PATH)),
+    libraries(DLLoader<Display::IDisplayModule>::getInstance().getLibraries(ARCADE_LIB_PATH)),
+    games(DLLoader<Games::IGameModule>::getInstance().getLibraries(ARCADE_GAMES_PATH)),
     iGame(0),
-    displayModule(DLLoader::getInstance().loadLibrary<Display::IDisplayModule>(startLibraryPath)),
+    displayModule(DLLoader<Display::IDisplayModule>::getInstance().loadLibrary(startLibraryPath)),
     gameModule(nullptr)
 {
     if (this->displayModule == nullptr)
@@ -72,7 +72,7 @@ void Arcade::Core::play()
 void Arcade::Core::menuEvents()
 {
     if (this->displayModule->isKeyPressedOnce(Display::IDisplayModule::Keys::ENTER) == true) {
-        this->gameModule = DLLoader::getInstance().loadLibrary<Games::IGameModule>(this->games[this->iGame].first);
+        this->gameModule = DLLoader<Games::IGameModule>::getInstance().loadLibrary(this->games[this->iGame].first);
         if (this->gameModule == nullptr)
             throw Exceptions::InvalidLibraryException("Unexpected error while loading game.", "Core::menuEvents");
         this->gameModule->setPlayerName(this->username);
@@ -203,7 +203,7 @@ void Arcade::Core::switchLibrary(Direction direction)
     } else {
         this->iLib = (this->iLib + 1) % this->libraries.size();
     }
-    this->displayModule = DLLoader::getInstance().loadLibrary<Display::IDisplayModule>(this->libraries[this->iLib].first);
+    this->displayModule = DLLoader<Display::IDisplayModule>::getInstance().loadLibrary(this->libraries[this->iLib].first);
     if (this->displayModule == nullptr)
         throw Exceptions::InvalidLibraryException("Unexpected error while switching library.", "Core::switchLibrary");
     this->displayModule->open();
@@ -222,7 +222,7 @@ void Arcade::Core::switchGame(Direction direction)
     } else {
         this->iGame = (this->iGame + 1) % this->games.size();
     }
-    this->gameModule = DLLoader::getInstance().loadLibrary<Games::IGameModule>(this->games[this->iGame].first);
+    this->gameModule = DLLoader<Games::IGameModule>::getInstance().loadLibrary(this->games[this->iGame].first);
     if (this->gameModule == nullptr)
         throw Exceptions::InvalidLibraryException("Unexpected error while switching game.", "Core::switchGame");
     this->gameModule->setPlayerName(this->username);

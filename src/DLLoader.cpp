@@ -7,23 +7,22 @@
 
 #include "DLLoader.hpp"
 #include "Logger.hpp"
-#include "lib/IDisplayModule.hpp"
 #include "games/IGameModule.hpp"
+#include "lib/IDisplayModule.hpp"
 
-const std::regex Arcade::DLLoader::libRegex("lib_arcade_.+\\.so");
-Arcade::DLLoader Arcade::DLLoader::loaderInstance;
+template <class T>
+const std::regex Arcade::DLLoader<T>::libRegex("lib_arcade_.+\\.so");
+template <class T>
+Arcade::DLLoader<T> Arcade::DLLoader<T>::loaderInstance;
 
-Arcade::DLLoader::DLLoader()
+template <class T>
+const Arcade::DLLoader<T> &Arcade::DLLoader<T>::getInstance(void)
 {
-}
-
-Arcade::DLLoader const &Arcade::DLLoader::getInstance(void)
-{
-    return Arcade::DLLoader::loaderInstance;
+    return Arcade::DLLoader<T>::loaderInstance;
 }
 
 template <class T>
-std::vector<std::pair<std::string, std::string>> Arcade::DLLoader::getLibraries(const std::string &dirPath) const
+std::vector<std::pair<std::string, std::string>> Arcade::DLLoader<T>::getLibraries(const std::string &dirPath) const
 {
     std::vector<std::pair<std::string, std::string>> availableLibs;
 
@@ -38,30 +37,29 @@ std::vector<std::pair<std::string, std::string>> Arcade::DLLoader::getLibraries(
             continue;
         }
         const std::string libFileName = entry.path().string().substr(entry.path().string().find_last_of('/') + 1);
-        const std::unique_ptr<T> lib = this->loadLibrary<T>(entry.path().string());
+        const std::unique_ptr<T> lib = this->loadLibrary(entry.path().string());
         if (std::regex_match(libFileName, libRegex) == true && lib != nullptr) {
             availableLibs.push_back(
                 std::make_pair(
                     entry.path().string(),
-                    lib->getLibName()
-            ));
+                    lib->getLibName()));
         }
     }
     return availableLibs;
 }
 
 template <class T>
-std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path) const
+std::unique_ptr<T> Arcade::DLLoader<T>::loadLibrary(const std::string &path) const
 {
     void *handler = dlopen(path.c_str(), RTLD_NOW | RTLD_NODELETE);
-    createLib_t<T> createLib = nullptr;
+    createLib_t createLib = nullptr;
     std::unique_ptr<T> lib = nullptr;
 
     if (!handler) {
         Logger::log(Logger::ERROR, dlerror());
         return nullptr;
     }
-    createLib = (createLib_t<T>)dlsym(handler, "createLib");
+    createLib = (createLib_t)dlsym(handler, "createLib");
     if (!createLib) {
         Logger::log(Logger::ERROR, dlerror());
         return nullptr;
@@ -71,8 +69,5 @@ std::unique_ptr<T> Arcade::DLLoader::loadLibrary(const std::string &path) const
     return lib;
 }
 
-template std::vector<std::pair<std::string, std::string>> Arcade::DLLoader::getLibraries<Arcade::Display::IDisplayModule>(const std::string &dirPath) const;
-template std::vector<std::pair<std::string, std::string>> Arcade::DLLoader::getLibraries<Arcade::Games::IGameModule>(const std::string &dirPath) const;
-
-template std::unique_ptr<Arcade::Display::IDisplayModule> Arcade::DLLoader::loadLibrary(const std::string &path) const;
-template std::unique_ptr<Arcade::Games::IGameModule> Arcade::DLLoader::loadLibrary(const std::string &path) const;
+template class Arcade::DLLoader<Arcade::Display::IDisplayModule>;
+template class Arcade::DLLoader<Arcade::Games::IGameModule>;
