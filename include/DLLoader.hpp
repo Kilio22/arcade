@@ -16,12 +16,13 @@
 #include <regex>
 #include <list>
 #include <dlfcn.h>
+#include "DLInfos.h"
 
 namespace Arcade
 {
     /**
      * @brief Used for dynamically loading libraries.
-     * @tparam T Library class type. Either IGameModule or IDisplayModule.
+     * @tparam T Library class type. <b>Either Arcade::Games::IGameModule or Arcade::Display::IDisplayModule</b>.
      */
     template <class T>
     class DLLoader
@@ -41,9 +42,9 @@ namespace Arcade
             /**
              * @brief Gets the available libraries in a given folder.
              * @param dirPath Folder to lookup
-             * @return std::vector<std::pair<std::string, std::string>> Vector containing [path, name] pairs.
+             * @return std::vector<DLInfos> Vector containing informations about the library.
              */
-            std::vector<std::pair<std::string, std::string>> getLibraries(const std::string &dirPath) const;
+            std::vector<DLInfos> getLibraries(const std::string &dirPath) const;
 
             /**
              * @brief Loads the given library.
@@ -54,6 +55,8 @@ namespace Arcade
 
         private:
             DLLoader() = default;
+
+            std::vector<std::pair<std::string, int>> getBestScores(const std::unique_ptr<T> &lib) const;
 
             using createLib_t = std::unique_ptr<T> (*)(void);
 

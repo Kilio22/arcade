@@ -22,9 +22,9 @@ const Arcade::DLLoader<T> &Arcade::DLLoader<T>::getInstance(void)
 }
 
 template <class T>
-std::vector<std::pair<std::string, std::string>> Arcade::DLLoader<T>::getLibraries(const std::string &dirPath) const
+std::vector<Arcade::DLInfos> Arcade::DLLoader<T>::getLibraries(const std::string &dirPath) const
 {
-    std::vector<std::pair<std::string, std::string>> availableLibs;
+    std::vector<DLInfos> availableLibs;
 
     if (std::filesystem::is_directory(dirPath) == false) {
         return {};
@@ -39,10 +39,7 @@ std::vector<std::pair<std::string, std::string>> Arcade::DLLoader<T>::getLibrari
         const std::string libFileName = entry.path().string().substr(entry.path().string().find_last_of('/') + 1);
         const std::unique_ptr<T> lib = this->loadLibrary(entry.path().string());
         if (std::regex_match(libFileName, libRegex) == true && lib != nullptr) {
-            availableLibs.push_back(
-                std::make_pair(
-                    entry.path().string(),
-                    lib->getLibName()));
+            availableLibs.push_back({ entry.path().string(), lib->getLibName(), this->getBestScores(lib) });
         }
     }
     return availableLibs;
@@ -67,6 +64,19 @@ std::unique_ptr<T> Arcade::DLLoader<T>::loadLibrary(const std::string &path) con
     lib = createLib();
     dlclose(handler);
     return lib;
+}
+
+template <>
+std::vector<std::pair<std::string, int>> Arcade::DLLoader<Arcade::Display::IDisplayModule>::getBestScores(const std::unique_ptr<Arcade::Display::IDisplayModule> &) const
+{
+    return {};
+}
+
+template <>
+std::vector<std::pair<std::string, int>> Arcade::DLLoader<Arcade::Games::IGameModule>::getBestScores(const std::unique_ptr<Arcade::Games::IGameModule> &lib) const
+{
+    lib->loadFromFile();
+    return lib->getBestScores();
 }
 
 template class Arcade::DLLoader<Arcade::Display::IDisplayModule>;

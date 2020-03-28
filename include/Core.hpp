@@ -10,6 +10,7 @@
 
 #include <string>
 #include <vector>
+#include "DLInfos.h"
 #include "games/IGameModule.hpp"
 #include "lib/IDisplayModule.hpp"
 
@@ -58,9 +59,9 @@ namespace Arcade
 
             std::string username;
 
-            std::vector<std::pair<std::string, std::string>> libraries;
+            std::vector<DLInfos> libraries;
             int iLib;
-            std::vector<std::pair<std::string, std::string>> games;
+            std::vector<DLInfos> games;
             int iGame;
 
             std::unique_ptr<Display::IDisplayModule> displayModule;
