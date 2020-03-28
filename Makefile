@@ -44,8 +44,8 @@ SRC_SDL	=	$(SRC_GRAPHICALS) \
 SRC_SFML	=	$(SRC_GRAPHICALS) \
 	src/libs/SFML.cpp
 
-SRC_LIBCACA	=	$(SRC_GRAPHICALS)	\
-	src/libs/LIbcaca.cpp
+SRC_LIBCACA	=	$(SRC_GRAPHICALS) \
+	src/libs/Libcaca.cpp
 
 SRC_CENTIPEDE	=	$(SRC_GAMES) \
 	src/games/Centipede/Centipede.cpp
@@ -72,7 +72,7 @@ OBJ_CORE	=	$(SRC_CORE:.cpp=.o)
 OBJ_NCURSES	=	$(SRC_ncurses:.cpp=.o)
 OBJ_SDL		=	$(SRC_SDL:.cpp=.o)
 OBJ_SFML	=	$(SRC_SFML:.cpp=.o)
-OBJ_LIBCACA	=	$(SRC_LIBCACA:.cpp=o)
+OBJ_LIBCACA	=	$(SRC_LIBCACA:.cpp=.o)
 OBJ_DEFAULT	=	$(SRC_DEFAULT:.cpp=.o)
 
 CXX	= 	g++
@@ -118,7 +118,7 @@ solarfox: OBJ = $(OBJ_SOLARFOX)
 solarfox: CXXFLAGS += -fPIC
 solarfox: $(OBJ_SOLARFOX) build_solarfox
 
-graphicals: ncurses sdl sfml
+graphicals: ncurses sdl sfml libcaca
 
 ncurses: NAME = lib/lib_arcade_ncurses.so
 ncurses: OBJ = $(OBJ_NCURSES)
@@ -195,8 +195,8 @@ doc_re: doc_clean doc doc_pdf
 
 .PHONY: all message core games graphicals \
 		centipede nibbler pacman qix solarfox \
-		ncurses sdl sfml \
-		build_ncurses build_sdl build_sfml build_centipede build_nibbler build_pacman build_qix build_solarfox \
+		ncurses sdl sfml libcaca \
+		build_ncurses build_sdl build_sfml build_libcaca build_centipede build_nibbler build_pacman build_qix build_solarfox \
 		exceptions \
 		clean fclean re debug \
 		doc doc_pdf doc_clean doc_re
