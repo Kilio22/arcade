@@ -1,0 +1,94 @@
+.TH "Arcade::Logger" 3 "Sat Mar 28 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Arcade::Logger \- Used to display error messages depending on the set log level\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Logger\&.hpp>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBLogLevel\fP { \fBERROR\fP, \fBDEBUG\fP }"
+.br
+.RI "Available log levels\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLogger\fP (const \fBLogger\fP &)=delete"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (const \fBLogger\fP &)=delete"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "template<typename \&.\&.\&. Args> static void \fBlog\fP (\fBLogLevel\fP level, Args &&\&.\&.\&.args)"
+.br
+.RI "Logs the given message to the output\&. "
+.ti -1c
+.RI "static void \fBsetLogLevel\fP (\fBLogLevel\fP level)"
+.br
+.RI "Sets the current log level\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Used to display error messages depending on the set log level\&. 
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBArcade::Logger::LogLevel\fP"
+
+.PP
+Available log levels\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIERROR \fP\fP
+Displays unexpected errors\&. 
+.TP
+\fB\fIDEBUG \fP\fP
+Used for debugging\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename \&.\&.\&. Args> static void Arcade::Logger::log (\fBLogLevel\fP level, Args &&\&.\&.\&. args)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Logs the given message to the output\&. 
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIArgs\fP Type list for each argument 
+.RE
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlevel\fP The log level of the message 
+.br
+\fIargs\fP Every argument are going to be assembled using std::cerr << \&.\&.\&. << args 
+.RE
+.PP
+
+.SS "static void Arcade::Logger::setLogLevel (\fBLogLevel\fP level)\fC [static]\fP"
+
+.PP
+Sets the current log level\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlevel\fP Log level value\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

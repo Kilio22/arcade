@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pacman',['Pacman',['../classArcade_1_1Games_1_1Pacman.html',1,'Arcade::Games']]]
+  ['nibbler',['Nibbler',['../classArcade_1_1Games_1_1Nibbler.html',1,'Arcade::Games']]]
 ];

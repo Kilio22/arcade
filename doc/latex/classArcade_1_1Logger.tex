@@ -1,0 +1,101 @@
+\hypertarget{classArcade_1_1Logger}{}\section{Arcade\+::Logger Class Reference}
+\label{classArcade_1_1Logger}\index{Arcade::Logger@{Arcade::Logger}}
+
+
+Used to display error messages depending on the set log level.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+hpp$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20}{Log\+Level}} \{ \mbox{\hyperlink{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20a7dc500efbea520e3cf58551c7c76d694}{E\+R\+R\+OR}}, 
+\mbox{\hyperlink{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20a2df55fe7b387ec1cdb7a780e6a95bbbc}{D\+E\+B\+UG}}
+ \}
+\begin{DoxyCompactList}\small\item\em Available log levels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1Logger_ad7812e041fb9b956cd36ad2013c9bda6}\label{classArcade_1_1Logger_ad7812e041fb9b956cd36ad2013c9bda6}} 
+{\bfseries Logger} (const \mbox{\hyperlink{classArcade_1_1Logger}{Logger}} \&)=delete
+\item 
+\mbox{\Hypertarget{classArcade_1_1Logger_a78f01aa85df4d75249b1cc62678c0b1a}\label{classArcade_1_1Logger_a78f01aa85df4d75249b1cc62678c0b1a}} 
+void {\bfseries operator=} (const \mbox{\hyperlink{classArcade_1_1Logger}{Logger}} \&)=delete
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename ... Args$>$ }\\static void \mbox{\hyperlink{classArcade_1_1Logger_aeb95c0e88e1d1b0df97006a04fd5a011}{log}} (\mbox{\hyperlink{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20}{Log\+Level}} level, Args \&\&...args)
+\begin{DoxyCompactList}\small\item\em Logs the given message to the output. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classArcade_1_1Logger_a60d1ef9de9500d0864fca8f571e062e5}{set\+Log\+Level}} (\mbox{\hyperlink{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20}{Log\+Level}} level)
+\begin{DoxyCompactList}\small\item\em Sets the current log level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Used to display error messages depending on the set log level. 
+
+\subsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20}\label{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20}} 
+\index{Arcade::Logger@{Arcade::Logger}!LogLevel@{LogLevel}}
+\index{LogLevel@{LogLevel}!Arcade::Logger@{Arcade::Logger}}
+\subsubsection{\texorpdfstring{LogLevel}{LogLevel}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20}{Arcade\+::\+Logger\+::\+Log\+Level}}}
+
+
+
+Available log levels. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!Arcade::Logger@{Arcade::Logger}}\index{Arcade::Logger@{Arcade::Logger}!ERROR@{ERROR}}}\mbox{\Hypertarget{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20a7dc500efbea520e3cf58551c7c76d694}\label{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20a7dc500efbea520e3cf58551c7c76d694}} 
+E\+R\+R\+OR&Displays unexpected errors. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DEBUG@{DEBUG}!Arcade::Logger@{Arcade::Logger}}\index{Arcade::Logger@{Arcade::Logger}!DEBUG@{DEBUG}}}\mbox{\Hypertarget{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20a2df55fe7b387ec1cdb7a780e6a95bbbc}\label{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20a2df55fe7b387ec1cdb7a780e6a95bbbc}} 
+D\+E\+B\+UG&Used for debugging. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1Logger_aeb95c0e88e1d1b0df97006a04fd5a011}\label{classArcade_1_1Logger_aeb95c0e88e1d1b0df97006a04fd5a011}} 
+\index{Arcade::Logger@{Arcade::Logger}!log@{log}}
+\index{log@{log}!Arcade::Logger@{Arcade::Logger}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily template$<$typename ... Args$>$ \\
+static void Arcade\+::\+Logger\+::log (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20}{Log\+Level}}}]{level,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Logs the given message to the output. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Args} & Type list for each argument \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em level} & The log level of the message \\
+\hline
+{\em args} & Every argument are going to be assembled using std\+::cerr $<$$<$ ... $<$$<$ args \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classArcade_1_1Logger_a60d1ef9de9500d0864fca8f571e062e5}\label{classArcade_1_1Logger_a60d1ef9de9500d0864fca8f571e062e5}} 
+\index{Arcade::Logger@{Arcade::Logger}!setLogLevel@{setLogLevel}}
+\index{setLogLevel@{setLogLevel}!Arcade::Logger@{Arcade::Logger}}
+\subsubsection{\texorpdfstring{setLogLevel()}{setLogLevel()}}
+{\footnotesize\ttfamily static void Arcade\+::\+Logger\+::set\+Log\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Logger_a9b6365ec3dfe94ac7d296ad60d4b3b20}{Log\+Level}}}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sets the current log level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & Log level value. \\
+\hline
+\end{DoxyParams}

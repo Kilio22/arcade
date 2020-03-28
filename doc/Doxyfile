@@ -817,7 +817,9 @@ INPUT                  = doc/Instructions.md \
                         include/Exceptions \
                         include/games \
                         include/lib \
-                        include/Core.hpp
+                        include/Core.hpp \
+                        include/DLLoader.hpp \
+                        include/Logger.hpp
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses

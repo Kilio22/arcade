@@ -24,8 +24,8 @@ namespace Arcade
              */
             enum LogLevel
             {
-                ERROR, ///< Displays unexpected errors */
-                DEBUG  ///< Used for debugging */
+                ERROR, ///< Displays unexpected errors
+                DEBUG  ///< Used for debugging
             };
 
         private:
@@ -38,6 +38,7 @@ namespace Arcade
 
             /**
              * @brief Logs the given message to the output
+             * @tparam Args Type list for each argument
              * @param level The log level of the message
              * @param args Every argument are going to be assembled using std::cerr << ... << args
              */

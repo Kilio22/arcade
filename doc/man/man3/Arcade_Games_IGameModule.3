@@ -53,7 +53,9 @@ Inherited by \fBArcade::Games::AGameModule\fP\&.
 .ti -1c
 .RI "virtual void \fBrender\fP (\fBArcade::Display::IDisplayModule\fP &lib) const =0"
 .br
-.RI "Renders the game on the display module\&. "
+.RI "Renders the game on the display module\&.
+.br
+THIS MUST ONLY DRAW THINGS ON THE CANVAS, so don't call the \fBArcade::Display::IDisplayModule::update\fP or \fBArcade::Display::IDisplayModule::render\fP methods\&. "
 .ti -1c
 .RI "virtual const std::string & \fBgetLibName\fP () const =0"
 .br
@@ -141,7 +143,9 @@ Implemented in \fBArcade::Games::AGameModule\fP\&.
 .SS "virtual void Arcade::Games::IGameModule::render (\fBArcade::Display::IDisplayModule\fP & lib) const\fC [pure virtual]\fP"
 
 .PP
-Renders the game on the display module\&. 
+Renders the game on the display module\&.
+.br
+THIS MUST ONLY DRAW THINGS ON THE CANVAS, so don't call the \fBArcade::Display::IDisplayModule::update\fP or \fBArcade::Display::IDisplayModule::render\fP methods\&. 
 .PP
 \fBParameters:\fP
 .RS 4

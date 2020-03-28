@@ -176,6 +176,8 @@ doc_clean:
 	@$(RM) -r doc/latex
 	@$(RM) -r doc/man
 
+doc_re: doc_clean doc doc_pdf
+
 %.o: %.cpp
 	@$(CXX) -c $(CXXFLAGS) -o $@ $< && \
 		$(ECHO) $(DIM_T) "$(CXX) $(CXXFLAGS) -c "$<$(COLOR_THEME)" -o "$@ $(DEFAULT) || \
@@ -187,7 +189,7 @@ doc_clean:
 		build_libcaca build_sdl build_sfml build_centipede build_nibbler build_pacman build_qix build_solarfox \
 		exceptions \
 		clean fclean re debug \
-		doc
+		doc doc_pdf doc_clean doc_re
 
 ECHO	=	/bin/echo -e
 DEFAULT	=	"\e[0m"

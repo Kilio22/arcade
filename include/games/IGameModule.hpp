@@ -93,7 +93,9 @@ namespace Arcade::Games
             virtual void update(const Arcade::Display::IDisplayModule &lib) = 0;
 
             /**
-             * @brief Renders the game on the display module.
+             * @brief Renders the game on the display module.\n
+             * THIS MUST ONLY DRAW THINGS ON THE CANVAS, so don't call the Arcade::Display::IDisplayModule::update or Arcade::Display::IDisplayModule::render methods.
+             *
              * @param lib The display module that will be used to put things on a canvas.
              */
             virtual void render(Arcade::Display::IDisplayModule &lib) const = 0;

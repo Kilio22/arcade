@@ -19,11 +19,11 @@ Inherits \fBArcade::Games::AGameModule\fP\&.
 .br
 .RI "Resets and restarts the game\&. "
 .ti -1c
-.RI "void \fBupdate\fP (const \fBArcade::Display::IDisplayModule\fP &lib) final"
+.RI "void \fBupdate\fP (const \fBArcade::Display::IDisplayModule\fP &displayModule) final"
 .br
 .RI "Updates the game\&. "
 .ti -1c
-.RI "void \fBrender\fP (\fBArcade::Display::IDisplayModule\fP &lib) const final"
+.RI "void \fBrender\fP (\fBArcade::Display::IDisplayModule\fP &displayModule) const final"
 .br
 .RI "Renders the \fBPacman\fP game on the display module\&. "
 .in -1c
@@ -33,7 +33,7 @@ Inherits \fBArcade::Games::AGameModule\fP\&.
 \fBPacman\fP game\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "void Arcade::Games::Pacman::render (\fBArcade::Display::IDisplayModule\fP & lib) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Games::Pacman::render (\fBArcade::Display::IDisplayModule\fP & displayModule) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Renders the \fBPacman\fP game on the display module\&. 

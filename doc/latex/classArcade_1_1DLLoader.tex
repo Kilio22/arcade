@@ -1,0 +1,97 @@
+\hypertarget{classArcade_1_1DLLoader}{}\section{Arcade\+::D\+L\+Loader$<$ T $>$ Class Template Reference}
+\label{classArcade_1_1DLLoader}\index{Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}}
+
+
+Used for dynamically loading libraries.  
+
+
+
+
+{\ttfamily \#include $<$D\+L\+Loader.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1DLLoader_ae3bd52e8aff2d1009f0eeb169d18290a}\label{classArcade_1_1DLLoader_ae3bd52e8aff2d1009f0eeb169d18290a}} 
+{\bfseries D\+L\+Loader} (\mbox{\hyperlink{classArcade_1_1DLLoader}{D\+L\+Loader}} const \&)=delete
+\item 
+\mbox{\Hypertarget{classArcade_1_1DLLoader_a7669292663e67263a50cfa36be22c5d7}\label{classArcade_1_1DLLoader_a7669292663e67263a50cfa36be22c5d7}} 
+void {\bfseries operator=} (\mbox{\hyperlink{classArcade_1_1DLLoader}{D\+L\+Loader}} const \&)=delete
+\item 
+std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \mbox{\hyperlink{classArcade_1_1DLLoader_ab2d8182befd3ba3dc59cb0c308046de8}{get\+Libraries}} (const std\+::string \&dir\+Path) const
+\begin{DoxyCompactList}\small\item\em Gets the available libraries in a given folder. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{classArcade_1_1DLLoader_ad9fb1241a01190637402f3866c695272}{load\+Library}} (const std\+::string \&path) const
+\begin{DoxyCompactList}\small\item\em Loads the given library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classArcade_1_1DLLoader}{D\+L\+Loader}} const  \& \mbox{\hyperlink{classArcade_1_1DLLoader_a7a75048aa067e9e75aaf5faae6cfa4c1}{get\+Instance}} (void)
+\begin{DoxyCompactList}\small\item\em Gets an instance of this object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Arcade\+::\+D\+L\+Loader$<$ T $>$}
+
+Used for dynamically loading libraries. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Library class type. Either I\+Game\+Module or I\+Display\+Module. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1DLLoader_a7a75048aa067e9e75aaf5faae6cfa4c1}\label{classArcade_1_1DLLoader_a7a75048aa067e9e75aaf5faae6cfa4c1}} 
+\index{Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}}
+\subsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static \mbox{\hyperlink{classArcade_1_1DLLoader}{D\+L\+Loader}} const\& \mbox{\hyperlink{classArcade_1_1DLLoader}{Arcade\+::\+D\+L\+Loader}}$<$ T $>$\+::get\+Instance (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets an instance of this object. 
+
+\begin{DoxyReturn}{Returns}
+The current \mbox{\hyperlink{classArcade_1_1DLLoader}{D\+L\+Loader}} instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1DLLoader_ab2d8182befd3ba3dc59cb0c308046de8}\label{classArcade_1_1DLLoader_ab2d8182befd3ba3dc59cb0c308046de8}} 
+\index{Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}!getLibraries@{getLibraries}}
+\index{getLibraries@{getLibraries}!Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}}
+\subsubsection{\texorpdfstring{getLibraries()}{getLibraries()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$std\+::pair$<$std\+::string, std\+::string$>$ $>$ \mbox{\hyperlink{classArcade_1_1DLLoader}{Arcade\+::\+D\+L\+Loader}}$<$ T $>$\+::get\+Libraries (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{dir\+Path }\end{DoxyParamCaption}) const}
+
+
+
+Gets the available libraries in a given folder. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir\+Path} & Folder to lookup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::pair$<$std\+::string, std\+::string$>$$>$ Vector containing \mbox{[}path, name\mbox{]} pairs. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classArcade_1_1DLLoader_ad9fb1241a01190637402f3866c695272}\label{classArcade_1_1DLLoader_ad9fb1241a01190637402f3866c695272}} 
+\index{Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}!loadLibrary@{loadLibrary}}
+\index{loadLibrary@{loadLibrary}!Arcade::DLLoader$<$ T $>$@{Arcade::DLLoader$<$ T $>$}}
+\subsubsection{\texorpdfstring{loadLibrary()}{loadLibrary()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::unique\+\_\+ptr$<$T$>$ \mbox{\hyperlink{classArcade_1_1DLLoader}{Arcade\+::\+D\+L\+Loader}}$<$ T $>$\+::load\+Library (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{path }\end{DoxyParamCaption}) const}
+
+
+
+Loads the given library. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em path} & File containing the library to extract. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$\+T$>$ Unique pointer to the T instance. 
+\end{DoxyReturn}

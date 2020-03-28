@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "Arcade::Core", "classArcade_1_1Core.html", null ],
+    [ "Arcade::DLLoader< T >", "classArcade_1_1DLLoader.html", null ],
     [ "exception", null, [
       [ "Arcade::Exceptions::ArcadeException", "classArcade_1_1Exceptions_1_1ArcadeException.html", [
         [ "Arcade::Exceptions::BadFileException", "classArcade_1_1Exceptions_1_1BadFileException.html", null ],
@@ -23,5 +24,6 @@ var hierarchy =
         [ "Arcade::Games::Qix", "classArcade_1_1Games_1_1Qix.html", null ],
         [ "Arcade::Games::Solarfox", "classArcade_1_1Games_1_1Solarfox.html", null ]
       ] ]
-    ] ]
+    ] ],
+    [ "Arcade::Logger", "classArcade_1_1Logger.html", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['systemkeys',['SystemKeys',['../classArcade_1_1Display_1_1ADisplayModule.html#ac438501e449afdad548b42ee2897eabc',1,'Arcade::Display::ADisplayModule']]]
+  ['loglevel',['LogLevel',['../classArcade_1_1Logger.html#a9b6365ec3dfe94ac7d296ad60d4b3b20',1,'Arcade::Logger']]]
 ];

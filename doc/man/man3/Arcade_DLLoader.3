@@ -1,0 +1,102 @@
+.TH "Arcade::DLLoader< T >" 3 "Sat Mar 28 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Arcade::DLLoader< T > \- Used for dynamically loading libraries\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DLLoader\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDLLoader\fP (\fBDLLoader\fP const &)=delete"
+.br
+.ti -1c
+.RI "void \fBoperator=\fP (\fBDLLoader\fP const &)=delete"
+.br
+.ti -1c
+.RI "std::vector< std::pair< std::string, std::string > > \fBgetLibraries\fP (const std::string &dirPath) const"
+.br
+.RI "Gets the available libraries in a given folder\&. "
+.ti -1c
+.RI "std::unique_ptr< T > \fBloadLibrary\fP (const std::string &path) const"
+.br
+.RI "Loads the given library\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBDLLoader\fP const  & \fBgetInstance\fP (void)"
+.br
+.RI "Gets an instance of this object\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class Arcade::DLLoader< T >"
+Used for dynamically loading libraries\&. 
+
+
+.PP
+\fBTemplate Parameters:\fP
+.RS 4
+\fIT\fP Library class type\&. Either IGameModule or IDisplayModule\&. 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T > static \fBDLLoader\fP const& \fBArcade::DLLoader\fP< T >::getInstance (void)\fC [static]\fP"
+
+.PP
+Gets an instance of this object\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+The current \fBDLLoader\fP instance\&. 
+.RE
+.PP
+
+.SS "template<class T > std::vector<std::pair<std::string, std::string> > \fBArcade::DLLoader\fP< T >::getLibraries (const std::string & dirPath) const"
+
+.PP
+Gets the available libraries in a given folder\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIdirPath\fP Folder to lookup 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+std::vector<std::pair<std::string, std::string>> Vector containing [path, name] pairs\&. 
+.RE
+.PP
+
+.SS "template<class T > std::unique_ptr<T> \fBArcade::DLLoader\fP< T >::loadLibrary (const std::string & path) const"
+
+.PP
+Loads the given library\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIpath\fP File containing the library to extract\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+std::unique_ptr<T> Unique pointer to the T instance\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Arcade from the source code\&.

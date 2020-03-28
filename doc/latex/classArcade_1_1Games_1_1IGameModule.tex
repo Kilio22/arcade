@@ -38,7 +38,8 @@ virtual std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \mbox{\hyperl
 virtual void \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_a421d1064fcc112dfc7ea025fc7f88aa7}{update}} (const \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&lib)=0
 \begin{DoxyCompactList}\small\item\em Updates the game. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_afd5ec66681e77038e3d4dc17f43e1ee9}{render}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule}{Arcade\+::\+Display\+::\+I\+Display\+Module}} \&lib) const =0
-\begin{DoxyCompactList}\small\item\em Renders the game on the display module. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Renders the game on the display module.~\newline
+T\+H\+IS M\+U\+ST O\+N\+LY D\+R\+AW T\+H\+I\+N\+GS ON T\+HE C\+A\+N\+V\+AS, so don\textquotesingle{}t call the \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a1ca0c1052dccb78eb470e36e6f557e60}{Arcade\+::\+Display\+::\+I\+Display\+Module\+::update}} or \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a012f5804e7dc45515ef8e85e7ca8de5a}{Arcade\+::\+Display\+::\+I\+Display\+Module\+::render}} methods. \end{DoxyCompactList}\item 
 virtual const std\+::string \& \mbox{\hyperlink{classArcade_1_1Games_1_1IGameModule_a30966cbaa00abbd2a211cf152ea595f2}{get\+Lib\+Name}} () const =0
 \begin{DoxyCompactList}\small\item\em Gets the library name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -149,7 +150,8 @@ Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a61be4a5123c
 
 
 
-Renders the game on the display module. 
+Renders the game on the display module.~\newline
+T\+H\+IS M\+U\+ST O\+N\+LY D\+R\+AW T\+H\+I\+N\+GS ON T\+HE C\+A\+N\+V\+AS, so don\textquotesingle{}t call the \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a1ca0c1052dccb78eb470e36e6f557e60}{Arcade\+::\+Display\+::\+I\+Display\+Module\+::update}} or \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a012f5804e7dc45515ef8e85e7ca8de5a}{Arcade\+::\+Display\+::\+I\+Display\+Module\+::render}} methods. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -158,7 +160,7 @@ Renders the game on the display module.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a5897780d42d5faba3287c29b87f2b498}{Arcade\+::\+Games\+::\+A\+Game\+Module}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Nibbler_afd52ee2fad66523b58f94f9eb582145e}{Arcade\+::\+Games\+::\+Nibbler}}, and \mbox{\hyperlink{classArcade_1_1Games_1_1Pacman_ab1a7408f265efbef12b4f9d1a6fb4512}{Arcade\+::\+Games\+::\+Pacman}}.
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1AGameModule_a5897780d42d5faba3287c29b87f2b498}{Arcade\+::\+Games\+::\+A\+Game\+Module}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Nibbler_afd52ee2fad66523b58f94f9eb582145e}{Arcade\+::\+Games\+::\+Nibbler}}, and \mbox{\hyperlink{classArcade_1_1Games_1_1Pacman_a624e0f9332f888fc585a17290cf80041}{Arcade\+::\+Games\+::\+Pacman}}.
 
 \mbox{\Hypertarget{classArcade_1_1Games_1_1IGameModule_a3cf053ce2f4ccfe13e9c10d8549f7c82}\label{classArcade_1_1Games_1_1IGameModule_a3cf053ce2f4ccfe13e9c10d8549f7c82}} 
 \index{Arcade::Games::IGameModule@{Arcade::Games::IGameModule}!saveToFile@{saveToFile}}
@@ -239,5 +241,5 @@ Updates the game.
 \end{DoxyParams}
 
 
-Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1Nibbler_a6a44a75ab1905647587d7a6314155955}{Arcade\+::\+Games\+::\+Nibbler}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Pacman_aa6bc227c3f14cc8d66d11f2d32bed3ec}{Arcade\+::\+Games\+::\+Pacman}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Centipede_a11a932a0abda301ae6037c6b97532e79}{Arcade\+::\+Games\+::\+Centipede}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Qix_aab6bfb0ecf8571da19c4fcbfc9de263e}{Arcade\+::\+Games\+::\+Qix}}, and \mbox{\hyperlink{classArcade_1_1Games_1_1Solarfox_a87d7898dc7b5d8c658a18c45d35be991}{Arcade\+::\+Games\+::\+Solarfox}}.
+Implemented in \mbox{\hyperlink{classArcade_1_1Games_1_1Nibbler_a6a44a75ab1905647587d7a6314155955}{Arcade\+::\+Games\+::\+Nibbler}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Pacman_aa1da58f8e97d6363bd4ef0538496490e}{Arcade\+::\+Games\+::\+Pacman}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Centipede_a11a932a0abda301ae6037c6b97532e79}{Arcade\+::\+Games\+::\+Centipede}}, \mbox{\hyperlink{classArcade_1_1Games_1_1Qix_aab6bfb0ecf8571da19c4fcbfc9de263e}{Arcade\+::\+Games\+::\+Qix}}, and \mbox{\hyperlink{classArcade_1_1Games_1_1Solarfox_a87d7898dc7b5d8c658a18c45d35be991}{Arcade\+::\+Games\+::\+Solarfox}}.
 

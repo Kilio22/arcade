@@ -28,7 +28,7 @@ namespace Arcade
     {
         public:
             /**
-             * @brief Gets the Instance object.
+             * @brief Gets an instance of this object.
              * @return The current DLLoader instance.
              */
             static DLLoader const &getInstance(void);
