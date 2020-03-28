@@ -159,7 +159,7 @@ void Arcade::Display::SFML::update()
         if (event.type == sf::Event::Closed)
             this->_shouldClose = true;
         if (event.type == sf::Event::KeyPressed) {
-            auto found = std::find(this->_libKeys.begin(),this->_libKeys.end(), event.key.code);
+            auto found = std::find(this->_libKeys.begin(), this->_libKeys.end(), event.key.code);
             if (found != this->_libKeys.end())
                 this->_events[std::distance(this->_libKeys.begin(), found)] = true;
         }
