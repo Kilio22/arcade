@@ -6,6 +6,7 @@
 */
 
 #include "games/AGameModule.hpp"
+#include "Logger.hpp"
 
 const std::regex Arcade::Games::AGameModule::highscoreRegex("\\w*:\\d*$");
 
@@ -17,7 +18,8 @@ Arcade::Games::AGameModule::AGameModule(std::string const &libname)
 Arcade::Games::AGameModule::~AGameModule()
 {
     if (this->_highscores.empty() == false)
-        this->saveToFile();
+        if (this->saveToFile() == false)
+            Logger::log(Logger::ERROR, "Could not save scores.");
 }
 
 bool Arcade::Games::AGameModule::loadFromFile(const std::string &filepath)
@@ -61,11 +63,13 @@ bool Arcade::Games::AGameModule::saveToFile(const std::string &filepath) const
     std::ofstream ofs;
 
     ofs.open(filepath);
+    if (ofs.is_open() == false)
+        return false;
     for (auto tuple : this->_highscores) {
         ofs << tuple.first << ":" << tuple.second << std::endl;
     }
     ofs.close();
-    return false;
+    return true;
 }
 
 bool Arcade::Games::AGameModule::saveToFile() const
@@ -73,11 +77,13 @@ bool Arcade::Games::AGameModule::saveToFile() const
     std::ofstream ofs;
 
     ofs.open(SAVE_PATH + this->_libName);
+    if (ofs.is_open() == false)
+        return false;
     for (auto tuple : this->_highscores) {
         ofs << tuple.first << ":" << tuple.second << std::endl;
     }
     ofs.close();
-    return false;
+    return true;
 }
 
 void Arcade::Games::AGameModule::setPlayerName(const std::string &playerName)
