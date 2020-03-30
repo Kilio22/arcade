@@ -2,7 +2,7 @@
 
 Project carried out in collaboration with the following group leaders:
 
-- kylian.balan@epitech.eu
+- _kylian.balan@epitech.eu_
 - paulic1.killian@epitech.eu
 - remi.balbous@epitech.eu
 - philippe.loctaux@epitech.eu
