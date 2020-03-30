@@ -53,7 +53,7 @@ const std::vector<std::pair<int, int>> Arcade::Display::Ncurses::_colorsToInit =
     {COLOR_BLUE, COLOR_BLUE}, // BLUE
     {COLOR_MAGENTA, COLOR_MAGENTA}, // MAGENTA
     {COLOR_CYAN, COLOR_CYAN}, // CYAN
-    {COLOR_BLACK, COLOR_BLACK}, // LIGHT GRAY
+    {COLOR_WHITE, COLOR_WHITE}, // LIGHT GRAY
     {COLOR_BLACK, COLOR_BLACK}, // DARK GRAY
     {COLOR_RED, COLOR_RED}, // LIGHT RED
     {COLOR_GREEN, COLOR_GREEN}, // LIGHT GREEN
@@ -70,7 +70,7 @@ const std::vector<std::pair<int, int>> Arcade::Display::Ncurses::_colorsToInit =
     {COLOR_BLUE, COLOR_BLACK}, // BLUE
     {COLOR_MAGENTA, COLOR_BLACK}, // MAGENTA
     {COLOR_CYAN, COLOR_BLACK}, // CYAN
-    {COLOR_BLACK, COLOR_BLACK}, // LIGHT GRAY
+    {COLOR_WHITE, COLOR_BLACK}, // LIGHT GRAY
     {COLOR_BLACK, COLOR_BLACK}, // DARK GRAY
     {COLOR_RED, COLOR_BLACK}, // RED
     {COLOR_GREEN, COLOR_BLACK}, // GREEN

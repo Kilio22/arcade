@@ -173,7 +173,7 @@ void Arcade::Core::displayControls() const
     std::ostringstream oss;
     char str[40];
 
-    this->displayModule->setColor(Display::IDisplayModule::Colors::DARK_GRAY);
+    this->displayModule->setColor(Display::IDisplayModule::Colors::LIGHT_GRAY);
     sprintf(str, "%39s", "Press R to restart the game.");
     this->displayModule->putText(str, 15, -1350, y -= 10);
     sprintf(str, "%39s", "Press ESCAPE to quit Arcade.");
