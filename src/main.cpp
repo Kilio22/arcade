@@ -27,7 +27,7 @@ int main(int ac, char *av[])
     std::srand(std::time(nullptr));
     try
     {
-        Arcade::Logger::setLogLevel(Arcade::Logger::LogLevel::DEBUG);
+        Arcade::Logger::setLogLevel(Arcade::Logger::LogLevel::ERROR);
         Arcade::Core core(av[1]);
 
         core.play();
