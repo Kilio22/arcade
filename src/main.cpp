@@ -38,10 +38,13 @@ int main(int ac, char *av[])
         std::cerr << ex.what();
         std::cerr << "\"";
         std::cerr << "at: " << ex.getComponent() << std::endl;
+        return ARCADE_FAILURE;
     }
     catch (const std::exception &ex)
     {
         std::cerr << "An unexpeted error happened! " << ex.what() << std::endl;
+        return ARCADE_FAILURE;
     }
+
     return ARCADE_SUCCESS;
 }
