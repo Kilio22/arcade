@@ -37,11 +37,7 @@ int main(int ac, char *av[])
         std::cerr << "An error occured while running the program : \"";
         std::cerr << ex.what();
         std::cerr << "\"";
-<<<<<<< HEAD
-        std::cerr << "at: " << ex.getComponent() << std::endl;
-=======
         std::cerr << " at: " << ex.getComponent() << std::endl;
->>>>>>> 8586d92... for the tests
         return ARCADE_FAILURE;
     }
     catch (const std::exception &ex)
