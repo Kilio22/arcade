@@ -45,8 +45,8 @@ void Arcade::Core::play()
     this->displayModule->open();
     while (this->displayModule->isOpen() == true) {
         this->displayModule->setColor(Display::IDisplayModule::Colors::DEFAULT);
-        this->displayModule->clear();
         this->displayModule->update();
+        this->displayModule->clear();
         if (this->displayModule->shouldExit())
             return;
         if (this->displayModule->switchToNextLib() == true)

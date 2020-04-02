@@ -1,4 +1,4 @@
-.TH "Arcade::Display::IDisplayModule" 3 "Sat Mar 28 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Display::IDisplayModule" 3 "Fri Apr 3 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -34,6 +34,10 @@ Inherited by \fBArcade::Display::ADisplayModule\fP\&.
 .RI "virtual void \fBopen\fP ()=0"
 .br
 .RI "Opens / initializes the window\&. "
+.ti -1c
+.RI "virtual void \fBclose\fP ()=0"
+.br
+.RI "Close / destroy the window\&. "
 .ti -1c
 .RI "virtual bool \fBisOpen\fP () const =0"
 .br
@@ -81,11 +85,11 @@ Inherited by \fBArcade::Display::ADisplayModule\fP\&.
 .ti -1c
 .RI "virtual void \fBclear\fP () const =0"
 .br
-.RI "Clears the canvas\&. "
+.RI "Clears the canvas\&. \fBCall this after the \fBIDisplayModule::update\fP method\&.\fP "
 .ti -1c
 .RI "virtual void \fBupdate\fP ()=0"
 .br
-.RI "Runs an update over the events that occured\&. "
+.RI "Runs an update over the events that occured\&. \fBCall this before the \fBIDisplayModule::clear\fP method\&.\fP "
 .ti -1c
 .RI "virtual void \fBrender\fP () const =0"
 .br
@@ -275,7 +279,7 @@ float Frame count
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual char Arcade::Display::IDisplayModule::getKeyCode () const\fC [pure virtual]\fP"
 
 .PP
@@ -288,7 +292,7 @@ Gets the last pressed character from the keyboard\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual const std::string& Arcade::Display::IDisplayModule::getLibName () const\fC [pure virtual]\fP"
 
 .PP
@@ -321,7 +325,7 @@ false Key is not pressed
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::isKeyPressedOnce (\fBIDisplayModule::Keys\fP key) const\fC [pure virtual]\fP"
 
 .PP
@@ -341,7 +345,7 @@ false Key is not pressed
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::isOpen () const\fC [pure virtual]\fP"
 
 .PP
@@ -356,7 +360,7 @@ false Window is closed
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual void Arcade::Display::IDisplayModule::putCircle (float x, float y, float rad) const\fC [pure virtual]\fP"
 
 .PP
@@ -373,7 +377,7 @@ Displays a cirle\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual void Arcade::Display::IDisplayModule::putFillCircle (float x, float y, float rad) const\fC [pure virtual]\fP"
 
 .PP
@@ -390,7 +394,7 @@ Displays a filled cirle\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual void Arcade::Display::IDisplayModule::putFillRect (float x, float y, float w, float h) const\fC [pure virtual]\fP"
 
 .PP
@@ -409,7 +413,7 @@ Displays a filled rectangle\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual void Arcade::Display::IDisplayModule::putLine (float x1, float y1, float x2, float y2) const\fC [pure virtual]\fP"
 
 .PP
@@ -428,7 +432,7 @@ Displays a line\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual void Arcade::Display::IDisplayModule::putPixel (float x, float y) const\fC [pure virtual]\fP"
 
 .PP
@@ -443,7 +447,7 @@ Displays a pixel\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual void Arcade::Display::IDisplayModule::putRect (float x, float y, float w, float h) const\fC [pure virtual]\fP"
 
 .PP
@@ -462,7 +466,7 @@ Displays a rectangle\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual void Arcade::Display::IDisplayModule::putText (const std::string & text, unsigned int size, float x, float y) const\fC [pure virtual]\fP"
 
 .PP
@@ -481,7 +485,7 @@ Displays text\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual void Arcade::Display::IDisplayModule::setColor (\fBIDisplayModule::Colors\fP color)\fC [pure virtual]\fP"
 
 .PP
@@ -494,7 +498,7 @@ Defines the color of the elements that will be drawn\&.
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::shouldBeRestarted () const\fC [pure virtual]\fP"
 
 .PP
@@ -509,7 +513,7 @@ false Do nothing
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::shouldExit () const\fC [pure virtual]\fP"
 
 .PP
@@ -524,7 +528,7 @@ false Do nothing
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::shouldGoToMenu () const\fC [pure virtual]\fP"
 
 .PP
@@ -539,7 +543,7 @@ false Do nothing
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::switchToNextGame () const\fC [pure virtual]\fP"
 
 .PP
@@ -554,7 +558,7 @@ false Do nothing
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::switchToNextLib () const\fC [pure virtual]\fP"
 
 .PP
@@ -569,7 +573,7 @@ false Do nothing
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::switchToPreviousGame () const\fC [pure virtual]\fP"
 
 .PP
@@ -584,7 +588,7 @@ false Do nothing
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 .SS "virtual bool Arcade::Display::IDisplayModule::switchToPreviousLib () const\fC [pure virtual]\fP"
 
 .PP
@@ -599,7 +603,7 @@ false Do nothing
 .PP
 
 .PP
-Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Libcaca\fP, and \fBArcade::Display::SFML\fP\&.
+Implemented in \fBArcade::Display::SDL\fP, \fBArcade::Display::Ncurses\fP, \fBArcade::Display::SFML\fP, and \fBArcade::Display::Libcaca\fP\&.
 
 .SH "Author"
 .PP 

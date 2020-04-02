@@ -1,14 +1,11 @@
-.TH "Arcade::Display::Libcaca" 3 "Sat Mar 28 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Display::Libcaca" 3 "Fri Apr 3 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Arcade::Display::Libcaca \- \fBLibcaca\fP library\&.  
-
+Arcade::Display::Libcaca
 .SH SYNOPSIS
 .br
 .PP
-.PP
-\fC#include <Libcaca\&.hpp>\fP
 .PP
 Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .SS "Public Member Functions"
@@ -22,6 +19,10 @@ Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .RI "void \fBopen\fP () final"
 .br
 .RI "Opens / initializes the window\&. "
+.ti -1c
+.RI "void \fBclose\fP () final"
+.br
+.RI "Close / destroy the window\&. "
 .ti -1c
 .RI "bool \fBisOpen\fP () const final"
 .br
@@ -55,11 +56,11 @@ Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .br
 .RI "Checks whether you need to exit the program\&. "
 .ti -1c
-.RI "bool \fBisKeyPressed\fP (\fBIDisplayModule::Keys\fP key) const final"
+.RI "bool \fBisKeyPressed\fP (\fBIDisplayModule::Keys\fP) const final"
 .br
 .RI "Checks whether the current key is being pressed\&. "
 .ti -1c
-.RI "bool \fBisKeyPressedOnce\fP (\fBIDisplayModule::Keys\fP key) const final"
+.RI "bool \fBisKeyPressedOnce\fP (\fBIDisplayModule::Keys\fP) const final"
 .br
 .RI "Checks whether the current key was pressed during the last frame\&. "
 .ti -1c
@@ -69,11 +70,11 @@ Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .ti -1c
 .RI "void \fBclear\fP () const final"
 .br
-.RI "Clears the canvas\&. "
+.RI "Clears the canvas\&. \fBCall this after the \fBIDisplayModule::update\fP method\&.\fP "
 .ti -1c
 .RI "void \fBupdate\fP () final"
 .br
-.RI "Runs an update over the events that occured\&. "
+.RI "Runs an update over the events that occured\&. \fBCall this before the \fBIDisplayModule::clear\fP method\&.\fP "
 .ti -1c
 .RI "void \fBrender\fP () const final"
 .br
@@ -83,7 +84,7 @@ Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .br
 .RI "Gets the last pressed character from the keyboard\&. "
 .ti -1c
-.RI "void \fBsetColor\fP (\fBIDisplayModule::Colors\fP color) final"
+.RI "void \fBsetColor\fP (\fBIDisplayModule::Colors\fP col) final"
 .br
 .RI "Defines the color of the elements that will be drawn\&. "
 .ti -1c
@@ -116,9 +117,6 @@ Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .RI "Displays text\&. "
 .in -1c
 .SS "Additional Inherited Members"
-.SH "Detailed Description"
-.PP 
-\fBLibcaca\fP library\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "float Arcade::Display::Libcaca::getDelta () const\fC [final]\fP, \fC [virtual]\fP"

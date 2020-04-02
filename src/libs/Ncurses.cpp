@@ -178,7 +178,7 @@ float Arcade::Display::Ncurses::getDelta() const
 
 void Arcade::Display::Ncurses::clear() const
 {
-    wclear(stdscr);
+    erase();
 }
 
 void Arcade::Display::Ncurses::update()
@@ -198,7 +198,6 @@ void Arcade::Display::Ncurses::update()
 void Arcade::Display::Ncurses::render() const
 {
     refresh();
-    usleep(90000);
 }
 
 char Arcade::Display::Ncurses::getKeyCode() const

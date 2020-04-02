@@ -1,4 +1,4 @@
-.TH "Arcade::Display::SDL" 3 "Sat Mar 28 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Display::SDL" 3 "Fri Apr 3 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,6 +22,10 @@ Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .RI "void \fBopen\fP () final"
 .br
 .RI "Opens / initializes the window\&. "
+.ti -1c
+.RI "void \fBclose\fP () final"
+.br
+.RI "Close / destroy the window\&. "
 .ti -1c
 .RI "bool \fBisOpen\fP () const final"
 .br
@@ -69,11 +73,11 @@ Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .ti -1c
 .RI "void \fBclear\fP () const final"
 .br
-.RI "Clears the canvas\&. "
+.RI "Clears the canvas\&. \fBCall this after the \fBIDisplayModule::update\fP method\&.\fP "
 .ti -1c
 .RI "void \fBupdate\fP () final"
 .br
-.RI "Runs an update over the events that occured\&. "
+.RI "Runs an update over the events that occured\&. \fBCall this before the \fBIDisplayModule::clear\fP method\&.\fP "
 .ti -1c
 .RI "void \fBrender\fP () const final"
 .br

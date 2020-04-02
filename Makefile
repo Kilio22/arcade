@@ -178,7 +178,7 @@ doc:
 	@doxygen doc/Doxyfile
 
 doc_pdf:
-	@make -C doc/latex
+	@make -C doc/latex -s
 	@cp doc/latex/refman.pdf doc/ArcadeDoc.pdf
 
 doc_clean:

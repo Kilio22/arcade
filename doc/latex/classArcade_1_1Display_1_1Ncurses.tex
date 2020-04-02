@@ -1,0 +1,505 @@
+\hypertarget{classArcade_1_1Display_1_1Ncurses}{}\section{Arcade\+::Display\+::Ncurses Class Reference}
+\label{classArcade_1_1Display_1_1Ncurses}\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+
+
+Libncurses library.  
+
+
+
+
+{\ttfamily \#include $<$Ncurses.\+hpp$>$}
+
+Inheritance diagram for Arcade\+::Display\+::Ncurses\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classArcade_1_1Display_1_1Ncurses}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_aa77320da3bd0385342062d38824ecfa1}\label{classArcade_1_1Display_1_1Ncurses_aa77320da3bd0385342062d38824ecfa1}} 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_aa77320da3bd0385342062d38824ecfa1}{reset}} () final
+\begin{DoxyCompactList}\small\item\em Resets the library. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a1263b41c3fec5968e1adc036e67713cb}\label{classArcade_1_1Display_1_1Ncurses_a1263b41c3fec5968e1adc036e67713cb}} 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a1263b41c3fec5968e1adc036e67713cb}{open}} () final
+\begin{DoxyCompactList}\small\item\em Opens / initializes the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a3a5cd97cdaa7058e426746fcf4f5928f}\label{classArcade_1_1Display_1_1Ncurses_a3a5cd97cdaa7058e426746fcf4f5928f}} 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a3a5cd97cdaa7058e426746fcf4f5928f}{close}} () final
+\begin{DoxyCompactList}\small\item\em Close / destroy the window. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a57f8a7c485cba89aa6862c2b84e442c0}{is\+Open}} () const final
+\begin{DoxyCompactList}\small\item\em Check window status. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a921c8a8559cd48419aafda8e34c1b653}{switch\+To\+Next\+Lib}} () const final
+\begin{DoxyCompactList}\small\item\em Checks whether you need to change the current display library. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_ab92672cecd6fad3116de09fa3f315331}{switch\+To\+Previous\+Lib}} () const final
+\begin{DoxyCompactList}\small\item\em Checks whether you need to change the current display library. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a915b07b0cc03a96303c0d01b59652996}{switch\+To\+Next\+Game}} () const final
+\begin{DoxyCompactList}\small\item\em Checks whether you need to change the current game library. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_ad2e7818db1e8f3328083ed6cab2f7517}{switch\+To\+Previous\+Game}} () const final
+\begin{DoxyCompactList}\small\item\em Checks whether you need to change the current game library. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_aa675198d68cb93fdf94686aa1e60605c}{should\+Be\+Restarted}} () const final
+\begin{DoxyCompactList}\small\item\em Checks whether you need to restart the current game. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a807e935000fce3f6f405cb6aa6239246}{should\+Go\+To\+Menu}} () const final
+\begin{DoxyCompactList}\small\item\em Checks whether you need to go back to the menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a6d27fa12cb2086a3ded2f40462c5ddab}{should\+Exit}} () const final
+\begin{DoxyCompactList}\small\item\em Checks whether you need to exit the program. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a10f2b5576e60581c43719ab2ea882d93}{is\+Key\+Pressed}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}} key) const final
+\begin{DoxyCompactList}\small\item\em Checks whether the current key is being pressed. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_ae32ffc3c3923c09809c6d13822606af1}{is\+Key\+Pressed\+Once}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}} key) const final
+\begin{DoxyCompactList}\small\item\em Checks whether the current key was pressed during the last frame. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a16855687c9b3545739f2b65f0d72e86a}{get\+Delta}} () const final
+\begin{DoxyCompactList}\small\item\em Gets the number of frames since last update. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a75d794522c39558634abdcf82724ddb4}\label{classArcade_1_1Display_1_1Ncurses_a75d794522c39558634abdcf82724ddb4}} 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a75d794522c39558634abdcf82724ddb4}{clear}} () const final
+\begin{DoxyCompactList}\small\item\em Clears the canvas. {\bfseries{Call this after the \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a1ca0c1052dccb78eb470e36e6f557e60}{I\+Display\+Module\+::update}} method.}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a5d3bd6e7882610b6feae7b3b523aa8c2}\label{classArcade_1_1Display_1_1Ncurses_a5d3bd6e7882610b6feae7b3b523aa8c2}} 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a5d3bd6e7882610b6feae7b3b523aa8c2}{update}} () final
+\begin{DoxyCompactList}\small\item\em Runs an update over the events that occured. {\bfseries{Call this before the \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a4892b758c6710f45d4dcebe70f801639}{I\+Display\+Module\+::clear}} method.}} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a6dfbb6d91614db8ae92fd28c5f9bf663}\label{classArcade_1_1Display_1_1Ncurses_a6dfbb6d91614db8ae92fd28c5f9bf663}} 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a6dfbb6d91614db8ae92fd28c5f9bf663}{render}} () const final
+\begin{DoxyCompactList}\small\item\em Renders the canvas. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a250dbb0610f79a7524ba5a926be750b6}{get\+Key\+Code}} () const final
+\begin{DoxyCompactList}\small\item\em Gets the last pressed character from the keyboard. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a2b9c5de7068fcf6c85b0201d5de0fade}{set\+Color}} (\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}} color) final
+\begin{DoxyCompactList}\small\item\em Defines the color of the elements that will be drawn. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a78be67c84498f97a781906f17f3e5f61}{put\+Pixel}} (float x, float y) const final
+\begin{DoxyCompactList}\small\item\em Displays a pixel. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_aaa099fcaa46df8d8d984547933664d7e}{put\+Line}} (float x1, float y1, float x2, float y2) const final
+\begin{DoxyCompactList}\small\item\em Displays a line. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a602741b15ebd421fccd915fea036cb0f}{put\+Rect}} (float x, float y, float w, float h) const final
+\begin{DoxyCompactList}\small\item\em Displays a rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a2f7e633e73799babda0a380a21b54abf}{put\+Fill\+Rect}} (float x, float y, float w, float h) const final
+\begin{DoxyCompactList}\small\item\em Displays a filled rectangle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a06da271e2ab3e6e188965471ce46bf32}{put\+Circle}} (float x, float y, float rad) const final
+\begin{DoxyCompactList}\small\item\em Displays a cirle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_a2c97706223722017dc61ac12105c9d81}{put\+Fill\+Circle}} (float x, float y, float rad) const final
+\begin{DoxyCompactList}\small\item\em Displays a filled cirle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1Ncurses_af660e53523f4d13cc33612ac94c7da97}{put\+Text}} (const std\+::string \&text, unsigned int size, float x, float y) const final
+\begin{DoxyCompactList}\small\item\em Displays text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Libncurses library. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a16855687c9b3545739f2b65f0d72e86a}\label{classArcade_1_1Display_1_1Ncurses_a16855687c9b3545739f2b65f0d72e86a}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!getDelta@{getDelta}}
+\index{getDelta@{getDelta}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{getDelta()}{getDelta()}}
+{\footnotesize\ttfamily float Arcade\+::\+Display\+::\+Ncurses\+::get\+Delta (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Gets the number of frames since last update. 
+
+\begin{DoxyReturn}{Returns}
+float Frame count 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_aab078d82e6fdd32682553947c20226ac}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a250dbb0610f79a7524ba5a926be750b6}\label{classArcade_1_1Display_1_1Ncurses_a250dbb0610f79a7524ba5a926be750b6}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!getKeyCode@{getKeyCode}}
+\index{getKeyCode@{getKeyCode}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{getKeyCode()}{getKeyCode()}}
+{\footnotesize\ttfamily char Arcade\+::\+Display\+::\+Ncurses\+::get\+Key\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Gets the last pressed character from the keyboard. 
+
+\begin{DoxyReturn}{Returns}
+\textbackslash{}0 if nothing was pressed, \textbackslash{}b if backspace was pressed, \textbackslash{}n if return was pressed, otherwise, a character. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a403f8a0f065dad707a881ef3cee79805}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a10f2b5576e60581c43719ab2ea882d93}\label{classArcade_1_1Display_1_1Ncurses_a10f2b5576e60581c43719ab2ea882d93}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!isKeyPressed@{isKeyPressed}}
+\index{isKeyPressed@{isKeyPressed}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{isKeyPressed()}{isKeyPressed()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::is\+Key\+Pressed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether the current key is being pressed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Key is pressed 
+
+false Key is not pressed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_af871661ff84c21581cd7233ba6f27aa0}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_ae32ffc3c3923c09809c6d13822606af1}\label{classArcade_1_1Display_1_1Ncurses_ae32ffc3c3923c09809c6d13822606af1}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!isKeyPressedOnce@{isKeyPressedOnce}}
+\index{isKeyPressedOnce@{isKeyPressedOnce}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{isKeyPressedOnce()}{isKeyPressedOnce()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::is\+Key\+Pressed\+Once (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a8da3f6b309ca0581473ae8cc8789b619}{I\+Display\+Module\+::\+Keys}}}]{key }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether the current key was pressed during the last frame. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true Key is pressed 
+
+false Key is not pressed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a531b700b332e077d9b714bafac05ebe1}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a57f8a7c485cba89aa6862c2b84e442c0}\label{classArcade_1_1Display_1_1Ncurses_a57f8a7c485cba89aa6862c2b84e442c0}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Check window status. 
+
+\begin{DoxyReturn}{Returns}
+true Window is open 
+
+false Window is closed 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a34c86dd2e7aa60a70c0cc06ccbd34e47}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a06da271e2ab3e6e188965471ce46bf32}\label{classArcade_1_1Display_1_1Ncurses_a06da271e2ab3e6e188965471ce46bf32}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!putCircle@{putCircle}}
+\index{putCircle@{putCircle}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{putCircle()}{putCircle()}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Ncurses\+::put\+Circle (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Displays a cirle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+{\em rad} & Radius of the circle \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a68b7b140a378dc416ec278d97dc76e9e}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a2c97706223722017dc61ac12105c9d81}\label{classArcade_1_1Display_1_1Ncurses_a2c97706223722017dc61ac12105c9d81}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!putFillCircle@{putFillCircle}}
+\index{putFillCircle@{putFillCircle}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{putFillCircle()}{putFillCircle()}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Ncurses\+::put\+Fill\+Circle (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{rad }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Displays a filled cirle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+{\em rad} & Radius of the circle \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_aa3d23b9294132b6efb28dbc932892d1b}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a2f7e633e73799babda0a380a21b54abf}\label{classArcade_1_1Display_1_1Ncurses_a2f7e633e73799babda0a380a21b54abf}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!putFillRect@{putFillRect}}
+\index{putFillRect@{putFillRect}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{putFillRect()}{putFillRect()}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Ncurses\+::put\+Fill\+Rect (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Displays a filled rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+{\em w} & Width of the rectangle \\
+\hline
+{\em h} & Height of the rectangle \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a1e9f08e3568ac005e92191eea6c0ae4d}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_aaa099fcaa46df8d8d984547933664d7e}\label{classArcade_1_1Display_1_1Ncurses_aaa099fcaa46df8d8d984547933664d7e}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!putLine@{putLine}}
+\index{putLine@{putLine}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{putLine()}{putLine()}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Ncurses\+::put\+Line (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{y1,  }\item[{float}]{x2,  }\item[{float}]{y2 }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Displays a line. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & X coordinates for the first point \\
+\hline
+{\em y1} & Y coordinates for the first point \\
+\hline
+{\em x2} & X coordinates for the second point \\
+\hline
+{\em y2} & Y coordinates for the second point \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a669da8dd0fc5360d11c735d68c17bc6e}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a78be67c84498f97a781906f17f3e5f61}\label{classArcade_1_1Display_1_1Ncurses_a78be67c84498f97a781906f17f3e5f61}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!putPixel@{putPixel}}
+\index{putPixel@{putPixel}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{putPixel()}{putPixel()}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Ncurses\+::put\+Pixel (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Displays a pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a86a61eaa1d0cf2ddfdedbaa04054da90}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a602741b15ebd421fccd915fea036cb0f}\label{classArcade_1_1Display_1_1Ncurses_a602741b15ebd421fccd915fea036cb0f}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!putRect@{putRect}}
+\index{putRect@{putRect}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{putRect()}{putRect()}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Ncurses\+::put\+Rect (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{w,  }\item[{float}]{h }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Displays a rectangle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+{\em w} & Width of the rectangle \\
+\hline
+{\em h} & Height of the rectangle \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a4c4072d7444006b9a0ba134c684e58b5}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_af660e53523f4d13cc33612ac94c7da97}\label{classArcade_1_1Display_1_1Ncurses_af660e53523f4d13cc33612ac94c7da97}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!putText@{putText}}
+\index{putText@{putText}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{putText()}{putText()}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Ncurses\+::put\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{unsigned int}]{size,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Displays text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & The text content \\
+\hline
+{\em size} & The text size \\
+\hline
+{\em x} & X coordinates \\
+\hline
+{\em y} & Y coordinates \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9740f30e3135d3a51851bdca07ef88a3}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a2b9c5de7068fcf6c85b0201d5de0fade}\label{classArcade_1_1Display_1_1Ncurses_a2b9c5de7068fcf6c85b0201d5de0fade}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!setColor@{setColor}}
+\index{setColor@{setColor}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Arcade\+::\+Display\+::\+Ncurses\+::set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ae0a776be9163d096051c522e21c007b2}{I\+Display\+Module\+::\+Colors}}}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Defines the color of the elements that will be drawn. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9f81148f93a249d6fc91307819911b4e}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_aa675198d68cb93fdf94686aa1e60605c}\label{classArcade_1_1Display_1_1Ncurses_aa675198d68cb93fdf94686aa1e60605c}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!shouldBeRestarted@{shouldBeRestarted}}
+\index{shouldBeRestarted@{shouldBeRestarted}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{shouldBeRestarted()}{shouldBeRestarted()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::should\+Be\+Restarted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether you need to restart the current game. 
+
+\begin{DoxyReturn}{Returns}
+true Restart the game 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_adc5d499229aa5899bbd4bae14f00cb27}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a6d27fa12cb2086a3ded2f40462c5ddab}\label{classArcade_1_1Display_1_1Ncurses_a6d27fa12cb2086a3ded2f40462c5ddab}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!shouldExit@{shouldExit}}
+\index{shouldExit@{shouldExit}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{shouldExit()}{shouldExit()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::should\+Exit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether you need to exit the program. 
+
+\begin{DoxyReturn}{Returns}
+true Exit the program 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a550877fb92d58325404b9ebe9e71f6ff}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a807e935000fce3f6f405cb6aa6239246}\label{classArcade_1_1Display_1_1Ncurses_a807e935000fce3f6f405cb6aa6239246}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!shouldGoToMenu@{shouldGoToMenu}}
+\index{shouldGoToMenu@{shouldGoToMenu}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{shouldGoToMenu()}{shouldGoToMenu()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::should\+Go\+To\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether you need to go back to the menu. 
+
+\begin{DoxyReturn}{Returns}
+true Go back to menu 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_ad060f6b99f2adffaf02a4226fc40d0ab}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a915b07b0cc03a96303c0d01b59652996}\label{classArcade_1_1Display_1_1Ncurses_a915b07b0cc03a96303c0d01b59652996}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!switchToNextGame@{switchToNextGame}}
+\index{switchToNextGame@{switchToNextGame}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{switchToNextGame()}{switchToNextGame()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::switch\+To\+Next\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether you need to change the current game library. 
+
+\begin{DoxyReturn}{Returns}
+true Switch to next available library 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a9584cb0ca3b157c9a4ec94509e4f8e32}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_a921c8a8559cd48419aafda8e34c1b653}\label{classArcade_1_1Display_1_1Ncurses_a921c8a8559cd48419aafda8e34c1b653}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!switchToNextLib@{switchToNextLib}}
+\index{switchToNextLib@{switchToNextLib}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{switchToNextLib()}{switchToNextLib()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::switch\+To\+Next\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether you need to change the current display library. 
+
+\begin{DoxyReturn}{Returns}
+true Switch to next available library 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a0de47361c9d47bf8fc52070b945f23b7}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_ad2e7818db1e8f3328083ed6cab2f7517}\label{classArcade_1_1Display_1_1Ncurses_ad2e7818db1e8f3328083ed6cab2f7517}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!switchToPreviousGame@{switchToPreviousGame}}
+\index{switchToPreviousGame@{switchToPreviousGame}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{switchToPreviousGame()}{switchToPreviousGame()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::switch\+To\+Previous\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether you need to change the current game library. 
+
+\begin{DoxyReturn}{Returns}
+true Switch to previous available library 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a3bbbfe00907c8f3e4c7ef1aadedcc513}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+
+\mbox{\Hypertarget{classArcade_1_1Display_1_1Ncurses_ab92672cecd6fad3116de09fa3f315331}\label{classArcade_1_1Display_1_1Ncurses_ab92672cecd6fad3116de09fa3f315331}} 
+\index{Arcade::Display::Ncurses@{Arcade::Display::Ncurses}!switchToPreviousLib@{switchToPreviousLib}}
+\index{switchToPreviousLib@{switchToPreviousLib}!Arcade::Display::Ncurses@{Arcade::Display::Ncurses}}
+\subsubsection{\texorpdfstring{switchToPreviousLib()}{switchToPreviousLib()}}
+{\footnotesize\ttfamily bool Arcade\+::\+Display\+::\+Ncurses\+::switch\+To\+Previous\+Lib (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+
+
+Checks whether you need to change the current display library. 
+
+\begin{DoxyReturn}{Returns}
+true Switch to previous available library 
+
+false Do nothing 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a498d51597164e9f92e97ec2afee426b0}{Arcade\+::\+Display\+::\+I\+Display\+Module}}.
+

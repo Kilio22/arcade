@@ -24,6 +24,9 @@ void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_af991085519cc752d328dcf8b789
 \mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a3bd124ab1f07dbee77139ddc689b1aff}\label{classArcade_1_1Display_1_1SDL_a3bd124ab1f07dbee77139ddc689b1aff}} 
 void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a3bd124ab1f07dbee77139ddc689b1aff}{open}} () final
 \begin{DoxyCompactList}\small\item\em Opens / initializes the window. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a53c6120b526f38eff9a2b4aa7aca30fc}\label{classArcade_1_1Display_1_1SDL_a53c6120b526f38eff9a2b4aa7aca30fc}} 
+void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a53c6120b526f38eff9a2b4aa7aca30fc}{close}} () final
+\begin{DoxyCompactList}\small\item\em Close / destroy the window. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a7d86c934d5dde9283e9c70816cf9c8a5}{is\+Open}} () const final
 \begin{DoxyCompactList}\small\item\em Check window status. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a91bee5a87dfcacb4da9d6d148dc52a2b}{switch\+To\+Next\+Lib}} () const final
@@ -48,10 +51,10 @@ float \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a1ca09d130dea3bec2481eb72a4
 \begin{DoxyCompactList}\small\item\em Gets the number of frames since last update. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a537c85f0d2ebdd7d83484126baecf5da}\label{classArcade_1_1Display_1_1SDL_a537c85f0d2ebdd7d83484126baecf5da}} 
 void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a537c85f0d2ebdd7d83484126baecf5da}{clear}} () const final
-\begin{DoxyCompactList}\small\item\em Clears the canvas. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Clears the canvas. {\bfseries{Call this after the \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a1ca0c1052dccb78eb470e36e6f557e60}{I\+Display\+Module\+::update}} method.}} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a9732415d73686f2b20693f280f3b596a}\label{classArcade_1_1Display_1_1SDL_a9732415d73686f2b20693f280f3b596a}} 
 void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a9732415d73686f2b20693f280f3b596a}{update}} () final
-\begin{DoxyCompactList}\small\item\em Runs an update over the events that occured. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Runs an update over the events that occured. {\bfseries{Call this before the \mbox{\hyperlink{classArcade_1_1Display_1_1IDisplayModule_a4892b758c6710f45d4dcebe70f801639}{I\+Display\+Module\+::clear}} method.}} \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classArcade_1_1Display_1_1SDL_a81d987b70ba70d67f92b9c93e2fea833}\label{classArcade_1_1Display_1_1SDL_a81d987b70ba70d67f92b9c93e2fea833}} 
 void \mbox{\hyperlink{classArcade_1_1Display_1_1SDL_a81d987b70ba70d67f92b9c93e2fea833}{render}} () const final
 \begin{DoxyCompactList}\small\item\em Renders the canvas. \end{DoxyCompactList}\item 

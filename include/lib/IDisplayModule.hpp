@@ -93,7 +93,7 @@ namespace Arcade::Display
             virtual void open() = 0;
 
             /**
-             * @brief Close / Destroy the window
+             * @brief Close / destroy the window
              */
             virtual void close() = 0;
 
@@ -180,12 +180,14 @@ namespace Arcade::Display
 
 
             /**
-             * @brief Clears the canvas
+             * @brief Clears the canvas.
+             * <b>Call this after the IDisplayModule::update method.</b>
              */
             virtual void clear() const = 0;
 
             /**
              * @brief Runs an update over the events that occured.
+             * <b>Call this before the IDisplayModule::clear method.</b>
              */
             virtual void update() = 0;
 

@@ -1,14 +1,14 @@
-.TH "Arcade::Display::SFML" 3 "Fri Apr 3 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
+.TH "Arcade::Display::Ncurses" 3 "Fri Apr 3 2020" "Version 1.0" "Arcade" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-Arcade::Display::SFML \- \fBSFML\fP library\&.  
+Arcade::Display::Ncurses \- Libncurses library\&.  
 
 .SH SYNOPSIS
 .br
 .PP
 .PP
-\fC#include <SFML\&.hpp>\fP
+\fC#include <Ncurses\&.hpp>\fP
 .PP
 Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .SS "Public Member Functions"
@@ -122,10 +122,10 @@ Inherits \fBArcade::Display::ADisplayModule\fP\&.
 .SS "Additional Inherited Members"
 .SH "Detailed Description"
 .PP 
-\fBSFML\fP library\&. 
+Libncurses library\&. 
 .SH "Member Function Documentation"
 .PP 
-.SS "float Arcade::Display::SFML::getDelta () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "float Arcade::Display::Ncurses::getDelta () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Gets the number of frames since last update\&. 
@@ -138,7 +138,7 @@ float Frame count
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "char Arcade::Display::SFML::getKeyCode () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "char Arcade::Display::Ncurses::getKeyCode () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Gets the last pressed character from the keyboard\&. 
@@ -151,7 +151,7 @@ Gets the last pressed character from the keyboard\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::isKeyPressed (\fBIDisplayModule::Keys\fP key) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::isKeyPressed (\fBIDisplayModule::Keys\fP key) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether the current key is being pressed\&. 
@@ -171,7 +171,7 @@ false Key is not pressed
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::isKeyPressedOnce (\fBIDisplayModule::Keys\fP key) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::isKeyPressedOnce (\fBIDisplayModule::Keys\fP key) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether the current key was pressed during the last frame\&. 
@@ -191,7 +191,7 @@ false Key is not pressed
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::isOpen () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::isOpen () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Check window status\&. 
@@ -206,7 +206,7 @@ false Window is closed
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SFML::putCircle (float x, float y, float rad) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::Ncurses::putCircle (float x, float y, float rad) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Displays a cirle\&. 
@@ -223,7 +223,7 @@ Displays a cirle\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SFML::putFillCircle (float x, float y, float rad) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::Ncurses::putFillCircle (float x, float y, float rad) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Displays a filled cirle\&. 
@@ -240,7 +240,7 @@ Displays a filled cirle\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SFML::putFillRect (float x, float y, float w, float h) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::Ncurses::putFillRect (float x, float y, float w, float h) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Displays a filled rectangle\&. 
@@ -259,7 +259,7 @@ Displays a filled rectangle\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SFML::putLine (float x1, float y1, float x2, float y2) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::Ncurses::putLine (float x1, float y1, float x2, float y2) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Displays a line\&. 
@@ -278,7 +278,7 @@ Displays a line\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SFML::putPixel (float x, float y) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::Ncurses::putPixel (float x, float y) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Displays a pixel\&. 
@@ -293,7 +293,7 @@ Displays a pixel\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SFML::putRect (float x, float y, float w, float h) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::Ncurses::putRect (float x, float y, float w, float h) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Displays a rectangle\&. 
@@ -312,7 +312,7 @@ Displays a rectangle\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SFML::putText (const std::string & text, unsigned int size, float x, float y) const\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::Ncurses::putText (const std::string & text, unsigned int size, float x, float y) const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Displays text\&. 
@@ -331,7 +331,7 @@ Displays text\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "void Arcade::Display::SFML::setColor (\fBIDisplayModule::Colors\fP color)\fC [final]\fP, \fC [virtual]\fP"
+.SS "void Arcade::Display::Ncurses::setColor (\fBIDisplayModule::Colors\fP color)\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Defines the color of the elements that will be drawn\&. 
@@ -344,7 +344,7 @@ Defines the color of the elements that will be drawn\&.
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::shouldBeRestarted () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::shouldBeRestarted () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether you need to restart the current game\&. 
@@ -359,7 +359,7 @@ false Do nothing
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::shouldExit () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::shouldExit () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether you need to exit the program\&. 
@@ -374,7 +374,7 @@ false Do nothing
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::shouldGoToMenu () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::shouldGoToMenu () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether you need to go back to the menu\&. 
@@ -389,7 +389,7 @@ false Do nothing
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::switchToNextGame () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::switchToNextGame () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether you need to change the current game library\&. 
@@ -404,7 +404,7 @@ false Do nothing
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::switchToNextLib () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::switchToNextLib () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether you need to change the current display library\&. 
@@ -419,7 +419,7 @@ false Do nothing
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::switchToPreviousGame () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::switchToPreviousGame () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether you need to change the current game library\&. 
@@ -434,7 +434,7 @@ false Do nothing
 
 .PP
 Implements \fBArcade::Display::IDisplayModule\fP\&.
-.SS "bool Arcade::Display::SFML::switchToPreviousLib () const\fC [final]\fP, \fC [virtual]\fP"
+.SS "bool Arcade::Display::Ncurses::switchToPreviousLib () const\fC [final]\fP, \fC [virtual]\fP"
 
 .PP
 Checks whether you need to change the current display library\&. 

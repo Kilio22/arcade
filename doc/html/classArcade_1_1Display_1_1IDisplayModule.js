@@ -43,6 +43,7 @@ var classArcade_1_1Display_1_1IDisplayModule =
     ] ],
     [ "~IDisplayModule", "classArcade_1_1Display_1_1IDisplayModule.html#a7284e8f6231457fdfb347220ed1a64ac", null ],
     [ "clear", "classArcade_1_1Display_1_1IDisplayModule.html#a4892b758c6710f45d4dcebe70f801639", null ],
+    [ "close", "classArcade_1_1Display_1_1IDisplayModule.html#a689bccd57c13b1706d491870111519e3", null ],
     [ "getDelta", "classArcade_1_1Display_1_1IDisplayModule.html#aab078d82e6fdd32682553947c20226ac", null ],
     [ "getKeyCode", "classArcade_1_1Display_1_1IDisplayModule.html#a403f8a0f065dad707a881ef3cee79805", null ],
     [ "getLibName", "classArcade_1_1Display_1_1IDisplayModule.html#a0d8e957815e94766bdefbd7a5043e81a", null ],
