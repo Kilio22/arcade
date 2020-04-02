@@ -26,6 +26,7 @@ namespace Arcade::Display
 
             void reset() final;
             void open() final;
+            void close() final;
             bool isOpen() const final;
 
             bool switchToNextLib() const final;

@@ -77,12 +77,7 @@ Arcade::Display::SDL::SDL()
 
 Arcade::Display::SDL::~SDL()
 {
-    if (this->_window != nullptr) {
-        SDL_DestroyRenderer(this->_renderer);
-        SDL_DestroyWindow(this->_window);
-        TTF_Quit();
-        SDL_Quit();
-    }
+    this->close();
 }
 
 void Arcade::Display::SDL::reset()
@@ -108,6 +103,16 @@ void Arcade::Display::SDL::open()
     SDL_StartTextInput();
     SDL_SetRenderDrawColor(this->_renderer, this->_libColors.at(this->_currentColor).r, this->_libColors.at(this->_currentColor).g, this->_libColors.at(this->_currentColor).b, 255); // set to current color
     this->_fonts = std::make_unique<std::map<unsigned int, TTF_Font *>>();
+}
+
+void Arcade::Display::SDL::close()
+{
+    if (this->_window != nullptr) {
+        SDL_DestroyRenderer(this->_renderer);
+        SDL_DestroyWindow(this->_window);
+        TTF_Quit();
+        SDL_Quit();
+    }
 }
 
 bool Arcade::Display::SDL::isOpen() const
@@ -164,7 +169,13 @@ bool Arcade::Display::SDL::isKeyPressedOnce(IDisplayModule::Keys key) const
 
 float Arcade::Display::SDL::getDelta() const
 {
-    return 1;
+    static float old_time = SDL_GetTicks();
+    float current_time = SDL_GetTicks();
+    float frames = 0;
+
+    frames = ((current_time - old_time) / 1000) * 60;
+    old_time = current_time;
+    return frames;
 }
 
 void Arcade::Display::SDL::clear() const

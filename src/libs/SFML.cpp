@@ -72,10 +72,7 @@ Arcade::Display::SFML::SFML()
 
 Arcade::Display::SFML::~SFML()
 {
-    if (this->_window != nullptr) {
-        this->_window->close();
-        this->_window.release();
-    }
+    this->close();
 }
 
 void Arcade::Display::SFML::reset()
@@ -87,6 +84,14 @@ void Arcade::Display::SFML::open()
 {
     this->_window = std::make_unique<sf::RenderWindow>(sf::VideoMode(FULL_WIDTH, FULL_HEIGHT), "Arcade");
     this->_window->setFramerateLimit(60);
+}
+
+void Arcade::Display::SFML::close()
+{
+    if (this->_window != nullptr) {
+        this->_window->close();
+        this->_window.release();
+    }
 }
 
 bool Arcade::Display::SFML::isOpen() const
@@ -141,7 +146,12 @@ bool Arcade::Display::SFML::isKeyPressedOnce(Keys key) const
 
 float Arcade::Display::SFML::getDelta() const
 {
-    return 1;
+    static sf::Clock clock;
+    float frames = clock.getElapsedTime().asSeconds() * 60;
+
+    clock.restart();
+    std::cout << frames << std::endl;
+    return frames;
 }
 
 void Arcade::Display::SFML::clear() const

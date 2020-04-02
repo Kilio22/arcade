@@ -88,7 +88,7 @@ Arcade::Display::Ncurses::Ncurses()
 
 Arcade::Display::Ncurses::~Ncurses()
 {
-    endwin();
+    this->close();
 }
 
 void Arcade::Display::Ncurses::reset()
@@ -114,6 +114,11 @@ void Arcade::Display::Ncurses::open()
         init_pair(i, value.first, value.second);
         i++;
     }
+}
+
+void Arcade::Display::Ncurses::close()
+{
+    endwin();
 }
 
 bool Arcade::Display::Ncurses::isOpen() const

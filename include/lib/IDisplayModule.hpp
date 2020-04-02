@@ -93,6 +93,11 @@ namespace Arcade::Display
             virtual void open() = 0;
 
             /**
+             * @brief Close / Destroy the window
+             */
+            virtual void close() = 0;
+
+            /**
              * @brief Check window status
              * @return true Window is open
              * @return false Window is closed
