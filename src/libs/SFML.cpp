@@ -150,7 +150,6 @@ float Arcade::Display::SFML::getDelta() const
     float frames = clock.getElapsedTime().asSeconds() * 60;
 
     clock.restart();
-    std::cout << frames << std::endl;
     return frames;
 }
 
