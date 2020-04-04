@@ -11,3 +11,6 @@ Project carried out in collaboration with the following group leaders:
 - thomas1.bastien@epitech.eu
 - kevin.huet@epitech.eu
 - peter.bessone@epitech.eu
+- louis.girard@epitech.eu
+- eliott.palueau@epitech.eu
+- yoann.le-colleter@epitech.eu
