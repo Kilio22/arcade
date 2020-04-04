@@ -8,7 +8,7 @@
 #include "games/Pacman.hpp"
 #include "Exceptions/BadFileException.hpp"
 
-const std::string Arcade::Games::Pacman::_mapPath = "./src/games/Pacman/maze.txt";
+const std::string Arcade::Games::Pacman::_mapPath = "./assets/maze.txt";
 
 const std::vector<std::tuple<float, float, Arcade::Display::IDisplayModule::Colors>> Arcade::Games::Pacman::_monstersPositions = {
     {307, 220, Arcade::Display::IDisplayModule::Colors::LIGHT_BLUE},
