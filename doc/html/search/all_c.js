@@ -1,7 +1,6 @@
 var searchData=
 [
   ['left',['LEFT',['../classArcade_1_1Display_1_1IDisplayModule.html#a8da3f6b309ca0581473ae8cc8789b619a818e2dccdb9b68e41b790ae2a61db553',1,'Arcade::Display::IDisplayModule']]],
-  ['libcaca',['Libcaca',['../classArcade_1_1Display_1_1Libcaca.html',1,'Arcade::Display']]],
   ['light_5fblue',['LIGHT_BLUE',['../classArcade_1_1Display_1_1IDisplayModule.html#ae0a776be9163d096051c522e21c007b2a366101170408645fff26aa02f6f3a2fc',1,'Arcade::Display::IDisplayModule']]],
   ['light_5fcyan',['LIGHT_CYAN',['../classArcade_1_1Display_1_1IDisplayModule.html#ae0a776be9163d096051c522e21c007b2aaa12eda5f91bfd6596475be5305b1ce7',1,'Arcade::Display::IDisplayModule']]],
   ['light_5fgray',['LIGHT_GRAY',['../classArcade_1_1Display_1_1IDisplayModule.html#ae0a776be9163d096051c522e21c007b2a310720f4feb7c4e92899f872cadb374b',1,'Arcade::Display::IDisplayModule']]],

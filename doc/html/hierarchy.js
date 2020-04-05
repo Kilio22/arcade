@@ -12,7 +12,6 @@ var hierarchy =
     ] ],
     [ "Arcade::Display::IDisplayModule", "classArcade_1_1Display_1_1IDisplayModule.html", [
       [ "Arcade::Display::ADisplayModule", "classArcade_1_1Display_1_1ADisplayModule.html", [
-        [ "Arcade::Display::Libcaca", "classArcade_1_1Display_1_1Libcaca.html", null ],
         [ "Arcade::Display::Ncurses", "classArcade_1_1Display_1_1Ncurses.html", null ],
         [ "Arcade::Display::SDL", "classArcade_1_1Display_1_1SDL.html", null ],
         [ "Arcade::Display::SFML", "classArcade_1_1Display_1_1SFML.html", null ]

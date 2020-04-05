@@ -2,11 +2,11 @@
 ** EPITECH PROJECT, 2020
 ** OOP_arcade_2019
 ** File description:
-** Libcaca
+** Ncurses
 */
 
-#ifndef LIBCACA_HPP_
-#define LIBCACA_HPP_
+#ifndef NCURSES_HPP_
+#define NCURSES_HPP_
 
 #include <memory>
 #include <curses.h>
@@ -66,4 +66,4 @@ namespace Arcade::Display
     };
 }
 
-#endif /* !LIBCACA_HPP_ */
+#endif /* !NCURSES_HPP_ */

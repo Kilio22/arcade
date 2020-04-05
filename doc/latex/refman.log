@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2020.3.26)  5 APR 2020 18:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2020.3.26)  5 APR 2020 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1064,13 +1064,13 @@ Chapter 6.
 pdfTeX warning: pdflatex (file ./classArcade_1_1Display_1_1ADisplayModule.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Display_1_1ADisplayModule.pdf>
-<classArcade_1_1Display_1_1ADisplayModule.pdf, id=1405, 501.875pt x 72.03914pt>
+<classArcade_1_1Display_1_1ADisplayModule.pdf, id=1290, 501.875pt x 96.04884pt>
 
 File: classArcade_1_1Display_1_1ADisplayModule.pdf Graphic file (type pdf)
 <use classArcade_1_1Display_1_1ADisplayModule.pdf>
 Package pdftex.def Info: classArcade_1_1Display_1_1ADisplayModule.pdf  used on 
 input line 15.
-(pdftex.def)             Requested size: 398.36076pt x 57.17772pt.
+(pdftex.def)             Requested size: 398.36076pt x 76.2371pt.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (Font)              scaled to size 8.99994pt on input line 50.
  [11
@@ -1090,7 +1090,7 @@ Underfull \hbox (badness 10000) detected at line 122
 pdfTeX warning: pdflatex (file ./classArcade_1_1Games_1_1AGameModule.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Games_1_1AGameModule.pdf>
-<classArcade_1_1Games_1_1AGameModule.pdf, id=1456, 501.875pt x 61.77078pt>
+<classArcade_1_1Games_1_1AGameModule.pdf, id=1340, 501.875pt x 61.77078pt>
 File: classArcade_1_1Games_1_1AGameModule.pdf Graphic file (type pdf)
 <use classArcade_1_1Games_1_1AGameModule.pdf>
 Package pdftex.def Info: classArcade_1_1Games_1_1AGameModule.pdf  used on input
@@ -1149,7 +1149,7 @@ Underfull \hbox (badness 10000) detected at line 262
 pdfTeX warning: pdflatex (file ./classArcade_1_1Exceptions_1_1ArcadeException.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Exceptions_1_1ArcadeException.pdf>
-<classArcade_1_1Exceptions_1_1ArcadeException.pdf, id=1546, 501.875pt x 71.1859
+<classArcade_1_1Exceptions_1_1ArcadeException.pdf, id=1430, 501.875pt x 71.1859
 4pt>
 File: classArcade_1_1Exceptions_1_1ArcadeException.pdf Graphic file (type pdf)
 <use classArcade_1_1Exceptions_1_1ArcadeException.pdf>
@@ -1172,7 +1172,7 @@ pdfTeX warning: pdflatex (file ./classArcade_1_1Exceptions_1_1BadFileException.
 pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
  <./classArcade_1_1Exceptions_1_1BadFileException.pdf>
-<classArcade_1_1Exceptions_1_1BadFileException.pdf, id=1578, 501.875pt x 258.47
+<classArcade_1_1Exceptions_1_1BadFileException.pdf, id=1462, 501.875pt x 258.47
 568pt>
 File: classArcade_1_1Exceptions_1_1BadFileException.pdf Graphic file (type pdf)
 
@@ -1187,7 +1187,7 @@ pdfTeX warning: pdflatex (file ./classArcade_1_1Exceptions_1_1BadInstanciationE
 xception.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5
 > allowed
  <./classArcade_1_1Exceptions_1_1BadInstanciationException.pdf>
-<classArcade_1_1Exceptions_1_1BadInstanciationException.pdf, id=1593, 501.875pt
+<classArcade_1_1Exceptions_1_1BadInstanciationException.pdf, id=1478, 501.875pt
  x 213.56789pt>
 File: classArcade_1_1Exceptions_1_1BadInstanciationException.pdf Graphic file (
 type pdf)
@@ -1204,7 +1204,7 @@ Overfull \vbox (18.08711pt too high) has occurred while \output is active []
 pdfTeX warning: pdflatex (file ./classArcade_1_1Games_1_1Centipede.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Games_1_1Centipede.pdf>
-<classArcade_1_1Games_1_1Centipede.pdf, id=1611, 501.875pt x 308.84384pt>
+<classArcade_1_1Games_1_1Centipede.pdf, id=1495, 501.875pt x 308.84384pt>
 File: classArcade_1_1Games_1_1Centipede.pdf Graphic file (type pdf)
 <use classArcade_1_1Games_1_1Centipede.pdf>
 Package pdftex.def Info: classArcade_1_1Games_1_1Centipede.pdf  used on input l
@@ -1269,13 +1269,13 @@ Underfull \hbox (badness 10000) detected at line 95
 pdfTeX warning: pdflatex (file ./classArcade_1_1Display_1_1IDisplayModule.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Display_1_1IDisplayModule.pdf>
-<classArcade_1_1Display_1_1IDisplayModule.pdf, id=1702, 501.875pt x 72.03914pt>
+<classArcade_1_1Display_1_1IDisplayModule.pdf, id=1586, 501.875pt x 96.04884pt>
 
 File: classArcade_1_1Display_1_1IDisplayModule.pdf Graphic file (type pdf)
 <use classArcade_1_1Display_1_1IDisplayModule.pdf>
 Package pdftex.def Info: classArcade_1_1Display_1_1IDisplayModule.pdf  used on 
 input line 15.
-(pdftex.def)             Requested size: 398.36076pt x 57.17772pt.
+(pdftex.def)             Requested size: 398.36076pt x 76.2371pt.
  [25]
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <7> not available
 (Font)              Font shape `T1/phv/b/it' tried instead on input line 108.
@@ -1289,18 +1289,8 @@ Underfull \hbox (badness 10000) detected at line 326
  []
 
 
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 331--332
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
 Underfull \hbox (badness 10000) detected at line 343
 [][][]
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 348--349
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
  []
 
 
@@ -1314,18 +1304,8 @@ Underfull \hbox (badness 10000) detected at line 382
  []
 
 
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 389--390
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
 Underfull \hbox (badness 10000) detected at line 406
 [][][]
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 413--414
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
  []
 
 [29]
@@ -1334,62 +1314,12 @@ Underfull \hbox (badness 10000) detected at line 425
  []
 
 
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 432--433
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 455--456
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
 Overfull \vbox (29.53883pt too high) has occurred while \output is active []
 
 
-[30]
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 478--479
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 503--504
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 528--529
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-[31]
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 549--550
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 574--575
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 599--600
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-[32]
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 618--619
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
+[30] [31] [32]
 Underfull \hbox (badness 10000) detected at line 630
 [][][]
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 637--638
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
  []
 
 
@@ -1398,18 +1328,8 @@ Underfull \hbox (badness 10000) detected at line 649
  []
 
 
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 656--657
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
 Underfull \hbox (badness 10000) detected at line 668
 [][][]
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 675--676
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
  []
 
 [33]
@@ -1418,18 +1338,8 @@ Underfull \hbox (badness 10000) detected at line 687
  []
 
 
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 694--695
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
-
 Underfull \hbox (badness 10000) detected at line 706
 [][][]
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 713--714
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
  []
 
 
@@ -1437,19 +1347,9 @@ Underfull \hbox (badness 10000) detected at line 725
 [][][]
  []
 
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 732--733
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
- []
-
 [34]
 Underfull \hbox (badness 10000) detected at line 744
 [][][]
- []
-
-
-Overfull \hbox (17.12656pt too wide) in paragraph at lines 751--752
-[]\T1/phv/m/n/10 Implemented in [], [], [], and []. 
  []
 
 ) (./classArcade_1_1Games_1_1IGameModule.tex
@@ -1457,7 +1357,7 @@ Overfull \hbox (17.12656pt too wide) in paragraph at lines 751--752
 pdfTeX warning: pdflatex (file ./classArcade_1_1Games_1_1IGameModule.pdf): PDF 
 inclusion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Games_1_1IGameModule.pdf>
-<classArcade_1_1Games_1_1IGameModule.pdf, id=2060, 501.875pt x 61.77078pt>
+<classArcade_1_1Games_1_1IGameModule.pdf, id=1907, 501.875pt x 61.77078pt>
 File: classArcade_1_1Games_1_1IGameModule.pdf Graphic file (type pdf)
 <use classArcade_1_1Games_1_1IGameModule.pdf>
 Package pdftex.def Info: classArcade_1_1Games_1_1IGameModule.pdf  used on input
@@ -1518,7 +1418,7 @@ pdfTeX warning: pdflatex (file ./classArcade_1_1Exceptions_1_1InvalidLibraryExc
 eption.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> 
 allowed
  <./classArcade_1_1Exceptions_1_1InvalidLibraryException.pdf>
-<classArcade_1_1Exceptions_1_1InvalidLibraryException.pdf, id=2133, 501.875pt x
+<classArcade_1_1Exceptions_1_1InvalidLibraryException.pdf, id=1977, 501.875pt x
  224.71956pt>
 File: classArcade_1_1Exceptions_1_1InvalidLibraryException.pdf Graphic file (ty
 pe pdf)
@@ -1527,90 +1427,19 @@ Package pdftex.def Info: classArcade_1_1Exceptions_1_1InvalidLibraryException.p
 df  used on input line 15.
 (pdftex.def)             Requested size: 190.63023pt x 85.35826pt.
  [39])
-(./classArcade_1_1Display_1_1Libcaca.tex
-
-pdfTeX warning: pdflatex (file ./classArcade_1_1Display_1_1Libcaca.pdf): PDF in
-clusion: found PDF version <1.7>, but at most version <1.5> allowed
- <./classArcade_1_1Display_1_1Libcaca.pdf>
-<classArcade_1_1Display_1_1Libcaca.pdf, id=2150, 501.875pt x 288.15654pt>
-File: classArcade_1_1Display_1_1Libcaca.pdf Graphic file (type pdf)
-<use classArcade_1_1Display_1_1Libcaca.pdf>
-Package pdftex.def Info: classArcade_1_1Display_1_1Libcaca.pdf  used on input l
-ine 6.
-(pdftex.def)             Requested size: 148.66447pt x 85.35826pt.
- [40] [41]
-Underfull \hbox (badness 10000) detected at line 84
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 101
-[][][]
- []
-
-[42]
-Underfull \hbox (badness 10000) detected at line 123
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 147
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 166
-[][][]
- []
-
-[43] [44] [45] [46]
-Underfull \hbox (badness 10000) detected at line 371
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 390
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 409
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 428
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 447
-[][][]
- []
-
-[47]
-Underfull \hbox (badness 10000) detected at line 466
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 485
-[][][]
- []
-
-) (./classArcade_1_1Logger.tex [48] [49])
+(./classArcade_1_1Logger.tex [40] [41])
 (./classArcade_1_1Display_1_1Ncurses.tex
 
 pdfTeX warning: pdflatex (file ./classArcade_1_1Display_1_1Ncurses.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Display_1_1Ncurses.pdf>
-<classArcade_1_1Display_1_1Ncurses.pdf, id=2300, 501.875pt x 288.15654pt>
+<classArcade_1_1Display_1_1Ncurses.pdf, id=2031, 501.875pt x 288.15654pt>
 File: classArcade_1_1Display_1_1Ncurses.pdf Graphic file (type pdf)
 <use classArcade_1_1Display_1_1Ncurses.pdf>
 Package pdftex.def Info: classArcade_1_1Display_1_1Ncurses.pdf  used on input l
 ine 15.
 (pdftex.def)             Requested size: 148.66447pt x 85.35826pt.
- [50] [51]
+ [42] [43]
 Underfull \hbox (badness 10000) detected at line 96
 [][][]
  []
@@ -1620,7 +1449,7 @@ Underfull \hbox (badness 10000) detected at line 113
 [][][]
  []
 
-[52]
+[44]
 Underfull \hbox (badness 10000) detected at line 135
 [][][]
  []
@@ -1635,7 +1464,7 @@ Underfull \hbox (badness 10000) detected at line 178
 [][][]
  []
 
-[53] [54] [55] [56]
+[45] [46] [47] [48]
 Underfull \hbox (badness 10000) detected at line 383
 [][][]
  []
@@ -1660,7 +1489,7 @@ Underfull \hbox (badness 10000) detected at line 459
 [][][]
  []
 
-[57]
+[49]
 Underfull \hbox (badness 10000) detected at line 478
 [][][]
  []
@@ -1675,49 +1504,120 @@ Underfull \hbox (badness 10000) detected at line 497
 pdfTeX warning: pdflatex (file ./classArcade_1_1Games_1_1Nibbler.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Games_1_1Nibbler.pdf>
-<classArcade_1_1Games_1_1Nibbler.pdf, id=2418, 501.875pt x 308.84384pt>
+<classArcade_1_1Games_1_1Nibbler.pdf, id=2148, 501.875pt x 308.84384pt>
 File: classArcade_1_1Games_1_1Nibbler.pdf Graphic file (type pdf)
 <use classArcade_1_1Games_1_1Nibbler.pdf>
 Package pdftex.def Info: classArcade_1_1Games_1_1Nibbler.pdf  used on input lin
 e 15.
 (pdftex.def)             Requested size: 138.70909pt x 85.35826pt.
- [58]
+ [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59])
+ [51])
 (./classArcade_1_1Games_1_1Pacman.tex
 
 pdfTeX warning: pdflatex (file ./classArcade_1_1Games_1_1Pacman.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Games_1_1Pacman.pdf>
-<classArcade_1_1Games_1_1Pacman.pdf, id=2451, 501.875pt x 308.84384pt>
+<classArcade_1_1Games_1_1Pacman.pdf, id=2181, 501.875pt x 308.84384pt>
 File: classArcade_1_1Games_1_1Pacman.pdf Graphic file (type pdf)
 <use classArcade_1_1Games_1_1Pacman.pdf>
 Package pdftex.def Info: classArcade_1_1Games_1_1Pacman.pdf  used on input line
  15.
 (pdftex.def)             Requested size: 138.70909pt x 85.35826pt.
- [60])
+ [52])
 (./classArcade_1_1Games_1_1Qix.tex
 
 pdfTeX warning: pdflatex (file ./classArcade_1_1Games_1_1Qix.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Games_1_1Qix.pdf>
-<classArcade_1_1Games_1_1Qix.pdf, id=2479, 501.875pt x 308.84384pt>
+<classArcade_1_1Games_1_1Qix.pdf, id=2209, 501.875pt x 308.84384pt>
 File: classArcade_1_1Games_1_1Qix.pdf Graphic file (type pdf)
 <use classArcade_1_1Games_1_1Qix.pdf>
 Package pdftex.def Info: classArcade_1_1Games_1_1Qix.pdf  used on input line 15
 .
 (pdftex.def)             Requested size: 138.70909pt x 85.35826pt.
- [61]) (./classArcade_1_1Display_1_1SDL.tex
+ [53]) (./classArcade_1_1Display_1_1SDL.tex
 
 pdfTeX warning: pdflatex (file ./classArcade_1_1Display_1_1SDL.pdf): PDF inclus
 ion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Display_1_1SDL.pdf>
-<classArcade_1_1Display_1_1SDL.pdf, id=2500, 501.875pt x 288.15654pt>
+<classArcade_1_1Display_1_1SDL.pdf, id=2230, 501.875pt x 288.15654pt>
 File: classArcade_1_1Display_1_1SDL.pdf Graphic file (type pdf)
 <use classArcade_1_1Display_1_1SDL.pdf>
 Package pdftex.def Info: classArcade_1_1Display_1_1SDL.pdf  used on input line 
 15.
+(pdftex.def)             Requested size: 148.66447pt x 85.35826pt.
+ [54] [55]
+Underfull \hbox (badness 10000) detected at line 96
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 113
+[][][]
+ []
+
+[56]
+Underfull \hbox (badness 10000) detected at line 135
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 159
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 178
+[][][]
+ []
+
+[57] [58] [59] [60]
+Underfull \hbox (badness 10000) detected at line 383
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 402
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 421
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 440
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 459
+[][][]
+ []
+
+[61]
+Underfull \hbox (badness 10000) detected at line 478
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 497
+[][][]
+ []
+
+) (./classArcade_1_1Display_1_1SFML.tex
+
+pdfTeX warning: pdflatex (file ./classArcade_1_1Display_1_1SFML.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+ <./classArcade_1_1Display_1_1SFML.pdf>
+<classArcade_1_1Display_1_1SFML.pdf, id=2350, 501.875pt x 288.15654pt>
+File: classArcade_1_1Display_1_1SFML.pdf Graphic file (type pdf)
+<use classArcade_1_1Display_1_1SFML.pdf>
+Package pdftex.def Info: classArcade_1_1Display_1_1SFML.pdf  used on input line
+ 15.
 (pdftex.def)             Requested size: 148.66447pt x 85.35826pt.
  [62] [63]
 Underfull \hbox (badness 10000) detected at line 96
@@ -1739,78 +1639,7 @@ Underfull \hbox (badness 10000) detected at line 159
 [][][]
  []
 
-
-Underfull \hbox (badness 10000) detected at line 178
-[][][]
- []
-
-[65] [66] [67] [68]
-Underfull \hbox (badness 10000) detected at line 383
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 402
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 421
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 440
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 459
-[][][]
- []
-
-[69]
-Underfull \hbox (badness 10000) detected at line 478
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 497
-[][][]
- []
-
-) (./classArcade_1_1Display_1_1SFML.tex
-
-pdfTeX warning: pdflatex (file ./classArcade_1_1Display_1_1SFML.pdf): PDF inclu
-sion: found PDF version <1.7>, but at most version <1.5> allowed
- <./classArcade_1_1Display_1_1SFML.pdf>
-<classArcade_1_1Display_1_1SFML.pdf, id=2619, 501.875pt x 288.15654pt>
-File: classArcade_1_1Display_1_1SFML.pdf Graphic file (type pdf)
-<use classArcade_1_1Display_1_1SFML.pdf>
-Package pdftex.def Info: classArcade_1_1Display_1_1SFML.pdf  used on input line
- 15.
-(pdftex.def)             Requested size: 148.66447pt x 85.35826pt.
- [70] [71]
-Underfull \hbox (badness 10000) detected at line 96
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 113
-[][][]
- []
-
-[72]
-Underfull \hbox (badness 10000) detected at line 135
-[][][]
- []
-
-
-Underfull \hbox (badness 10000) detected at line 159
-[][][]
- []
-
-[73]
+[65]
 Underfull \hbox (badness 10000) detected at line 178
 [][][]
  []
@@ -1819,7 +1648,7 @@ Underfull \hbox (badness 10000) detected at line 178
 Overfull \vbox (29.53883pt too high) has occurred while \output is active []
 
 
-[74] [75] [76]
+[66] [67] [68]
 Underfull \hbox (badness 10000) detected at line 383
 [][][]
  []
@@ -1834,7 +1663,7 @@ Underfull \hbox (badness 10000) detected at line 421
 [][][]
  []
 
-[77]
+[69]
 Underfull \hbox (badness 10000) detected at line 440
 [][][]
  []
@@ -1849,7 +1678,7 @@ Underfull \hbox (badness 10000) detected at line 478
 [][][]
  []
 
-[78]
+[70]
 Underfull \hbox (badness 10000) detected at line 497
 [][][]
  []
@@ -1859,40 +1688,41 @@ Underfull \hbox (badness 10000) detected at line 497
 pdfTeX warning: pdflatex (file ./classArcade_1_1Games_1_1Solarfox.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
  <./classArcade_1_1Games_1_1Solarfox.pdf>
-<classArcade_1_1Games_1_1Solarfox.pdf, id=2740, 501.875pt x 308.84384pt>
+<classArcade_1_1Games_1_1Solarfox.pdf, id=2469, 501.875pt x 308.84384pt>
 File: classArcade_1_1Games_1_1Solarfox.pdf Graphic file (type pdf)
 <use classArcade_1_1Games_1_1Solarfox.pdf>
 Package pdftex.def Info: classArcade_1_1Games_1_1Solarfox.pdf  used on input li
 ne 15.
 (pdftex.def)             Requested size: 138.70909pt x 85.35826pt.
- [79]) [80] (./refman.ind [81
+ [71]) [72] (./refman.ind [73
 
 
 
 ]
-[82]
-Underfull \hbox (badness 10000) in paragraph at lines 235--237
+Underfull \hbox (badness 10000) in paragraph at lines 214--216
 []| \T1/phv/m/n/10 Ar-cade::Exceptions::BadInstanciationException,
  []
 
-[83] [84] [85])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
+[74] [75] [76] [77
+
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
  (./refman.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 073B99BB47419A2C29153AC5B45517E3;49641.
+(rerunfilecheck)             Checksum: 50BB445CE0033F85041D14F5DE11CD21;45085.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 17764 strings out of 494587
- 289202 string characters out of 6177759
- 426375 words of memory out of 5000000
- 20335 multiletter control sequences out of 15000+600000
+ 17629 strings out of 494587
+ 284042 string characters out of 6177759
+ 418324 words of memory out of 5000000
+ 20272 multiletter control sequences out of 15000+600000
  75576 words of font info for 99 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  53i,16n,92p,938b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1908,10 +1738,10 @@ are/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (93 pages, 375928 bytes).
+Output written on refman.pdf (85 pages, 351639 bytes).
 PDF statistics:
- 3400 PDF objects out of 3580 (max. 8388607)
- 3222 compressed objects within 33 object streams
- 735 named destinations out of 1000 (max. 500000)
- 1950 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3075 PDF objects out of 3580 (max. 8388607)
+ 2910 compressed objects within 30 object streams
+ 665 named destinations out of 1000 (max. 500000)
+ 1769 words of extra memory for PDF output out of 10000 (max. 10000000)
 
