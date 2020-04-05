@@ -93,8 +93,10 @@ void Arcade::Display::Libcaca::close()
 {
     if (this->_display != nullptr)
         caca_free_display(_display);
-	    _display = nullptr;
-	    _canvas = nullptr;
+    if (this->_canvas != nullptr)
+        caca_free_canvas(_canvas);
+    _display = nullptr;
+    _canvas = nullptr;
 }
 
 bool Arcade::Display::Libcaca::isOpen() const
@@ -182,6 +184,7 @@ void Arcade::Display::Libcaca::update()
 void Arcade::Display::Libcaca::render() const
 {
 	caca_refresh_display(_display);
+    usleep(16666);
 }
 
 char Arcade::Display::Libcaca::getKeyCode() const
@@ -211,23 +214,16 @@ void Arcade::Display::Libcaca::putLine(float x1, float y1, float x2, float y2) c
 
 void Arcade::Display::Libcaca::putRect(float x, float y, float w, float h) const
 {
-    caca_set_color_ansi(_canvas, this->_libColors.at(this->_currentColor), CACA_BLACK);
+    caca_set_color_ansi(_canvas, CACA_BLACK, this->_libColors.at(this->_currentColor));
     if (w < 32 || h < 32)
         return this->putFillRect(x, y, w, h);
-    for (float i = 0; i <= w / 8; i++) {
-            caca_draw_cp437_box(_canvas, x / 8 + i + caca_get_canvas_width(_canvas) / 2 - 40, y / 16 + caca_get_canvas_height(_canvas) / 2 - 10, w, h);
-            caca_draw_cp437_box(_canvas, x / 8 + i + caca_get_canvas_width(_canvas) / 2 - 40, y / 16 + h / 16 + caca_get_canvas_height(_canvas) / 2 - 10, w, h);
-    }
-    for (float i = 0; i <= h / 16; i++) {
-            caca_draw_cp437_box(_canvas, x / 8 + caca_get_canvas_width(_canvas) / 2 - 40, y / 16 + i + caca_get_canvas_height(_canvas) / 2 - 10, w, h);
-            caca_draw_cp437_box(_canvas, x / 8 + w / 8 + caca_get_canvas_width(_canvas) / 2 - 40, y / 16 + i + caca_get_canvas_height(_canvas) / 2 - 10, w, h);
-    }
+    caca_draw_box(this->_canvas, x / 8 + caca_get_canvas_width(_canvas) / 2 - 40, y / 16 + caca_get_canvas_height(_canvas) / 2 - 10, w / 8, h / 16, ' ');
 }
 
 void Arcade::Display::Libcaca::putFillRect(float x, float y, float w, float h) const
 {
-    caca_set_color_ansi(_canvas, this->_libColors.at(this->_currentColor), CACA_BLACK);
-    caca_fill_box(_canvas, x / 8 + caca_get_canvas_width(_canvas) / 2 - 40, y / 16 + caca_get_canvas_height(_canvas) / 2 - 10, w / 8, h / 16, 9642);
+    caca_set_color_ansi(_canvas, CACA_BLACK, this->_libColors.at(this->_currentColor));
+    caca_fill_box(_canvas, x / 8 + caca_get_canvas_width(_canvas) / 2 - 40, y / 16 + caca_get_canvas_height(_canvas) / 2 - 10, w / 8, h / 16, ' ');
 }
 
 void Arcade::Display::Libcaca::putCircle(float x, float y, float) const
