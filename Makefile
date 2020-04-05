@@ -138,7 +138,7 @@ sfml: CXXFLAGS += -fPIC
 sfml: LDLIBS = -lsfml-graphics -lsfml-system -lsfml-window
 sfml: $(OBJ_SFML) build_sfml
 
-libcaca: NAME = lib/lib_arcade_libcaca.so
+libcaca: NAME = bonus/lib_arcade_libcaca.so
 libcaca: OBJ = $(OBJ_LIBCACA)
 libcaca: CXXFLAGS += -fPIC
 libcaca: LDLIBS = -lcaca
