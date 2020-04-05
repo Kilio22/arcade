@@ -175,6 +175,8 @@ float Arcade::Display::SDL::getDelta() const
 
     frames = ((current_time - old_time) / 1000) * 60;
     old_time = current_time;
+    if (frames < 0)
+        return 1;
     return frames;
 }
 
