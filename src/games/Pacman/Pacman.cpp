@@ -53,7 +53,7 @@ void Arcade::Games::Pacman::update(const Arcade::Display::IDisplayModule &displa
     this->_framesCount += displayModule.getDelta();
     if (this->_isDead == false) {
         this->updatePacmanDirection(displayModule);
-        if (this->_canEatMonsters == true && (clock() - this->_eatClock) / CLOCKS_PER_SEC >= 8) {
+        if (this->_canEatMonsters == true && (clock() - this->_eatClock) / CLOCKS_PER_SEC >= 10) {
             this->_canEatMonsters = false;
         }
         if (this->_framesCount >= this->_framesToStep) {
@@ -262,7 +262,10 @@ void Arcade::Games::Pacman::drawMaze(Arcade::Display::IDisplayModule &displayMod
 void Arcade::Games::Pacman::drawMonsters(Arcade::Display::IDisplayModule &displayModule) const
 {
     for (auto monster = this->_monsters.begin(); monster < this->_monsters.end(); monster++) {
-        displayModule.setColor(monster->first.color);
+        if (this->_canEatMonsters == true)
+            displayModule.setColor(Arcade::Display::IDisplayModule::Colors::BLUE);
+        else
+            displayModule.setColor(monster->first.color);
         displayModule.putFillCircle(monster->first.x, monster->first.y, monster->first.radius);
     }
 }
