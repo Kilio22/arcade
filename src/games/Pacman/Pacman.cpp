@@ -57,12 +57,12 @@ void Arcade::Games::Pacman::update(const Arcade::Display::IDisplayModule &displa
             this->_canEatMonsters = false;
         }
         if (this->_framesCount >= this->_framesToStep) {
-            this->moveMonsters();
             this->moveEntity(this->_pacman);
             this->eat();
             if (this->isDead()) {
                 this->addToBestScores(this->_currentScore);
             }
+            this->moveMonsters();
             this->_framesCount = 0;
         }
     }
@@ -129,23 +129,34 @@ void Arcade::Games::Pacman::moveRandomDirection(std::pair<circle_t, Direction> &
 
 bool Arcade::Games::Pacman::moveEntity(std::pair<circle_t, Direction> &entity) const
 {
+    bool hasMoved = false;
+
     if (entity.second == Direction::UP && canMove(entity.first.x, entity.first.y - 15)) {
         entity.first.y -= 15;
-        return true;
+        hasMoved = true;
     }
     if (entity.second == Direction::DOWN && canMove(entity.first.x, entity.first.y + 15)) {
         entity.first.y += 15;
-        return true;
+        hasMoved = true;
     }
     if (entity.second == Direction::RIGHT && canMove(entity.first.x + 15, entity.first.y)) {
         entity.first.x += 15;
-        return true;
+        hasMoved = true;
     }
     if (entity.second == Direction::LEFT && canMove(entity.first.x - 15, entity.first.y)) {
         entity.first.x -= 15;
-        return true;
+        hasMoved = true;
     }
-    return false;
+    if (entity.first.x >= 502 && entity.first.x <= 517 && entity.first.y >= 220 && entity.first.y <= 235 && entity.second != Direction::LEFT) {
+        entity.first.x = 127;
+        entity.first.y = 220;
+        entity.second = Direction::RIGHT;
+    } else if (entity.first.x >= 127 && entity.first.x <= 142 && entity.first.y >= 220 && entity.first.y <= 235 && entity.second != Direction::RIGHT) {
+        entity.first.x = 502;
+        entity.first.y = 220;
+        entity.second = Direction::LEFT;
+    }
+    return hasMoved;
 }
 
 bool Arcade::Games::Pacman::canMove(const float x, const float y) const
